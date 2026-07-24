@@ -17,7 +17,7 @@ struct RootView: View {
             if isChecking {
                 ProgressView()
             } else if hasCompletedOnboarding {
-                DashboardView()
+                MainTabView()
             } else {
                 OnboardingView(onComplete: { hasCompletedOnboarding = true })
             }

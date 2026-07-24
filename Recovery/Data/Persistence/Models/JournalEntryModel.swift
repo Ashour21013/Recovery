@@ -8,12 +8,14 @@ final class JournalEntryModel {
     var date: Date
     var text: String
     var mood: Int?
+    var triggerName: String?
     var profile: RecoveryProfileModel?
 
-    init(id: UUID, date: Date, text: String, mood: Int?) {
+    init(id: UUID, date: Date, text: String, mood: Int?, triggerName: String?) {
         self.id = id
         self.date = date
         self.text = text
         self.mood = mood
+        self.triggerName = triggerName
     }
 }

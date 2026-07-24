@@ -41,11 +41,23 @@ enum RecoveryMapper {
     // MARK: - Journal
 
     static func toDomain(_ model: JournalEntryModel) -> JournalEntry {
-        JournalEntry(id: model.id, date: model.date, text: model.text, mood: model.mood)
+        JournalEntry(
+            id: model.id,
+            date: model.date,
+            text: model.text,
+            mood: model.mood,
+            triggerName: model.triggerName
+        )
     }
 
     static func makeModel(from entry: JournalEntry) -> JournalEntryModel {
-        JournalEntryModel(id: entry.id, date: entry.date, text: entry.text, mood: entry.mood)
+        JournalEntryModel(
+            id: entry.id,
+            date: entry.date,
+            text: entry.text,
+            mood: entry.mood,
+            triggerName: entry.triggerName
+        )
     }
 
     // MARK: - Trigger
