@@ -5,6 +5,9 @@ import SwiftUI
 /// Bündelt die Top-Level-Bereiche in einer `TabView`. Jeder Tab besitzt
 /// seinen eigenen Screen mit eigenem ViewModel.
 struct MainTabView: View {
+    /// Wird aufgerufen, wenn in den Einstellungen alle Daten gelöscht wurden.
+    var onDataDeleted: () -> Void = {}
+
     var body: some View {
         TabView {
             DashboardView()
@@ -27,9 +30,9 @@ struct MainTabView: View {
                     Label("Erfolge", systemImage: "trophy.fill")
                 }
 
-            ReminderSettingsView()
+            SettingsView(onDataDeleted: onDataDeleted)
                 .tabItem {
-                    Label("Erinnerungen", systemImage: "bell.fill")
+                    Label("Einstellungen", systemImage: "gearshape.fill")
                 }
         }
     }

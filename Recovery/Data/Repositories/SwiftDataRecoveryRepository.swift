@@ -133,6 +133,72 @@ final class SwiftDataRecoveryRepository: RecoveryRepository {
         try save()
     }
 
+    // MARK: - Datenverwaltung
+
+    func exportData() async throws -> ExportData {
+        do {
+            let profileModel = try context.fetch(FetchDescriptor<RecoveryProfileModel>()).first
+            let journal = try context.fetch(
+                FetchDescriptor<JournalEntryModel>(sortBy: [SortDescriptor(\.date, order: .reverse)])
+            )
+            let triggers = try context.fetch(
+                FetchDescriptor<TriggerModel>(sortBy: [SortDescriptor(\.createdAt, order: .reverse)])
+            )
+            let relapses = try context.fetch(
+                FetchDescriptor<RelapseModel>(sortBy: [SortDescriptor(\.date, order: .reverse)])
+            )
+
+            return ExportData(
+                exportedAt: .now,
+                appVersion: AppInfo.fullVersion,
+                profile: profileModel.map { model in
+                    ExportData.ProfileExport(
+                        habitType: model.habitTypeRawValue,
+                        reason: model.reason,
+                        frequency: model.frequencyRawValue,
+                        startDate: model.startDate,
+                        bestStreakDays: model.bestStreakDays,
+                        goalDays: model.goalDays
+                    )
+                },
+                journalEntries: journal.map {
+                    ExportData.JournalEntryExport(
+                        date: $0.date,
+                        text: $0.text,
+                        mood: $0.mood,
+                        triggerName: $0.triggerName
+                    )
+                },
+                triggers: triggers.map {
+                    ExportData.TriggerExport(name: $0.name, note: $0.note, createdAt: $0.createdAt)
+                },
+                relapses: relapses.map {
+                    ExportData.RelapseExport(
+                        date: $0.date,
+                        note: $0.note,
+                        cravingIntensity: $0.cravingIntensity,
+                        triggerNames: $0.triggerNames
+                    )
+                }
+            )
+        } catch {
+            throw AppError.persistence
+        }
+    }
+
+    func deleteAllData() async throws {
+        do {
+            try context.delete(model: JournalEntryModel.self)
+            try context.delete(model: TriggerModel.self)
+            try context.delete(model: RelapseModel.self)
+            try context.delete(model: AchievementModel.self)
+            try context.delete(model: RecoveryProfileModel.self)
+            try context.save()
+        } catch {
+            throw AppError.persistence
+        }
+    }
+
     /// Baut einen kurzen Journal-Text aus den Rückfall-Details.
     private func relapseJournalText(for relapse: Relapse) -> String {
         var parts = ["Rückfall dokumentiert."]

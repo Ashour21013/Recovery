@@ -17,8 +17,12 @@ struct RootView: View {
             if isChecking {
                 ProgressView()
             } else if hasCompletedOnboarding {
-                MainTabView()
-                    .transition(.opacity)
+                MainTabView(onDataDeleted: {
+                    withAnimation(.smooth(duration: 0.5)) {
+                        hasCompletedOnboarding = false
+                    }
+                })
+                .transition(.opacity)
             } else {
                 OnboardingView(onComplete: {
                     withAnimation(.smooth(duration: 0.5)) {

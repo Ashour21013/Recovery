@@ -10,16 +10,15 @@ struct ReminderSettingsView: View {
     @State private var viewModel: ReminderSettingsViewModel?
 
     var body: some View {
-        NavigationStack {
-            Group {
-                if let viewModel {
-                    form(viewModel)
-                } else {
-                    ProgressView()
-                }
+        Group {
+            if let viewModel {
+                form(viewModel)
+            } else {
+                ProgressView()
             }
-            .navigationTitle("Erinnerungen")
         }
+        .navigationTitle("Erinnerungen")
+        .navigationBarTitleDisplayMode(.inline)
         .task {
             if viewModel == nil {
                 viewModel = ReminderSettingsViewModel(
@@ -80,5 +79,7 @@ struct ReminderSettingsView: View {
 }
 
 #Preview {
-    ReminderSettingsView()
+    NavigationStack {
+        ReminderSettingsView()
+    }
 }

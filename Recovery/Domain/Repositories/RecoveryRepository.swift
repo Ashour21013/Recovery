@@ -39,4 +39,13 @@ protocol RecoveryRepository: Repository {
     func fetchRelapses() async throws -> [Relapse]
     /// Dokumentiert einen Rückfall und setzt die Streak zurück.
     func recordRelapse(_ relapse: Relapse) async throws
+
+    // MARK: - Datenverwaltung
+
+    /// Erstellt einen vollständigen, exportierbaren Snapshot aller Daten.
+    func exportData() async throws -> ExportData
+
+    /// Löscht sämtliche persistierten Daten (Profil, Journal, Trigger,
+    /// Rückfälle, Achievements) unwiderruflich.
+    func deleteAllData() async throws
 }
