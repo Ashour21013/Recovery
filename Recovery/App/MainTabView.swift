@@ -22,6 +22,11 @@ struct MainTabView: View {
                     Label("Statistik", systemImage: "chart.bar.fill")
                 }
 
+            AchievementsView()
+                .tabItem {
+                    Label("Erfolge", systemImage: "trophy.fill")
+                }
+
             ReminderSettingsView()
                 .tabItem {
                     Label("Erinnerungen", systemImage: "bell.fill")

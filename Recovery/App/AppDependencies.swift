@@ -18,13 +18,17 @@ final class AppDependencies {
     /// Persistenz der Erinnerungs-Einstellungen.
     let reminderSettingsStore: ReminderSettingsStore = UserDefaultsReminderSettingsStore()
 
+    /// Zähler für abgeschlossene Craving-Sessions.
+    let cravingSessionCounter: CravingSessionCounter = UserDefaultsCravingSessionCounter()
+
     init() {
         do {
             let schema = Schema([
                 RecoveryProfileModel.self,
                 JournalEntryModel.self,
                 TriggerModel.self,
-                RelapseModel.self
+                RelapseModel.self,
+                AchievementModel.self
             ])
             let configuration = ModelConfiguration(schema: schema, isStoredInMemoryOnly: false)
             self.modelContainer = try ModelContainer(for: schema, configurations: [configuration])
@@ -42,5 +46,11 @@ final class AppDependencies {
     @MainActor
     func makeRecoveryRepository() -> RecoveryRepository {
         SwiftDataRecoveryRepository(context: modelContainer.mainContext)
+    }
+
+    /// Erstellt den Achievement-Service auf Basis des Main-Kontexts.
+    @MainActor
+    func makeAchievementService() -> AchievementService {
+        SwiftDataAchievementService(context: modelContainer.mainContext)
     }
 }

@@ -150,7 +150,10 @@ struct CravingModeView: View {
             }
 
             if viewModel.isLastStep {
-                PrimaryButton(title: "Abschließen") { dismiss() }
+                PrimaryButton(title: "Abschließen") {
+                    dependencies.cravingSessionCounter.incrementCompleted()
+                    dismiss()
+                }
             } else {
                 PrimaryButton(title: "Weiter", action: viewModel.goNext)
             }
