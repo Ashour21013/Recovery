@@ -21,6 +21,9 @@ final class CravingModeViewModel: ViewModel {
     /// Zufällig gewählte Aufgabe für diesen Durchlauf.
     private(set) var task: CravingTask = .random()
 
+    /// Zufällig gewählte Affirmation für diesen Durchlauf.
+    private(set) var affirmation: Affirmation = .random()
+
     // MARK: - Atemübung
 
     let breathingDuration = 60

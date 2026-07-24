@@ -9,6 +9,7 @@ enum CravingStep: Int, CaseIterable, Identifiable {
     case welcome
     case breathing
     case motivation
+    case affirmation
     case reason
     case task
     case finish
@@ -21,6 +22,7 @@ enum CravingStep: Int, CaseIterable, Identifiable {
         case .welcome: "Willkommen"
         case .breathing: "Atmen"
         case .motivation: "Motivation"
+        case .affirmation: "Affirmation"
         case .reason: "Dein Warum"
         case .task: "Kleine Aufgabe"
         case .finish: "Geschafft"

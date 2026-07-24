@@ -76,6 +76,24 @@ struct CravingModeView: View {
                 tint: .pink
             )
 
+        case .affirmation:
+            CravingMessageStepView(
+                systemImage: "quote.bubble.fill",
+                title: "Sprich es dir laut vor",
+                message: "Lies diese Affirmation laut und langsam vor:",
+                tint: .purple
+            ) {
+                Text("„\(viewModel.affirmation.text)")
+                    .font(.title3.weight(.medium))
+                    .multilineTextAlignment(.center)
+                    .padding(AppSpacing.l)
+                    .frame(maxWidth: .infinity)
+                    .background(
+                        RoundedRectangle(cornerRadius: 16)
+                            .fill(Color(.secondarySystemBackground))
+                    )
+            }
+
         case .reason:
             CravingMessageStepView(
                 systemImage: "target",
