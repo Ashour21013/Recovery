@@ -16,7 +16,17 @@ final class DashboardViewModel: ViewModel {
     /// Steuert die Anzeige des Cravings-Hilfe-Sheets.
     var isShowingCravingHelp = false
 
+    /// Steuert die Anzeige des Ziel-Auswahl-Sheets.
+    var isShowingGoalPicker = false
+
+    /// Gerade erreichtes Ziel für die Erfolgsmeldung (falls vorhanden).
+    private(set) var achievedGoal: RecoveryGoal?
+
     private let repository: RecoveryRepository
+
+    /// Merkt sich (gerätelokal), welche Ziele bereits gefeiert wurden,
+    /// damit die Erfolgsmeldung pro Ziel nur einmal erscheint.
+    private let celebratedKey = "recovery.celebratedGoals"
 
     init(repository: RecoveryRepository) {
         self.repository = repository
@@ -37,7 +47,9 @@ final class DashboardViewModel: ViewModel {
             }
             let relapses = try await repository.fetchRelapses()
             let journal = try await repository.fetchJournalEntries()
-            state = .loaded(makeDashboardData(profile: profile, relapses: relapses, journalCount: journal.count))
+            let data = makeDashboardData(profile: profile, relapses: relapses, journalCount: journal.count)
+            state = .loaded(data)
+            checkForAchievement(data.goalProgress)
         } catch {
             state = .failed(error)
         }
@@ -46,6 +58,54 @@ final class DashboardViewModel: ViewModel {
     /// Nutzer meldet akutes Verlangen ("Cravings").
     func handleCravingTapped() {
         isShowingCravingHelp = true
+    }
+
+    // MARK: - Ziele
+
+    func presentGoalPicker() {
+        isShowingGoalPicker = true
+    }
+
+    /// Setzt das gewählte Ziel und lädt das Dashboard neu.
+    func setGoal(_ goal: RecoveryGoal?) async {
+        do {
+            try await repository.updateGoal(goal)
+            isShowingGoalPicker = false
+            await load()
+        } catch {
+            state = .failed(error)
+        }
+    }
+
+    /// Bestätigt die Erfolgsmeldung und blendet sie aus.
+    func dismissAchievement() {
+        if let goal = achievedGoal {
+            markCelebrated(goal)
+        }
+        achievedGoal = nil
+    }
+
+    /// Prüft, ob ein Ziel neu erreicht wurde und noch nicht gefeiert wurde.
+    private func checkForAchievement(_ progress: GoalProgress?) {
+        guard let progress, progress.isAchieved, !hasCelebrated(progress.goal) else {
+            return
+        }
+        achievedGoal = progress.goal
+    }
+
+    private func hasCelebrated(_ goal: RecoveryGoal) -> Bool {
+        celebratedGoals().contains(goal.rawValue)
+    }
+
+    private func markCelebrated(_ goal: RecoveryGoal) {
+        var ids = celebratedGoals()
+        ids.insert(goal.rawValue)
+        UserDefaults.standard.set(Array(ids), forKey: celebratedKey)
+    }
+
+    private func celebratedGoals() -> Set<Int> {
+        let array = UserDefaults.standard.array(forKey: celebratedKey) as? [Int] ?? []
+        return Set(array)
     }
 
     // MARK: - Aufbereitete Anzeige-Werte
@@ -65,6 +125,9 @@ final class DashboardViewModel: ViewModel {
         journalCount: Int
     ) -> DashboardData {
         let streak = profile.streak()
+        let goalProgress = profile.goal.map {
+            GoalProgress(goal: $0, currentDays: streak.currentDays)
+        }
         return DashboardData(
             habitType: profile.habitType,
             streak: streak,
@@ -74,7 +137,8 @@ final class DashboardViewModel: ViewModel {
                 title: "Heutige Ziele",
                 completedTasks: min(journalCount, 3),
                 totalTasks: 3
-            )
+            ),
+            goalProgress: goalProgress
         )
     }
 

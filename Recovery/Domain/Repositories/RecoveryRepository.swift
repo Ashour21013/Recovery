@@ -19,6 +19,9 @@ protocol RecoveryRepository: Repository {
     /// Aktualisiert ein bestehendes Profil.
     func updateProfile(_ profile: RecoveryProfile) async throws
 
+    /// Setzt (oder entfernt mit `nil`) das aktuelle Ziel.
+    func updateGoal(_ goal: RecoveryGoal?) async throws
+
     // MARK: - Journal
 
     func fetchJournalEntries() async throws -> [JournalEntry]

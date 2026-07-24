@@ -15,7 +15,8 @@ enum RecoveryMapper {
             reason: model.reason,
             frequency: model.frequencyRawValue.flatMap(HabitFrequency.init(rawValue:)),
             startDate: model.startDate,
-            bestStreakDays: model.bestStreakDays
+            bestStreakDays: model.bestStreakDays,
+            goalDays: model.goalDays
         )
     }
 
@@ -26,7 +27,8 @@ enum RecoveryMapper {
             reason: profile.reason,
             frequencyRawValue: profile.frequency?.rawValue,
             startDate: profile.startDate,
-            bestStreakDays: profile.bestStreakDays
+            bestStreakDays: profile.bestStreakDays,
+            goalDays: profile.goalDays
         )
     }
 
@@ -36,6 +38,7 @@ enum RecoveryMapper {
         model.frequencyRawValue = profile.frequency?.rawValue
         model.startDate = profile.startDate
         model.bestStreakDays = profile.bestStreakDays
+        model.goalDays = profile.goalDays
     }
 
     // MARK: - Journal

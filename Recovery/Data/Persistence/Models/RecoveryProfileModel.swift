@@ -16,6 +16,8 @@ final class RecoveryProfileModel {
     var frequencyRawValue: String?
     var startDate: Date
     var bestStreakDays: Int
+    /// Gewähltes Ziel in Tagen (optional → leichtgewichtige Migration).
+    var goalDays: Int?
 
     @Relationship(deleteRule: .cascade, inverse: \JournalEntryModel.profile)
     var journalEntries: [JournalEntryModel]
@@ -32,7 +34,8 @@ final class RecoveryProfileModel {
         reason: String,
         frequencyRawValue: String?,
         startDate: Date,
-        bestStreakDays: Int
+        bestStreakDays: Int,
+        goalDays: Int? = nil
     ) {
         self.id = id
         self.habitTypeRawValue = habitTypeRawValue
@@ -40,6 +43,7 @@ final class RecoveryProfileModel {
         self.frequencyRawValue = frequencyRawValue
         self.startDate = startDate
         self.bestStreakDays = bestStreakDays
+        self.goalDays = goalDays
         self.journalEntries = []
         self.triggers = []
         self.relapses = []

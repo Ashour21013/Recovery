@@ -41,6 +41,12 @@ final class SwiftDataRecoveryRepository: RecoveryRepository {
         try save()
     }
 
+    func updateGoal(_ goal: RecoveryGoal?) async throws {
+        let model = try currentProfileModel()
+        model.goalDays = goal?.rawValue
+        try save()
+    }
+
     // MARK: - Journal
 
     func fetchJournalEntries() async throws -> [JournalEntry] {

@@ -14,6 +14,8 @@ struct RecoveryProfile: Equatable, Identifiable {
     var startDate: Date
     /// Bisher längste erreichte Strähne in Tagen.
     var bestStreakDays: Int
+    /// Aktuell gewähltes Ziel (in Tagen), falls gesetzt.
+    var goalDays: Int?
 
     init(
         id: UUID = UUID(),
@@ -21,7 +23,8 @@ struct RecoveryProfile: Equatable, Identifiable {
         reason: String = "",
         frequency: HabitFrequency? = nil,
         startDate: Date = .now,
-        bestStreakDays: Int = 0
+        bestStreakDays: Int = 0,
+        goalDays: Int? = nil
     ) {
         self.id = id
         self.habitType = habitType
@@ -29,6 +32,13 @@ struct RecoveryProfile: Equatable, Identifiable {
         self.frequency = frequency
         self.startDate = startDate
         self.bestStreakDays = bestStreakDays
+        self.goalDays = goalDays
+    }
+
+    /// Typsicherer Zugriff auf das gewählte Ziel.
+    var goal: RecoveryGoal? {
+        get { goalDays.flatMap(RecoveryGoal.init(rawValue:)) }
+        set { goalDays = newValue?.rawValue }
     }
 
     /// Anzahl cleaner Tage seit `startDate` (kalendarisch, nie negativ).

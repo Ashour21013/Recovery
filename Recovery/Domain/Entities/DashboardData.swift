@@ -10,4 +10,6 @@ struct DashboardData: Equatable {
     let quote: MotivationalQuote
     let progress: ProgressSummary
     let dailyGoal: DailyGoal
+    /// Fortschritt des gewählten Ziels (falls eines gesetzt ist).
+    let goalProgress: GoalProgress?
 }
