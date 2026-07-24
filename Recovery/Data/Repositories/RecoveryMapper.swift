@@ -73,10 +73,22 @@ enum RecoveryMapper {
     // MARK: - Rückfälle
 
     static func toDomain(_ model: RelapseModel) -> Relapse {
-        Relapse(id: model.id, date: model.date, note: model.note)
+        Relapse(
+            id: model.id,
+            date: model.date,
+            note: model.note,
+            cravingIntensity: model.cravingIntensity,
+            triggerNames: model.triggerNames
+        )
     }
 
     static func makeModel(from relapse: Relapse) -> RelapseModel {
-        RelapseModel(id: relapse.id, date: relapse.date, note: relapse.note)
+        RelapseModel(
+            id: relapse.id,
+            date: relapse.date,
+            note: relapse.note,
+            cravingIntensity: relapse.cravingIntensity,
+            triggerNames: relapse.triggerNames
+        )
     }
 }

@@ -106,6 +106,18 @@ final class SwiftDataRecoveryRepository: RecoveryRepository {
         model.profile = profile
         context.insert(model)
 
+        // Journal automatisch mit einem Eintrag aktualisieren, damit der
+        // Rückfall auch im Tagebuch und in den Trigger-Statistiken auftaucht.
+        let journalEntry = JournalEntryModel(
+            id: UUID(),
+            date: relapse.date,
+            text: relapseJournalText(for: relapse),
+            mood: Mood.bad.rawValue,
+            triggerName: relapse.triggerNames.first
+        )
+        journalEntry.profile = profile
+        context.insert(journalEntry)
+
         // Bisherige Strähne als Rekord sichern und Streak zurücksetzen.
         let domain = RecoveryMapper.toDomain(profile)
         let achieved = domain.currentStreakDays(now: relapse.date)
@@ -113,6 +125,19 @@ final class SwiftDataRecoveryRepository: RecoveryRepository {
         profile.startDate = Calendar.current.startOfDay(for: relapse.date)
 
         try save()
+    }
+
+    /// Baut einen kurzen Journal-Text aus den Rückfall-Details.
+    private func relapseJournalText(for relapse: Relapse) -> String {
+        var parts = ["Rückfall dokumentiert."]
+        parts.append("Verlangen: \(relapse.cravingIntensity)/10.")
+        if !relapse.triggerNames.isEmpty {
+            parts.append("Trigger: \(relapse.triggerNames.joined(separator: ", ")).")
+        }
+        if !relapse.note.isEmpty {
+            parts.append(relapse.note)
+        }
+        return parts.joined(separator: " ")
     }
 
     // MARK: - Private Helpers

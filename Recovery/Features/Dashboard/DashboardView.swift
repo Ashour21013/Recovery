@@ -10,6 +10,7 @@ struct DashboardView: View {
 
     @Environment(\.dependencies) private var dependencies
     @State private var viewModel: DashboardViewModel?
+    @State private var isShowingRelapse = false
 
     var body: some View {
         NavigationStack {
@@ -57,6 +58,11 @@ struct DashboardView: View {
         )) {
             CravingHelpView(onDismiss: { viewModel.isShowingCravingHelp = false })
         }
+        .sheet(isPresented: $isShowingRelapse) {
+            RelapseView(onSaved: {
+                Task { await viewModel.load() }
+            })
+        }
     }
 
     private func loadedContent(for data: DashboardData, viewModel: DashboardViewModel) -> some View {
@@ -70,6 +76,8 @@ struct DashboardView: View {
                     formattedMoneySaved: viewModel.formattedMoneySaved(for: data.progress)
                 )
                 DailyGoalCardView(goal: data.dailyGoal)
+
+                RelapseButton(action: { isShowingRelapse = true })
             }
             .padding(AppSpacing.m)
         }
