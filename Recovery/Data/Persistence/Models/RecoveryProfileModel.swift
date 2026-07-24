@@ -28,6 +28,9 @@ final class RecoveryProfileModel {
     @Relationship(deleteRule: .cascade, inverse: \RelapseModel.profile)
     var relapses: [RelapseModel]
 
+    @Relationship(deleteRule: .cascade, inverse: \PlanTaskCompletionModel.profile)
+    var planCompletions: [PlanTaskCompletionModel]
+
     init(
         id: UUID,
         habitTypeRawValue: String,
@@ -47,5 +50,6 @@ final class RecoveryProfileModel {
         self.journalEntries = []
         self.triggers = []
         self.relapses = []
+        self.planCompletions = []
     }
 }

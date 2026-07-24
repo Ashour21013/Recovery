@@ -40,11 +40,17 @@ protocol RecoveryRepository: Repository {
     /// Dokumentiert einen Rückfall und setzt die Streak zurück.
     func recordRelapse(_ relapse: Relapse) async throws
 
+    // MARK: - Recovery-Plan
+
+    /// Lädt den Plan für den angegebenen Tag inkl. Abhak-Zustand.
+    func fetchPlan(for day: Date) async throws -> RecoveryPlan
+    /// Schaltet den Abhak-Zustand einer Aufgabe an einem Tag um.
+    func setTaskCompletion(_ type: RecoveryTaskType, on day: Date, isCompleted: Bool) async throws
+
     // MARK: - Datenverwaltung
 
     /// Erstellt einen vollständigen, exportierbaren Snapshot aller Daten.
     func exportData() async throws -> ExportData
-
     /// Löscht sämtliche persistierten Daten (Profil, Journal, Trigger,
     /// Rückfälle, Achievements) unwiderruflich.
     func deleteAllData() async throws

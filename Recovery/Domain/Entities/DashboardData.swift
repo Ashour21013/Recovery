@@ -12,4 +12,6 @@ struct DashboardData: Equatable {
     let dailyGoal: DailyGoal
     /// Fortschritt des gewählten Ziels (falls eines gesetzt ist).
     let goalProgress: GoalProgress?
+    /// Täglicher Recovery-Plan mit abhakbaren Aufgaben.
+    var plan: RecoveryPlan
 }

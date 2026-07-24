@@ -47,7 +47,13 @@ final class DashboardViewModel: ViewModel {
             }
             let relapses = try await repository.fetchRelapses()
             let journal = try await repository.fetchJournalEntries()
-            let data = makeDashboardData(profile: profile, relapses: relapses, journalCount: journal.count)
+            let plan = try await repository.fetchPlan(for: .now)
+            let data = makeDashboardData(
+                profile: profile,
+                relapses: relapses,
+                journalCount: journal.count,
+                plan: plan
+            )
             state = .loaded(data)
             checkForAchievement(data.goalProgress)
         } catch {
@@ -58,6 +64,28 @@ final class DashboardViewModel: ViewModel {
     /// Nutzer meldet akutes Verlangen ("Cravings").
     func handleCravingTapped() {
         isShowingCravingHelp = true
+    }
+
+    // MARK: - Recovery-Plan
+
+    /// Schaltet eine Plan-Aufgabe um und aktualisiert den Fortschritt optimistisch.
+    func toggleTask(_ type: RecoveryTaskType) async {
+        guard case let .loaded(data) = state,
+              let index = data.plan.tasks.firstIndex(where: { $0.type == type }) else { return }
+
+        let newValue = !data.plan.tasks[index].isCompleted
+
+        // Optimistisches UI-Update für ein direktes, flüssiges Gefühl.
+        var updated = data
+        updated.plan.tasks[index].isCompleted = newValue
+        state = .loaded(updated)
+
+        do {
+            try await repository.setTaskCompletion(type, on: .now, isCompleted: newValue)
+        } catch {
+            // Bei Fehler den ursprünglichen Zustand wiederherstellen.
+            state = .loaded(data)
+        }
     }
 
     // MARK: - Ziele
@@ -122,7 +150,8 @@ final class DashboardViewModel: ViewModel {
     private func makeDashboardData(
         profile: RecoveryProfile,
         relapses: [Relapse],
-        journalCount: Int
+        journalCount: Int,
+        plan: RecoveryPlan
     ) -> DashboardData {
         let streak = profile.streak()
         let goalProgress = profile.goal.map {
@@ -135,10 +164,11 @@ final class DashboardViewModel: ViewModel {
             progress: makeProgress(streak: streak, relapseCount: relapses.count),
             dailyGoal: DailyGoal(
                 title: "Heutige Ziele",
-                completedTasks: min(journalCount, 3),
-                totalTasks: 3
+                completedTasks: plan.completedCount,
+                totalTasks: plan.totalCount
             ),
-            goalProgress: goalProgress
+            goalProgress: goalProgress,
+            plan: plan
         )
     }
 

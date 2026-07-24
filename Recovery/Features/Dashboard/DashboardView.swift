@@ -124,7 +124,10 @@ struct DashboardView: View {
                     progress: data.progress,
                     formattedMoneySaved: viewModel.formattedMoneySaved(for: data.progress)
                 )
-                DailyGoalCardView(goal: data.dailyGoal)
+                RecoveryPlanCardView(
+                    plan: data.plan,
+                    onToggle: { type in Task { await viewModel.toggleTask(type) } }
+                )
 
                 RelapseButton(action: { isShowingRelapse = true })
             }

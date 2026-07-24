@@ -28,7 +28,8 @@ final class AppDependencies {
                 JournalEntryModel.self,
                 TriggerModel.self,
                 RelapseModel.self,
-                AchievementModel.self
+                AchievementModel.self,
+                PlanTaskCompletionModel.self
             ])
             let configuration = ModelConfiguration(schema: schema, isStoredInMemoryOnly: false)
             self.modelContainer = try ModelContainer(for: schema, configurations: [configuration])

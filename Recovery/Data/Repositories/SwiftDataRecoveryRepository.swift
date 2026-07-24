@@ -133,6 +133,56 @@ final class SwiftDataRecoveryRepository: RecoveryRepository {
         try save()
     }
 
+    // MARK: - Recovery-Plan
+
+    func fetchPlan(for day: Date) async throws -> RecoveryPlan {
+        let normalizedDay = Calendar.current.startOfDay(for: day)
+        do {
+            let descriptor = FetchDescriptor<PlanTaskCompletionModel>(
+                predicate: #Predicate { $0.day == normalizedDay }
+            )
+            let completions = try context.fetch(descriptor)
+            let completedTypes = Set(completions.map(\.taskRawValue))
+
+            let tasks = RecoveryTaskType.defaultPlan.map { type in
+                RecoveryTask(type: type, isCompleted: completedTypes.contains(type.rawValue))
+            }
+            return RecoveryPlan(date: normalizedDay, tasks: tasks)
+        } catch {
+            throw AppError.persistence
+        }
+    }
+
+    func setTaskCompletion(_ type: RecoveryTaskType, on day: Date, isCompleted: Bool) async throws {
+        let normalizedDay = Calendar.current.startOfDay(for: day)
+        let raw = type.rawValue
+        do {
+            var descriptor = FetchDescriptor<PlanTaskCompletionModel>(
+                predicate: #Predicate { $0.day == normalizedDay && $0.taskRawValue == raw }
+            )
+            descriptor.fetchLimit = 1
+            let existing = try context.fetch(descriptor).first
+
+            if isCompleted {
+                guard existing == nil else { return }
+                let model = PlanTaskCompletionModel(
+                    taskRawValue: raw,
+                    day: normalizedDay,
+                    completedAt: .now
+                )
+                model.profile = try currentProfileModel()
+                context.insert(model)
+            } else if let existing {
+                context.delete(existing)
+            }
+            try save()
+        } catch let error as AppError {
+            throw error
+        } catch {
+            throw AppError.persistence
+        }
+    }
+
     // MARK: - Datenverwaltung
 
     func exportData() async throws -> ExportData {
@@ -192,6 +242,7 @@ final class SwiftDataRecoveryRepository: RecoveryRepository {
             try context.delete(model: TriggerModel.self)
             try context.delete(model: RelapseModel.self)
             try context.delete(model: AchievementModel.self)
+            try context.delete(model: PlanTaskCompletionModel.self)
             try context.delete(model: RecoveryProfileModel.self)
             try context.save()
         } catch {
