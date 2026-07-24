@@ -23,8 +23,16 @@ final class StatisticsViewModel: ViewModel {
         await load()
     }
 
-    func load() async {
-        state = .loading
+    /// Lädt die Statistik neu, ohne den Lade-Spinner zu zeigen
+    /// (verhindert Flackern beim erneuten Öffnen des Tabs).
+    func refresh() async {
+        await load(showLoading: false)
+    }
+
+    func load(showLoading: Bool = true) async {
+        if showLoading {
+            state = .loading
+        }
         do {
             guard let profile = try await repository.loadProfile() else {
                 state = .failed(AppError.notFound)

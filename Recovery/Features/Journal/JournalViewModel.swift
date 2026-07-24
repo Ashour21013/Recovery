@@ -11,6 +11,9 @@ final class JournalViewModel: ViewModel {
 
     private(set) var state: ViewState<[JournalEntry]> = .idle
 
+    /// Bereits genutzte Trigger-Namen (für Schnellauswahl im Editor).
+    private(set) var knownTriggers: [String] = []
+
     private let repository: RecoveryRepository
 
     init(repository: RecoveryRepository) {
@@ -26,6 +29,7 @@ final class JournalViewModel: ViewModel {
         state = .loading
         do {
             let entries = try await repository.fetchJournalEntries()
+            knownTriggers = Self.extractTriggers(from: entries)
             state = .loaded(entries)
         } catch {
             state = .failed(error)
@@ -49,5 +53,13 @@ final class JournalViewModel: ViewModel {
         } catch {
             state = .failed(error)
         }
+    }
+
+    /// Ermittelt eindeutige, alphabetisch sortierte Trigger-Namen.
+    private static func extractTriggers(from entries: [JournalEntry]) -> [String] {
+        let names = entries.compactMap { $0.triggerName }
+            .map { $0.trimmingCharacters(in: .whitespacesAndNewlines) }
+            .filter { !$0.isEmpty }
+        return Array(Set(names)).sorted()
     }
 }

@@ -37,7 +37,8 @@ struct JournalView: View {
                     isShowingEditor = false
                     Task { await viewModel?.addEntry(entry) }
                 },
-                onCancel: { isShowingEditor = false }
+                onCancel: { isShowingEditor = false },
+                knownTriggers: viewModel?.knownTriggers ?? []
             )
         }
     }

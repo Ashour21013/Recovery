@@ -8,6 +8,8 @@ struct JournalEditorView: View {
 
     let onSave: (JournalEntry) -> Void
     let onCancel: () -> Void
+    /// Bereits genutzte Trigger für die Schnellauswahl.
+    var knownTriggers: [String] = []
 
     @State private var mood: Mood?
     @State private var triggerName: String = ""
@@ -26,8 +28,22 @@ struct JournalEditorView: View {
                     }
 
                     section(title: "Gab es einen Trigger?") {
-                        TextField("z. B. Stress, Langeweile, Feier…", text: $triggerName)
-                            .textFieldStyle(.roundedBorder)
+                        VStack(alignment: .leading, spacing: AppSpacing.s) {
+                            if !knownTriggers.isEmpty {
+                                FlowLayout {
+                                    ForEach(knownTriggers, id: \.self) { name in
+                                        SelectableChip(
+                                            title: name,
+                                            isSelected: triggerName.trimmed.caseInsensitiveEquals(name),
+                                            action: { selectTrigger(name) }
+                                        )
+                                    }
+                                }
+                            }
+
+                            TextField("z. B. Stress, Langeweile, Feier…", text: $triggerName)
+                                .textFieldStyle(.roundedBorder)
+                        }
                     }
 
                     section(title: "Notizen") {
@@ -63,6 +79,15 @@ struct JournalEditorView: View {
         onSave(entry)
     }
 
+    /// Wählt einen Trigger-Chip aus bzw. hebt die Auswahl wieder auf.
+    private func selectTrigger(_ name: String) {
+        if triggerName.trimmed.caseInsensitiveEquals(name) {
+            triggerName = ""
+        } else {
+            triggerName = name
+        }
+    }
+
     private func section<Content: View>(
         title: String,
         @ViewBuilder content: () -> Content
@@ -77,6 +102,10 @@ struct JournalEditorView: View {
 
 private extension String {
     var trimmed: String { trimmingCharacters(in: .whitespacesAndNewlines) }
+
+    func caseInsensitiveEquals(_ other: String) -> Bool {
+        compare(other, options: .caseInsensitive) == .orderedSame
+    }
 }
 
 #Preview {

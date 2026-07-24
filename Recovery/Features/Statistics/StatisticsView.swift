@@ -26,6 +26,10 @@ struct StatisticsView: View {
             }
             await viewModel?.onAppear()
         }
+        .onAppear {
+            // Bei jedem Wechsel auf diesen Tab die Kennzahlen aktualisieren.
+            Task { await viewModel?.refresh() }
+        }
     }
 
     @ViewBuilder
