@@ -16,6 +16,11 @@ struct MainTabView: View {
                 .tabItem {
                     Label("Journal", systemImage: "book.fill")
                 }
+
+            StatisticsView()
+                .tabItem {
+                    Label("Statistik", systemImage: "chart.bar.fill")
+                }
         }
     }
 }
