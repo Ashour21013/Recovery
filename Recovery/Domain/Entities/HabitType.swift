@@ -33,4 +33,28 @@ enum HabitType: String, CaseIterable, Identifiable, Hashable {
         case .socialMedia: "iphone"
         }
     }
+
+    /// Ausdrucksstarkes Emoji für illustrative Darstellung im Onboarding.
+    var emoji: String {
+        switch self {
+        case .smoking: "🚭"
+        case .pornography: "🙈"
+        case .alcohol: "🍷"
+        case .gambling: "🎲"
+        case .sugar: "🍬"
+        case .socialMedia: "📱"
+        }
+    }
+
+    /// Kurze, ermutigende Beschreibung der jeweiligen Gewohnheit.
+    var subtitle: String {
+        switch self {
+        case .smoking: "Frei atmen, länger leben"
+        case .pornography: "Echte Verbindung statt Bildschirm"
+        case .alcohol: "Klarer Kopf, mehr Energie"
+        case .gambling: "Kontrolle zurückgewinnen"
+        case .sugar: "Mehr Energie, weniger Heißhunger"
+        case .socialMedia: "Präsenter im echten Leben"
+        }
+    }
 }

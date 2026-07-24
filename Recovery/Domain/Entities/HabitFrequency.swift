@@ -19,4 +19,15 @@ enum HabitFrequency: String, CaseIterable, Identifiable, Hashable {
         case .occasionally: "Gelegentlich"
         }
     }
+
+    /// Symbol zur illustrativen Darstellung im Onboarding.
+    var iconName: String {
+        switch self {
+        case .multipleTimesADay: "clock.badge.exclamationmark"
+        case .daily: "sun.max.fill"
+        case .fewTimesAWeek: "calendar"
+        case .weekly: "calendar.badge.clock"
+        case .occasionally: "sparkles"
+        }
+    }
 }

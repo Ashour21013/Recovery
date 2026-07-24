@@ -8,28 +8,27 @@ struct FrequencyView: View {
     let onContinue: () -> Void
 
     var body: some View {
-        VStack(alignment: .leading, spacing: AppSpacing.l) {
-            Text("Wie häufig tritt die Gewohnheit auf?")
-                .font(AppFont.title)
-
+        OnboardingScaffold(
+            step: .frequency,
+            title: "Wie oft passiert es?",
+            subtitle: "Ehrlichkeit hilft dir, deinen Fortschritt realistisch einzuschätzen."
+        ) {
             VStack(spacing: AppSpacing.s) {
                 ForEach(HabitFrequency.allCases) { frequency in
                     SelectableRow(
                         title: frequency.title,
+                        systemImage: frequency.iconName,
                         isSelected: selected == frequency,
                         action: { onSelect(frequency) }
                     )
                 }
             }
-
-            Spacer()
-
+        } footer: {
             PrimaryButton(title: "Weiter", action: onContinue)
                 .disabled(!canContinue)
+                .opacity(canContinue ? 1 : 0.5)
+                .animation(.smooth, value: canContinue)
         }
-        .padding(AppSpacing.l)
-        .navigationTitle("Häufigkeit")
-        .navigationBarTitleDisplayMode(.inline)
     }
 }
 

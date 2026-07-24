@@ -18,10 +18,17 @@ struct RootView: View {
                 ProgressView()
             } else if hasCompletedOnboarding {
                 MainTabView()
+                    .transition(.opacity)
             } else {
-                OnboardingView(onComplete: { hasCompletedOnboarding = true })
+                OnboardingView(onComplete: {
+                    withAnimation(.smooth(duration: 0.5)) {
+                        hasCompletedOnboarding = true
+                    }
+                })
+                .transition(.opacity)
             }
         }
+        .animation(.smooth(duration: 0.5), value: hasCompletedOnboarding)
         .task {
             let repository = dependencies.makeRecoveryRepository()
             let profile = try? await repository.loadProfile()

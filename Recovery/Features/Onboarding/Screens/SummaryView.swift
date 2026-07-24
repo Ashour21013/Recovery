@@ -1,57 +1,123 @@
 import SwiftUI
 
 /// Screen 5 – Zusammenfassung der erfassten Eingaben.
+///
+/// Fasst die Auswahl hochwertig zusammen und leitet mit einer kurzen
+/// Erfolgs-Animation zum Dashboard über. Reine UI-Komponente.
 struct SummaryView: View {
     let draft: OnboardingDraft
     let onFinish: () -> Void
 
-    var body: some View {
-        VStack(alignment: .leading, spacing: AppSpacing.l) {
-            Text("Zusammenfassung")
-                .font(AppFont.title)
+    @State private var isFinishing = false
 
-            VStack(spacing: AppSpacing.s) {
-                summaryRow(label: "Gewohnheit", value: draft.habitType?.title ?? "–")
-                summaryRow(label: "Häufigkeit", value: draft.frequency?.title ?? "–")
-                reasonRow
+    var body: some View {
+        ZStack {
+            OnboardingScaffold(
+                step: .summary,
+                title: "Bereit für den Neustart?",
+                subtitle: "Hier ist dein persönlicher Plan. Du kannst alles später anpassen."
+            ) {
+                VStack(spacing: AppSpacing.m) {
+                    if let habit = draft.habitType {
+                        HStack {
+                            Spacer()
+                            OnboardingIllustration(emoji: habit.emoji, tint: AppColor.accent)
+                                .scaleEffect(0.8)
+                            Spacer()
+                        }
+                    }
+
+                    summaryCard(
+                        icon: "flag.checkered",
+                        label: "Gewohnheit",
+                        value: draft.habitType?.title ?? "–"
+                    )
+                    summaryCard(
+                        icon: "clock.arrow.circlepath",
+                        label: "Häufigkeit",
+                        value: draft.frequency?.title ?? "–"
+                    )
+                    reasonCard
+                }
+            } footer: {
+                PrimaryButton(title: "Meine Reise beginnen") {
+                    withAnimation(.smooth(duration: 0.4)) { isFinishing = true }
+                    DispatchQueue.main.asyncAfter(deadline: .now() + 0.9) {
+                        onFinish()
+                    }
+                }
             }
 
-            Spacer()
-
-            PrimaryButton(title: "Fertig", action: onFinish)
+            if isFinishing {
+                completionOverlay
+                    .transition(.opacity)
+            }
         }
-        .padding(AppSpacing.l)
-        .navigationTitle("Übersicht")
-        .navigationBarTitleDisplayMode(.inline)
     }
 
-    private func summaryRow(label: String, value: String) -> some View {
-        HStack {
-            Text(label)
-                .foregroundStyle(.secondary)
+    // MARK: - Bausteine
+
+    private func summaryCard(icon: String, label: String, value: String) -> some View {
+        HStack(spacing: AppSpacing.m) {
+            Image(systemName: icon)
+                .font(.title3)
+                .foregroundStyle(AppColor.accent)
+                .frame(width: 32)
+            VStack(alignment: .leading, spacing: 2) {
+                Text(label)
+                    .font(.caption)
+                    .foregroundStyle(.secondary)
+                Text(value)
+                    .font(.body.weight(.semibold))
+            }
             Spacer()
-            Text(value)
-                .fontWeight(.medium)
         }
         .padding(AppSpacing.m)
         .background(
-            RoundedRectangle(cornerRadius: 12)
+            RoundedRectangle(cornerRadius: 16, style: .continuous)
                 .fill(Color(.secondarySystemBackground))
         )
     }
 
-    private var reasonRow: some View {
-        VStack(alignment: .leading, spacing: AppSpacing.xs) {
-            Text("Motivation")
-                .foregroundStyle(.secondary)
-            Text(draft.reason.isEmpty ? "–" : draft.reason)
-                .frame(maxWidth: .infinity, alignment: .leading)
+    private var reasonCard: some View {
+        HStack(spacing: AppSpacing.m) {
+            Image(systemName: "quote.opening")
+                .font(.title3)
+                .foregroundStyle(AppColor.accent)
+                .frame(width: 32)
+            VStack(alignment: .leading, spacing: 2) {
+                Text("Dein Warum")
+                    .font(.caption)
+                    .foregroundStyle(.secondary)
+                Text(draft.reason.isEmpty ? "–" : draft.reason)
+                    .font(.body.weight(.medium))
+                    .frame(maxWidth: .infinity, alignment: .leading)
+            }
+            Spacer(minLength: 0)
         }
         .padding(AppSpacing.m)
         .background(
-            RoundedRectangle(cornerRadius: 12)
+            RoundedRectangle(cornerRadius: 16, style: .continuous)
                 .fill(Color(.secondarySystemBackground))
         )
+    }
+
+    /// Kurze Erfolgs-Animation als Übergang zum Dashboard.
+    private var completionOverlay: some View {
+        ZStack {
+            Color(.systemBackground).ignoresSafeArea()
+            VStack(spacing: AppSpacing.l) {
+                Image(systemName: "checkmark.circle.fill")
+                    .font(.system(size: 88))
+                    .foregroundStyle(AppColor.accent.gradient)
+                    .symbolEffect(.bounce, value: isFinishing)
+                Text("Los geht's!")
+                    .font(.title.bold())
+                Text("Dein erster cleaner Tag beginnt jetzt.")
+                    .font(.body)
+                    .foregroundStyle(.secondary)
+            }
+        }
     }
 }
 

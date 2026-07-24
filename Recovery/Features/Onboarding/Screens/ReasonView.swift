@@ -1,34 +1,54 @@
 import SwiftUI
 
-/// Screen 3 – Grund, warum der Nutzer aufhören möchte (mehrzeiliges Textfeld).
+/// Screen 3 – Grund, warum der Nutzer aufhören möchte.
+///
+/// Persönliche Ansprache mit Illustration und optionalen Vorschlägen, die den
+/// Einstieg erleichtern. Reine UI-Komponente.
 struct ReasonView: View {
     @Binding var reason: String
     let onContinue: () -> Void
 
+    private let suggestions = [
+        "Für meine Gesundheit",
+        "Für meine Familie",
+        "Um Geld zu sparen",
+        "Um mich freier zu fühlen",
+        "Für mehr Selbstachtung"
+    ]
+
     var body: some View {
-        VStack(alignment: .leading, spacing: AppSpacing.l) {
-            Text("Warum möchtest du aufhören?")
-                .font(AppFont.title)
+        OnboardingScaffold(
+            step: .reason,
+            title: "Was ist dein Warum?",
+            subtitle: "Deine persönliche Motivation gibt dir Kraft in schwierigen Momenten."
+        ) {
+            VStack(alignment: .leading, spacing: AppSpacing.m) {
+                HStack {
+                    Spacer()
+                    OnboardingIllustration(systemImage: "target", tint: .pink)
+                        .scaleEffect(0.8)
+                    Spacer()
+                }
 
-            Text("Deine Motivation hilft dir in schwierigen Momenten.")
-                .font(AppFont.body)
-                .foregroundStyle(.secondary)
+                AppTextEditor(placeholder: "Ich möchte aufhören, weil…", text: $reason)
 
-            TextEditor(text: $reason)
-                .frame(minHeight: 160)
-                .padding(AppSpacing.s)
-                .background(
-                    RoundedRectangle(cornerRadius: 12)
-                        .fill(Color(.secondarySystemBackground))
-                )
+                Text("Vorschläge")
+                    .font(.caption.weight(.semibold))
+                    .foregroundStyle(.secondary)
 
-            Spacer()
-
+                FlowLayout(spacing: AppSpacing.s) {
+                    ForEach(suggestions, id: \.self) { suggestion in
+                        SelectableChip(
+                            title: suggestion,
+                            isSelected: reason == suggestion,
+                            action: { withAnimation(.smooth) { reason = suggestion } }
+                        )
+                    }
+                }
+            }
+        } footer: {
             PrimaryButton(title: "Weiter", action: onContinue)
         }
-        .padding(AppSpacing.l)
-        .navigationTitle("Motivation")
-        .navigationBarTitleDisplayMode(.inline)
     }
 }
 
