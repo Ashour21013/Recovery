@@ -68,10 +68,13 @@ final class DashboardViewModel: ViewModel {
 
     // MARK: - Recovery-Plan
 
+    /// Steuert die Anzeige des Plan-Editors.
+    var isShowingPlanEditor = false
+
     /// Schaltet eine Plan-Aufgabe um und aktualisiert den Fortschritt optimistisch.
-    func toggleTask(_ type: RecoveryTaskType) async {
+    func toggleTask(_ taskId: String) async {
         guard case let .loaded(data) = state,
-              let index = data.plan.tasks.firstIndex(where: { $0.type == type }) else { return }
+              let index = data.plan.tasks.firstIndex(where: { $0.id == taskId }) else { return }
 
         let newValue = !data.plan.tasks[index].isCompleted
 
@@ -81,11 +84,21 @@ final class DashboardViewModel: ViewModel {
         state = .loaded(updated)
 
         do {
-            try await repository.setTaskCompletion(type, on: .now, isCompleted: newValue)
+            try await repository.setTaskCompletion(taskId, on: .now, isCompleted: newValue)
         } catch {
             // Bei Fehler den ursprünglichen Zustand wiederherstellen.
             state = .loaded(data)
         }
+    }
+
+    /// Öffnet den Editor zum Anpassen des Plans.
+    func presentPlanEditor() {
+        isShowingPlanEditor = true
+    }
+
+    /// Wird nach Änderungen im Plan-Editor aufgerufen, um neu zu laden.
+    func planDidChange() async {
+        await load()
     }
 
     // MARK: - Ziele

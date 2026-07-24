@@ -7,7 +7,8 @@ import SwiftUI
 /// außen und enthält keine Geschäftslogik.
 struct RecoveryPlanCardView: View {
     let plan: RecoveryPlan
-    let onToggle: (RecoveryTaskType) -> Void
+    let onToggle: (String) -> Void
+    var onEdit: () -> Void = {}
 
     var body: some View {
         CardContainer {
@@ -20,7 +21,7 @@ struct RecoveryPlanCardView: View {
 
                 VStack(spacing: AppSpacing.xs) {
                     ForEach(plan.tasks) { task in
-                        RecoveryTaskRow(task: task) { onToggle(task.type) }
+                        RecoveryTaskRow(task: task) { onToggle(task.id) }
                         if task.id != plan.tasks.last?.id {
                             Divider()
                         }
@@ -40,6 +41,13 @@ struct RecoveryPlanCardView: View {
                 .foregroundStyle(.secondary)
                 .contentTransition(.numericText(value: Double(plan.completedCount)))
                 .animation(.smooth, value: plan.completedCount)
+            Button(action: onEdit) {
+                Image(systemName: "slider.horizontal.3")
+                    .font(.subheadline.weight(.semibold))
+                    .foregroundStyle(AppColor.accent)
+            }
+            .buttonStyle(.plain)
+            .accessibilityLabel("Plan anpassen")
         }
     }
 }
@@ -52,17 +60,17 @@ private struct RecoveryTaskRow: View {
     var body: some View {
         Button(action: onToggle) {
             HStack(spacing: AppSpacing.m) {
-                Image(systemName: task.type.systemImage)
+                Image(systemName: task.task.systemImage)
                     .font(.body)
                     .foregroundStyle(task.isCompleted ? AppColor.accent : .secondary)
                     .frame(width: 28)
 
                 VStack(alignment: .leading, spacing: 2) {
-                    Text(task.type.title)
+                    Text(task.task.title)
                         .font(.subheadline.weight(.medium))
                         .foregroundStyle(.primary)
                         .strikethrough(task.isCompleted, color: .secondary)
-                    Text(task.type.subtitle)
+                    Text(task.task.subtitle)
                         .font(.caption)
                         .foregroundStyle(.secondary)
                 }
@@ -80,7 +88,7 @@ private struct RecoveryTaskRow: View {
         }
         .buttonStyle(.plain)
         .animation(.smooth(duration: 0.25), value: task.isCompleted)
-        .accessibilityLabel(task.type.title)
+        .accessibilityLabel(task.task.title)
         .accessibilityValue(task.isCompleted ? "erledigt" : "offen")
         .accessibilityAddTraits(.isButton)
     }
@@ -91,11 +99,11 @@ private struct RecoveryTaskRow: View {
         plan: RecoveryPlan(
             date: .now,
             tasks: [
-                RecoveryTask(type: .journal, isCompleted: true),
-                RecoveryTask(type: .meditation, isCompleted: false),
-                RecoveryTask(type: .motivation, isCompleted: true),
-                RecoveryTask(type: .walk, isCompleted: false),
-                RecoveryTask(type: .sport, isCompleted: false)
+                RecoveryTask(task: PlanTask(.journal), isCompleted: true),
+                RecoveryTask(task: PlanTask(.meditation), isCompleted: false),
+                RecoveryTask(task: PlanTask(.motivation), isCompleted: true),
+                RecoveryTask(task: PlanTask(.walk), isCompleted: false),
+                RecoveryTask(task: PlanTask(.sport), isCompleted: false)
             ]
         ),
         onToggle: { _ in }

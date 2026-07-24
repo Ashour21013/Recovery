@@ -3,11 +3,12 @@ import Foundation
 /// Eine einzelne Aufgabe des Recovery-Plans mit ihrem heutigen Zustand.
 /// Reine Domain-Entität ohne UI-Bezug.
 struct RecoveryTask: Identifiable, Equatable {
-    let type: RecoveryTaskType
+    /// Zugrunde liegende Aufgaben-Definition.
+    let task: PlanTask
     /// Ob die Aufgabe für den aktuellen Tag abgehakt wurde.
     var isCompleted: Bool
 
-    var id: String { type.rawValue }
+    var id: String { task.id }
 }
 
 /// Der Recovery-Plan eines Tages: die Aufgaben plus abgeleiteter Fortschritt.

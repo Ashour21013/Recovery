@@ -79,6 +79,14 @@ struct DashboardView: View {
                 onCancel: { viewModel.isShowingGoalPicker = false }
             )
         }
+        .sheet(isPresented: Binding(
+            get: { viewModel.isShowingPlanEditor },
+            set: { viewModel.isShowingPlanEditor = $0 }
+        )) {
+            PlanEditorView(onChange: {
+                Task { await viewModel.planDidChange() }
+            })
+        }
         .alert(
             "Ziel erreicht! 🎉",
             isPresented: Binding(
@@ -126,7 +134,8 @@ struct DashboardView: View {
                 )
                 RecoveryPlanCardView(
                     plan: data.plan,
-                    onToggle: { type in Task { await viewModel.toggleTask(type) } }
+                    onToggle: { taskId in Task { await viewModel.toggleTask(taskId) } },
+                    onEdit: viewModel.presentPlanEditor
                 )
 
                 RelapseButton(action: { isShowingRelapse = true })

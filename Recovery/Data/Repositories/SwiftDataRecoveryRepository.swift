@@ -138,27 +138,30 @@ final class SwiftDataRecoveryRepository: RecoveryRepository {
     func fetchPlan(for day: Date) async throws -> RecoveryPlan {
         let normalizedDay = Calendar.current.startOfDay(for: day)
         do {
-            let descriptor = FetchDescriptor<PlanTaskCompletionModel>(
+            let definition = try planDefinition()
+
+            let completionDescriptor = FetchDescriptor<PlanTaskCompletionModel>(
                 predicate: #Predicate { $0.day == normalizedDay }
             )
-            let completions = try context.fetch(descriptor)
-            let completedTypes = Set(completions.map(\.taskRawValue))
+            let completions = try context.fetch(completionDescriptor)
+            let completedIds = Set(completions.map(\.taskRawValue))
 
-            let tasks = RecoveryTaskType.defaultPlan.map { type in
-                RecoveryTask(type: type, isCompleted: completedTypes.contains(type.rawValue))
+            let tasks = definition.map { task in
+                RecoveryTask(task: task, isCompleted: completedIds.contains(task.id))
             }
             return RecoveryPlan(date: normalizedDay, tasks: tasks)
+        } catch let error as AppError {
+            throw error
         } catch {
             throw AppError.persistence
         }
     }
 
-    func setTaskCompletion(_ type: RecoveryTaskType, on day: Date, isCompleted: Bool) async throws {
+    func setTaskCompletion(_ taskId: String, on day: Date, isCompleted: Bool) async throws {
         let normalizedDay = Calendar.current.startOfDay(for: day)
-        let raw = type.rawValue
         do {
             var descriptor = FetchDescriptor<PlanTaskCompletionModel>(
-                predicate: #Predicate { $0.day == normalizedDay && $0.taskRawValue == raw }
+                predicate: #Predicate { $0.day == normalizedDay && $0.taskRawValue == taskId }
             )
             descriptor.fetchLimit = 1
             let existing = try context.fetch(descriptor).first
@@ -166,7 +169,7 @@ final class SwiftDataRecoveryRepository: RecoveryRepository {
             if isCompleted {
                 guard existing == nil else { return }
                 let model = PlanTaskCompletionModel(
-                    taskRawValue: raw,
+                    taskRawValue: taskId,
                     day: normalizedDay,
                     completedAt: .now
                 )
@@ -181,6 +184,103 @@ final class SwiftDataRecoveryRepository: RecoveryRepository {
         } catch {
             throw AppError.persistence
         }
+    }
+
+    func fetchPlanTasks() async throws -> [PlanTask] {
+        do {
+            return try planDefinition()
+        } catch let error as AppError {
+            throw error
+        } catch {
+            throw AppError.persistence
+        }
+    }
+
+    func addPlanTask(_ task: PlanTask) async throws {
+        do {
+            let existing = try fetchPlanTaskModels()
+            // Doppelte (gleiche id) vermeiden.
+            guard !existing.contains(where: { $0.id == task.id }) else { return }
+            let nextOrder = (existing.map(\.order).max() ?? -1) + 1
+            let model = PlanTaskModel(
+                id: task.id,
+                title: task.title,
+                subtitle: task.subtitle,
+                systemImage: task.systemImage,
+                isCustom: task.isCustom,
+                order: nextOrder
+            )
+            model.profile = try currentProfileModel()
+            context.insert(model)
+            try save()
+        } catch let error as AppError {
+            throw error
+        } catch {
+            throw AppError.persistence
+        }
+    }
+
+    func removePlanTask(id: String) async throws {
+        do {
+            var descriptor = FetchDescriptor<PlanTaskModel>(
+                predicate: #Predicate { $0.id == id }
+            )
+            descriptor.fetchLimit = 1
+            if let model = try context.fetch(descriptor).first {
+                context.delete(model)
+                try save()
+            }
+        } catch {
+            throw AppError.persistence
+        }
+    }
+
+    /// Liefert die Plan-Definition und legt bei Bedarf den Standard-Plan an
+    /// (Auto-Seeding beim ersten Zugriff nach dem Onboarding).
+    private func planDefinition() throws -> [PlanTask] {
+        let models = try fetchPlanTaskModels()
+        if models.isEmpty {
+            return try seedDefaultPlan()
+        }
+        return models.map(planTask(from:))
+    }
+
+    private func fetchPlanTaskModels() throws -> [PlanTaskModel] {
+        let descriptor = FetchDescriptor<PlanTaskModel>(
+            sortBy: [SortDescriptor(\.order, order: .forward)]
+        )
+        return try context.fetch(descriptor)
+    }
+
+    private func seedDefaultPlan() throws -> [PlanTask] {
+        let profile = try currentProfileModel()
+        var result: [PlanTask] = []
+        for (index, type) in RecoveryTaskType.defaultPlan.enumerated() {
+            let task = PlanTask(type)
+            let model = PlanTaskModel(
+                id: task.id,
+                title: task.title,
+                subtitle: task.subtitle,
+                systemImage: task.systemImage,
+                isCustom: false,
+                order: index
+            )
+            model.profile = profile
+            context.insert(model)
+            result.append(task)
+        }
+        try save()
+        return result
+    }
+
+    private func planTask(from model: PlanTaskModel) -> PlanTask {
+        PlanTask(
+            id: model.id,
+            title: model.title,
+            subtitle: model.subtitle,
+            systemImage: model.systemImage,
+            isCustom: model.isCustom
+        )
     }
 
     // MARK: - Datenverwaltung
@@ -243,6 +343,7 @@ final class SwiftDataRecoveryRepository: RecoveryRepository {
             try context.delete(model: RelapseModel.self)
             try context.delete(model: AchievementModel.self)
             try context.delete(model: PlanTaskCompletionModel.self)
+            try context.delete(model: PlanTaskModel.self)
             try context.delete(model: RecoveryProfileModel.self)
             try context.save()
         } catch {

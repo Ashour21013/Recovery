@@ -45,7 +45,14 @@ protocol RecoveryRepository: Repository {
     /// Lädt den Plan für den angegebenen Tag inkl. Abhak-Zustand.
     func fetchPlan(for day: Date) async throws -> RecoveryPlan
     /// Schaltet den Abhak-Zustand einer Aufgabe an einem Tag um.
-    func setTaskCompletion(_ type: RecoveryTaskType, on day: Date, isCompleted: Bool) async throws
+    func setTaskCompletion(_ taskId: String, on day: Date, isCompleted: Bool) async throws
+
+    /// Lädt die anpassbare Plan-Definition (Aufgabenliste, sortiert).
+    func fetchPlanTasks() async throws -> [PlanTask]
+    /// Fügt eine Aufgabe zur Plan-Definition hinzu (ans Ende).
+    func addPlanTask(_ task: PlanTask) async throws
+    /// Entfernt eine Aufgabe aus der Plan-Definition.
+    func removePlanTask(id: String) async throws
 
     // MARK: - Datenverwaltung
 
