@@ -3,10 +3,9 @@ import Observation
 
 /// ViewModel des Dashboards (MVVM).
 ///
-/// Hält den Präsentationszustand des Dashboards und lädt die anzuzeigenden
-/// Daten. Aktuell werden bewusst Mockdaten verwendet (keine Persistenz,
-/// keine Use Cases). Die Struktur ist so gewählt, dass das Laden später
-/// transparent durch einen Use Case ersetzt werden kann.
+/// Hält den Präsentationszustand und lädt die Daten über das
+/// `RecoveryRepository`. Es kennt keine Persistenzdetails (kein SwiftData),
+/// sondern arbeitet ausschließlich mit Domain-Entities.
 @MainActor
 @Observable
 final class DashboardViewModel: ViewModel {
@@ -17,16 +16,31 @@ final class DashboardViewModel: ViewModel {
     /// Steuert die Anzeige des Cravings-Hilfe-Sheets.
     var isShowingCravingHelp = false
 
-    /// Lädt die Dashboard-Daten. Aktuell aus einer Mock-Quelle.
-    func onAppear() {
-        guard case .idle = state else { return }
-        load()
+    private let repository: RecoveryRepository
+
+    init(repository: RecoveryRepository) {
+        self.repository = repository
     }
 
-    func load() {
+    /// Lädt die Dashboard-Daten. Idempotent beim ersten Erscheinen.
+    func onAppear() async {
+        if case .loaded = state { return }
+        await load()
+    }
+
+    func load() async {
         state = .loading
-        // Später: Use Case aufrufen (async). Vorerst synchrone Mockdaten.
-        state = .loaded(DashboardMockData.sample)
+        do {
+            guard let profile = try await repository.loadProfile() else {
+                state = .failed(AppError.notFound)
+                return
+            }
+            let relapses = try await repository.fetchRelapses()
+            let journal = try await repository.fetchJournalEntries()
+            state = .loaded(makeDashboardData(profile: profile, relapses: relapses, journalCount: journal.count))
+        } catch {
+            state = .failed(error)
+        }
     }
 
     /// Nutzer meldet akutes Verlangen ("Cravings").
@@ -40,6 +54,38 @@ final class DashboardViewModel: ViewModel {
     func formattedMoneySaved(for progress: ProgressSummary) -> String {
         progress.moneySaved.formatted(
             .currency(code: progress.currencyCode)
+        )
+    }
+
+    // MARK: - Ableitung der Anzeige-Daten aus der Domain
+
+    private func makeDashboardData(
+        profile: RecoveryProfile,
+        relapses: [Relapse],
+        journalCount: Int
+    ) -> DashboardData {
+        let streak = profile.streak()
+        return DashboardData(
+            habitType: profile.habitType,
+            streak: streak,
+            quote: QuoteProvider.quote(for: streak.currentDays),
+            progress: makeProgress(streak: streak, relapseCount: relapses.count),
+            dailyGoal: DailyGoal(
+                title: "Heutige Ziele",
+                completedTasks: min(journalCount, 3),
+                totalTasks: 3
+            )
+        )
+    }
+
+    private func makeProgress(streak: Streak, relapseCount: Int) -> ProgressSummary {
+        let milestone = Milestone.next(afterDays: streak.currentDays)
+        return ProgressSummary(
+            milestoneFraction: milestone.fraction(currentDays: streak.currentDays),
+            nextMilestoneTitle: milestone.title,
+            moneySaved: Decimal(streak.currentDays) * 7,
+            currencyCode: "EUR",
+            avoidedCount: max(0, streak.currentDays * 12 - relapseCount)
         )
     }
 }

@@ -18,6 +18,15 @@ final class OnboardingViewModel: ViewModel {
     /// Im Flow erfasste Eingaben.
     private(set) var draft = OnboardingDraft()
 
+    /// Signalisiert einen Speicherfehler beim Abschluss.
+    var didFailToSave = false
+
+    private let repository: RecoveryRepository
+
+    init(repository: RecoveryRepository) {
+        self.repository = repository
+    }
+
     // MARK: - Validierung pro Schritt
 
     var canContinueFromHabitSelection: Bool { draft.isHabitSelected }
@@ -55,8 +64,23 @@ final class OnboardingViewModel: ViewModel {
         path.append(.summary)
     }
 
-    /// Schließt das Onboarding ab. Persistierung folgt in einem späteren Schritt.
-    func finish() {
-        path.removeAll()
+    /// Schließt das Onboarding ab und persistiert das Profil via Repository.
+    /// Gibt `true` zurück, wenn das Speichern erfolgreich war.
+    func finish() async -> Bool {
+        guard let habitType = draft.habitType else { return false }
+        let profile = RecoveryProfile(
+            habitType: habitType,
+            reason: draft.reason,
+            frequency: draft.frequency,
+            startDate: .now
+        )
+        do {
+            try await repository.createProfile(profile)
+            path.removeAll()
+            return true
+        } catch {
+            didFailToSave = true
+            return false
+        }
     }
 }

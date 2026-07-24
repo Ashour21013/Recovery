@@ -8,37 +8,58 @@ import SwiftUI
 /// dessen aufbereitete Daten dar. Aktuell werden Mockdaten genutzt.
 struct DashboardView: View {
 
-    @State private var viewModel = DashboardViewModel()
+    @Environment(\.dependencies) private var dependencies
+    @State private var viewModel: DashboardViewModel?
 
     var body: some View {
         NavigationStack {
             Group {
-                switch viewModel.state {
-                case .idle, .loading:
+                if let viewModel {
+                    content(for: viewModel)
+                } else {
                     ProgressView("Lädt…")
                         .frame(maxWidth: .infinity, maxHeight: .infinity)
-
-                case let .loaded(data):
-                    content(for: data)
-
-                case .failed:
-                    ContentUnavailableView(
-                        "Etwas ist schiefgelaufen",
-                        systemImage: "exclamationmark.triangle",
-                        description: Text("Bitte versuche es erneut.")
-                    )
                 }
             }
             .navigationTitle("Übersicht")
             .background(Color(.systemGroupedBackground))
         }
-        .sheet(isPresented: $viewModel.isShowingCravingHelp) {
-            CravingHelpView(onDismiss: { viewModel.isShowingCravingHelp = false })
+        .task {
+            if viewModel == nil {
+                viewModel = DashboardViewModel(repository: dependencies.makeRecoveryRepository())
+            }
+            await viewModel?.onAppear()
         }
-        .onAppear(perform: viewModel.onAppear)
     }
 
-    private func content(for data: DashboardData) -> some View {
+    @ViewBuilder
+    private func content(for viewModel: DashboardViewModel) -> some View {
+        Group {
+            switch viewModel.state {
+            case .idle, .loading:
+                ProgressView("Lädt…")
+                    .frame(maxWidth: .infinity, maxHeight: .infinity)
+
+            case let .loaded(data):
+                loadedContent(for: data, viewModel: viewModel)
+
+            case .failed:
+                ContentUnavailableView(
+                    "Etwas ist schiefgelaufen",
+                    systemImage: "exclamationmark.triangle",
+                    description: Text("Bitte versuche es erneut.")
+                )
+            }
+        }
+        .sheet(isPresented: Binding(
+            get: { viewModel.isShowingCravingHelp },
+            set: { viewModel.isShowingCravingHelp = $0 }
+        )) {
+            CravingHelpView(onDismiss: { viewModel.isShowingCravingHelp = false })
+        }
+    }
+
+    private func loadedContent(for data: DashboardData, viewModel: DashboardViewModel) -> some View {
         ScrollView {
             VStack(spacing: AppSpacing.m) {
                 StreakCardView(streak: data.streak)

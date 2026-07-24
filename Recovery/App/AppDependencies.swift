@@ -14,8 +14,12 @@ final class AppDependencies {
 
     init() {
         do {
-            // Registrierte SwiftData-Modelle werden später ergänzt.
-            let schema = Schema([])
+            let schema = Schema([
+                RecoveryProfileModel.self,
+                JournalEntryModel.self,
+                TriggerModel.self,
+                RelapseModel.self
+            ])
             let configuration = ModelConfiguration(schema: schema, isStoredInMemoryOnly: false)
             self.modelContainer = try ModelContainer(for: schema, configurations: [configuration])
         } catch {
@@ -24,6 +28,13 @@ final class AppDependencies {
     }
 
     // MARK: - Factories
-    // Repositories und Use Cases werden hier bereitgestellt, sobald
-    // die entsprechenden Features implementiert werden.
+
+    /// Erstellt das Recovery-Repository auf Basis des Main-Kontexts.
+    ///
+    /// Views/ViewModels erhalten ausschließlich die Protokoll-Abstraktion
+    /// `RecoveryRepository`, niemals SwiftData-Typen.
+    @MainActor
+    func makeRecoveryRepository() -> RecoveryRepository {
+        SwiftDataRecoveryRepository(context: modelContainer.mainContext)
+    }
 }

@@ -9,22 +9,37 @@ import SwiftUI
 /// nur Aktionen an das ViewModel (Trennung von Logik und UI).
 struct OnboardingView: View {
 
-    @State private var viewModel = OnboardingViewModel()
+    @Environment(\.dependencies) private var dependencies
+    @State private var viewModel: OnboardingViewModel?
 
     /// Wird aufgerufen, sobald das Onboarding abgeschlossen ist.
     let onComplete: () -> Void
 
     var body: some View {
-        NavigationStack(path: $viewModel.path) {
-            WelcomeView(onContinue: viewModel.start)
-                .navigationDestination(for: OnboardingStep.self) { step in
-                    destination(for: step)
+        Group {
+            if let viewModel {
+                NavigationStack(path: Binding(
+                    get: { viewModel.path },
+                    set: { viewModel.path = $0 }
+                )) {
+                    WelcomeView(onContinue: viewModel.start)
+                        .navigationDestination(for: OnboardingStep.self) { step in
+                            destination(for: step, viewModel: viewModel)
+                        }
                 }
+            } else {
+                ProgressView()
+            }
+        }
+        .task {
+            if viewModel == nil {
+                viewModel = OnboardingViewModel(repository: dependencies.makeRecoveryRepository())
+            }
         }
     }
 
     @ViewBuilder
-    private func destination(for step: OnboardingStep) -> some View {
+    private func destination(for step: OnboardingStep, viewModel: OnboardingViewModel) -> some View {
         switch step {
         case .habitSelection:
             HabitSelectionView(
@@ -55,8 +70,11 @@ struct OnboardingView: View {
             SummaryView(
                 draft: viewModel.draft,
                 onFinish: {
-                    viewModel.finish()
-                    onComplete()
+                    Task {
+                        if await viewModel.finish() {
+                            onComplete()
+                        }
+                    }
                 }
             )
         }
