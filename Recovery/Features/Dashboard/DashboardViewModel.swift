@@ -19,17 +19,25 @@ final class DashboardViewModel: ViewModel {
     /// Steuert die Anzeige des Ziel-Auswahl-Sheets.
     var isShowingGoalPicker = false
 
+    /// Steuert die Anzeige der Motivationsquellen-Auswahl.
+    var isShowingSourcePicker = false
+
+    /// Aktuell gewählte Motivationsquelle (für den Picker).
+    private(set) var motivationSource: MotivationSource = .default
+
     /// Gerade erreichtes Ziel für die Erfolgsmeldung (falls vorhanden).
     private(set) var achievedGoal: RecoveryGoal?
 
     private let repository: RecoveryRepository
+    private let motivationService: MotivationService
 
     /// Merkt sich (gerätelokal), welche Ziele bereits gefeiert wurden,
     /// damit die Erfolgsmeldung pro Ziel nur einmal erscheint.
     private let celebratedKey = "recovery.celebratedGoals"
 
-    init(repository: RecoveryRepository) {
+    init(repository: RecoveryRepository, motivationService: MotivationService) {
         self.repository = repository
+        self.motivationService = motivationService
     }
 
     /// Lädt die Dashboard-Daten. Idempotent beim ersten Erscheinen.
@@ -48,6 +56,7 @@ final class DashboardViewModel: ViewModel {
             let relapses = try await repository.fetchRelapses()
             let journal = try await repository.fetchJournalEntries()
             let plan = try await repository.fetchPlan(for: .now)
+            motivationSource = profile.motivationSource
             let data = makeDashboardData(
                 profile: profile,
                 relapses: relapses,
@@ -64,6 +73,38 @@ final class DashboardViewModel: ViewModel {
     /// Nutzer meldet akutes Verlangen ("Cravings").
     func handleCravingTapped() {
         isShowingCravingHelp = true
+    }
+
+    // MARK: - Motivationsquelle
+
+    func presentSourcePicker() {
+        isShowingSourcePicker = true
+    }
+
+    /// Speichert die gewählte Quelle und lädt das Dashboard neu.
+    func setMotivationSource(_ source: MotivationSource) async {
+        do {
+            try await repository.updateMotivationSource(source)
+            motivationSource = source
+            isShowingSourcePicker = false
+            await load()
+        } catch {
+            state = .failed(error)
+        }
+    }
+
+    /// Leitet den passenden Motivationskontext aus der aktuellen Situation ab.
+    private func motivationContext(streak: Streak, relapses: [Relapse]) -> MotivationContext {
+        // Kürzlicher Rückfall (heute oder gestern)?
+        if let last = relapses.map(\.date).max() {
+            let days = Calendar.current.dateComponents([.day], from: last, to: .now).day ?? .max
+            if days <= 1 { return .relapse }
+        }
+        // Meilenstein exakt erreicht?
+        if Milestone.allCases.contains(where: { $0.rawValue == streak.currentDays }) {
+            return .milestone
+        }
+        return .daily
     }
 
     // MARK: - Recovery-Plan
@@ -170,10 +211,15 @@ final class DashboardViewModel: ViewModel {
         let goalProgress = profile.goal.map {
             GoalProgress(goal: $0, currentDays: streak.currentDays)
         }
+        let context = motivationContext(streak: streak, relapses: relapses)
+        let motivation = motivationService.dailyMotivation(
+            source: profile.motivationSource,
+            context: context
+        )
         return DashboardData(
             habitType: profile.habitType,
             streak: streak,
-            quote: QuoteProvider.quote(for: streak.currentDays),
+            motivation: motivation,
             progress: makeProgress(streak: streak, relapseCount: relapses.count),
             dailyGoal: DailyGoal(
                 title: "Heutige Ziele",

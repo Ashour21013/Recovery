@@ -21,6 +21,14 @@ final class AppDependencies {
     /// Zähler für abgeschlossene Craving-Sessions.
     let cravingSessionCounter: CravingSessionCounter = UserDefaultsCravingSessionCounter()
 
+    /// Dienst für die tägliche Motivation (Inspiration System).
+    ///
+    /// Kapselt Provider-Auswahl und Wiederholungsvermeidung. Views/ViewModels
+    /// erhalten nur die `MotivationService`-Abstraktion.
+    let motivationService: MotivationService = DefaultMotivationService(
+        history: UserDefaultsMotivationHistoryStore()
+    )
+
     init() {
         do {
             let schema = Schema([

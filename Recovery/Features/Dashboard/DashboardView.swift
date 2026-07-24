@@ -27,7 +27,10 @@ struct DashboardView: View {
         }
         .task {
             if viewModel == nil {
-                viewModel = DashboardViewModel(repository: dependencies.makeRecoveryRepository())
+                viewModel = DashboardViewModel(
+                    repository: dependencies.makeRecoveryRepository(),
+                    motivationService: dependencies.motivationService
+                )
             }
             await viewModel?.onAppear()
         }
@@ -87,6 +90,16 @@ struct DashboardView: View {
                 Task { await viewModel.planDidChange() }
             })
         }
+        .sheet(isPresented: Binding(
+            get: { viewModel.isShowingSourcePicker },
+            set: { viewModel.isShowingSourcePicker = $0 }
+        )) {
+            MotivationSourcePickerView(
+                current: viewModel.motivationSource,
+                onSelect: { source in Task { await viewModel.setMotivationSource(source) } },
+                onCancel: { viewModel.isShowingSourcePicker = false }
+            )
+        }
         .alert(
             "Ziel erreicht! 🎉",
             isPresented: Binding(
@@ -122,7 +135,10 @@ struct DashboardView: View {
         ScrollView {
             VStack(spacing: AppSpacing.m) {
                 StreakCardView(streak: data.streak)
-                MotivationCardView(quote: data.quote)
+                MotivationCardView(
+                    motivation: data.motivation,
+                    onChangeSource: viewModel.presentSourcePicker
+                )
                 CravingButton(action: viewModel.handleCravingTapped)
                 GoalCardView(
                     goalProgress: data.goalProgress,

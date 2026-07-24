@@ -16,6 +16,8 @@ struct RecoveryProfile: Equatable, Identifiable {
     var bestStreakDays: Int
     /// Aktuell gewähltes Ziel (in Tagen), falls gesetzt.
     var goalDays: Int?
+    /// Gewählte Quelle der täglichen Motivation.
+    var motivationSource: MotivationSource
 
     init(
         id: UUID = UUID(),
@@ -24,7 +26,8 @@ struct RecoveryProfile: Equatable, Identifiable {
         frequency: HabitFrequency? = nil,
         startDate: Date = .now,
         bestStreakDays: Int = 0,
-        goalDays: Int? = nil
+        goalDays: Int? = nil,
+        motivationSource: MotivationSource = .default
     ) {
         self.id = id
         self.habitType = habitType
@@ -33,6 +36,7 @@ struct RecoveryProfile: Equatable, Identifiable {
         self.startDate = startDate
         self.bestStreakDays = bestStreakDays
         self.goalDays = goalDays
+        self.motivationSource = motivationSource
     }
 
     /// Typsicherer Zugriff auf das gewählte Ziel.

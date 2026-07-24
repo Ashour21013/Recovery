@@ -7,7 +7,8 @@ import Foundation
 struct DashboardData: Equatable {
     let habitType: HabitType
     let streak: Streak
-    let quote: MotivationalQuote
+    /// Tägliche Motivation aus der gewählten Quelle (Inspiration System).
+    let motivation: MotivationItem
     let progress: ProgressSummary
     let dailyGoal: DailyGoal
     /// Fortschritt des gewählten Ziels (falls eines gesetzt ist).

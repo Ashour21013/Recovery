@@ -22,6 +22,9 @@ protocol RecoveryRepository: Repository {
     /// Setzt (oder entfernt mit `nil`) das aktuelle Ziel.
     func updateGoal(_ goal: RecoveryGoal?) async throws
 
+    /// Aktualisiert die gewählte Motivationsquelle.
+    func updateMotivationSource(_ source: MotivationSource) async throws
+
     // MARK: - Journal
 
     func fetchJournalEntries() async throws -> [JournalEntry]
