@@ -6,6 +6,7 @@ import SwiftUI
 /// gleichzeitig freigeschalteten Achievements werden sie nacheinander gezeigt.
 struct AchievementUnlockView: View {
     let achievements: [Achievement]
+    var namespace: Namespace.ID?
     let onDismiss: () -> Void
 
     @State private var index = 0
@@ -77,9 +78,11 @@ struct AchievementUnlockView: View {
                 .font(.system(size: 68))
                 .foregroundStyle(tint)
                 .symbolRenderingMode(.hierarchical)
+                .symbolEffect(.bounce, value: animate)
                 .scaleEffect(animate ? 1.0 : 0.2)
                 .rotationEffect(.degrees(animate ? 0 : -30))
         }
+        .modifier(OptionalMatchedGeometry(id: achievement.id, namespace: namespace))
         .shadow(color: tint.opacity(0.6), radius: animate ? 24 : 0)
         .animation(.spring(response: 0.5, dampingFraction: 0.55), value: animate)
     }
@@ -95,6 +98,20 @@ struct AchievementUnlockView: View {
             triggerAnimation()
         } else {
             onDismiss()
+        }
+    }
+}
+
+/// Wendet `matchedGeometryEffect` nur an, wenn ein Namespace vorhanden ist.
+private struct OptionalMatchedGeometry: ViewModifier {
+    let id: String
+    let namespace: Namespace.ID?
+
+    func body(content: Content) -> some View {
+        if let namespace {
+            content.matchedGeometryEffect(id: id, in: namespace)
+        } else {
+            content
         }
     }
 }

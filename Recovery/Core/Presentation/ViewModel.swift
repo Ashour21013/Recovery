@@ -17,3 +17,18 @@ enum ViewState<Value> {
     case loaded(Value)
     case failed(Error)
 }
+
+extension ViewState: Equatable where Value: Equatable {
+    static func == (lhs: ViewState<Value>, rhs: ViewState<Value>) -> Bool {
+        switch (lhs, rhs) {
+        case (.idle, .idle), (.loading, .loading):
+            return true
+        case let (.loaded(a), .loaded(b)):
+            return a == b
+        case let (.failed(a), .failed(b)):
+            return (a as NSError) == (b as NSError)
+        default:
+            return false
+        }
+    }
+}

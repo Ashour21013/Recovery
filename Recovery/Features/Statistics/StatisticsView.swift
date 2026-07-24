@@ -17,6 +17,7 @@ struct StatisticsView: View {
     var body: some View {
         NavigationStack {
             content
+                .animation(.smooth, value: viewModel?.state)
                 .navigationTitle("Statistik")
                 .background(Color(.systemGroupedBackground))
         }
@@ -37,6 +38,7 @@ struct StatisticsView: View {
         switch viewModel?.state {
         case .loaded(let statistics):
             loadedContent(statistics)
+                .transition(.opacity)
 
         case .failed:
             ContentUnavailableView(

@@ -9,6 +9,8 @@ struct CravingMessageStepView<Content: View>: View {
     var tint: Color = AppColor.accent
     @ViewBuilder var content: () -> Content
 
+    @State private var appeared = false
+
     var body: some View {
         VStack(spacing: AppSpacing.l) {
             Spacer(minLength: 0)
@@ -17,6 +19,9 @@ struct CravingMessageStepView<Content: View>: View {
                 .font(.system(size: 64))
                 .foregroundStyle(tint)
                 .symbolRenderingMode(.hierarchical)
+                .symbolEffect(.bounce, value: appeared)
+                .scaleEffect(appeared ? 1 : 0.85)
+                .animation(.spring(response: 0.45, dampingFraction: 0.6), value: appeared)
 
             Text(title)
                 .font(AppFont.title)
@@ -33,6 +38,7 @@ struct CravingMessageStepView<Content: View>: View {
         }
         .padding(AppSpacing.l)
         .frame(maxWidth: .infinity)
+        .onAppear { appeared = true }
     }
 }
 

@@ -25,6 +25,8 @@ struct AchievementBadge: View {
                     .font(.system(size: size * 0.4))
                     .foregroundStyle(achievement.isUnlocked ? tint : .secondary)
                     .symbolRenderingMode(.hierarchical)
+                    .contentTransition(.symbolEffect(.replace))
+                    .symbolEffect(.bounce, value: achievement.isUnlocked)
             }
 
             Text(achievement.type.title)
@@ -35,6 +37,7 @@ struct AchievementBadge: View {
                 .frame(maxWidth: size + 24)
         }
         .opacity(achievement.isUnlocked ? 1 : 0.7)
+        .animation(.smooth, value: achievement.isUnlocked)
         .accessibilityElement(children: .combine)
         .accessibilityLabel("\(achievement.type.title), \(achievement.isUnlocked ? "freigeschaltet" : "gesperrt")")
     }

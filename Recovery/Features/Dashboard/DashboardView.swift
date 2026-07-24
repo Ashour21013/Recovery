@@ -40,9 +40,11 @@ struct DashboardView: View {
             case .idle, .loading:
                 ProgressView("Lädt…")
                     .frame(maxWidth: .infinity, maxHeight: .infinity)
+                    .transition(.opacity)
 
             case let .loaded(data):
                 loadedContent(for: data, viewModel: viewModel)
+                    .transition(.opacity.combined(with: .move(edge: .bottom)))
 
             case .failed:
                 ContentUnavailableView(
@@ -50,8 +52,10 @@ struct DashboardView: View {
                     systemImage: "exclamationmark.triangle",
                     description: Text("Bitte versuche es erneut.")
                 )
+                .transition(.opacity)
             }
         }
+        .animation(.smooth, value: viewModel.state)
         .sheet(isPresented: Binding(
             get: { viewModel.isShowingCravingHelp },
             set: { viewModel.isShowingCravingHelp = $0 }

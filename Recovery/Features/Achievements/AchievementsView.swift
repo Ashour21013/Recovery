@@ -8,6 +8,7 @@ struct AchievementsView: View {
 
     @Environment(\.dependencies) private var dependencies
     @State private var viewModel: AchievementsViewModel?
+    @Namespace private var badgeNamespace
 
     private let columns = [
         GridItem(.adaptive(minimum: 96), spacing: AppSpacing.l)
@@ -39,6 +40,7 @@ struct AchievementsView: View {
             if let viewModel, !viewModel.newlyUnlocked.isEmpty {
                 AchievementUnlockView(
                     achievements: viewModel.newlyUnlocked,
+                    namespace: badgeNamespace,
                     onDismiss: viewModel.dismissUnlockAnimation
                 )
             }
@@ -53,8 +55,10 @@ struct AchievementsView: View {
                 LazyVGrid(columns: columns, spacing: AppSpacing.l) {
                     ForEach(viewModel.achievements) { achievement in
                         AchievementBadge(achievement: achievement)
+                            .matchedGeometryEffect(id: achievement.id, in: badgeNamespace)
                     }
                 }
+                .animation(.smooth, value: viewModel.achievements)
             }
             .padding(AppSpacing.l)
         }
@@ -66,9 +70,12 @@ struct AchievementsView: View {
                 Image(systemName: "trophy.fill")
                     .font(.title)
                     .foregroundStyle(.yellow)
+                    .symbolEffect(.bounce, value: viewModel.unlockedCount)
                 VStack(alignment: .leading, spacing: 2) {
                     Text("\(viewModel.unlockedCount) / \(viewModel.achievements.count)")
                         .font(.title2.weight(.bold))
+                        .contentTransition(.numericText(value: Double(viewModel.unlockedCount)))
+                        .animation(.smooth, value: viewModel.unlockedCount)
                     Text("Erfolge freigeschaltet")
                         .font(.subheadline)
                         .foregroundStyle(.secondary)

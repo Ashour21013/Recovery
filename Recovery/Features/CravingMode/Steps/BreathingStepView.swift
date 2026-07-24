@@ -53,13 +53,18 @@ struct BreathingStepView: View {
                 Label("Gut gemacht!", systemImage: "checkmark.circle.fill")
                     .font(.headline)
                     .foregroundStyle(.green)
+                    .symbolEffect(.bounce, value: remainingSeconds)
+                    .transition(.scale.combined(with: .opacity))
             } else {
                 Text("Bleib dabei…")
                     .font(.subheadline)
                     .foregroundStyle(.secondary)
+                    .transition(.opacity)
             }
         }
         .padding(AppSpacing.l)
+        .animation(.smooth, value: isRunning)
+        .animation(.smooth, value: remainingSeconds == 0)
     }
 }
 

@@ -18,6 +18,7 @@ struct StatCard: View {
                 Text(value)
                     .font(.system(size: 32, weight: .bold, design: .rounded))
                     .contentTransition(.numericText())
+                    .animation(.smooth, value: value)
 
                 Text(label)
                     .font(.footnote)

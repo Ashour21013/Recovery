@@ -20,14 +20,19 @@ struct CravingModeView: View {
                             .tint(AppColor.accent)
                             .padding(.horizontal, AppSpacing.l)
                             .padding(.top, AppSpacing.s)
+                            .animation(.smooth, value: viewModel.progress)
 
                         stepContent(viewModel)
                             .frame(maxWidth: .infinity, maxHeight: .infinity)
-                            .transition(.opacity)
+                            .id(viewModel.currentIndex)
+                            .transition(.asymmetric(
+                                insertion: .move(edge: .trailing).combined(with: .opacity),
+                                removal: .move(edge: .leading).combined(with: .opacity)
+                            ))
 
                         footer(viewModel)
                     }
-                    .animation(.default, value: viewModel.currentIndex)
+                    .animation(.smooth(duration: 0.35), value: viewModel.currentIndex)
                 } else {
                     ProgressView()
                 }
@@ -147,6 +152,7 @@ struct CravingModeView: View {
                         .padding(AppSpacing.m)
                 }
                 .buttonStyle(.bordered)
+                .transition(.move(edge: .leading).combined(with: .opacity))
             }
 
             if viewModel.isLastStep {
@@ -159,6 +165,7 @@ struct CravingModeView: View {
             }
         }
         .padding(AppSpacing.l)
+        .animation(.smooth, value: viewModel.isFirstStep)
     }
 
     private func reasonMessage(_ reason: String) -> String {
