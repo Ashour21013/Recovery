@@ -21,6 +21,11 @@ struct MainTabView: View {
                 .tabItem {
                     Label("Statistik", systemImage: "chart.bar.fill")
                 }
+
+            ReminderSettingsView()
+                .tabItem {
+                    Label("Erinnerungen", systemImage: "bell.fill")
+                }
         }
     }
 }

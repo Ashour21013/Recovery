@@ -12,6 +12,12 @@ final class AppDependencies {
 
     let modelContainer: ModelContainer
 
+    /// Service für lokale Benachrichtigungen (App-weit geteilt).
+    let notificationService: NotificationService = LocalNotificationService()
+
+    /// Persistenz der Erinnerungs-Einstellungen.
+    let reminderSettingsStore: ReminderSettingsStore = UserDefaultsReminderSettingsStore()
+
     init() {
         do {
             let schema = Schema([
