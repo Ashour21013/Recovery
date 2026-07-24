@@ -56,7 +56,7 @@ struct DashboardView: View {
             get: { viewModel.isShowingCravingHelp },
             set: { viewModel.isShowingCravingHelp = $0 }
         )) {
-            CravingHelpView(onDismiss: { viewModel.isShowingCravingHelp = false })
+            CravingModeView()
         }
         .sheet(isPresented: $isShowingRelapse) {
             RelapseView(onSaved: {
