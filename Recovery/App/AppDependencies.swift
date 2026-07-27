@@ -59,8 +59,12 @@ final class AppDependencies {
 
     /// Aktualisiert den geteilten Widget-Snapshot aus dem aktuellen Profil.
     @MainActor
-    func refreshWidgetSnapshot(profile: RecoveryProfile) {
-        widgetPublisher.publish(profile: profile, isPremium: featureAccess.isPremium)
+    func refreshWidgetSnapshot(profile: RecoveryProfile, addictions: [AddictionSummary] = []) {
+        widgetPublisher.publish(
+            profile: profile,
+            addictions: addictions,
+            isPremium: featureAccess.isPremium
+        )
     }
 
 

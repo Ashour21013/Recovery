@@ -38,10 +38,10 @@ private struct SmallWidgetView: View {
     var body: some View {
         VStack(alignment: .leading, spacing: 6) {
             HStack(spacing: 6) {
-                Image(systemName: entry.snapshot.addictionSystemImage)
+                Image(systemName: entry.addiction.systemImage)
                     .font(.caption)
                     .foregroundStyle(Color.accentColor)
-                Text(entry.snapshot.addictionTitle)
+                Text(entry.addiction.title)
                     .font(.caption2.weight(.semibold))
                     .foregroundStyle(.secondary)
                     .lineLimit(1)
@@ -82,10 +82,10 @@ private struct MediumWidgetView: View {
             // Streak-Block.
             VStack(alignment: .leading, spacing: 4) {
                 HStack(spacing: 6) {
-                    Image(systemName: entry.snapshot.addictionSystemImage)
+                    Image(systemName: entry.addiction.systemImage)
                         .font(.caption)
                         .foregroundStyle(Color.accentColor)
-                    Text(entry.snapshot.addictionTitle)
+                    Text(entry.addiction.title)
                         .font(.caption.weight(.semibold))
                         .foregroundStyle(.secondary)
                         .lineLimit(1)
@@ -102,7 +102,7 @@ private struct MediumWidgetView: View {
 
                 Spacer(minLength: 0)
 
-                Label("Rekord: \(entry.snapshot.longestStreakDays) Tage", systemImage: "trophy.fill")
+                Label("Rekord: \(entry.addiction.longestStreakDays) Tage", systemImage: "trophy.fill")
                     .font(.caption2)
                     .foregroundStyle(.secondary)
                     .lineLimit(1)
@@ -149,6 +149,7 @@ private struct LockedWidgetView: View {
         RecoveryEntry(
             date: .now,
             snapshot: .placeholder,
+            addiction: WidgetSnapshot.placeholder.resolvedAddiction(preferredID: nil),
             quote: WidgetSnapshot.placeholder.quote()
         )
     }

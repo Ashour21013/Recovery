@@ -9,7 +9,11 @@ struct RecoveryWidget: Widget {
     private let kind = "RecoveryWidget"
 
     var body: some WidgetConfiguration {
-        StaticConfiguration(kind: kind, provider: RecoveryTimelineProvider()) { entry in
+        AppIntentConfiguration(
+            kind: kind,
+            intent: SelectAddictionIntent.self,
+            provider: RecoveryTimelineProvider()
+        ) { entry in
             RecoveryWidgetView(entry: entry)
         }
         .configurationDisplayName("Recovery")
@@ -21,11 +25,21 @@ struct RecoveryWidget: Widget {
 #Preview(as: .systemSmall) {
     RecoveryWidget()
 } timeline: {
-    RecoveryEntry(date: .now, snapshot: .placeholder, quote: WidgetSnapshot.placeholder.quote())
+    RecoveryEntry(
+        date: .now,
+        snapshot: .placeholder,
+        addiction: WidgetSnapshot.placeholder.resolvedAddiction(preferredID: nil),
+        quote: WidgetSnapshot.placeholder.quote()
+    )
 }
 
 #Preview(as: .systemMedium) {
     RecoveryWidget()
 } timeline: {
-    RecoveryEntry(date: .now, snapshot: .placeholder, quote: WidgetSnapshot.placeholder.quote())
+    RecoveryEntry(
+        date: .now,
+        snapshot: .placeholder,
+        addiction: WidgetSnapshot.placeholder.resolvedAddiction(preferredID: nil),
+        quote: WidgetSnapshot.placeholder.quote()
+    )
 }

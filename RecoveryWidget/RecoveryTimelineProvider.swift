@@ -1,52 +1,58 @@
 import WidgetKit
 import SwiftUI
+import AppIntents
 
 /// Ein Eintrag der Widget-Timeline: der anzuzeigende Zustand zu einem
-/// Zeitpunkt. Enthält den geteilten Snapshot und den tagesaktuellen Spruch.
+/// Zeitpunkt. Enthält den geteilten Snapshot, die gewählte Sucht und den
+/// tagesaktuellen Spruch.
 struct RecoveryEntry: TimelineEntry {
     let date: Date
     let snapshot: WidgetSnapshot
+    /// Die konkret anzuzeigende Sucht (aufgelöst aus Konfiguration + Snapshot).
+    let addiction: WidgetAddiction
     let quote: WidgetQuote?
 
     /// Aktuelle Streak für den angezeigten Tag (kalendarisch berechnet).
     var streakDays: Int {
-        let start = Calendar.current.startOfDay(for: snapshot.startDate)
+        let start = Calendar.current.startOfDay(for: addiction.startDate)
         let today = Calendar.current.startOfDay(for: date)
         let days = Calendar.current.dateComponents([.day], from: start, to: today).day ?? 0
-        return max(snapshot.currentStreakDays, max(0, days))
+        return max(addiction.currentStreakDays, max(0, days))
     }
 }
 
-/// Liefert die Timeline für das Widget. Liest ausschließlich aus der App Group
-/// (keine Business-Logik) und plant eine tägliche Aktualisierung zum
-/// Tageswechsel, damit Streak und Motivationsspruch aktuell bleiben.
-struct RecoveryTimelineProvider: TimelineProvider {
+/// Liefert die Timeline für das konfigurierbare Widget. Liest ausschließlich
+/// aus der App Group (keine Business-Logik) und plant eine tägliche
+/// Aktualisierung zum Tageswechsel.
+struct RecoveryTimelineProvider: AppIntentTimelineProvider {
 
     private let store = WidgetSnapshotStore()
 
     func placeholder(in context: Context) -> RecoveryEntry {
-        entry(from: .placeholder, date: .now)
+        entry(from: .placeholder, preferredID: nil, date: .now)
     }
 
-    func getSnapshot(in context: Context, completion: @escaping (RecoveryEntry) -> Void) {
+    func snapshot(for configuration: SelectAddictionIntent, in context: Context) async -> RecoveryEntry {
         let snapshot = store.load() ?? .placeholder
-        completion(entry(from: snapshot, date: .now))
+        return entry(from: snapshot, preferredID: configuration.addiction?.id, date: .now)
     }
 
-    func getTimeline(in context: Context, completion: @escaping (Timeline<RecoveryEntry>) -> Void) {
+    func timeline(for configuration: SelectAddictionIntent, in context: Context) async -> Timeline<RecoveryEntry> {
         let snapshot = store.load() ?? .placeholder
         let now = Date.now
-
-        // Ein Eintrag für heute plus Aktualisierung zum nächsten Tagesbeginn.
-        let entries = [entry(from: snapshot, date: now)]
-        let timeline = Timeline(entries: entries, policy: .after(nextMidnight(after: now)))
-        completion(timeline)
+        let entries = [entry(from: snapshot, preferredID: configuration.addiction?.id, date: now)]
+        return Timeline(entries: entries, policy: .after(nextMidnight(after: now)))
     }
 
     // MARK: - Private
 
-    private func entry(from snapshot: WidgetSnapshot, date: Date) -> RecoveryEntry {
-        RecoveryEntry(date: date, snapshot: snapshot, quote: snapshot.quote(for: date))
+    private func entry(from snapshot: WidgetSnapshot, preferredID: String?, date: Date) -> RecoveryEntry {
+        RecoveryEntry(
+            date: date,
+            snapshot: snapshot,
+            addiction: snapshot.resolvedAddiction(preferredID: preferredID),
+            quote: snapshot.quote(for: date)
+        )
     }
 
     private func nextMidnight(after date: Date) -> Date {
