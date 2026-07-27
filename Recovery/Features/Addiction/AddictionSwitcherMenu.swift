@@ -22,10 +22,11 @@ struct AddictionSwitcherMenu: View {
                         Button {
                             onSwitch(addiction.id)
                         } label: {
-                            Label(
-                                "\(addiction.emoji)  \(addiction.title)",
-                                systemImage: addiction.isActive ? "checkmark" : ""
-                            )
+                            if addiction.isActive {
+                                Label("\(addiction.emoji)  \(addiction.title)", systemImage: "checkmark")
+                            } else {
+                                Text("\(addiction.emoji)  \(addiction.title)")
+                            }
                         }
                     }
                 }
