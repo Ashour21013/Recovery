@@ -14,17 +14,20 @@ struct StatCard: View {
                 Image(systemName: systemImage)
                     .font(.title3)
                     .foregroundStyle(tint)
+                    .accessibilityHidden(true)
 
                 Text(value)
-                    .font(.system(size: 32, weight: .bold, design: .rounded))
+                    .font(AppFont.roundedNumber(relativeTo: .title))
                     .contentTransition(.numericText())
                     .animation(.smooth, value: value)
 
                 Text(label)
-                    .font(.footnote)
+                    .font(AppFont.footnote)
                     .foregroundStyle(.secondary)
             }
         }
+        .accessibilityElement(children: .ignore)
+        .accessibilityLabel("\(label): \(value)")
     }
 }
 

@@ -15,7 +15,7 @@ struct CardContainer<Content: View>: View {
             .padding(AppSpacing.l)
             .background(
                 RoundedRectangle(cornerRadius: 20, style: .continuous)
-                    .fill(Color(.secondarySystemBackground))
+                    .fill(AppColor.cardBackground)
             )
     }
 }
