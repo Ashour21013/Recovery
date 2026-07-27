@@ -53,48 +53,98 @@ struct MetricsEditorView: View {
     @ViewBuilder
     private func form(_ viewModel: MetricsEditorViewModel) -> some View {
         Form {
-            switch viewModel.category {
-            case .money:
-                moneySection(viewModel)
-            case .time:
+            switch viewModel.inputLayout {
+            case .smokingPackage:
+                smokingSection(viewModel)
+            case .alcoholWeekly:
+                alcoholSection(viewModel)
+            case .weeklySpendOnly:
+                weeklySpendSection(viewModel)
+            case .timePerDay:
                 timeSection(viewModel)
             }
         }
     }
 
-    // MARK: - Geld-Süchte
+    // MARK: - Rauchen (Packungslogik)
 
     @ViewBuilder
-    private func moneySection(_ viewModel: MetricsEditorViewModel) -> some View {
+    private func smokingSection(_ viewModel: MetricsEditorViewModel) -> some View {
         Section {
             LabeledField(
-                title: "Preis pro Packung (€)",
+                title: "Preis pro Schachtel (€)",
                 text: bindingUnitPrice(viewModel),
-                placeholder: "z. B. 7,00"
+                placeholder: "z. B. 8,00"
             )
             LabeledField(
-                title: "\(viewModel.consumptionUnitName) pro Tag",
+                title: "Zigaretten pro Tag",
                 text: bindingUnitsPerDay(viewModel),
                 placeholder: "z. B. 15"
             )
             LabeledField(
-                title: "Einheiten pro Packung",
+                title: "Zigaretten pro Schachtel",
                 text: bindingUnitsPerPackage(viewModel),
-                placeholder: "z. B. 20"
+                placeholder: "20"
             )
         } header: {
-            Text("Kosten pro Packung")
+            Text("Deine Angaben")
         } footer: {
-            Text("Alternativ kannst du unten direkt deine Wochenausgaben angeben.")
+            Text("Daraus berechnen wir gespartes Geld und vermiedene Zigaretten.")
         }
+    }
 
-        Section("Oder: Wochenausgaben") {
+    // MARK: - Alkohol (Wochenausgabe + optional Getränke)
+
+    @ViewBuilder
+    private func alcoholSection(_ viewModel: MetricsEditorViewModel) -> some View {
+        Section {
             LabeledField(
                 title: "Ausgaben pro Woche (€)",
                 text: bindingWeeklySpend(viewModel),
-                placeholder: "z. B. 50,00"
+                placeholder: "z. B. 40,00"
             )
+        } header: {
+            Text("Ausgaben")
         }
+
+        Section {
+            LabeledField(
+                title: "Getränke pro Woche",
+                text: bindingDrinksPerWeek(viewModel),
+                placeholder: "z. B. 14"
+            )
+        } header: {
+            Text("Optional")
+        } footer: {
+            Text("Wenn du magst, sehen wir daraus auch deine vermiedenen Getränke.")
+        }
+    }
+
+    // MARK: - Glücksspiel / Zucker (nur Wochenausgabe)
+
+    @ViewBuilder
+    private func weeklySpendSection(_ viewModel: MetricsEditorViewModel) -> some View {
+        Section {
+            LabeledField(
+                title: weeklyLabel(viewModel),
+                text: bindingWeeklySpend(viewModel),
+                placeholder: "z. B. 30,00"
+            )
+        } header: {
+            Text("Deine Angaben")
+        } footer: {
+            Text(weeklyFooter(viewModel))
+        }
+    }
+
+    private func weeklyLabel(_ viewModel: MetricsEditorViewModel) -> String {
+        viewModel.habitType == .gambling ? "Einsatz pro Woche (€)" : "Ausgaben pro Woche (€)"
+    }
+
+    private func weeklyFooter(_ viewModel: MetricsEditorViewModel) -> String {
+        viewModel.habitType == .gambling
+            ? "Daraus zeigen wir, wie viel du nicht verspielt hast."
+            : "Optional – ohne Angabe zeigen wir dir deine Gesundheits-Meilensteine."
     }
 
     // MARK: - Zeit-Süchte
@@ -126,6 +176,9 @@ struct MetricsEditorView: View {
     }
     private func bindingWeeklySpend(_ vm: MetricsEditorViewModel) -> Binding<String> {
         Binding(get: { vm.weeklySpendText }, set: { vm.weeklySpendText = $0 })
+    }
+    private func bindingDrinksPerWeek(_ vm: MetricsEditorViewModel) -> Binding<String> {
+        Binding(get: { vm.drinksPerWeekText }, set: { vm.drinksPerWeekText = $0 })
     }
     private func bindingMinutesPerDay(_ vm: MetricsEditorViewModel) -> Binding<String> {
         Binding(get: { vm.minutesPerDayText }, set: { vm.minutesPerDayText = $0 })

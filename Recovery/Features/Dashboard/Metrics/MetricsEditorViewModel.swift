@@ -21,6 +21,7 @@ final class MetricsEditorViewModel: ViewModel {
     var unitsPerDayText = ""
     var unitsPerPackageText = ""
     var weeklySpendText = ""
+    var drinksPerWeekText = ""
     var minutesPerDayText = ""
 
     private let repository: RecoveryRepository
@@ -34,6 +35,27 @@ final class MetricsEditorViewModel: ViewModel {
 
     var consumptionUnitName: String { habitType.consumptionUnitName }
 
+    /// Konkretes Eingabe-Layout je Suchtart (steuert die sichtbaren Felder).
+    enum InputLayout {
+        /// Rauchen: Preis/Schachtel, Zigaretten/Tag, Zigaretten/Schachtel.
+        case smokingPackage
+        /// Alkohol: Wochenausgabe + optional Getränke/Woche.
+        case alcoholWeekly
+        /// Glücksspiel/Zucker: nur Wochenausgabe.
+        case weeklySpendOnly
+        /// Zeit-Süchte: Minuten pro Tag.
+        case timePerDay
+    }
+
+    var inputLayout: InputLayout {
+        switch habitType {
+        case .smoking: return .smokingPackage
+        case .alcohol: return .alcoholWeekly
+        case .gambling, .sugar: return .weeklySpendOnly
+        case .pornography, .socialMedia: return .timePerDay
+        }
+    }
+
     func onAppear() async {
         await load()
     }
@@ -46,6 +68,7 @@ final class MetricsEditorViewModel: ViewModel {
             }
             let metrics = try await repository.fetchMetrics()
             applyToFields(metrics)
+            applyPlaceholderDefaults(existing: metrics)
             state = .loaded(())
         } catch {
             state = .failed(error)
@@ -66,11 +89,24 @@ final class MetricsEditorViewModel: ViewModel {
 
     // MARK: - Mapping Text ↔ Domain
 
+    /// Setzt unverbindliche Platzhalter-Vorschläge (nur beim Rauchen und nur,
+    /// wenn der Nutzer noch nichts eingetragen hat). Nicht erzwungen.
+    private func applyPlaceholderDefaults(existing: AddictionMetrics) {
+        guard habitType == .smoking else { return }
+        if existing.unitPrice == nil, unitPriceText.isEmpty {
+            unitPriceText = "8"
+        }
+        if existing.unitsPerPackage == nil, unitsPerPackageText.isEmpty {
+            unitsPerPackageText = "20"
+        }
+    }
+
     private func applyToFields(_ metrics: AddictionMetrics) {
         unitPriceText = metrics.unitPrice.map { Self.decimalString($0) } ?? ""
         unitsPerDayText = metrics.unitsPerDay.map { Self.doubleString($0) } ?? ""
         unitsPerPackageText = metrics.unitsPerPackage.map { Self.doubleString($0) } ?? ""
         weeklySpendText = metrics.weeklySpend.map { Self.decimalString($0) } ?? ""
+        drinksPerWeekText = metrics.drinksPerWeek.map { Self.doubleString($0) } ?? ""
         minutesPerDayText = metrics.minutesPerDay.map { Self.doubleString($0) } ?? ""
     }
 
@@ -80,6 +116,7 @@ final class MetricsEditorViewModel: ViewModel {
             unitsPerDay: Self.parseDouble(unitsPerDayText),
             unitsPerPackage: Self.parseDouble(unitsPerPackageText),
             weeklySpend: Self.parseDecimal(weeklySpendText),
+            drinksPerWeek: Self.parseDouble(drinksPerWeekText),
             minutesPerDay: Self.parseDouble(minutesPerDayText)
         )
     }

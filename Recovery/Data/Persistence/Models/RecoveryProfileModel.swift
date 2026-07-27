@@ -35,6 +35,8 @@ final class RecoveryProfileModel {
     var metricUnitsPerPackage: Double? = nil
     /// Wochenausgaben (Alkohol/Glücksspiel), als Double gespeichert.
     var metricWeeklySpend: Double? = nil
+    /// Getränke pro Woche (Alkohol).
+    var metricDrinksPerWeek: Double? = nil
     /// Durchschnittlich verbrauchte Zeit pro Tag in Minuten (Zeit-Süchte).
     var metricMinutesPerDay: Double? = nil
 

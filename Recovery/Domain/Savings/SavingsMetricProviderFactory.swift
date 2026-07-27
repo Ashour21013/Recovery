@@ -10,7 +10,8 @@ protocol SavingsMetricProviderFactory {
     func provider(for habitType: HabitType) -> SavingsMetricProvider
 }
 
-/// Standard-Factory basierend auf `HabitType.metricCategory`.
+/// Standard-Factory: kombiniert je Suchtart die passenden Provider
+/// (Geld/Zeit) mit optionalen Gesundheits-Meilensteinen (Composite).
 struct DefaultSavingsMetricProviderFactory: SavingsMetricProviderFactory {
 
     private let moneyProvider: SavingsMetricProvider
@@ -25,9 +26,31 @@ struct DefaultSavingsMetricProviderFactory: SavingsMetricProviderFactory {
     }
 
     func provider(for habitType: HabitType) -> SavingsMetricProvider {
-        switch habitType.metricCategory {
-        case .money: return moneyProvider
-        case .time: return timeProvider
+        switch habitType {
+        case .smoking, .alcohol, .gambling:
+            // Reine Geld-(+Mengen-)Süchte.
+            return moneyProvider
+
+        case .sugar:
+            // Geld (nur bei Eingabe) + Gesundheits-Meilensteine.
+            return CompositeSavingsProvider([
+                moneyProvider,
+                HealthSavingsAdapter(SugarHealthProvider())
+            ])
+
+        case .pornography:
+            // Zurückgewonnene Zeit + Energie-/Fokus-Meilensteine.
+            return CompositeSavingsProvider([
+                timeProvider,
+                HealthSavingsAdapter(PornographyHealthProvider())
+            ])
+
+        case .socialMedia:
+            // Zurückgewonnene Zeit + Fokus-/Schlaf-Meilensteine.
+            return CompositeSavingsProvider([
+                timeProvider,
+                HealthSavingsAdapter(SocialMediaHealthProvider())
+            ])
         }
     }
 }

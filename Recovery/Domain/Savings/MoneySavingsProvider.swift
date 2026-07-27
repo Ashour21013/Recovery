@@ -2,10 +2,13 @@ import Foundation
 
 /// Provider für finanzielle Süchte (Rauchen, Alkohol, Glücksspiel, Zucker).
 ///
-/// Berechnet gespartes Geld und – falls möglich – die vermiedene Konsummenge.
-/// Unterstützt zwei Eingabe-Modelle:
-/// 1. Preis pro Packung + Einheiten pro Tag (+ Einheiten pro Packung).
-/// 2. Direkte Wochenausgaben (`weeklySpend`).
+/// Berechnet gespartes Geld und – falls möglich – die vermiedene Menge.
+/// Das konkrete Verhalten richtet sich nach der Suchtart:
+/// - Rauchen: Preis pro Schachtel ÷ Zigaretten/Schachtel × Zigaretten/Tag
+///   → Geld gespart + vermiedene Zigaretten.
+/// - Alkohol: Wochenausgabe ÷ 7 → Geld, optional Getränke/Woche → vermiedene Getränke.
+/// - Glücksspiel: Wocheneinsatz ÷ 7 → "X € nicht verspielt".
+/// - Zucker: Wochenausgabe ÷ 7 → Geld (nur bei Eingabe).
 struct MoneySavingsProvider: SavingsMetricProvider {
 
     func gains(
@@ -17,21 +20,25 @@ struct MoneySavingsProvider: SavingsMetricProvider {
 
         var result: [RecoveryGain] = []
 
-        if let saved = moneySaved(streakDays: streakDays, metrics: metrics) {
+        // 1. Geld gespart / nicht verspielt.
+        if let perDay = dailyCost(for: habitType, metrics: metrics) {
+            let saved = perDay * Double(streakDays)
             result.append(
                 RecoveryGain(
                     id: "money.saved",
                     kind: .money,
                     value: saved,
                     unit: "EUR",
-                    title: "Gespart",
-                    detail: savedDetail(perDay: dailyCost(metrics: metrics) ?? 0),
+                    title: moneyTitle(for: habitType),
+                    detail: monthlyDetail(perDay: perDay),
                     systemImage: "eurosign.circle.fill"
                 )
             )
         }
 
-        if let avoided = unitsAvoided(streakDays: streakDays, metrics: metrics), avoided > 0 {
+        // 2. Vermiedene Menge (nur wo sinnvoll: Rauchen, Alkohol).
+        if let avoided = unitsAvoided(for: habitType, streakDays: streakDays, metrics: metrics),
+           avoided > 0 {
             result.append(
                 RecoveryGain(
                     id: "money.avoided",
@@ -48,33 +55,51 @@ struct MoneySavingsProvider: SavingsMetricProvider {
         return result
     }
 
-    // MARK: - Berechnung
+    // MARK: - Tägliche Kosten
 
-    /// Tägliche Kosten aus den Eingaben (Packungslogik oder Wochenausgabe).
-    private func dailyCost(metrics: AddictionMetrics) -> Double? {
-        if let price = metrics.unitPrice, let perDay = metrics.unitsPerDay {
-            let unitsPerPackage = metrics.unitsPerPackage ?? 1
-            guard unitsPerPackage > 0 else { return nil }
-            let pricePerUnit = (price as NSDecimalNumber).doubleValue / unitsPerPackage
-            return pricePerUnit * perDay
-        }
-        if let weekly = metrics.weeklySpend {
+    private func dailyCost(for habitType: HabitType, metrics: AddictionMetrics) -> Double? {
+        switch habitType {
+        case .smoking:
+            // Preis pro Schachtel ÷ Zigaretten pro Schachtel × Zigaretten pro Tag.
+            guard let price = metrics.unitPrice, let perDay = metrics.unitsPerDay else { return nil }
+            let perPackage = metrics.unitsPerPackage ?? 20
+            guard perPackage > 0 else { return nil }
+            let pricePerCigarette = (price as NSDecimalNumber).doubleValue / perPackage
+            return pricePerCigarette * perDay
+        default:
+            // Alkohol/Glücksspiel/Zucker: Wochenausgabe ÷ 7.
+            guard let weekly = metrics.weeklySpend else { return nil }
             return (weekly as NSDecimalNumber).doubleValue / 7.0
         }
-        return nil
     }
 
-    private func moneySaved(streakDays: Int, metrics: AddictionMetrics) -> Double? {
-        guard let perDay = dailyCost(metrics: metrics) else { return nil }
-        return perDay * Double(streakDays)
+    // MARK: - Vermiedene Menge
+
+    private func unitsAvoided(
+        for habitType: HabitType,
+        streakDays: Int,
+        metrics: AddictionMetrics
+    ) -> Double? {
+        switch habitType {
+        case .smoking:
+            guard let perDay = metrics.unitsPerDay else { return nil }
+            return perDay * Double(streakDays)
+        case .alcohol:
+            guard let perWeek = metrics.drinksPerWeek else { return nil }
+            return (perWeek / 7.0) * Double(streakDays)
+        default:
+            // Glücksspiel & Zucker: keine Mengenangabe.
+            return nil
+        }
     }
 
-    private func unitsAvoided(streakDays: Int, metrics: AddictionMetrics) -> Double? {
-        guard let perDay = metrics.unitsPerDay else { return nil }
-        return perDay * Double(streakDays)
+    // MARK: - Texte
+
+    private func moneyTitle(for habitType: HabitType) -> String {
+        habitType == .gambling ? "Nicht verspielt" : "Gespart"
     }
 
-    private func savedDetail(perDay: Double) -> String {
+    private func monthlyDetail(perDay: Double) -> String {
         let monthly = Decimal(perDay * 30)
         return "Etwa \(monthly.formatted(.currency(code: "EUR"))) pro Monat"
     }

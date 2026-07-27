@@ -16,10 +16,12 @@ struct RecoveryGainCard: View {
                 Text(gain.title)
                     .font(AppFont.footnote)
                     .foregroundStyle(.secondary)
-                Text(gain.formattedValue)
-                    .font(.title3.weight(.bold))
-                    .foregroundStyle(.primary)
-                    .contentTransition(.numericText())
+                if gain.kind != .health {
+                    Text(gain.formattedValue)
+                        .font(.title3.weight(.bold))
+                        .foregroundStyle(.primary)
+                        .contentTransition(.numericText())
+                }
                 Text(gain.detail)
                     .font(AppFont.caption)
                     .foregroundStyle(.secondary)
@@ -30,7 +32,13 @@ struct RecoveryGainCard: View {
         .frame(maxWidth: .infinity, alignment: .leading)
         .background(AppColor.cardBackground, in: RoundedRectangle(cornerRadius: 16, style: .continuous))
         .accessibilityElement(children: .ignore)
-        .accessibilityLabel("\(gain.title): \(gain.formattedValue). \(gain.detail)")
+        .accessibilityLabel(accessibilityText)
+    }
+
+    private var accessibilityText: String {
+        gain.kind == .health
+            ? "\(gain.title). \(gain.detail)"
+            : "\(gain.title): \(gain.formattedValue). \(gain.detail)"
     }
 
     private var iconBadge: some View {
@@ -46,6 +54,7 @@ struct RecoveryGainCard: View {
         case .money: return AppColor.success
         case .time: return AppColor.accent
         case .quantity: return AppColor.warning
+        case .health: return .pink
         }
     }
 }

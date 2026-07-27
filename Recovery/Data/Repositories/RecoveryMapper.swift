@@ -53,6 +53,7 @@ enum RecoveryMapper {
             unitsPerDay: model.metricUnitsPerDay,
             unitsPerPackage: model.metricUnitsPerPackage,
             weeklySpend: model.metricWeeklySpend.map { Decimal($0) },
+            drinksPerWeek: model.metricDrinksPerWeek,
             minutesPerDay: model.metricMinutesPerDay
         )
     }
@@ -62,6 +63,7 @@ enum RecoveryMapper {
         model.metricUnitsPerDay = metrics.unitsPerDay
         model.metricUnitsPerPackage = metrics.unitsPerPackage
         model.metricWeeklySpend = metrics.weeklySpend.map { ($0 as NSDecimalNumber).doubleValue }
+        model.metricDrinksPerWeek = metrics.drinksPerWeek
         model.metricMinutesPerDay = metrics.minutesPerDay
     }
 

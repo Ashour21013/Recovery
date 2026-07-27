@@ -17,8 +17,10 @@ struct AddictionMetrics: Equatable {
     var unitsPerDay: Double?
     /// Anzahl Einheiten pro Preis-Packung (z. B. 20 Zigaretten pro Schachtel).
     var unitsPerPackage: Double?
-    /// Alternativ: durchschnittliche Ausgaben pro Woche (Alkohol/Glücksspiel).
+    /// Alternativ: durchschnittliche Ausgaben pro Woche (Alkohol/Glücksspiel/Zucker).
     var weeklySpend: Decimal?
+    /// Getränke pro Woche (Alkohol) – für die vermiedene Menge.
+    var drinksPerWeek: Double?
     /// Durchschnittlich verbrauchte Zeit pro Tag in Minuten (Zeit-Süchte).
     var minutesPerDay: Double?
 
@@ -27,12 +29,14 @@ struct AddictionMetrics: Equatable {
         unitsPerDay: Double? = nil,
         unitsPerPackage: Double? = nil,
         weeklySpend: Decimal? = nil,
+        drinksPerWeek: Double? = nil,
         minutesPerDay: Double? = nil
     ) {
         self.unitPrice = unitPrice
         self.unitsPerDay = unitsPerDay
         self.unitsPerPackage = unitsPerPackage
         self.weeklySpend = weeklySpend
+        self.drinksPerWeek = drinksPerWeek
         self.minutesPerDay = minutesPerDay
     }
 
@@ -41,6 +45,7 @@ struct AddictionMetrics: Equatable {
 
     /// Ob überhaupt verwertbare Eingaben vorliegen.
     var hasAnyInput: Bool {
-        unitPrice != nil || unitsPerDay != nil || weeklySpend != nil || minutesPerDay != nil
+        unitPrice != nil || unitsPerDay != nil || weeklySpend != nil
+            || drinksPerWeek != nil || minutesPerDay != nil
     }
 }

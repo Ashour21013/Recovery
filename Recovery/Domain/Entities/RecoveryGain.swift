@@ -13,11 +13,13 @@ struct RecoveryGain: Identifiable, Equatable {
         case money
         case time
         case quantity
+        /// Motivierender, nicht-medizinischer Gesundheits-Meilenstein.
+        case health
     }
 
     let id: String
     let kind: Kind
-    /// Roh-Wert (z. B. Euro-Betrag, Stunden, Stückzahl).
+    /// Roh-Wert (z. B. Euro-Betrag, Stunden, Stückzahl). Bei `health` ungenutzt.
     let value: Double
     /// Einheit bzw. Währungscode (bei `money` ein ISO-Code wie "EUR").
     let unit: String
@@ -29,6 +31,7 @@ struct RecoveryGain: Identifiable, Equatable {
     let systemImage: String
 
     /// Anzeigefertiger, lokalisierter Wert – je nach `kind` formatiert.
+    /// Bei `health` leer, da dort nur Titel + Beschreibung zählen.
     var formattedValue: String {
         switch kind {
         case .money:
@@ -38,6 +41,8 @@ struct RecoveryGain: Identifiable, Equatable {
             return "\(Self.trim(rounded)) \(unit)"
         case .quantity:
             return "\(Int(value.rounded())) \(unit)"
+        case .health:
+            return ""
         }
     }
 
