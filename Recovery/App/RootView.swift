@@ -11,11 +11,20 @@ struct RootView: View {
     @Environment(\.dependencies) private var dependencies
     @State private var hasCompletedOnboarding = false
     @State private var isChecking = true
+    @State private var hasAcceptedDisclaimer = false
 
     var body: some View {
         Group {
             if isChecking {
                 ProgressView()
+            } else if !hasAcceptedDisclaimer {
+                DisclaimerView(onAccept: {
+                    dependencies.disclaimerStore.acceptDisclaimer()
+                    withAnimation(.smooth(duration: 0.5)) {
+                        hasAcceptedDisclaimer = true
+                    }
+                })
+                .transition(.opacity)
             } else if hasCompletedOnboarding {
                 MainTabView(onDataDeleted: {
                     withAnimation(.smooth(duration: 0.5)) {
@@ -33,7 +42,9 @@ struct RootView: View {
             }
         }
         .animation(.smooth(duration: 0.5), value: hasCompletedOnboarding)
+        .animation(.smooth(duration: 0.5), value: hasAcceptedDisclaimer)
         .task {
+            hasAcceptedDisclaimer = dependencies.disclaimerStore.hasAcceptedDisclaimer
             let repository = dependencies.makeRecoveryRepository()
             let profile = try? await repository.loadProfile()
             hasCompletedOnboarding = (profile ?? nil) != nil

@@ -10,6 +10,7 @@ struct CravingModeView: View {
     @Environment(\.dependencies) private var dependencies
     @Environment(\.dismiss) private var dismiss
     @State private var viewModel: CravingModeViewModel?
+    @State private var isShowingHelp = false
 
     var body: some View {
         NavigationStack {
@@ -43,6 +44,17 @@ struct CravingModeView: View {
                 ToolbarItem(placement: .cancellationAction) {
                     Button("Schließen") { dismiss() }
                 }
+                ToolbarItem(placement: .primaryAction) {
+                    Button {
+                        isShowingHelp = true
+                    } label: {
+                        Image(systemName: "lifepreserver")
+                    }
+                    .accessibilityLabel("Hilfe & Ressourcen")
+                }
+            }
+            .sheet(isPresented: $isShowingHelp) {
+                HelpView()
             }
         }
         .task {

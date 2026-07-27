@@ -29,6 +29,12 @@ final class AppDependencies {
         history: UserDefaultsMotivationHistoryStore()
     )
 
+    /// Quelle der Hilfe-/Beratungs-Ressourcen (Hilfe-Screen).
+    let helpResourceProvider: HelpResourceProvider = DefaultHelpResourceProvider()
+
+    /// Persistenz der einmaligen Disclaimer-Bestätigung.
+    let disclaimerStore: DisclaimerStore = UserDefaultsDisclaimerStore()
+
     init() {
         do {
             let schema = Schema([

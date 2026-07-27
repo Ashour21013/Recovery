@@ -11,6 +11,7 @@ struct DashboardView: View {
     @Environment(\.dependencies) private var dependencies
     @State private var viewModel: DashboardViewModel?
     @State private var isShowingRelapse = false
+    @State private var isShowingHelp = false
 
     var body: some View {
         NavigationStack {
@@ -24,6 +25,19 @@ struct DashboardView: View {
             }
             .navigationTitle("Übersicht")
             .background(Color(.systemGroupedBackground))
+            .toolbar {
+                ToolbarItem(placement: .primaryAction) {
+                    Button {
+                        isShowingHelp = true
+                    } label: {
+                        Image(systemName: "lifepreserver")
+                    }
+                    .accessibilityLabel("Hilfe & Ressourcen")
+                }
+            }
+            .sheet(isPresented: $isShowingHelp) {
+                HelpView()
+            }
         }
         .task {
             if viewModel == nil {
