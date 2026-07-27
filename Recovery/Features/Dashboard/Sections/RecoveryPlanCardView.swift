@@ -34,16 +34,16 @@ struct RecoveryPlanCardView: View {
     private var header: some View {
         HStack {
             Label("Dein Tagesplan", systemImage: "checklist")
-                .font(.headline)
+                .font(AppFont.headline)
             Spacer()
             Text("\(plan.completedCount)/\(plan.totalCount)")
-                .font(.subheadline.weight(.semibold))
+                .font(AppFont.subheadline.weight(.semibold))
                 .foregroundStyle(.secondary)
                 .contentTransition(.numericText(value: Double(plan.completedCount)))
                 .animation(.smooth, value: plan.completedCount)
             Button(action: onEdit) {
                 Image(systemName: "slider.horizontal.3")
-                    .font(.subheadline.weight(.semibold))
+                    .font(AppFont.subheadline.weight(.semibold))
                     .foregroundStyle(AppColor.accent)
             }
             .buttonStyle(.plain)
@@ -64,14 +64,15 @@ private struct RecoveryTaskRow: View {
                     .font(.body)
                     .foregroundStyle(task.isCompleted ? AppColor.accent : .secondary)
                     .frame(width: 28)
+                    .accessibilityHidden(true)
 
                 VStack(alignment: .leading, spacing: 2) {
                     Text(task.task.title)
-                        .font(.subheadline.weight(.medium))
+                        .font(AppFont.subheadline.weight(.medium))
                         .foregroundStyle(.primary)
                         .strikethrough(task.isCompleted, color: .secondary)
                     Text(task.task.subtitle)
-                        .font(.caption)
+                        .font(AppFont.caption)
                         .foregroundStyle(.secondary)
                 }
 
@@ -82,6 +83,7 @@ private struct RecoveryTaskRow: View {
                     .foregroundStyle(task.isCompleted ? AppColor.accent : Color(.tertiaryLabel))
                     .contentTransition(.symbolEffect(.replace))
                     .symbolEffect(.bounce, value: task.isCompleted)
+                    .accessibilityHidden(true)
             }
             .padding(.vertical, AppSpacing.xs)
             .contentShape(Rectangle())

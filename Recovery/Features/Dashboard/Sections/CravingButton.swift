@@ -12,14 +12,14 @@ struct CravingButton: View {
                     .font(.title2)
                 VStack(alignment: .leading, spacing: 2) {
                     Text("Ich habe gerade Cravings")
-                        .font(.headline)
+                        .font(AppFont.headline)
                     Text("Hol dir jetzt Unterstützung")
-                        .font(.footnote)
+                        .font(AppFont.footnote)
                         .foregroundStyle(.white.opacity(0.9))
                 }
                 Spacer()
                 Image(systemName: "chevron.right")
-                    .font(.subheadline.weight(.semibold))
+                    .font(AppFont.subheadline.weight(.semibold))
                     .foregroundStyle(.white.opacity(0.8))
             }
             .foregroundStyle(.white)
@@ -31,6 +31,7 @@ struct CravingButton: View {
             )
         }
         .buttonStyle(.plain)
+        .accessibilityLabel("Ich habe gerade Cravings")
         .accessibilityHint("Öffnet Sofortmaßnahmen gegen akutes Verlangen.")
     }
 }

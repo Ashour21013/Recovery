@@ -10,20 +10,22 @@ struct ProgressCardView: View {
         CardContainer {
             VStack(alignment: .leading, spacing: AppSpacing.m) {
                 Text("Dein Fortschritt")
-                    .font(.headline)
+                    .font(AppFont.headline)
 
                 VStack(alignment: .leading, spacing: AppSpacing.xs) {
                     HStack {
                         Text("Nächster Meilenstein")
-                            .font(.subheadline)
+                            .font(AppFont.subheadline)
                             .foregroundStyle(.secondary)
                         Spacer()
                         Text(progress.nextMilestoneTitle)
-                            .font(.subheadline.weight(.semibold))
+                            .font(AppFont.subheadline.weight(.semibold))
                     }
                     ProgressView(value: progress.clampedMilestoneFraction)
                         .tint(AppColor.accent)
                 }
+                .accessibilityElement(children: .ignore)
+                .accessibilityLabel("Nächster Meilenstein: \(progress.nextMilestoneTitle)")
 
                 Divider()
 
@@ -50,10 +52,12 @@ struct ProgressCardView: View {
                 .font(.title3.weight(.semibold))
                 .labelStyle(.titleAndIcon)
             Text(label)
-                .font(.footnote)
+                .font(AppFont.footnote)
                 .foregroundStyle(.secondary)
         }
         .frame(maxWidth: .infinity, alignment: .leading)
+        .accessibilityElement(children: .ignore)
+        .accessibilityLabel("\(label): \(value)")
     }
 }
 

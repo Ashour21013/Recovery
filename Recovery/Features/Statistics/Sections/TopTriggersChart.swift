@@ -10,11 +10,11 @@ struct TopTriggersChart: View {
         CardContainer {
             VStack(alignment: .leading, spacing: AppSpacing.m) {
                 Text("Häufigste Trigger")
-                    .font(.headline)
+                    .font(AppFont.headline)
 
                 if triggers.isEmpty {
                     Text("Noch keine Trigger erfasst.")
-                        .font(.subheadline)
+                        .font(AppFont.subheadline)
                         .foregroundStyle(.secondary)
                         .frame(maxWidth: .infinity, alignment: .leading)
                         .padding(.vertical, AppSpacing.m)
@@ -28,7 +28,7 @@ struct TopTriggersChart: View {
                         .cornerRadius(6)
                         .annotation(position: .trailing) {
                             Text("\(trigger.count)")
-                                .font(.caption)
+                                .font(AppFont.caption)
                                 .foregroundStyle(.secondary)
                         }
                     }
@@ -36,6 +36,7 @@ struct TopTriggersChart: View {
                         AxisMarks(values: .automatic(desiredCount: 4))
                     }
                     .frame(height: chartHeight)
+                    .accessibilityLabel("Häufigste Trigger")
                 }
             }
         }

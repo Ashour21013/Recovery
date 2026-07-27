@@ -22,18 +22,18 @@ struct GoalCardView: View {
         VStack(alignment: .leading, spacing: AppSpacing.m) {
             HStack {
                 Label("Mein Ziel", systemImage: progress.goal.systemImage)
-                    .font(.headline)
+                    .font(AppFont.headline)
                 Spacer()
                 Button("Ändern", action: onSelectGoal)
-                    .font(.subheadline)
+                    .font(AppFont.subheadline)
             }
 
             HStack(alignment: .firstTextBaseline, spacing: AppSpacing.xs) {
                 Text("\(progress.currentDays)")
-                    .font(.system(size: 34, weight: .bold, design: .rounded))
+                    .font(AppFont.roundedNumber(relativeTo: .title))
                     .foregroundStyle(AppColor.accent)
                 Text("/ \(progress.goal.days) Tage")
-                    .font(.subheadline)
+                    .font(AppFont.subheadline)
                     .foregroundStyle(.secondary)
             }
 
@@ -42,11 +42,11 @@ struct GoalCardView: View {
 
             if progress.isAchieved {
                 Label("Ziel erreicht! 🎉", systemImage: "checkmark.seal.fill")
-                    .font(.subheadline.weight(.semibold))
+                    .font(AppFont.subheadline.weight(.semibold))
                     .foregroundStyle(.green)
             } else {
                 Text("Noch \(progress.remainingDays) Tage bis zum Ziel")
-                    .font(.footnote)
+                    .font(AppFont.footnote)
                     .foregroundStyle(.secondary)
             }
         }
@@ -57,13 +57,13 @@ struct GoalCardView: View {
     private var noGoal: some View {
         VStack(alignment: .leading, spacing: AppSpacing.s) {
             Label("Ziel setzen", systemImage: "target")
-                .font(.headline)
+                .font(AppFont.headline)
             Text("Wähle ein Ziel und verfolge deinen Fortschritt.")
-                .font(.subheadline)
+                .font(AppFont.subheadline)
                 .foregroundStyle(.secondary)
             Button(action: onSelectGoal) {
                 Text("Ziel festlegen")
-                    .font(.subheadline.weight(.semibold))
+                    .font(AppFont.subheadline.weight(.semibold))
             }
             .buttonStyle(.borderedProminent)
             .padding(.top, AppSpacing.xs)

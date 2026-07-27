@@ -12,12 +12,12 @@ struct MotivationCardView: View {
             VStack(alignment: .leading, spacing: AppSpacing.s) {
                 HStack {
                     Label(motivation.origin.title, systemImage: motivation.origin.systemImage)
-                        .font(.caption.weight(.semibold))
+                        .font(AppFont.caption.weight(.semibold))
                         .foregroundStyle(AppColor.accent)
                     Spacer()
                     Button(action: onChangeSource) {
                         Image(systemName: "slider.horizontal.3")
-                            .font(.subheadline.weight(.semibold))
+                            .font(AppFont.subheadline.weight(.semibold))
                             .foregroundStyle(AppColor.accent)
                     }
                     .buttonStyle(.plain)
@@ -32,11 +32,12 @@ struct MotivationCardView: View {
 
                 if let source = motivation.source {
                     Text("– \(source)")
-                        .font(.footnote)
+                        .font(AppFont.footnote)
                         .foregroundStyle(.secondary)
                 }
             }
             .animation(.smooth, value: motivation.id)
+            .accessibilityElement(children: .combine)
         }
     }
 }

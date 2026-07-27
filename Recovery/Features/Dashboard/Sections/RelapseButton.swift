@@ -11,7 +11,7 @@ struct RelapseButton: View {
             HStack(spacing: AppSpacing.s) {
                 Image(systemName: "arrow.uturn.backward.circle")
                 Text("Rückfall melden")
-                    .font(.subheadline.weight(.medium))
+                    .font(AppFont.subheadline.weight(.medium))
             }
             .foregroundStyle(.secondary)
             .frame(maxWidth: .infinity)
@@ -22,6 +22,7 @@ struct RelapseButton: View {
             )
         }
         .buttonStyle(.plain)
+        .accessibilityLabel("Rückfall melden")
         .accessibilityHint("Öffnet das Formular, um einen Rückfall zu dokumentieren.")
     }
 }

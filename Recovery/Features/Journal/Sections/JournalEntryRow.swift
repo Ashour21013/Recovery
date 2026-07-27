@@ -13,11 +13,11 @@ struct JournalEntryRow: View {
                         .font(.title3)
                 }
                 Text(entry.date, format: .dateTime.day().month().year())
-                    .font(.subheadline.weight(.semibold))
+                    .font(AppFont.subheadline.weight(.semibold))
                 Spacer()
                 if let trigger = entry.triggerName, !trigger.isEmpty {
                     Label(trigger, systemImage: "bolt.fill")
-                        .font(.caption)
+                        .font(AppFont.caption)
                         .foregroundStyle(.orange)
                         .labelStyle(.titleAndIcon)
                 }
@@ -25,12 +25,13 @@ struct JournalEntryRow: View {
 
             if !entry.text.isEmpty {
                 Text(entry.text)
-                    .font(.body)
+                    .font(AppFont.body)
                     .foregroundStyle(.primary)
                     .lineLimit(4)
             }
         }
         .padding(.vertical, AppSpacing.xs)
+        .accessibilityElement(children: .combine)
     }
 }
 

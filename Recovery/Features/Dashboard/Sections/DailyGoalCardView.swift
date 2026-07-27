@@ -10,11 +10,11 @@ struct DailyGoalCardView: View {
             VStack(alignment: .leading, spacing: AppSpacing.m) {
                 HStack {
                     Text(goal.title)
-                        .font(.headline)
+                        .font(AppFont.headline)
                     Spacer()
                     if goal.isCompleted {
                         Label("Erledigt", systemImage: "checkmark.seal.fill")
-                            .font(.footnote.weight(.semibold))
+                            .font(AppFont.footnote.weight(.semibold))
                             .foregroundStyle(.green)
                     }
                 }
@@ -28,10 +28,17 @@ struct DailyGoalCardView: View {
                 .tint(AppColor.accent)
 
                 Text("\(goal.completedTasks) von \(goal.totalTasks) Aufgaben abgeschlossen")
-                    .font(.footnote)
+                    .font(AppFont.footnote)
                     .foregroundStyle(.secondary)
             }
         }
+        .accessibilityElement(children: .ignore)
+        .accessibilityLabel(accessibilityDescription)
+    }
+
+    private var accessibilityDescription: String {
+        let status = goal.isCompleted ? " Erledigt." : ""
+        return "\(goal.title): \(goal.completedTasks) von \(goal.totalTasks) Aufgaben abgeschlossen.\(status)"
     }
 }
 
