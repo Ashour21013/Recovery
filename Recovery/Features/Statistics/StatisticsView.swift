@@ -59,37 +59,25 @@ struct StatisticsView: View {
     private func loadedContent(_ statistics: RecoveryStatistics) -> some View {
         ScrollView {
             VStack(spacing: AppSpacing.m) {
-                LazyVGrid(columns: columns, spacing: AppSpacing.m) {
-                    StatCard(
-                        value: "\(statistics.currentStreakDays)",
-                        label: "Aktuelle Streak",
-                        systemImage: "flame.fill"
-                    )
-                    StatCard(
-                        value: "\(statistics.longestStreakDays)",
-                        label: "Längste Streak",
-                        systemImage: "trophy.fill",
-                        tint: .yellow
-                    )
-                    StatCard(
-                        value: "\(statistics.relapseCount)",
-                        label: "Rückfälle",
-                        systemImage: "arrow.uturn.backward",
-                        tint: .red
-                    )
-                    StatCard(
-                        value: "\(statistics.topTriggers.count)",
-                        label: "Erfasste Trigger",
-                        systemImage: "bolt.fill",
-                        tint: .orange
-                    )
-                }
-
+                metricsGrid(statistics)
+                StreakHistoryChart(points: statistics.streakHistory)
+                RelapseHistoryChart(buckets: statistics.relapseBuckets)
                 TopTriggersChart(triggers: statistics.topTriggers)
             }
             .padding(AppSpacing.m)
             .premiumGated(.alleStatistiken) {
                 SampleChartPreview()
+            }
+        }
+    }
+
+    @ViewBuilder
+    private func metricsGrid(_ statistics: RecoveryStatistics) -> some View {
+        if let viewModel {
+            LazyVGrid(columns: columns, spacing: AppSpacing.m) {
+                ForEach(viewModel.metricCards(for: statistics)) { metric in
+                    StatMetricCard(metric: metric)
+                }
             }
         }
     }

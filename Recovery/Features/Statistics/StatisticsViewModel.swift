@@ -1,5 +1,6 @@
 import Foundation
 import Observation
+import SwiftUI
 
 /// ViewModel des Statistik-Screens (MVVM).
 ///
@@ -53,4 +54,54 @@ final class StatisticsViewModel: ViewModel {
             state = .failed(error)
         }
     }
+
+    // MARK: - Aufbereitete Kennzahlen (für die Karten)
+
+    /// Kennzahl-Karten in fester Reihenfolge (Grid 2×2).
+    func metricCards(for statistics: RecoveryStatistics) -> [StatMetric] {
+        [
+            StatMetric(
+                id: "currentStreak",
+                value: statistics.currentStreakDays,
+                unit: "Tage",
+                label: "Aktuelle Streak",
+                systemImage: "flame.fill",
+                tint: .orange
+            ),
+            StatMetric(
+                id: "longestStreak",
+                value: statistics.longestStreakDays,
+                unit: "Tage",
+                label: "Längste Streak",
+                systemImage: "trophy.fill",
+                tint: .yellow
+            ),
+            StatMetric(
+                id: "relapses",
+                value: statistics.relapseCount,
+                unit: nil,
+                label: "Rückfälle",
+                systemImage: "arrow.uturn.backward",
+                tint: .red
+            ),
+            StatMetric(
+                id: "triggers",
+                value: statistics.topTriggers.count,
+                unit: nil,
+                label: "Erfasste Trigger",
+                systemImage: "bolt.fill",
+                tint: .blue
+            )
+        ]
+    }
+}
+
+/// Aufbereitete Kennzahl für eine `StatCard`. Reines Presentation-Modell.
+struct StatMetric: Identifiable, Equatable {
+    let id: String
+    let value: Int
+    let unit: String?
+    let label: String
+    let systemImage: String
+    let tint: Color
 }
