@@ -12,6 +12,7 @@ struct SettingsView: View {
     @Environment(\.openURL) private var openURL
     @State private var viewModel: SettingsViewModel?
     @State private var isShowingPaywall = false
+    @State private var isShowingMetricsEditor = false
 
     /// Wird aufgerufen, wenn alle Daten gelöscht wurden (App-Reset).
     var onDataDeleted: () -> Void = {}
@@ -40,6 +41,7 @@ struct SettingsView: View {
         Form {
             premiumSection
             privacySection
+            trackingSection
             notificationsSection
             dataSection(viewModel)
             supportSection(viewModel)
@@ -47,6 +49,9 @@ struct SettingsView: View {
         }
         .sheet(isPresented: $isShowingPaywall) {
             PaywallView()
+        }
+        .sheet(isPresented: $isShowingMetricsEditor) {
+            MetricsEditorView()
         }
         .sheet(isPresented: Binding(
             get: { viewModel.exportURL != nil },
@@ -133,6 +138,23 @@ struct SettingsView: View {
             } label: {
                 settingsLabel("Datenschutz", systemImage: "lock.shield.fill", tint: .blue)
             }
+        }
+    }
+
+    private var trackingSection: some View {
+        Section("Fortschritt") {
+            Button {
+                isShowingMetricsEditor = true
+            } label: {
+                HStack {
+                    settingsLabel("Deine Werte", systemImage: "chart.line.uptrend.xyaxis", tint: .green)
+                    Spacer()
+                    Image(systemName: "chevron.right")
+                        .font(.footnote.weight(.semibold))
+                        .foregroundStyle(.tertiary)
+                }
+            }
+            .buttonStyle(.plain)
         }
     }
 

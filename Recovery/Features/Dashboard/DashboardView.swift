@@ -60,7 +60,8 @@ struct DashboardView: View {
             if viewModel == nil {
                 viewModel = DashboardViewModel(
                     repository: dependencies.makeRecoveryRepository(),
-                    motivationService: dependencies.motivationService
+                    motivationService: dependencies.motivationService,
+                    savingsFactory: dependencies.savingsMetricProviderFactory
                 )
             }
             await viewModel?.onAppear()
@@ -122,6 +123,14 @@ struct DashboardView: View {
             })
         }
         .sheet(isPresented: Binding(
+            get: { viewModel.isShowingMetricsEditor },
+            set: { viewModel.isShowingMetricsEditor = $0 }
+        )) {
+            MetricsEditorView(onSaved: {
+                Task { await viewModel.metricsDidChange() }
+            })
+        }
+        .sheet(isPresented: Binding(
             get: { viewModel.isShowingSourcePicker },
             set: { viewModel.isShowingSourcePicker = $0 }
         )) {
@@ -175,9 +184,13 @@ struct DashboardView: View {
                     goalProgress: data.goalProgress,
                     onSelectGoal: viewModel.presentGoalPicker
                 )
+                RecoveryGainsSectionView(
+                    gains: viewModel.gains,
+                    hasMetrics: viewModel.hasMetrics,
+                    onAddValues: viewModel.presentMetricsEditor
+                )
                 ProgressCardView(
-                    progress: data.progress,
-                    formattedMoneySaved: viewModel.formattedMoneySaved(for: data.progress)
+                    progress: data.progress
                 )
                 RecoveryPlanCardView(
                     plan: data.plan,

@@ -34,16 +34,31 @@ final class DashboardViewModel: ViewModel {
     /// Steuert die Anzeige der Sucht-Verwaltung (Hinzufügen/Löschen/Wechseln).
     var isShowingAddictionManager = false
 
+    /// Berechnete Fortschritts-Gewinne der aktiven Sucht (Geld/Zeit/Menge).
+    private(set) var gains: [RecoveryGain] = []
+
+    /// Ob für die aktive Sucht bereits Metrik-Eingaben hinterlegt sind.
+    private(set) var hasMetrics = false
+
+    /// Steuert die Anzeige des Metrik-Editors ("Werte hinzufügen").
+    var isShowingMetricsEditor = false
+
     private let repository: RecoveryRepository
     private let motivationService: MotivationService
+    private let savingsFactory: SavingsMetricProviderFactory
 
     /// Merkt sich (gerätelokal), welche Ziele bereits gefeiert wurden,
     /// damit die Erfolgsmeldung pro Ziel nur einmal erscheint.
     private let celebratedKey = "recovery.celebratedGoals"
 
-    init(repository: RecoveryRepository, motivationService: MotivationService) {
+    init(
+        repository: RecoveryRepository,
+        motivationService: MotivationService,
+        savingsFactory: SavingsMetricProviderFactory
+    ) {
         self.repository = repository
         self.motivationService = motivationService
+        self.savingsFactory = savingsFactory
     }
 
     /// Lädt die Dashboard-Daten. Idempotent beim ersten Erscheinen.
@@ -64,6 +79,7 @@ final class DashboardViewModel: ViewModel {
             let plan = try await repository.fetchPlan(for: .now)
             addictions = try await repository.fetchAddictions()
             motivationSource = profile.motivationSource
+            await loadGains(for: profile)
             let data = makeDashboardData(
                 profile: profile,
                 relapses: relapses,
@@ -122,6 +138,31 @@ final class DashboardViewModel: ViewModel {
     /// Wird nach Änderungen in der Verwaltung aufgerufen (Neuladen).
     func addictionsDidChange() async {
         await load()
+    }
+
+    // MARK: - Fortschritts-Gewinne (Geld/Zeit/Menge)
+
+    /// Öffnet den Editor zum Erfassen der Metrik-Eingaben.
+    func presentMetricsEditor() {
+        isShowingMetricsEditor = true
+    }
+
+    /// Wird nach dem Speichern im Metrik-Editor aufgerufen (Neuladen).
+    func metricsDidChange() async {
+        await load()
+    }
+
+    /// Berechnet die passenden Gewinne der aktiven Sucht über den per Factory
+    /// gewählten Provider (ViewModel kennt nur die Abstraktion).
+    private func loadGains(for profile: RecoveryProfile) async {
+        let metrics = (try? await repository.fetchMetrics()) ?? .empty
+        hasMetrics = metrics.hasAnyInput
+        let provider = savingsFactory.provider(for: profile.habitType)
+        gains = provider.gains(
+            for: profile.habitType,
+            streakDays: profile.currentStreakDays(),
+            metrics: metrics
+        )
     }
 
     /// Leitet den passenden Motivationskontext aus der aktuellen Situation ab.
@@ -222,13 +263,6 @@ final class DashboardViewModel: ViewModel {
     }
 
     // MARK: - Aufbereitete Anzeige-Werte
-
-    /// Formatiert den gesparten Betrag gemäß Locale.
-    func formattedMoneySaved(for progress: ProgressSummary) -> String {
-        progress.moneySaved.formatted(
-            .currency(code: progress.currencyCode)
-        )
-    }
 
     // MARK: - Ableitung der Anzeige-Daten aus der Domain
 

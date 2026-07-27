@@ -25,6 +25,20 @@ final class RecoveryProfileModel {
     /// Optional-defaultend, damit Bestandsdaten leichtgewichtig migrieren.
     var isActive: Bool = false
 
+    // MARK: - Fortschritts-Metriken (optional, leichte Migration)
+
+    /// Preis pro Konsum-Packung (z. B. Schachtel), als Double gespeichert.
+    var metricUnitPrice: Double? = nil
+    /// Konsumeinheiten pro Tag (z. B. Zigaretten pro Tag).
+    var metricUnitsPerDay: Double? = nil
+    /// Einheiten pro Packung (z. B. 20 Zigaretten pro Schachtel).
+    var metricUnitsPerPackage: Double? = nil
+    /// Wochenausgaben (Alkohol/Glücksspiel), als Double gespeichert.
+    var metricWeeklySpend: Double? = nil
+    /// Durchschnittlich verbrauchte Zeit pro Tag in Minuten (Zeit-Süchte).
+    var metricMinutesPerDay: Double? = nil
+
+
     @Relationship(deleteRule: .cascade, inverse: \JournalEntryModel.profile)
     var journalEntries: [JournalEntryModel]
 

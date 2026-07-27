@@ -45,6 +45,26 @@ enum RecoveryMapper {
         model.motivationSourceRawValue = profile.motivationSource.rawValue
     }
 
+    // MARK: - Fortschritts-Metriken
+
+    static func metrics(from model: RecoveryProfileModel) -> AddictionMetrics {
+        AddictionMetrics(
+            unitPrice: model.metricUnitPrice.map { Decimal($0) },
+            unitsPerDay: model.metricUnitsPerDay,
+            unitsPerPackage: model.metricUnitsPerPackage,
+            weeklySpend: model.metricWeeklySpend.map { Decimal($0) },
+            minutesPerDay: model.metricMinutesPerDay
+        )
+    }
+
+    static func apply(_ metrics: AddictionMetrics, to model: RecoveryProfileModel) {
+        model.metricUnitPrice = metrics.unitPrice.map { ($0 as NSDecimalNumber).doubleValue }
+        model.metricUnitsPerDay = metrics.unitsPerDay
+        model.metricUnitsPerPackage = metrics.unitsPerPackage
+        model.metricWeeklySpend = metrics.weeklySpend.map { ($0 as NSDecimalNumber).doubleValue }
+        model.metricMinutesPerDay = metrics.minutesPerDay
+    }
+
     // MARK: - Journal
 
     static func toDomain(_ model: JournalEntryModel) -> JournalEntry {

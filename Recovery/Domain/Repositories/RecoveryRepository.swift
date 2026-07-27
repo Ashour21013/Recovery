@@ -27,6 +27,14 @@ protocol RecoveryRepository: Repository {
     /// Aktualisiert die gewählte Motivationsquelle.
     func updateMotivationSource(_ source: MotivationSource) async throws
 
+    // MARK: - Fortschritts-Metriken
+
+    /// Lädt die hinterlegten Metrik-Eingaben der aktiven Sucht.
+    func fetchMetrics() async throws -> AddictionMetrics
+
+    /// Speichert die Metrik-Eingaben für die aktive Sucht.
+    func updateMetrics(_ metrics: AddictionMetrics) async throws
+
     // MARK: - Süchte (Multi-Addiction)
 
     /// Liefert alle getrackten Süchte als Zusammenfassung (für Auswahl/Verwaltung).

@@ -55,6 +55,19 @@ final class SwiftDataRecoveryRepository: RecoveryRepository {
         try save()
     }
 
+    // MARK: - Fortschritts-Metriken
+
+    func fetchMetrics() async throws -> AddictionMetrics {
+        let model = try currentProfileModel()
+        return RecoveryMapper.metrics(from: model)
+    }
+
+    func updateMetrics(_ metrics: AddictionMetrics) async throws {
+        let model = try currentProfileModel()
+        RecoveryMapper.apply(metrics, to: model)
+        try save()
+    }
+
     // MARK: - Süchte (Multi-Addiction)
 
     func fetchAddictions() async throws -> [AddictionSummary] {
