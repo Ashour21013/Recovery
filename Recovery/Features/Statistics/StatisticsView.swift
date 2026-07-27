@@ -88,7 +88,9 @@ struct StatisticsView: View {
                 TopTriggersChart(triggers: statistics.topTriggers)
             }
             .padding(AppSpacing.m)
-            .premiumGated(.alleStatistiken)
+            .premiumGated(.alleStatistiken) {
+                SampleChartPreview()
+            }
         }
     }
 }

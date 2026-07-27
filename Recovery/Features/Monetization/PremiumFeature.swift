@@ -35,4 +35,50 @@ enum PremiumFeature: String, CaseIterable, Identifiable {
         case .widgets: "Widgets"
         }
     }
+
+    /// Einladender Teaser-Titel für die `LockedFeatureCard`.
+    var teaserTitle: String {
+        switch self {
+        case .multipleSuchte: "Mehrere Gewohnheiten"
+        case .alleStatistiken: "Statistiken"
+        case .recoveryGains: "Deine Erfolge"
+        case .alleAppIcons: "Alle App-Icons"
+        case .erweiterteInspiration: "Mehr Motivation"
+        case .iCloudSync: "iCloud-Sync"
+        case .widgets: "Widgets"
+        }
+    }
+
+    /// Kurze, motivierende Nutzen-Beschreibung für die `LockedFeatureCard`.
+    var teaserDescription: String {
+        switch self {
+        case .multipleSuchte:
+            "Tracke mehrere Gewohnheiten gleichzeitig an einem Ort."
+        case .alleStatistiken:
+            "Sieh deine längste Streak, Rückfälle und häufigsten Trigger als übersichtliche Diagramme."
+        case .recoveryGains:
+            "Sieh, wie viel Geld oder Zeit du seit deinem Start zurückgewonnen hast."
+        case .alleAppIcons:
+            "Wähle aus verschiedenen App-Icons dein Lieblingsdesign."
+        case .erweiterteInspiration:
+            "Schalte zusätzliche Motivationsquellen frei, z. B. Bibelverse."
+        case .iCloudSync:
+            "Synchronisiere deinen Fortschritt sicher über all deine Geräte."
+        case .widgets:
+            "Behalte deine Streak direkt vom Home-Bildschirm im Blick."
+        }
+    }
+
+    /// SF-Symbol zur illustrativen Darstellung des Features.
+    var systemImage: String {
+        switch self {
+        case .multipleSuchte: "square.stack.3d.up.fill"
+        case .alleStatistiken: "chart.bar.xaxis"
+        case .recoveryGains: "sparkles"
+        case .alleAppIcons: "app.badge.fill"
+        case .erweiterteInspiration: "quote.bubble.fill"
+        case .iCloudSync: "icloud.fill"
+        case .widgets: "square.grid.2x2.fill"
+        }
+    }
 }

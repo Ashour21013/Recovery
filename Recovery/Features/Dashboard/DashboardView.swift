@@ -189,7 +189,9 @@ struct DashboardView: View {
                     hasMetrics: viewModel.hasMetrics,
                     onAddValues: viewModel.presentMetricsEditor
                 )
-                .premiumGated(.recoveryGains)
+                .premiumGated(.recoveryGains) {
+                    SampleMetricsPreview()
+                }
                 ProgressCardView(
                     progress: data.progress
                 )

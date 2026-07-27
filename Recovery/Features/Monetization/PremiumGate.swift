@@ -16,16 +16,25 @@ extension View {
         modifier(PremiumGateModifier(isActive: isActive))
     }
 
-    /// Sperrt den Inhalt hinter Premium, sofern das Feature nicht freigeschaltet
-    /// ist: dezenter Blur + Schloss-Overlay, Tap öffnet die Paywall. Ist das
-    /// Feature freigeschaltet, wird der Inhalt unverändert dargestellt.
+    /// Ersetzt den Inhalt bei fehlendem Zugriff durch einen attraktiven Teaser
+    /// (`LockedFeatureCard`) mit Icon, Titel, Nutzen und Call-to-Action. Ist das
+    /// Feature freigeschaltet, wird der echte Inhalt unverändert dargestellt.
     ///
     /// Beispiel:
     /// ```swift
     /// StatisticsChart().premiumGated(.alleStatistiken)
     /// ```
     func premiumGated(_ feature: PremiumFeature) -> some View {
-        modifier(PremiumGatedModifier(feature: feature))
+        modifier(PremiumGatedModifier(feature: feature, preview: { EmptyView() }))
+    }
+
+    /// Wie `premiumGated(_:)`, zeigt aber zusätzlich ein generisches
+    /// Beispiel-Preview (Dummy-Chart/-Zahlen) dezent im Hintergrund des Teasers.
+    func premiumGated<Preview: View>(
+        _ feature: PremiumFeature,
+        @ViewBuilder preview: @escaping () -> Preview
+    ) -> some View {
+        modifier(PremiumGatedModifier(feature: feature, preview: preview))
     }
 }
 
@@ -81,10 +90,11 @@ struct PremiumBadge: View {
     }
 }
 
-/// Sperrt beliebige Inhalte hinter Premium: dezenter Blur + Schloss-Overlay.
-/// Tap öffnet die Paywall. Freigeschaltete Features bleiben unverändert.
-private struct PremiumGatedModifier: ViewModifier {
+/// Ersetzt gesperrte Inhalte durch einen attraktiven Teaser
+/// (`LockedFeatureCard`). Der echte Inhalt bleibt für Premium unverändert.
+private struct PremiumGatedModifier<Preview: View>: ViewModifier {
     let feature: PremiumFeature
+    @ViewBuilder let preview: () -> Preview
 
     @Environment(\.dependencies) private var dependencies
     @State private var isShowingPaywall = false
@@ -98,27 +108,15 @@ private struct PremiumGatedModifier: ViewModifier {
             if isUnlocked {
                 content
             } else {
-                lockedContent(content)
+                LockedFeatureCard(
+                    feature: feature,
+                    onUnlock: { isShowingPaywall = true },
+                    preview: preview
+                )
             }
         }
         .sheet(isPresented: $isShowingPaywall) {
             PaywallView()
         }
-    }
-
-    private func lockedContent(_ content: Content) -> some View {
-        content
-            .blur(radius: 6)
-            .disabled(true)
-            .overlay {
-                PremiumBadge()
-                    .scaleEffect(1.2)
-            }
-            .contentShape(Rectangle())
-            .onTapGesture { isShowingPaywall = true }
-            .accessibilityElement(children: .ignore)
-            .accessibilityLabel("\(feature.title) – Premium-Funktion")
-            .accessibilityHint("Doppeltippen, um Premium freizuschalten")
-            .accessibilityAddTraits(.isButton)
     }
 }
