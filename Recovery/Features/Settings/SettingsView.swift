@@ -190,8 +190,6 @@ struct SettingsView: View {
             }
         } header: {
             Text("Abonnement")
-        } footer: {
-            Text("Käufe wiederherstellen ist immer verfügbar – z. B. nach einem Gerätewechsel oder einer Neuinstallation.")
         }
     }
 

@@ -59,12 +59,19 @@ final class SettingsViewModel: ViewModel {
         isRestoring = true
         defer { isRestoring = false }
 
+        let wasPremiumBefore = isPremium
         await subscriptionService.restore()
 
-        if isPremium {
-            infoMessage = "Deine Käufe wurden wiederhergestellt. Premium ist aktiv."
-        } else {
-            infoMessage = "Es wurden keine früheren Käufe gefunden, die wiederhergestellt werden können."
+        switch (wasPremiumBefore, isPremium) {
+        case (true, _):
+            // War bereits Premium – nichts wurde neu wiederhergestellt.
+            infoMessage = "Premium ist bereits aktiv."
+        case (false, true):
+            // Vorher kein Premium, jetzt Premium – Kauf wiederhergestellt.
+            infoMessage = "Deine Käufe wurden wiederhergestellt."
+        case (false, false):
+            // Keine Berechtigung gefunden.
+            infoMessage = "Keine früheren Käufe gefunden."
         }
     }
 
