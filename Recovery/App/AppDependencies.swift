@@ -49,18 +49,33 @@ final class AppDependencies {
 
     // MARK: - Factories
 
-    /// Erstellt das Recovery-Repository auf Basis des Main-Kontexts.
+    /// Zwischengespeicherte Repository-Instanz (an den Main-Kontext gebunden).
+    ///
+    /// Das Repository ist zustandslos und arbeitet ausschließlich auf dem
+    /// geteilten `mainContext`. Ein einmaliges Erzeugen vermeidet unnötige
+    /// Allokationen bei wiederholten Aufrufen aus verschiedenen Views.
+    @MainActor
+    @ObservationIgnored
+    private lazy var cachedRecoveryRepository: RecoveryRepository =
+        SwiftDataRecoveryRepository(context: modelContainer.mainContext)
+
+    @MainActor
+    @ObservationIgnored
+    private lazy var cachedAchievementService: AchievementService =
+        SwiftDataAchievementService(context: modelContainer.mainContext)
+
+    /// Liefert das Recovery-Repository auf Basis des Main-Kontexts.
     ///
     /// Views/ViewModels erhalten ausschließlich die Protokoll-Abstraktion
     /// `RecoveryRepository`, niemals SwiftData-Typen.
     @MainActor
     func makeRecoveryRepository() -> RecoveryRepository {
-        SwiftDataRecoveryRepository(context: modelContainer.mainContext)
+        cachedRecoveryRepository
     }
 
-    /// Erstellt den Achievement-Service auf Basis des Main-Kontexts.
+    /// Liefert den Achievement-Service auf Basis des Main-Kontexts.
     @MainActor
     func makeAchievementService() -> AchievementService {
-        SwiftDataAchievementService(context: modelContainer.mainContext)
+        cachedAchievementService
     }
 }

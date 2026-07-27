@@ -13,13 +13,14 @@ struct StreakCardView: View {
                 } icon: {
                     Image(systemName: "flame.fill")
                         .symbolEffect(.pulse, options: .repeating)
+                        .accessibilityHidden(true)
                 }
-                .font(.subheadline.weight(.semibold))
+                .font(AppFont.subheadline.weight(.semibold))
                 .foregroundStyle(.secondary)
 
                 HStack(alignment: .firstTextBaseline, spacing: AppSpacing.s) {
                     Text("\(streak.currentDays)")
-                        .font(.system(size: 56, weight: .bold, design: .rounded))
+                        .font(AppFont.roundedNumber())
                         .foregroundStyle(AppColor.accent)
                         .contentTransition(.numericText(value: Double(streak.currentDays)))
 
@@ -34,16 +35,30 @@ struct StreakCardView: View {
                         .foregroundStyle(streak.isNewRecord ? .yellow : .secondary)
                         .contentTransition(.symbolEffect(.replace))
                         .symbolEffect(.bounce, value: streak.isNewRecord)
+                        .accessibilityHidden(true)
                     Text(streak.isNewRecord
                          ? "Neuer Rekord!"
                          : "Bestwert: \(streak.bestDays) Tage")
-                        .font(.footnote)
+                        .font(AppFont.footnote)
                         .foregroundStyle(.secondary)
                         .contentTransition(.numericText())
                 }
                 .animation(.smooth, value: streak.isNewRecord)
             }
         }
+        .accessibilityElement(children: .ignore)
+        .accessibilityLabel(accessibilityDescription)
+    }
+
+    /// Zusammenhängende, natürlich vorgelesene Beschreibung für VoiceOver,
+    /// statt einzelner Fragmente.
+    private var accessibilityDescription: String {
+        let unit = streak.currentDays == 1 ? "Tag" : "Tage"
+        let base = "Aktuelle Streak: \(streak.currentDays) \(unit)."
+        let record = streak.isNewRecord
+            ? " Neuer Rekord!"
+            : " Bestwert: \(streak.bestDays) Tage."
+        return base + record
     }
 }
 
