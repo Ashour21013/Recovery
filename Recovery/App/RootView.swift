@@ -44,6 +44,11 @@ struct RootView: View {
         .animation(.smooth(duration: 0.5), value: hasCompletedOnboarding)
         .animation(.smooth(duration: 0.5), value: hasAcceptedDisclaimer)
         .task {
+            // Premium-Status möglichst früh ermitteln, damit gating-relevante
+            // Screens nicht kurz die gesperrte Ansicht zeigen.
+            await dependencies.featureAccess.refresh()
+        }
+        .task {
             hasAcceptedDisclaimer = dependencies.disclaimerStore.hasAcceptedDisclaimer
             let repository = dependencies.makeRecoveryRepository()
             let profile = try? await repository.loadProfile()

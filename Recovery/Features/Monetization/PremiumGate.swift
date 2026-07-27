@@ -92,6 +92,10 @@ struct PremiumBadge: View {
 
 /// Ersetzt gesperrte Inhalte durch einen attraktiven Teaser
 /// (`LockedFeatureCard`). Der echte Inhalt bleibt für Premium unverändert.
+///
+/// Solange der Entitlement-Status noch lädt, wird ein dezenter, neutraler
+/// Ladezustand (Redacted-Skeleton des echten Inhalts) gezeigt – so blitzt
+/// beim App-Start weder die Paywall noch der finale Inhalt kurz auf.
 private struct PremiumGatedModifier<Preview: View>: ViewModifier {
     let feature: PremiumFeature
     @ViewBuilder let preview: () -> Preview
@@ -99,15 +103,21 @@ private struct PremiumGatedModifier<Preview: View>: ViewModifier {
     @Environment(\.dependencies) private var dependencies
     @State private var isShowingPaywall = false
 
-    private var isUnlocked: Bool {
-        dependencies.featureAccess.isUnlocked(feature)
+    private var access: FeatureAccessState {
+        dependencies.featureAccess.access(feature)
     }
 
     func body(content: Content) -> some View {
         Group {
-            if isUnlocked {
+            switch access {
+            case .loading:
                 content
-            } else {
+                    .redacted(reason: .placeholder)
+                    .allowsHitTesting(false)
+                    .accessibilityLabel("Wird geladen")
+            case .unlocked:
+                content
+            case .locked:
                 LockedFeatureCard(
                     feature: feature,
                     onUnlock: { isShowingPaywall = true },
@@ -115,6 +125,7 @@ private struct PremiumGatedModifier<Preview: View>: ViewModifier {
                 )
             }
         }
+        .animation(.smooth, value: access)
         .sheet(isPresented: $isShowingPaywall) {
             PaywallView()
         }

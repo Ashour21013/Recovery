@@ -56,12 +56,13 @@ struct AddictionManagerView: View {
     }
 
     /// Entscheidet beim Tippen auf "+", ob der Add-Flow oder die Paywall
-    /// erscheint: Free-Nutzer dürfen genau eine Sucht anlegen.
+    /// erscheint: Free-Nutzer dürfen genau eine Sucht anlegen. Solange der
+    /// Premium-Status noch lädt, wird nicht fälschlich gesperrt.
     private func addTapped() {
         guard let viewModel else { return }
         let hasAtLeastOne = !viewModel.addictions.isEmpty
-        let mayAddMore = dependencies.featureAccess.isUnlocked(.multipleSuchte)
-        if hasAtLeastOne && !mayAddMore {
+        let access = dependencies.featureAccess.access(.multipleSuchte)
+        if hasAtLeastOne && access == .locked {
             isShowingPaywall = true
         } else {
             viewModel.isShowingAddFlow = true

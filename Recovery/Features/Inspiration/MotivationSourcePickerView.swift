@@ -59,9 +59,10 @@ struct MotivationSourcePickerView: View {
         }
     }
 
-    /// Ob die Quelle für den aktuellen Nutzer gesperrt ist.
+    /// Ob die Quelle für den aktuellen Nutzer gesperrt ist. Während der
+    /// Premium-Status noch lädt, wird nicht fälschlich gesperrt.
     private func isLocked(_ source: MotivationSource) -> Bool {
-        source.isPremium && !dependencies.featureAccess.isUnlocked(.erweiterteInspiration)
+        source.isPremium && dependencies.featureAccess.access(.erweiterteInspiration) == .locked
     }
 
     /// Gesperrte Premium-Quellen öffnen die Paywall statt gewählt zu werden.
