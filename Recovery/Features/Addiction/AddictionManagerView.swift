@@ -16,6 +16,9 @@ struct AddictionManagerView: View {
     /// Bestätigungsdialog vor dem Löschen.
     @State private var pendingDeletion: AddictionSummary?
 
+    /// Steuert die Paywall (Free-Nutzer versucht 2. Sucht anzulegen).
+    @State private var isShowingPaywall = false
+
     var body: some View {
         NavigationStack {
             Group {
@@ -33,13 +36,15 @@ struct AddictionManagerView: View {
                 }
                 ToolbarItem(placement: .primaryAction) {
                     Button {
-                        viewModel?.isShowingAddFlow = true
+                        addTapped()
                     } label: {
                         Image(systemName: "plus")
                     }
-                    .disabled(viewModel?.canAddMore == false)
                     .accessibilityLabel("Sucht hinzufügen")
                 }
+            }
+            .sheet(isPresented: $isShowingPaywall) {
+                PaywallView()
             }
         }
         .task {
@@ -47,6 +52,19 @@ struct AddictionManagerView: View {
                 viewModel = AddictionManagerViewModel(repository: dependencies.makeRecoveryRepository())
             }
             await viewModel?.onAppear()
+        }
+    }
+
+    /// Entscheidet beim Tippen auf "+", ob der Add-Flow oder die Paywall
+    /// erscheint: Free-Nutzer dürfen genau eine Sucht anlegen.
+    private func addTapped() {
+        guard let viewModel else { return }
+        let hasAtLeastOne = !viewModel.addictions.isEmpty
+        let mayAddMore = dependencies.featureAccess.isUnlocked(.multipleSuchte)
+        if hasAtLeastOne && !mayAddMore {
+            isShowingPaywall = true
+        } else {
+            viewModel.isShowingAddFlow = true
         }
     }
 

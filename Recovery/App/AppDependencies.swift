@@ -44,6 +44,13 @@ final class AppDependencies {
     /// Environment für den app-weiten Entitlement-Status.
     let subscriptionService: SubscriptionService = SubscriptionService()
 
+    /// App-weiter Feature-Gating-Service. Prüft anhand des Entitlement-Status,
+    /// welche `PremiumFeature`s freigeschaltet sind.
+    @MainActor
+    @ObservationIgnored
+    private(set) lazy var featureAccess: FeatureAccessService =
+        FeatureAccessService(subscriptionService: subscriptionService)
+
     init() {
         do {
             let schema = Schema([

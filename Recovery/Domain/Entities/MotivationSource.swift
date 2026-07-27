@@ -41,4 +41,10 @@ enum MotivationSource: String, CaseIterable, Identifiable, Codable, Hashable {
 
     /// Standardquelle für neue Nutzer.
     static let `default`: MotivationSource = .quotes
+
+    /// Ob diese Quelle zur erweiterten (kostenpflichtigen) Inspiration gehört.
+    /// Nur `quotes` ist kostenlos; alle weiteren Quellen sind Premium.
+    var isPremium: Bool {
+        self != .quotes
+    }
 }

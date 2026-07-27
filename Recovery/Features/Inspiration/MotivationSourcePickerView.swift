@@ -7,13 +7,16 @@ struct MotivationSourcePickerView: View {
     let onSelect: (MotivationSource) -> Void
     let onCancel: () -> Void
 
+    @Environment(\.dependencies) private var dependencies
+    @State private var isShowingPaywall = false
+
     var body: some View {
         NavigationStack {
             List {
                 Section {
                     ForEach(MotivationSource.allCases) { source in
                         Button {
-                            onSelect(source)
+                            handleTap(source)
                         } label: {
                             HStack(spacing: AppSpacing.m) {
                                 Image(systemName: source.systemImage)
@@ -27,7 +30,9 @@ struct MotivationSourcePickerView: View {
                                         .foregroundStyle(.secondary)
                                 }
                                 Spacer()
-                                if source == current {
+                                if isLocked(source) {
+                                    PremiumLockBadge()
+                                } else if source == current {
                                     Image(systemName: "checkmark")
                                         .foregroundStyle(AppColor.accent)
                                         .fontWeight(.semibold)
@@ -48,6 +53,23 @@ struct MotivationSourcePickerView: View {
                     Button("Abbrechen", action: onCancel)
                 }
             }
+            .sheet(isPresented: $isShowingPaywall) {
+                PaywallView()
+            }
+        }
+    }
+
+    /// Ob die Quelle für den aktuellen Nutzer gesperrt ist.
+    private func isLocked(_ source: MotivationSource) -> Bool {
+        source.isPremium && !dependencies.featureAccess.isUnlocked(.erweiterteInspiration)
+    }
+
+    /// Gesperrte Premium-Quellen öffnen die Paywall statt gewählt zu werden.
+    private func handleTap(_ source: MotivationSource) {
+        if isLocked(source) {
+            isShowingPaywall = true
+        } else {
+            onSelect(source)
         }
     }
 }
