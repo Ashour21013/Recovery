@@ -39,9 +39,15 @@ struct AddictionEntityQuery: EntityQuery {
 
     private func allEntities() -> [AddictionAppEntity] {
         let snapshot = store.load() ?? .placeholder
-        return snapshot.addictions.map {
+        let entities = snapshot.addictions.map {
             AddictionAppEntity(id: $0.id, title: $0.title)
         }
+        // Fallback, damit der Auswahl-Parameter auch dann sichtbar ist, wenn
+        // noch keine Süchte in die App Group geschrieben wurden.
+        if entities.isEmpty {
+            return [AddictionAppEntity(id: "active", title: "Aktive Sucht")]
+        }
+        return entities
     }
 }
 
