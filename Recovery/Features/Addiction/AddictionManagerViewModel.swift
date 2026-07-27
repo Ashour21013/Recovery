@@ -50,6 +50,7 @@ final class AddictionManagerViewModel: ViewModel {
         do {
             try await repository.switchAddiction(to: id)
             await reload()
+            AddictionChangeBroadcaster.broadcast()
         } catch {
             errorMessage = error.localizedDescription
         }
@@ -77,6 +78,7 @@ final class AddictionManagerViewModel: ViewModel {
         do {
             try await repository.deleteAddiction(id: id)
             await reload()
+            AddictionChangeBroadcaster.broadcast()
         } catch {
             errorMessage = error.localizedDescription
         }

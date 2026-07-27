@@ -36,6 +36,9 @@ struct AchievementsView: View {
             }
             await viewModel?.onAppear()
         }
+        .onReceive(NotificationCenter.default.publisher(for: .activeAddictionDidChange)) { _ in
+            Task { await viewModel?.evaluateAndReload() }
+        }
         .overlay {
             if let viewModel, !viewModel.newlyUnlocked.isEmpty {
                 AchievementUnlockView(

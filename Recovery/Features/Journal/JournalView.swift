@@ -31,6 +31,9 @@ struct JournalView: View {
             }
             await viewModel?.onAppear()
         }
+        .onReceive(NotificationCenter.default.publisher(for: .activeAddictionDidChange)) { _ in
+            Task { await viewModel?.load() }
+        }
         .sheet(isPresented: $isShowingEditor) {
             JournalEditorView(
                 onSave: { entry in

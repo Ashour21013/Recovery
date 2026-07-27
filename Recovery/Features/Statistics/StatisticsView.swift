@@ -31,6 +31,9 @@ struct StatisticsView: View {
             // Bei jedem Wechsel auf diesen Tab die Kennzahlen aktualisieren.
             Task { await viewModel?.refresh() }
         }
+        .onReceive(NotificationCenter.default.publisher(for: .activeAddictionDidChange)) { _ in
+            Task { await viewModel?.refresh() }
+        }
     }
 
     @ViewBuilder

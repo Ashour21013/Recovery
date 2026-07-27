@@ -112,6 +112,8 @@ final class DashboardViewModel: ViewModel {
         do {
             try await repository.switchAddiction(to: id)
             await load()
+            // Alle übrigen Screens (Journal, Statistik, Erfolge) informieren.
+            AddictionChangeBroadcaster.broadcast()
         } catch {
             state = .failed(error)
         }
