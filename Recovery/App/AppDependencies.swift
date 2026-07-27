@@ -51,6 +51,19 @@ final class AppDependencies {
     private(set) lazy var featureAccess: FeatureAccessService =
         FeatureAccessService(subscriptionService: subscriptionService)
 
+    /// Schreibt die für das Home-Screen-Widget benötigten Daten in die
+    /// geteilte App Group. Wird nach dem Laden des Dashboards aufgerufen.
+    @MainActor
+    @ObservationIgnored
+    private(set) lazy var widgetPublisher = WidgetSnapshotPublisher()
+
+    /// Aktualisiert den geteilten Widget-Snapshot aus dem aktuellen Profil.
+    @MainActor
+    func refreshWidgetSnapshot(profile: RecoveryProfile) {
+        widgetPublisher.publish(profile: profile, isPremium: featureAccess.isPremium)
+    }
+
+
     init() {
         do {
             let schema = Schema([

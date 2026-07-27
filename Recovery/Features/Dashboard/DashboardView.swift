@@ -65,6 +65,16 @@ struct DashboardView: View {
                 )
             }
             await viewModel?.onAppear()
+            await updateWidgetSnapshot()
+        }
+    }
+
+    /// Aktualisiert den geteilten Widget-Snapshot aus dem aktuellen Profil.
+    /// Reine Datenweitergabe an die App Group – keine UI-Logik.
+    private func updateWidgetSnapshot() async {
+        let loaded = try? await dependencies.makeRecoveryRepository().loadProfile()
+        if let profile = loaded ?? nil {
+            dependencies.refreshWidgetSnapshot(profile: profile)
         }
     }
 
