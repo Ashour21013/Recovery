@@ -17,7 +17,7 @@ struct RecoveryWidgetView: View {
                 default: MediumWidgetView(entry: entry)
                 }
             } else {
-                LockedWidgetView()
+                LockedWidgetView(family: family)
             }
         }
         .containerBackground(for: .widget) {
@@ -139,23 +139,56 @@ private struct MediumWidgetView: View {
 
 // MARK: - Locked (Free)
 
+/// Teaser für Free-Nutzer: zeigt eine dezent verblurrte Beispiel-Vorschau des
+/// echten Widgets im Hintergrund, darüber gut lesbar Schloss, Titel und Nutzen.
 private struct LockedWidgetView: View {
+    let family: WidgetFamily
+
+    /// Demo-Snapshot rein zur Veranschaulichung (keine echten Nutzerdaten).
+    private var demoEntry: RecoveryEntry {
+        RecoveryEntry(
+            date: .now,
+            snapshot: .placeholder,
+            quote: WidgetSnapshot.placeholder.quote()
+        )
+    }
+
     var body: some View {
-        VStack(spacing: 8) {
-            Image(systemName: "lock.fill")
-                .font(.title2)
-                .foregroundStyle(Color.accentColor)
-            Text("Premium freischalten")
-                .font(.subheadline.weight(.semibold))
-                .foregroundStyle(.primary)
-                .multilineTextAlignment(.center)
-            Text("Streak & tägliche Motivation direkt auf dem Home-Bildschirm.")
-                .font(.caption2)
-                .foregroundStyle(.secondary)
-                .multilineTextAlignment(.center)
-                .lineLimit(3)
+        ZStack {
+            // Verblurrte Beispiel-Vorschau des echten Widgets.
+            Group {
+                if family == .systemSmall {
+                    SmallWidgetView(entry: demoEntry)
+                } else {
+                    MediumWidgetView(entry: demoEntry)
+                }
+            }
+            .blur(radius: 5)
+            .opacity(0.5)
+            .accessibilityHidden(true)
+
+            // Abdunkelung für gute Lesbarkeit des Overlays.
+            Color(.systemBackground).opacity(0.25)
+
+            // Klarer Vordergrund.
+            VStack(spacing: 6) {
+                Image(systemName: "lock.fill")
+                    .font(.headline)
+                    .foregroundStyle(.white)
+                    .padding(8)
+                    .background(Circle().fill(Color.accentColor))
+                Text("Premium freischalten")
+                    .font(.subheadline.weight(.semibold))
+                    .foregroundStyle(.primary)
+                    .multilineTextAlignment(.center)
+                Text("Streak & tägliche Motivation direkt auf dem Home-Bildschirm.")
+                    .font(.caption2)
+                    .foregroundStyle(.secondary)
+                    .multilineTextAlignment(.center)
+                    .lineLimit(3)
+            }
+            .padding(.horizontal, 8)
         }
-        .padding(.horizontal, 4)
         .frame(maxWidth: .infinity, maxHeight: .infinity)
     }
 }

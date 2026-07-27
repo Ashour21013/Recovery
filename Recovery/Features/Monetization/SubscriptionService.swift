@@ -20,6 +20,10 @@ final class SubscriptionService: SubscriptionServiceProtocol {
     @ObservationIgnored
     private var updatesTask: Task<Void, Never>?
 
+    /// Spiegelt den Premium-Status in die App Group für das Widget.
+    @ObservationIgnored
+    private let widgetStore = WidgetSnapshotStore()
+
     init() {
         // Auf Transaktions-Updates lauschen, solange der Service lebt.
         updatesTask = listenForTransactions()
@@ -111,6 +115,9 @@ final class SubscriptionService: SubscriptionServiceProtocol {
         }
 
         entitlementStatus = active.map(EntitlementStatus.subscribed) ?? .notSubscribed
+
+        // Premium-Status zuverlässig für das Home-Screen-Widget spiegeln.
+        widgetStore.updatePremium(entitlementStatus.isPremium)
     }
 
     // MARK: - Transaktions-Updates

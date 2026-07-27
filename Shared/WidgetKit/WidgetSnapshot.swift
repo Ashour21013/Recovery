@@ -74,6 +74,21 @@ struct WidgetSnapshot: Codable, Equatable {
         ]
     )
 
+    /// Kopie mit geändertem Premium-Status (für schnelle Entitlement-Updates,
+    /// ohne den Snapshot vollständig aus dem Profil neu aufzubauen).
+    func withPremium(_ isPremium: Bool) -> WidgetSnapshot {
+        WidgetSnapshot(
+            currentStreakDays: currentStreakDays,
+            longestStreakDays: longestStreakDays,
+            addictionTitle: addictionTitle,
+            addictionSystemImage: addictionSystemImage,
+            startDate: startDate,
+            isPremium: isPremium,
+            quotes: quotes,
+            updatedAt: .now
+        )
+    }
+
     /// Wählt pro Kalendertag deterministisch einen Spruch aus.
     ///
     /// Anhand des Tagesindex (Ordinalzahl des Tages) ändert sich der Spruch

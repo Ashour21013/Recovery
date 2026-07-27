@@ -30,6 +30,18 @@ struct WidgetSnapshotStore {
         return try? JSONDecoder().decode(WidgetSnapshot.self, from: data)
     }
 
+    /// Aktualisiert nur den Premium-Status im vorhandenen Snapshot.
+    ///
+    /// Nützlich, wenn sich das Entitlement ändert (Kauf/Restore/Update),
+    /// ohne dass ein vollständiger Neuaufbau aus dem Profil nötig ist.
+    /// Existiert noch kein Snapshot, passiert nichts (der volle Aufbau
+    /// erfolgt dann beim nächsten App-/Dashboard-Start).
+    func updatePremium(_ isPremium: Bool) {
+        guard let current = load(), current.isPremium != isPremium else { return }
+        let updated = current.withPremium(isPremium)
+        save(updated)
+    }
+
     private func reloadWidgets() {
         #if canImport(WidgetKit)
         WidgetCenter.shared.reloadAllTimelines()
