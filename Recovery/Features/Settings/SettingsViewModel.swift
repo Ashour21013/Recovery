@@ -25,14 +25,49 @@ final class SettingsViewModel: ViewModel {
     /// Benutzerfreundliche Fehlermeldung, falls eine Aktion fehlschlägt.
     var errorMessage: String?
 
+    /// Bestätigungsmeldung nach erfolgreicher Aktion (z. B. Wiederherstellung).
+    var infoMessage: String?
+
+    /// Läuft gerade eine Wiederherstellung früherer Käufe?
+    private(set) var isRestoring = false
+
     /// Angezeigte App-Version.
     let appVersion = AppInfo.fullVersion
 
     private let repository: RecoveryRepository
+    private let subscriptionService: SubscriptionServiceProtocol
 
-    init(repository: RecoveryRepository) {
+    init(repository: RecoveryRepository, subscriptionService: SubscriptionServiceProtocol) {
         self.repository = repository
+        self.subscriptionService = subscriptionService
     }
+
+    // MARK: - Abonnement / Premium
+
+    /// Ob der Nutzer aktuell Premium-Zugriff hat.
+    var isPremium: Bool {
+        subscriptionService.entitlementStatus.isPremium
+    }
+
+    /// Stellt frühere Käufe wieder her (immer verfügbar, ohne Premium-Gate).
+    ///
+    /// Löst den bestehenden Restore-Flow des `SubscriptionService` aus,
+    /// aktualisiert danach den Premium-Status und zeigt eine passende
+    /// Rückmeldung an.
+    func restorePurchases() async {
+        guard !isRestoring else { return }
+        isRestoring = true
+        defer { isRestoring = false }
+
+        await subscriptionService.restore()
+
+        if isPremium {
+            infoMessage = "Deine Käufe wurden wiederhergestellt. Premium ist aktiv."
+        } else {
+            infoMessage = "Es wurden keine früheren Käufe gefunden, die wiederhergestellt werden können."
+        }
+    }
+
 
     // MARK: - Datenexport
 

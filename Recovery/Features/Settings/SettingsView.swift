@@ -30,7 +30,10 @@ struct SettingsView: View {
         }
         .task {
             if viewModel == nil {
-                viewModel = SettingsViewModel(repository: dependencies.makeRecoveryRepository())
+                viewModel = SettingsViewModel(
+                    repository: dependencies.makeRecoveryRepository(),
+                    subscriptionService: dependencies.subscriptionService
+                )
             }
         }
     }
@@ -39,7 +42,7 @@ struct SettingsView: View {
 
     private func form(_ viewModel: SettingsViewModel) -> some View {
         Form {
-            premiumSection
+            subscriptionSection(viewModel)
             privacySection
             trackingSection
             notificationsSection
@@ -90,46 +93,106 @@ struct SettingsView: View {
         } message: {
             Text(viewModel.errorMessage ?? "")
         }
+        .alert(
+            "Hinweis",
+            isPresented: Binding(
+                get: { viewModel.infoMessage != nil },
+                set: { if !$0 { viewModel.infoMessage = nil } }
+            )
+        ) {
+            Button("OK", role: .cancel) {}
+        } message: {
+            Text(viewModel.infoMessage ?? "")
+        }
     }
 
     // MARK: - Sektionen
 
-    private var premiumSection: some View {
+    /// Abonnement-/Premium-Sektion.
+    ///
+    /// Für ALLE Nutzer sichtbar und bedienbar (auch für Premium-Nutzer) –
+    /// insbesondere ist "Käufe wiederherstellen" immer erreichbar
+    /// (App-Store-Richtlinie). Diese Sektion liegt bewusst NICHT hinter dem
+    /// Premium-Gate.
+    private func subscriptionSection(_ viewModel: SettingsViewModel) -> some View {
         Section {
-            Button {
-                isShowingPaywall = true
-            } label: {
-                HStack(spacing: AppSpacing.m) {
-                    Image(systemName: "crown.fill")
-                        .foregroundStyle(.white)
-                        .frame(width: 28, height: 28)
-                        .background(
-                            RoundedRectangle(cornerRadius: 7, style: .continuous)
-                                .fill(AppColor.accent.gradient)
-                        )
-                    VStack(alignment: .leading, spacing: 2) {
-                        Text(isPremium ? "Recovery Premium aktiv" : "Recovery Premium")
-                            .font(AppFont.subheadline.weight(.semibold))
-                            .foregroundStyle(.primary)
-                        Text(isPremium ? "Vielen Dank für deine Unterstützung!" : "Alle Funktionen freischalten")
-                            .font(AppFont.caption)
-                            .foregroundStyle(.secondary)
-                    }
-                    Spacer()
-                    if !isPremium {
+            // Status-Zeile.
+            HStack(spacing: AppSpacing.m) {
+                Image(systemName: "crown.fill")
+                    .foregroundStyle(.white)
+                    .frame(width: 28, height: 28)
+                    .background(
+                        RoundedRectangle(cornerRadius: 7, style: .continuous)
+                            .fill(AppColor.accent.gradient)
+                    )
+                VStack(alignment: .leading, spacing: 2) {
+                    Text(viewModel.isPremium ? "Premium aktiv" : "Kostenlose Version")
+                        .font(AppFont.subheadline.weight(.semibold))
+                        .foregroundStyle(.primary)
+                    Text(viewModel.isPremium
+                         ? "Vielen Dank für deine Unterstützung!"
+                         : "Alle Funktionen freischalten")
+                        .font(AppFont.caption)
+                        .foregroundStyle(.secondary)
+                }
+                Spacer()
+                if viewModel.isPremium {
+                    Text("Aktiv")
+                        .font(AppFont.caption.weight(.semibold))
+                        .foregroundStyle(AppColor.success)
+                }
+            }
+
+            // Für Free-Nutzer: Premium freischalten (öffnet Paywall).
+            if !viewModel.isPremium {
+                Button {
+                    isShowingPaywall = true
+                } label: {
+                    HStack {
+                        settingsLabel("Premium freischalten", systemImage: "sparkles", tint: AppColor.accent)
+                        Spacer()
                         Image(systemName: "chevron.right")
                             .font(.footnote.weight(.semibold))
                             .foregroundStyle(.tertiary)
                     }
                 }
+                .buttonStyle(.plain)
+            }
+
+            // Käufe wiederherstellen – IMMER anklickbar (kein Premium-Gate).
+            Button {
+                Task { await viewModel.restorePurchases() }
+            } label: {
+                HStack {
+                    settingsLabel("Käufe wiederherstellen", systemImage: "arrow.clockwise", tint: .blue)
+                    Spacer()
+                    if viewModel.isRestoring {
+                        ProgressView()
+                    }
+                }
             }
             .buttonStyle(.plain)
-            .disabled(isPremium)
-        }
-    }
+            .disabled(viewModel.isRestoring)
 
-    private var isPremium: Bool {
-        dependencies.subscriptionService.entitlementStatus.isPremium
+            // Für Premium-Nutzer: Abo verwalten (System-Verwaltung).
+            if viewModel.isPremium {
+                Button {
+                    openURL(AppLinks.manageSubscriptions)
+                } label: {
+                    HStack {
+                        settingsLabel("Abonnement verwalten", systemImage: "gearshape.fill", tint: .gray)
+                        Spacer()
+                        Image(systemName: "arrow.up.forward.app")
+                            .foregroundStyle(.tertiary)
+                    }
+                }
+                .buttonStyle(.plain)
+            }
+        } header: {
+            Text("Abonnement")
+        } footer: {
+            Text("Käufe wiederherstellen ist immer verfügbar – z. B. nach einem Gerätewechsel oder einer Neuinstallation.")
+        }
     }
 
     private var privacySection: some View {        Section {

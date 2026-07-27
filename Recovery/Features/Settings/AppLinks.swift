@@ -13,6 +13,9 @@ enum AppLinks {
     /// Platzhalter-ID – bei Veröffentlichung durch die echte App-ID ersetzen.
     static let appStoreReview = URL(string: "https://apps.apple.com/app/id0000000000?action=write-review")!
 
+    /// System-Seite zur Verwaltung der App-Store-Abonnements.
+    static let manageSubscriptions = URL(string: "https://apps.apple.com/account/subscriptions")!
+
     /// Support-/Feedback-E-Mail.
     static let feedbackEmail = "feedback@recovery-app.example"
 
