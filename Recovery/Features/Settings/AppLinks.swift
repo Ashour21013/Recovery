@@ -6,6 +6,9 @@ enum AppLinks {
     /// Datenschutzrichtlinie (im Browser zu öffnen).
     static let privacyPolicy = URL(string: "https://ashour21013.github.io/Recovery/privacy")!
 
+    /// Allgemeine Geschäftsbedingungen (AGB / Terms of Service).
+    static let termsOfService = URL(string: "https://ashour21013.github.io/Recovery/terms")!
+
     /// App-Store-Seite mit direktem Bewertungs-Deeplink.
     /// Platzhalter-ID – bei Veröffentlichung durch die echte App-ID ersetzen.
     static let appStoreReview = URL(string: "https://apps.apple.com/app/id0000000000?action=write-review")!

@@ -35,6 +35,10 @@ final class AppDependencies {
     /// Persistenz der einmaligen Disclaimer-Bestätigung.
     let disclaimerStore: DisclaimerStore = UserDefaultsDisclaimerStore()
 
+    /// App-weiter In-App-Purchase-Service (StoreKit 2), beobachtbar in der
+    /// Environment für den app-weiten Entitlement-Status.
+    let subscriptionService: SubscriptionService = SubscriptionService()
+
     init() {
         do {
             let schema = Schema([

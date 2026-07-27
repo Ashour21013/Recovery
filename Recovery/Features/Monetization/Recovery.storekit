@@ -1,0 +1,107 @@
+{
+  "identifier" : "A1B2C3D4",
+  "nonRenewingSubscriptions" : [
+
+  ],
+  "products" : [
+    {
+      "displayPrice" : "79.99",
+      "familyShareable" : false,
+      "internalID" : "LIFETIME0001",
+      "localizations" : [
+        {
+          "description" : "Einmaliger Kauf – lebenslanger Zugriff auf alle Premium-Funktionen.",
+          "displayName" : "Recovery Lifetime",
+          "locale" : "de_DE"
+        }
+      ],
+      "productID" : "recovery.lifetime",
+      "referenceName" : "Recovery Lifetime",
+      "type" : "NonConsumable"
+    }
+  ],
+  "settings" : {
+    "_applicationInternalID" : "0000000000",
+    "_developerTeamID" : "ABCDE12345",
+    "_failTransactionsEnabled" : false,
+    "_lastSynchronizedDate" : 0,
+    "_locale" : "de_DE",
+    "_storefront" : "DEU",
+    "_storeKitErrors" : [
+
+    ]
+  },
+  "subscriptionGroups" : [
+    {
+      "id" : "RECOVERYGRP1",
+      "localizations" : [
+
+      ],
+      "name" : "Recovery Premium",
+      "subscriptions" : [
+        {
+          "adHocOffers" : [
+
+          ],
+          "codeOffers" : [
+
+          ],
+          "displayPrice" : "3.99",
+          "familyShareable" : false,
+          "groupNumber" : 1,
+          "internalID" : "MONTHLY00001",
+          "introductoryOffer" : {
+            "internalID" : "MONTHLYTRIAL",
+            "paymentMode" : "free",
+            "subscriptionPeriod" : "P1W"
+          },
+          "localizations" : [
+            {
+              "description" : "Monatlicher Zugriff auf alle Premium-Funktionen.",
+              "displayName" : "Monatlich",
+              "locale" : "de_DE"
+            }
+          ],
+          "productID" : "recovery.monthly",
+          "recurringSubscriptionPeriod" : "P1M",
+          "referenceName" : "Recovery Monatlich",
+          "subscriptionGroupID" : "RECOVERYGRP1",
+          "type" : "RecurringSubscription"
+        },
+        {
+          "adHocOffers" : [
+
+          ],
+          "codeOffers" : [
+
+          ],
+          "displayPrice" : "29.99",
+          "familyShareable" : false,
+          "groupNumber" : 1,
+          "internalID" : "YEARLY000001",
+          "introductoryOffer" : {
+            "internalID" : "YEARLYTRIAL0",
+            "paymentMode" : "free",
+            "subscriptionPeriod" : "P1W"
+          },
+          "localizations" : [
+            {
+              "description" : "Jährlicher Zugriff auf alle Premium-Funktionen – bester Preis.",
+              "displayName" : "Jährlich",
+              "locale" : "de_DE"
+            }
+          ],
+          "productID" : "recovery.yearly",
+          "recurringSubscriptionPeriod" : "P1Y",
+          "referenceName" : "Recovery Jährlich",
+          "subscriptionGroupID" : "RECOVERYGRP1",
+          "type" : "RecurringSubscription"
+        }
+      ]
+    }
+  ],
+  "version" : {
+    "major" : 4,
+    "minor" : 0
+  }
+}

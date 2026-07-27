@@ -11,6 +11,7 @@ struct SettingsView: View {
     @Environment(\.dependencies) private var dependencies
     @Environment(\.openURL) private var openURL
     @State private var viewModel: SettingsViewModel?
+    @State private var isShowingPaywall = false
 
     /// Wird aufgerufen, wenn alle Daten gelöscht wurden (App-Reset).
     var onDataDeleted: () -> Void = {}
@@ -37,11 +38,15 @@ struct SettingsView: View {
 
     private func form(_ viewModel: SettingsViewModel) -> some View {
         Form {
+            premiumSection
             privacySection
             notificationsSection
             dataSection(viewModel)
             supportSection(viewModel)
             aboutSection(viewModel)
+        }
+        .sheet(isPresented: $isShowingPaywall) {
+            PaywallView()
         }
         .sheet(isPresented: Binding(
             get: { viewModel.exportURL != nil },
@@ -84,8 +89,45 @@ struct SettingsView: View {
 
     // MARK: - Sektionen
 
-    private var privacySection: some View {
+    private var premiumSection: some View {
         Section {
+            Button {
+                isShowingPaywall = true
+            } label: {
+                HStack(spacing: AppSpacing.m) {
+                    Image(systemName: "crown.fill")
+                        .foregroundStyle(.white)
+                        .frame(width: 28, height: 28)
+                        .background(
+                            RoundedRectangle(cornerRadius: 7, style: .continuous)
+                                .fill(AppColor.accent.gradient)
+                        )
+                    VStack(alignment: .leading, spacing: 2) {
+                        Text(isPremium ? "Recovery Premium aktiv" : "Recovery Premium")
+                            .font(AppFont.subheadline.weight(.semibold))
+                            .foregroundStyle(.primary)
+                        Text(isPremium ? "Vielen Dank für deine Unterstützung!" : "Alle Funktionen freischalten")
+                            .font(AppFont.caption)
+                            .foregroundStyle(.secondary)
+                    }
+                    Spacer()
+                    if !isPremium {
+                        Image(systemName: "chevron.right")
+                            .font(.footnote.weight(.semibold))
+                            .foregroundStyle(.tertiary)
+                    }
+                }
+            }
+            .buttonStyle(.plain)
+            .disabled(isPremium)
+        }
+    }
+
+    private var isPremium: Bool {
+        dependencies.subscriptionService.entitlementStatus.isPremium
+    }
+
+    private var privacySection: some View {        Section {
             NavigationLink {
                 PrivacyView()
             } label: {
