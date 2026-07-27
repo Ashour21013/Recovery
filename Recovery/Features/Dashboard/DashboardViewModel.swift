@@ -28,6 +28,12 @@ final class DashboardViewModel: ViewModel {
     /// Gerade erreichtes Ziel für die Erfolgsmeldung (falls vorhanden).
     private(set) var achievedGoal: RecoveryGoal?
 
+    /// Alle getrackten Süchte (für den Switcher oben im Dashboard).
+    private(set) var addictions: [AddictionSummary] = []
+
+    /// Steuert die Anzeige der Sucht-Verwaltung (Hinzufügen/Löschen/Wechseln).
+    var isShowingAddictionManager = false
+
     private let repository: RecoveryRepository
     private let motivationService: MotivationService
 
@@ -56,6 +62,7 @@ final class DashboardViewModel: ViewModel {
             let relapses = try await repository.fetchRelapses()
             let journal = try await repository.fetchJournalEntries()
             let plan = try await repository.fetchPlan(for: .now)
+            addictions = try await repository.fetchAddictions()
             motivationSource = profile.motivationSource
             let data = makeDashboardData(
                 profile: profile,
@@ -91,6 +98,28 @@ final class DashboardViewModel: ViewModel {
         } catch {
             state = .failed(error)
         }
+    }
+
+    // MARK: - Süchte (Multi-Addiction)
+
+    /// Öffnet die Sucht-Verwaltung.
+    func presentAddictionManager() {
+        isShowingAddictionManager = true
+    }
+
+    /// Wechselt die aktive Sucht und lädt das Dashboard neu.
+    func switchAddiction(to id: UUID) async {
+        do {
+            try await repository.switchAddiction(to: id)
+            await load()
+        } catch {
+            state = .failed(error)
+        }
+    }
+
+    /// Wird nach Änderungen in der Verwaltung aufgerufen (Neuladen).
+    func addictionsDidChange() async {
+        await load()
     }
 
     /// Leitet den passenden Motivationskontext aus der aktuellen Situation ab.

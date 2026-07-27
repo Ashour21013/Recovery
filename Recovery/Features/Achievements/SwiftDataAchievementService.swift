@@ -23,6 +23,7 @@ final class SwiftDataAchievementService: AchievementService {
 
     @discardableResult
     func evaluate(_ evaluationContext: AchievementContext) async -> [Achievement] {
+        let profileID = activeProfileID()
         let unlocked = fetchUnlockedMap()
         var newlyUnlocked: [Achievement] = []
         let now = Date.now
@@ -32,7 +33,7 @@ final class SwiftDataAchievementService: AchievementService {
             guard !alreadyUnlocked, AchievementRules.isSatisfied(type, in: evaluationContext) else {
                 continue
             }
-            let model = AchievementModel(typeRawValue: type.rawValue, unlockedAt: now)
+            let model = AchievementModel(typeRawValue: type.rawValue, unlockedAt: now, profileID: profileID)
             context.insert(model)
             newlyUnlocked.append(Achievement(type: type, unlockedAt: now))
         }
@@ -45,9 +46,32 @@ final class SwiftDataAchievementService: AchievementService {
 
     // MARK: - Private
 
+    /// Achievements gelten pro aktiver Sucht: nur Einträge der aktiven (bzw.
+    /// noch nicht zugeordneter Alt-Einträge) berücksichtigen.
     private func fetchUnlockedMap() -> [String: Date] {
+        let activeID = activeProfileID()
         let descriptor = FetchDescriptor<AchievementModel>()
         let models = (try? context.fetch(descriptor)) ?? []
-        return Dictionary(uniqueKeysWithValues: models.map { ($0.typeRawValue, $0.unlockedAt) })
+        let scoped = models.filter { $0.profileID == activeID || $0.profileID == nil }
+        return Dictionary(models: scoped)
+    }
+
+    /// Ermittelt die ID der aktuell aktiven Sucht (oder der ersten vorhandenen).
+    private func activeProfileID() -> UUID? {
+        let profiles = (try? context.fetch(FetchDescriptor<RecoveryProfileModel>())) ?? []
+        return (profiles.first(where: { $0.isActive }) ?? profiles.first)?.id
+    }
+}
+
+private extension Dictionary where Key == String, Value == Date {
+    /// Baut eine Typ→Datum-Map, wobei bei Duplikaten das frühere Datum gewinnt.
+    init(models: [AchievementModel]) {
+        self = models.reduce(into: [:]) { map, model in
+            if let existing = map[model.typeRawValue] {
+                map[model.typeRawValue] = Swift.min(existing, model.unlockedAt)
+            } else {
+                map[model.typeRawValue] = model.unlockedAt
+            }
+        }
     }
 }

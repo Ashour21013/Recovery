@@ -26,6 +26,15 @@ struct DashboardView: View {
             .navigationTitle("Übersicht")
             .background(Color(.systemGroupedBackground))
             .toolbar {
+                if let viewModel, !viewModel.addictions.isEmpty {
+                    ToolbarItem(placement: .principal) {
+                        AddictionSwitcherMenu(
+                            addictions: viewModel.addictions,
+                            onSwitch: { id in Task { await viewModel.switchAddiction(to: id) } },
+                            onManage: viewModel.presentAddictionManager
+                        )
+                    }
+                }
                 ToolbarItem(placement: .primaryAction) {
                     Button {
                         isShowingHelp = true
@@ -37,6 +46,14 @@ struct DashboardView: View {
             }
             .sheet(isPresented: $isShowingHelp) {
                 HelpView()
+            }
+            .sheet(isPresented: Binding(
+                get: { viewModel?.isShowingAddictionManager ?? false },
+                set: { viewModel?.isShowingAddictionManager = $0 }
+            )) {
+                AddictionManagerView(onChange: {
+                    Task { await viewModel?.addictionsDidChange() }
+                })
             }
         }
         .task {

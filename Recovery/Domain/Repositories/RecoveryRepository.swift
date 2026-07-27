@@ -9,10 +9,12 @@ protocol RecoveryRepository: Repository {
 
     // MARK: - Profil
 
-    /// Lädt das aktuelle Profil, falls das Onboarding abgeschlossen wurde.
+    /// Lädt das aktuell aktive Profil (Sucht), falls das Onboarding
+    /// abgeschlossen wurde.
     func loadProfile() async throws -> RecoveryProfile?
 
-    /// Legt ein neues Profil an (Abschluss des Onboardings).
+    /// Legt ein neues Profil an (Abschluss des Onboardings). Wird zur aktiven
+    /// Sucht, falls noch keine existiert.
     @discardableResult
     func createProfile(_ profile: RecoveryProfile) async throws -> RecoveryProfile
 
@@ -24,6 +26,22 @@ protocol RecoveryRepository: Repository {
 
     /// Aktualisiert die gewählte Motivationsquelle.
     func updateMotivationSource(_ source: MotivationSource) async throws
+
+    // MARK: - Süchte (Multi-Addiction)
+
+    /// Liefert alle getrackten Süchte als Zusammenfassung (für Auswahl/Verwaltung).
+    func fetchAddictions() async throws -> [AddictionSummary]
+
+    /// Legt eine weitere Sucht an (nicht automatisch aktiv, außer es ist die erste).
+    @discardableResult
+    func addAddiction(_ profile: RecoveryProfile) async throws -> RecoveryProfile
+
+    /// Wechselt die aktive Sucht auf die angegebene ID.
+    func switchAddiction(to id: UUID) async throws
+
+    /// Löscht eine Sucht samt aller zugehörigen Daten. War sie aktiv, wird
+    /// automatisch eine andere aktiv gesetzt (falls vorhanden).
+    func deleteAddiction(id: UUID) async throws
 
     // MARK: - Journal
 

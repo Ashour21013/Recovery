@@ -18,9 +18,8 @@ final class SwiftDataRecoveryRepository: RecoveryRepository {
     // MARK: - Profil
 
     func loadProfile() async throws -> RecoveryProfile? {
-        let descriptor = FetchDescriptor<RecoveryProfileModel>()
         do {
-            guard let model = try context.fetch(descriptor).first else { return nil }
+            guard let model = try activeProfileModelIfExists() else { return nil }
             return RecoveryMapper.toDomain(model)
         } catch {
             throw AppError.persistence
@@ -30,6 +29,9 @@ final class SwiftDataRecoveryRepository: RecoveryRepository {
     @discardableResult
     func createProfile(_ profile: RecoveryProfile) async throws -> RecoveryProfile {
         let model = RecoveryMapper.makeModel(from: profile)
+        // Erste Sucht wird automatisch aktiv.
+        let hasAny = try !allProfileModels().isEmpty
+        model.isActive = !hasAny
         context.insert(model)
         try save()
         return RecoveryMapper.toDomain(model)
@@ -53,10 +55,81 @@ final class SwiftDataRecoveryRepository: RecoveryRepository {
         try save()
     }
 
+    // MARK: - Süchte (Multi-Addiction)
+
+    func fetchAddictions() async throws -> [AddictionSummary] {
+        do {
+            try ensureActiveAddiction()
+            let models = try allProfileModels()
+            return models
+                .map { model in
+                    let domain = RecoveryMapper.toDomain(model)
+                    return AddictionSummary(
+                        id: model.id,
+                        habitType: domain.habitType,
+                        currentStreakDays: domain.currentStreakDays(),
+                        bestStreakDays: model.bestStreakDays,
+                        isActive: model.isActive
+                    )
+                }
+                .sorted { $0.title < $1.title }
+        } catch let error as AppError {
+            throw error
+        } catch {
+            throw AppError.persistence
+        }
+    }
+
+    @discardableResult
+    func addAddiction(_ profile: RecoveryProfile) async throws -> RecoveryProfile {
+        try await createProfile(profile)
+    }
+
+    func switchAddiction(to id: UUID) async throws {
+        do {
+            let models = try allProfileModels()
+            guard models.contains(where: { $0.id == id }) else {
+                throw AppError.notFound
+            }
+            for model in models {
+                model.isActive = (model.id == id)
+            }
+            try save()
+        } catch let error as AppError {
+            throw error
+        } catch {
+            throw AppError.persistence
+        }
+    }
+
+    func deleteAddiction(id: UUID) async throws {
+        do {
+            let models = try allProfileModels()
+            guard let target = models.first(where: { $0.id == id }) else {
+                throw AppError.notFound
+            }
+            let wasActive = target.isActive
+            context.delete(target)
+
+            // War die gelöschte Sucht aktiv, eine andere aktiv setzen.
+            if wasActive {
+                let remaining = models.filter { $0.id != id }
+                remaining.first?.isActive = true
+            }
+            try save()
+        } catch let error as AppError {
+            throw error
+        } catch {
+            throw AppError.persistence
+        }
+    }
+
     // MARK: - Journal
 
     func fetchJournalEntries() async throws -> [JournalEntry] {
+        let profileId = try currentProfileModel().id
         let descriptor = FetchDescriptor<JournalEntryModel>(
+            predicate: #Predicate { $0.profile?.id == profileId },
             sortBy: [SortDescriptor(\.date, order: .reverse)]
         )
         return try fetchMapped(descriptor, RecoveryMapper.toDomain)
@@ -80,7 +153,9 @@ final class SwiftDataRecoveryRepository: RecoveryRepository {
     // MARK: - Trigger
 
     func fetchTriggers() async throws -> [Trigger] {
+        let profileId = try currentProfileModel().id
         let descriptor = FetchDescriptor<TriggerModel>(
+            predicate: #Predicate { $0.profile?.id == profileId },
             sortBy: [SortDescriptor(\.createdAt, order: .reverse)]
         )
         return try fetchMapped(descriptor, RecoveryMapper.toDomain)
@@ -104,7 +179,9 @@ final class SwiftDataRecoveryRepository: RecoveryRepository {
     // MARK: - Rückfälle
 
     func fetchRelapses() async throws -> [Relapse] {
+        let profileId = try currentProfileModel().id
         let descriptor = FetchDescriptor<RelapseModel>(
+            predicate: #Predicate { $0.profile?.id == profileId },
             sortBy: [SortDescriptor(\.date, order: .reverse)]
         )
         return try fetchMapped(descriptor, RecoveryMapper.toDomain)
@@ -145,9 +222,10 @@ final class SwiftDataRecoveryRepository: RecoveryRepository {
         let normalizedDay = Calendar.current.startOfDay(for: day)
         do {
             let definition = try planDefinition()
+            let profileId = try currentProfileModel().id
 
             let completionDescriptor = FetchDescriptor<PlanTaskCompletionModel>(
-                predicate: #Predicate { $0.day == normalizedDay }
+                predicate: #Predicate { $0.day == normalizedDay && $0.profile?.id == profileId }
             )
             let completions = try context.fetch(completionDescriptor)
             let completedIds = Set(completions.map(\.taskRawValue))
@@ -166,8 +244,9 @@ final class SwiftDataRecoveryRepository: RecoveryRepository {
     func setTaskCompletion(_ taskId: String, on day: Date, isCompleted: Bool) async throws {
         let normalizedDay = Calendar.current.startOfDay(for: day)
         do {
+            let profileId = try currentProfileModel().id
             var descriptor = FetchDescriptor<PlanTaskCompletionModel>(
-                predicate: #Predicate { $0.day == normalizedDay && $0.taskRawValue == taskId }
+                predicate: #Predicate { $0.day == normalizedDay && $0.taskRawValue == taskId && $0.profile?.id == profileId }
             )
             descriptor.fetchLimit = 1
             let existing = try context.fetch(descriptor).first
@@ -228,14 +307,17 @@ final class SwiftDataRecoveryRepository: RecoveryRepository {
 
     func removePlanTask(id: String) async throws {
         do {
+            let profileId = try currentProfileModel().id
             var descriptor = FetchDescriptor<PlanTaskModel>(
-                predicate: #Predicate { $0.id == id }
+                predicate: #Predicate { $0.id == id && $0.profile?.id == profileId }
             )
             descriptor.fetchLimit = 1
             if let model = try context.fetch(descriptor).first {
                 context.delete(model)
                 try save()
             }
+        } catch let error as AppError {
+            throw error
         } catch {
             throw AppError.persistence
         }
@@ -252,7 +334,9 @@ final class SwiftDataRecoveryRepository: RecoveryRepository {
     }
 
     private func fetchPlanTaskModels() throws -> [PlanTaskModel] {
+        let profileId = try currentProfileModel().id
         let descriptor = FetchDescriptor<PlanTaskModel>(
+            predicate: #Predicate { $0.profile?.id == profileId },
             sortBy: [SortDescriptor(\.order, order: .forward)]
         )
         return try context.fetch(descriptor)
@@ -402,12 +486,11 @@ final class SwiftDataRecoveryRepository: RecoveryRepository {
         }
     }
 
-    /// Liefert das (einzige) aktuelle Profil oder wirft `notFound`.
+    /// Liefert das aktuell aktive Profil oder wirft `notFound`.
     private func currentProfileModel() throws -> RecoveryProfileModel {
-        var descriptor = FetchDescriptor<RecoveryProfileModel>()
-        descriptor.fetchLimit = 1
         do {
-            guard let model = try context.fetch(descriptor).first else {
+            try ensureActiveAddiction()
+            guard let model = try activeProfileModelIfExists() else {
                 throw AppError.notFound
             }
             return model
@@ -415,6 +498,35 @@ final class SwiftDataRecoveryRepository: RecoveryRepository {
             throw error
         } catch {
             throw AppError.persistence
+        }
+    }
+
+    /// Alle Profile (Süchte), unsortiert.
+    private func allProfileModels() throws -> [RecoveryProfileModel] {
+        try context.fetch(FetchDescriptor<RecoveryProfileModel>())
+    }
+
+    /// Das aktive Profil, falls vorhanden – ohne Seiteneffekte.
+    private func activeProfileModelIfExists() throws -> RecoveryProfileModel? {
+        let models = try allProfileModels()
+        return models.first(where: { $0.isActive }) ?? models.first
+    }
+
+    /// Stellt sicher, dass genau eine Sucht aktiv ist (Migration/Selbstheilung).
+    ///
+    /// Für Bestandsdaten (eine Sucht ohne `isActive`) wird diese aktiv gesetzt.
+    /// Sollten aus irgendeinem Grund mehrere aktiv sein, bleibt nur die erste.
+    private func ensureActiveAddiction() throws {
+        let models = try allProfileModels()
+        guard !models.isEmpty else { return }
+
+        let active = models.filter { $0.isActive }
+        if active.isEmpty {
+            models.first?.isActive = true
+            try context.save()
+        } else if active.count > 1 {
+            for model in active.dropFirst() { model.isActive = false }
+            try context.save()
         }
     }
 

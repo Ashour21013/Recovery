@@ -21,6 +21,10 @@ final class RecoveryProfileModel {
     /// Gewählte Motivationsquelle (Roh-Wert, optional → leichte Migration).
     var motivationSourceRawValue: String?
 
+    /// Ob diese Sucht aktuell die aktive (im Dashboard angezeigte) ist.
+    /// Optional-defaultend, damit Bestandsdaten leichtgewichtig migrieren.
+    var isActive: Bool = false
+
     @Relationship(deleteRule: .cascade, inverse: \JournalEntryModel.profile)
     var journalEntries: [JournalEntryModel]
 
@@ -44,7 +48,8 @@ final class RecoveryProfileModel {
         startDate: Date,
         bestStreakDays: Int,
         goalDays: Int? = nil,
-        motivationSourceRawValue: String? = nil
+        motivationSourceRawValue: String? = nil,
+        isActive: Bool = false
     ) {
         self.id = id
         self.habitTypeRawValue = habitTypeRawValue
@@ -54,6 +59,7 @@ final class RecoveryProfileModel {
         self.bestStreakDays = bestStreakDays
         self.goalDays = goalDays
         self.motivationSourceRawValue = motivationSourceRawValue
+        self.isActive = isActive
         self.journalEntries = []
         self.triggers = []
         self.relapses = []

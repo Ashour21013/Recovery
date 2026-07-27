@@ -7,12 +7,18 @@ import SwiftData
 /// Zustand ergibt sich aus dem Fehlen eines Eintrags.
 @Model
 final class AchievementModel {
-    /// Roh-Wert von `AchievementType` (eindeutig – jedes nur einmal).
-    @Attribute(.unique) var typeRawValue: String
+    /// Roh-Wert von `AchievementType`.
+    ///
+    /// Nicht mehr global unique: Achievements gelten pro Sucht, dieselbe Typ-ID
+    /// kann daher für mehrere Süchte existieren (je einmal pro Profil).
+    var typeRawValue: String
     var unlockedAt: Date
+    /// Zugehörige Sucht (Profil-ID). Optional → leichtgewichtige Migration.
+    var profileID: UUID?
 
-    init(typeRawValue: String, unlockedAt: Date) {
+    init(typeRawValue: String, unlockedAt: Date, profileID: UUID? = nil) {
         self.typeRawValue = typeRawValue
         self.unlockedAt = unlockedAt
+        self.profileID = profileID
     }
 }

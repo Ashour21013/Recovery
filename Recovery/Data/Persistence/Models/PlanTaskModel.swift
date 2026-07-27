@@ -9,8 +9,11 @@ import SwiftData
 /// in `PlanTaskCompletionModel` gehalten.
 @Model
 final class PlanTaskModel {
-    /// Stabile Kennung (RawValue eines `RecoveryTaskType` oder UUID-String).
-    @Attribute(.unique) var id: String
+    /// Kennung (RawValue eines `RecoveryTaskType` oder UUID-String).
+    ///
+    /// Nicht global unique: dieselbe Aufgaben-ID (z. B. "journal") existiert pro
+    /// Sucht einmal. Eindeutigkeit gilt daher nur innerhalb eines Profils.
+    var id: String
     var title: String
     var subtitle: String
     var systemImage: String
