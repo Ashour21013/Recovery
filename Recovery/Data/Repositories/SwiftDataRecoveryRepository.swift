@@ -344,16 +344,29 @@ final class SwiftDataRecoveryRepository: RecoveryRepository {
 
     func deleteAllData() async throws {
         do {
-            try context.delete(model: JournalEntryModel.self)
-            try context.delete(model: TriggerModel.self)
-            try context.delete(model: RelapseModel.self)
-            try context.delete(model: AchievementModel.self)
-            try context.delete(model: PlanTaskCompletionModel.self)
-            try context.delete(model: PlanTaskModel.self)
-            try context.delete(model: RecoveryProfileModel.self)
+            // Objektweises Löschen statt Batch-Delete: Batch-Delete umgeht die
+            // SwiftData-Cascade-/Inverse-Regeln und verletzt die verpflichtende
+            // Inverse-Beziehung `PlanTaskModel.profile`. Durch das Löschen der
+            // einzelnen Objekte (Profil zuletzt) greifen die `.cascade`-Regeln
+            // korrekt und Beziehungen werden sauber aufgelöst.
+            try deleteEveryObject(of: JournalEntryModel.self)
+            try deleteEveryObject(of: TriggerModel.self)
+            try deleteEveryObject(of: RelapseModel.self)
+            try deleteEveryObject(of: AchievementModel.self)
+            try deleteEveryObject(of: PlanTaskCompletionModel.self)
+            try deleteEveryObject(of: PlanTaskModel.self)
+            try deleteEveryObject(of: RecoveryProfileModel.self)
             try context.save()
         } catch {
             throw AppError.persistence
+        }
+    }
+
+    /// Löscht alle Objekte des angegebenen Modelltyps einzeln aus dem Kontext.
+    private func deleteEveryObject<T: PersistentModel>(of type: T.Type) throws {
+        let objects = try context.fetch(FetchDescriptor<T>())
+        for object in objects {
+            context.delete(object)
         }
     }
 
