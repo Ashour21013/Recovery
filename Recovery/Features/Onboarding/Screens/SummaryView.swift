@@ -63,20 +63,23 @@ struct SummaryView: View {
                 .font(.title3)
                 .foregroundStyle(AppColor.accent)
                 .frame(width: 32)
+                .accessibilityHidden(true)
             VStack(alignment: .leading, spacing: 2) {
                 Text(label)
-                    .font(.caption)
+                    .font(AppFont.caption)
                     .foregroundStyle(.secondary)
                 Text(value)
-                    .font(.body.weight(.semibold))
+                    .font(AppFont.body.weight(.semibold))
             }
             Spacer()
         }
         .padding(AppSpacing.m)
         .background(
             RoundedRectangle(cornerRadius: 16, style: .continuous)
-                .fill(Color(.secondarySystemBackground))
+                .fill(AppColor.cardBackground)
         )
+        .accessibilityElement(children: .ignore)
+        .accessibilityLabel("\(label): \(value)")
     }
 
     private var reasonCard: some View {
@@ -85,12 +88,13 @@ struct SummaryView: View {
                 .font(.title3)
                 .foregroundStyle(AppColor.accent)
                 .frame(width: 32)
+                .accessibilityHidden(true)
             VStack(alignment: .leading, spacing: 2) {
                 Text("Dein Warum")
-                    .font(.caption)
+                    .font(AppFont.caption)
                     .foregroundStyle(.secondary)
                 Text(draft.reason.isEmpty ? "–" : draft.reason)
-                    .font(.body.weight(.medium))
+                    .font(AppFont.body.weight(.medium))
                     .frame(maxWidth: .infinity, alignment: .leading)
             }
             Spacer(minLength: 0)
@@ -98,8 +102,10 @@ struct SummaryView: View {
         .padding(AppSpacing.m)
         .background(
             RoundedRectangle(cornerRadius: 16, style: .continuous)
-                .fill(Color(.secondarySystemBackground))
+                .fill(AppColor.cardBackground)
         )
+        .accessibilityElement(children: .ignore)
+        .accessibilityLabel("Dein Warum: \(draft.reason.isEmpty ? "nicht angegeben" : draft.reason)")
     }
 
     /// Kurze Erfolgs-Animation als Übergang zum Dashboard.
@@ -111,10 +117,11 @@ struct SummaryView: View {
                     .font(.system(size: 88))
                     .foregroundStyle(AppColor.accent.gradient)
                     .symbolEffect(.bounce, value: isFinishing)
+                    .accessibilityHidden(true)
                 Text("Los geht's!")
-                    .font(.title.bold())
+                    .font(AppFont.title)
                 Text("Dein erster cleaner Tag beginnt jetzt.")
-                    .font(.body)
+                    .font(AppFont.body)
                     .foregroundStyle(.secondary)
             }
         }

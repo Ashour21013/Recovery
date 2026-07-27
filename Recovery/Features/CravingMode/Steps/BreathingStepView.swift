@@ -14,14 +14,14 @@ struct BreathingStepView: View {
                 Text("Atme ruhig")
                     .font(AppFont.title)
                 Text("Ein durch die Nase, aus durch den Mund.")
-                    .font(.subheadline)
+                    .font(AppFont.subheadline)
                     .foregroundStyle(.secondary)
                     .multilineTextAlignment(.center)
             }
 
             ZStack {
                 Circle()
-                    .stroke(Color(.secondarySystemBackground), lineWidth: 14)
+                    .stroke(AppColor.cardBackground, lineWidth: 14)
 
                 Circle()
                     .trim(from: 0, to: progress)
@@ -41,23 +41,26 @@ struct BreathingStepView: View {
                     .padding(28)
 
                 Text("\(remainingSeconds)")
-                    .font(.system(size: 56, weight: .bold, design: .rounded))
+                    .font(AppFont.roundedNumber())
                     .contentTransition(.numericText())
                     .monospacedDigit()
             }
             .frame(width: 240, height: 240)
+            .accessibilityElement(children: .ignore)
+            .accessibilityLabel("Verbleibende Zeit")
+            .accessibilityValue("\(remainingSeconds) Sekunden")
 
             if !isRunning && remainingSeconds == 60 {
                 PrimaryButton(title: "Atemübung starten", action: onStart)
             } else if remainingSeconds == 0 {
                 Label("Gut gemacht!", systemImage: "checkmark.circle.fill")
-                    .font(.headline)
+                    .font(AppFont.headline)
                     .foregroundStyle(.green)
                     .symbolEffect(.bounce, value: remainingSeconds)
                     .transition(.scale.combined(with: .opacity))
             } else {
                 Text("Bleib dabei…")
-                    .font(.subheadline)
+                    .font(AppFont.subheadline)
                     .foregroundStyle(.secondary)
                     .transition(.opacity)
             }

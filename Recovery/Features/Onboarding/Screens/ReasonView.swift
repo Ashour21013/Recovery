@@ -33,7 +33,7 @@ struct ReasonView: View {
                 AppTextEditor(placeholder: "Ich möchte aufhören, weil…", text: $reason)
 
                 Text("Vorschläge")
-                    .font(.caption.weight(.semibold))
+                    .font(AppFont.caption.weight(.semibold))
                     .foregroundStyle(.secondary)
 
                 FlowLayout(spacing: AppSpacing.s) {

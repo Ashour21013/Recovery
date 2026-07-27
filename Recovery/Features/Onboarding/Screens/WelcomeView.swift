@@ -23,7 +23,7 @@ struct WelcomeView: View {
 
             VStack(spacing: AppSpacing.s) {
                 Text("Willkommen bei Recovery")
-                    .font(.largeTitle.bold())
+                    .font(AppFont.largeTitle)
                     .multilineTextAlignment(.center)
 
                 Text("Dein persönlicher Begleiter auf dem Weg zu einem freieren Leben.")
@@ -41,8 +41,9 @@ struct WelcomeView: View {
                             .font(.title3)
                             .foregroundStyle(AppColor.accent)
                             .frame(width: 32)
+                            .accessibilityHidden(true)
                         Text(item.text)
-                            .font(.subheadline)
+                            .font(AppFont.subheadline)
                             .foregroundStyle(.primary)
                         Spacer(minLength: 0)
                     }

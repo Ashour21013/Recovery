@@ -22,13 +22,14 @@ struct CravingMessageStepView<Content: View>: View {
                 .symbolEffect(.bounce, value: appeared)
                 .scaleEffect(appeared ? 1 : 0.85)
                 .animation(.spring(response: 0.45, dampingFraction: 0.6), value: appeared)
+                .accessibilityHidden(true)
 
             Text(title)
                 .font(AppFont.title)
                 .multilineTextAlignment(.center)
 
             Text(message)
-                .font(.body)
+                .font(AppFont.body)
                 .foregroundStyle(.secondary)
                 .multilineTextAlignment(.center)
 

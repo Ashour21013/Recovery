@@ -54,13 +54,14 @@ private struct HabitTile: View {
                 Text(habit.emoji)
                     .font(.system(size: 40))
                     .scaleEffect(isSelected ? 1.1 : 1)
+                    .accessibilityHidden(true)
 
                 Text(habit.title)
-                    .font(.subheadline.weight(.semibold))
+                    .font(AppFont.subheadline.weight(.semibold))
                     .foregroundStyle(.primary)
 
                 Text(habit.subtitle)
-                    .font(.caption)
+                    .font(AppFont.caption)
                     .foregroundStyle(.secondary)
                     .multilineTextAlignment(.center)
                     .lineLimit(2)
@@ -70,7 +71,7 @@ private struct HabitTile: View {
             .padding(AppSpacing.s)
             .background(
                 RoundedRectangle(cornerRadius: 20, style: .continuous)
-                    .fill(isSelected ? AppColor.accent.opacity(0.14) : Color(.secondarySystemBackground))
+                    .fill(isSelected ? AppColor.accent.opacity(0.14) : AppColor.cardBackground)
             )
             .overlay(
                 RoundedRectangle(cornerRadius: 20, style: .continuous)
