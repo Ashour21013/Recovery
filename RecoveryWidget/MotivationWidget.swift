@@ -1,5 +1,6 @@
 import WidgetKit
 import SwiftUI
+import AppIntents
 
 /// Timeline-Eintrag für das reine Motivations-Widget.
 struct MotivationEntry: TimelineEntry {
@@ -9,28 +10,31 @@ struct MotivationEntry: TimelineEntry {
 }
 
 /// Timeline-Provider für das Motivations-Widget. Liest nur aus der App Group
-/// und wechselt den Spruch zum Tageswechsel.
-struct MotivationTimelineProvider: TimelineProvider {
+/// und wechselt den Spruch zum Tageswechsel. Berücksichtigt die im Widget
+/// gewählte Spruch-Quelle.
+struct MotivationTimelineProvider: AppIntentTimelineProvider {
 
     private let store = WidgetSnapshotStore()
 
     func placeholder(in context: Context) -> MotivationEntry {
-        entry(from: .placeholder, date: .now)
+        entry(from: .placeholder, source: .quotes, date: .now)
     }
 
-    func getSnapshot(in context: Context, completion: @escaping (MotivationEntry) -> Void) {
-        completion(entry(from: store.load() ?? .placeholder, date: .now))
+    func snapshot(for configuration: SelectQuoteSourceIntent, in context: Context) async -> MotivationEntry {
+        entry(from: store.load() ?? .placeholder, source: configuration.source.widgetSource, date: .now)
     }
 
-    func getTimeline(in context: Context, completion: @escaping (Timeline<MotivationEntry>) -> Void) {
+    func timeline(for configuration: SelectQuoteSourceIntent, in context: Context) async -> Timeline<MotivationEntry> {
         let snapshot = store.load() ?? .placeholder
         let now = Date.now
-        let timeline = Timeline(entries: [entry(from: snapshot, date: now)], policy: .after(nextMidnight(after: now)))
-        completion(timeline)
+        return Timeline(
+            entries: [entry(from: snapshot, source: configuration.source.widgetSource, date: now)],
+            policy: .after(nextMidnight(after: now))
+        )
     }
 
-    private func entry(from snapshot: WidgetSnapshot, date: Date) -> MotivationEntry {
-        MotivationEntry(date: date, snapshot: snapshot, quote: snapshot.quote(for: date))
+    private func entry(from snapshot: WidgetSnapshot, source: WidgetQuoteSource, date: Date) -> MotivationEntry {
+        MotivationEntry(date: date, snapshot: snapshot, quote: snapshot.quote(for: date, source: source))
     }
 
     private func nextMidnight(after date: Date) -> Date {
@@ -112,7 +116,11 @@ struct MotivationWidget: Widget {
     private let kind = "MotivationWidget"
 
     var body: some WidgetConfiguration {
-        StaticConfiguration(kind: kind, provider: MotivationTimelineProvider()) { entry in
+        AppIntentConfiguration(
+            kind: kind,
+            intent: SelectQuoteSourceIntent.self,
+            provider: MotivationTimelineProvider()
+        ) { entry in
             MotivationWidgetView(entry: entry)
         }
         .configurationDisplayName("Tägliche Motivation")

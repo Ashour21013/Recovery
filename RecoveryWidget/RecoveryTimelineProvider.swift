@@ -11,6 +11,9 @@ struct RecoveryEntry: TimelineEntry {
     /// Die konkret anzuzeigende Sucht (aufgelöst aus Konfiguration + Snapshot).
     let addiction: WidgetAddiction
     let quote: WidgetQuote?
+    /// Im Intent gewählte Sucht-ID (nil = keine Auswahl → aktive Sucht).
+    /// Wird nur für Debug/Verifikation mitgeführt.
+    let configuredID: String?
 
     /// Aktuelle Streak für den angezeigten Tag (kalendarisch berechnet).
     var streakDays: Int {
@@ -47,11 +50,19 @@ struct RecoveryTimelineProvider: AppIntentTimelineProvider {
     // MARK: - Private
 
     private func entry(from snapshot: WidgetSnapshot, preferredID: String?, date: Date) -> RecoveryEntry {
-        RecoveryEntry(
+        let resolved = snapshot.resolvedAddiction(preferredID: preferredID)
+        // Debug/Verifikation: zeigt, welche ID angefragt wurde und welche
+        // Sucht der Provider daraus aufgelöst hat (im Konsolen-Log der
+        // Widget-Extension sichtbar).
+        #if DEBUG
+        print("[RecoveryWidget] preferredID=\(preferredID ?? "nil") -> resolved id=\(resolved.id) title=\(resolved.title)")
+        #endif
+        return RecoveryEntry(
             date: date,
             snapshot: snapshot,
-            addiction: snapshot.resolvedAddiction(preferredID: preferredID),
-            quote: snapshot.quote(for: date)
+            addiction: resolved,
+            quote: snapshot.quote(for: date),
+            configuredID: preferredID
         )
     }
 

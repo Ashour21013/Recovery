@@ -29,7 +29,8 @@ struct RecoveryWidget: Widget {
         date: .now,
         snapshot: .placeholder,
         addiction: WidgetSnapshot.placeholder.resolvedAddiction(preferredID: nil),
-        quote: WidgetSnapshot.placeholder.quote()
+        quote: WidgetSnapshot.placeholder.quote(),
+        configuredID: nil
     )
 }
 
@@ -40,6 +41,7 @@ struct RecoveryWidget: Widget {
         date: .now,
         snapshot: .placeholder,
         addiction: WidgetSnapshot.placeholder.resolvedAddiction(preferredID: nil),
-        quote: WidgetSnapshot.placeholder.quote()
+        quote: WidgetSnapshot.placeholder.quote(),
+        configuredID: nil
     )
 }

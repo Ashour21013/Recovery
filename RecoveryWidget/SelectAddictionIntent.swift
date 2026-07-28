@@ -62,6 +62,10 @@ struct SelectAddictionIntent: WidgetConfigurationIntent {
     @Parameter(title: "Sucht")
     var addiction: AddictionAppEntity?
 
+    static var parameterSummary: some ParameterSummary {
+        Summary("Zeige \(\.$addiction)")
+    }
+
     init() {}
 
     init(addiction: AddictionAppEntity?) {

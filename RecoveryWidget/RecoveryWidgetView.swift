@@ -150,7 +150,8 @@ private struct LockedWidgetView: View {
             date: .now,
             snapshot: .placeholder,
             addiction: WidgetSnapshot.placeholder.resolvedAddiction(preferredID: nil),
-            quote: WidgetSnapshot.placeholder.quote()
+            quote: WidgetSnapshot.placeholder.quote(),
+            configuredID: nil
         )
     }
 

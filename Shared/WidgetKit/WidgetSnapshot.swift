@@ -1,5 +1,29 @@
 import Foundation
 
+/// Auswählbare Quelle der Motivationssprüche im Widget.
+///
+/// Spiegelt die App-Quellen (Zitate, Wissenschaft, Bibel, Gemischt). Bewusst
+/// als eigener, `Codable` String-Enum ohne App-Abhängigkeiten, damit er in
+/// beiden Targets nutzbar ist.
+enum WidgetQuoteSource: String, Codable, CaseIterable {
+    case quotes
+    case science
+    case bible
+    case mixed
+
+    var title: String {
+        switch self {
+        case .quotes: "Motivationszitate"
+        case .science: "Wissenschaft"
+        case .bible: "Bibelverse"
+        case .mixed: "Gemischt"
+        }
+    }
+
+    /// Ob diese Quelle Premium erfordert (nur `quotes` ist kostenlos).
+    var isPremium: Bool { self != .quotes }
+}
+
 /// Ein reduzierter, für das Widget bestimmter Motivationsspruch.
 ///
 /// Bewusst schlank und `Codable`, damit er ohne App-interne Abhängigkeiten
@@ -83,6 +107,10 @@ struct WidgetSnapshot: Codable, Equatable {
     /// ohne dieses Feld zu wahren.
     let addictions: [WidgetAddiction]
 
+    /// Sprüche je Quelle (für die Quellen-Auswahl im Widget). Nur die dem
+    /// Nutzer erlaubten Quellen sind befüllt (Free: nur `quotes`).
+    let quotesBySource: [String: [WidgetQuote]]
+
     init(
         currentStreakDays: Int,
         longestStreakDays: Int,
@@ -92,6 +120,7 @@ struct WidgetSnapshot: Codable, Equatable {
         isPremium: Bool,
         quotes: [WidgetQuote],
         addictions: [WidgetAddiction] = [],
+        quotesBySource: [String: [WidgetQuote]] = [:],
         updatedAt: Date = .now
     ) {
         self.currentStreakDays = currentStreakDays
@@ -102,12 +131,14 @@ struct WidgetSnapshot: Codable, Equatable {
         self.isPremium = isPremium
         self.quotes = quotes
         self.addictions = addictions
+        self.quotesBySource = quotesBySource
         self.updatedAt = updatedAt
     }
 
     private enum CodingKeys: String, CodingKey {
         case currentStreakDays, longestStreakDays, addictionTitle
-        case addictionSystemImage, startDate, isPremium, quotes, addictions, updatedAt
+        case addictionSystemImage, startDate, isPremium, quotes, addictions
+        case quotesBySource, updatedAt
     }
 
     init(from decoder: Decoder) throws {
@@ -120,6 +151,7 @@ struct WidgetSnapshot: Codable, Equatable {
         isPremium = try c.decode(Bool.self, forKey: .isPremium)
         quotes = try c.decode([WidgetQuote].self, forKey: .quotes)
         addictions = try c.decodeIfPresent([WidgetAddiction].self, forKey: .addictions) ?? []
+        quotesBySource = try c.decodeIfPresent([String: [WidgetQuote]].self, forKey: .quotesBySource) ?? [:]
         updatedAt = try c.decode(Date.self, forKey: .updatedAt)
     }
 
@@ -148,6 +180,7 @@ struct WidgetSnapshot: Codable, Equatable {
             isPremium: isPremium,
             quotes: quotes,
             addictions: addictions,
+            quotesBySource: quotesBySource,
             updatedAt: .now
         )
     }
@@ -160,6 +193,20 @@ struct WidgetSnapshot: Codable, Equatable {
         guard !quotes.isEmpty else { return nil }
         let dayIndex = calendar.ordinality(of: .day, in: .era, for: date) ?? 0
         return quotes[dayIndex % quotes.count]
+    }
+
+    /// Wählt pro Kalendertag deterministisch einen Spruch aus der gewählten Quelle.
+    ///
+    /// Greift auf `quotesBySource[source]` zurück; ist die Quelle leer oder für
+    /// Free-Nutzer gesperrt, wird auf die Standard-`quotes` zurückgefallen.
+    func quote(for date: Date = .now,
+               source: WidgetQuoteSource,
+               calendar: Calendar = .current) -> WidgetQuote? {
+        let pool = quotesBySource[source.rawValue] ?? []
+        let usable = (!pool.isEmpty && (isPremium || !source.isPremium)) ? pool : quotes
+        guard !usable.isEmpty else { return nil }
+        let dayIndex = calendar.ordinality(of: .day, in: .era, for: date) ?? 0
+        return usable[dayIndex % usable.count]
     }
 
     /// Löst die anzuzeigende Sucht für ein konfigurierbares Widget auf.

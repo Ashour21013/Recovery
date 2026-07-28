@@ -38,6 +38,7 @@ struct WidgetSnapshotPublisher {
             isPremium: isPremium,
             quotes: quotes,
             addictions: widgetAddictions(from: addictions, activeProfile: profile, now: now),
+            quotesBySource: quotesBySource(isPremium: isPremium),
             updatedAt: now
         )
         store.save(snapshot)
@@ -92,5 +93,24 @@ struct WidgetSnapshotPublisher {
         return provider.collectItems().map {
             WidgetQuote(id: $0.id, text: $0.text, author: $0.source)
         }
+    }
+
+    /// Baut die Sprüche je Quelle für die Quellen-Auswahl im Widget.
+    ///
+    /// Free-Nutzer erhalten nur die Basis-Quelle (`quotes`); Premium-Nutzer
+    /// alle Quellen. Schlüssel sind die `rawValue`s, die mit
+    /// `WidgetQuoteSource` übereinstimmen.
+    private func quotesBySource(isPremium: Bool) -> [String: [WidgetQuote]] {
+        let sources: [MotivationSource] = isPremium
+            ? MotivationSource.allCases
+            : [.quotes]
+        var result: [String: [WidgetQuote]] = [:]
+        for source in sources {
+            let provider = providerFactory.provider(for: source)
+            result[source.rawValue] = provider.collectItems().map {
+                WidgetQuote(id: $0.id, text: $0.text, author: $0.source)
+            }
+        }
+        return result
     }
 }
