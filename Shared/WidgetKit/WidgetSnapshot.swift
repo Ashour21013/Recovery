@@ -212,12 +212,26 @@ struct WidgetSnapshot: Codable, Equatable {
     /// Löst die anzuzeigende Sucht für ein konfigurierbares Widget auf.
     ///
     /// - Bei gültiger, noch existierender Auswahl: diese Sucht.
-    /// - Sonst (keine Auswahl oder gelöschte Sucht): die aktive Sucht,
-    ///   ersatzweise die Top-Level-Felder des Snapshots.
+    /// - Sonst (keine Auswahl, Sentinel `"active"`, oder gelöschte Sucht):
+    ///   die aktive Sucht, ersatzweise die Top-Level-Felder des Snapshots.
+    ///
+    /// Der ID-Abgleich erfolgt NORMALISIERT (getrimmt + `lowercased`), damit
+    /// er nicht an Groß-/Kleinschreibung oder Whitespace-Unterschieden
+    /// zwischen Schreib- (App) und Lesepfad (Widget-Intent) scheitert.
     func resolvedAddiction(preferredID: String?) -> WidgetAddiction {
-        if let id = preferredID, let match = addictions.first(where: { $0.id == id }) {
+        let normalized = preferredID?
+            .trimmingCharacters(in: .whitespacesAndNewlines)
+            .lowercased()
+
+        // Nur echte Auswahl matchen – der Sentinel "active" bedeutet
+        // ausdrücklich "keine konkrete Auswahl → aktive Sucht".
+        if let key = normalized, !key.isEmpty, key != "active",
+           let match = addictions.first(where: {
+               $0.id.trimmingCharacters(in: .whitespacesAndNewlines).lowercased() == key
+           }) {
             return match
         }
+
         if let active = addictions.first(where: { $0.isActive }) ?? addictions.first {
             return active
         }

@@ -51,11 +51,15 @@ struct RecoveryTimelineProvider: AppIntentTimelineProvider {
 
     private func entry(from snapshot: WidgetSnapshot, preferredID: String?, date: Date) -> RecoveryEntry {
         let resolved = snapshot.resolvedAddiction(preferredID: preferredID)
-        // Debug/Verifikation: zeigt, welche ID angefragt wurde und welche
-        // Sucht der Provider daraus aufgelöst hat (im Konsolen-Log der
-        // Widget-Extension sichtbar).
+        // Debug/Verifikation: zeigt, welche ID angefragt wurde, welche IDs im
+        // Snapshot vorliegen und welche Sucht der Provider daraus aufgelöst
+        // hat (im Konsolen-Log der Widget-Extension sichtbar).
         #if DEBUG
-        print("[RecoveryWidget] preferredID=\(preferredID ?? "nil") -> resolved id=\(resolved.id) title=\(resolved.title)")
+        let available = snapshot.addictions.map { "\($0.id)|\($0.title)" }.joined(separator: ", ")
+        let matched = preferredID.map { pid in
+            snapshot.addictions.contains { $0.id == pid } ? "MATCH" : "NO-MATCH"
+        } ?? "nil"
+        print("[RecoveryWidget] preferredID=\(preferredID ?? "nil") [\(matched)] -> resolved id=\(resolved.id) title=\(resolved.title) | available=[\(available)]")
         #endif
         return RecoveryEntry(
             date: date,
