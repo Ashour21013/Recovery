@@ -57,6 +57,22 @@ final class AppDependencies {
     @ObservationIgnored
     private(set) lazy var widgetPublisher = WidgetSnapshotPublisher()
 
+    /// Persistenz der Inhaltsschutz-Einstellungen.
+    let contentBlockingSettingsStore: ContentBlockingSettingsStore =
+        UserDefaultsContentBlockingSettingsStore()
+
+    /// Inhaltsschutz (Pornografie-Filter). Im Simulator ist Screen Time nicht
+    /// verfügbar – dort wird eine simulierte Umsetzung verwendet.
+    @MainActor
+    @ObservationIgnored
+    private(set) lazy var contentBlockingService: ContentBlockingService = {
+        #if targetEnvironment(simulator)
+        SimulatedContentBlockingService()
+        #else
+        ScreenTimeContentBlockingService()
+        #endif
+    }()
+
     /// Aktualisiert den geteilten Widget-Snapshot aus dem aktuellen Profil.
     @MainActor
     func refreshWidgetSnapshot(profile: RecoveryProfile, addictions: [AddictionSummary] = []) {

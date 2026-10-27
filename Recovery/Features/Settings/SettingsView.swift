@@ -43,6 +43,7 @@ struct SettingsView: View {
     private func form(_ viewModel: SettingsViewModel) -> some View {
         Form {
             subscriptionSection(viewModel)
+            protectionSection
             privacySection
             trackingSection
             notificationsSection
@@ -193,7 +194,18 @@ struct SettingsView: View {
         }
     }
 
-    private var privacySection: some View {        Section {
+    private var protectionSection: some View {
+        Section("Schutz") {
+            NavigationLink {
+                ContentBlockingView()
+            } label: {
+                settingsLabel("Inhaltsschutz", systemImage: "hand.raised.fill", tint: .purple)
+            }
+        }
+    }
+
+    private var privacySection: some View {
+        Section {
             NavigationLink {
                 PrivacyView()
             } label: {
