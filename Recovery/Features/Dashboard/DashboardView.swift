@@ -191,6 +191,7 @@ struct DashboardView: View {
                     onChangeSource: viewModel.presentSourcePicker
                 )
                 CravingButton(action: viewModel.handleCravingTapped)
+                ContentBlockingCardView()
                 GoalCardView(
                     goalProgress: data.goalProgress,
                     onSelectGoal: viewModel.presentGoalPicker
