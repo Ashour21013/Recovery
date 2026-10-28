@@ -60,7 +60,7 @@ struct MotivationWidgetView: View {
         }
         .containerBackground(for: .widget) {
             LinearGradient(
-                colors: [Color.accentColor.opacity(0.18), Color(.systemBackground)],
+                colors: [WidgetPalette.mint, WidgetPalette.surface],
                 startPoint: .topLeading,
                 endPoint: .bottomTrailing
             )
@@ -71,18 +71,18 @@ struct MotivationWidgetView: View {
         VStack(alignment: .leading, spacing: 8) {
             Image(systemName: "quote.opening")
                 .font(.title3)
-                .foregroundStyle(Color.accentColor)
+                .foregroundStyle(WidgetPalette.teal)
 
             if let quote = entry.quote {
                 Text(quote.text)
                     .font(family == .systemSmall ? .caption.weight(.medium) : .headline.weight(.medium))
-                    .foregroundStyle(.primary)
+                    .foregroundStyle(WidgetPalette.ink)
                     .lineLimit(family == .systemSmall ? 5 : 4)
                     .minimumScaleFactor(0.7)
                 if let author = quote.author {
                     Text("— \(author)")
                         .font(.caption2)
-                        .foregroundStyle(.secondary)
+                        .foregroundStyle(WidgetPalette.muted)
                         .lineLimit(1)
                 }
             }
@@ -97,13 +97,13 @@ struct MotivationWidgetView: View {
                 .font(.headline)
                 .foregroundStyle(.white)
                 .padding(8)
-                .background(Circle().fill(Color.accentColor))
+                .background(Circle().fill(WidgetPalette.teal))
             Text("Premium freischalten")
                 .font(.subheadline.weight(.semibold))
                 .multilineTextAlignment(.center)
             Text("Täglicher Motivationsspruch auf deinem Home-Bildschirm.")
                 .font(.caption2)
-                .foregroundStyle(.secondary)
+                .foregroundStyle(WidgetPalette.muted)
                 .multilineTextAlignment(.center)
                 .lineLimit(3)
         }

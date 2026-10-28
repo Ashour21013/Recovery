@@ -22,7 +22,7 @@ struct RecoveryWidgetView: View {
         }
         .containerBackground(for: .widget) {
             LinearGradient(
-                colors: [Color.accentColor.opacity(0.18), Color(.systemBackground)],
+                colors: [WidgetPalette.mint, WidgetPalette.surface],
                 startPoint: .topLeading,
                 endPoint: .bottomTrailing
             )
@@ -40,10 +40,10 @@ private struct SmallWidgetView: View {
             HStack(spacing: 6) {
                 Image(systemName: entry.addiction.systemImage)
                     .font(.caption)
-                    .foregroundStyle(Color.accentColor)
+                    .foregroundStyle(WidgetPalette.teal)
                 Text(entry.addiction.title)
                     .font(.caption2.weight(.semibold))
-                    .foregroundStyle(.secondary)
+                    .foregroundStyle(WidgetPalette.muted)
                     .lineLimit(1)
             }
 
@@ -51,19 +51,20 @@ private struct SmallWidgetView: View {
 
             Text("\(entry.streakDays)")
                 .font(.system(size: 44, weight: .bold, design: .rounded))
-                .foregroundStyle(.primary)
+                .foregroundStyle(WidgetPalette.ink)
                 .minimumScaleFactor(0.6)
                 .lineLimit(1)
-            Text("Tage clean")
+            Text("TAGE CLEAN")
+                .tracking(1.1)
                 .font(.caption2)
-                .foregroundStyle(.secondary)
+                .foregroundStyle(WidgetPalette.muted)
 
             Spacer(minLength: 0)
 
             if let quote = entry.quote {
                 Text(quote.text)
                     .font(.caption2)
-                    .foregroundStyle(.secondary)
+                    .foregroundStyle(WidgetPalette.muted)
                     .lineLimit(2)
                     .minimumScaleFactor(0.8)
             }
@@ -84,27 +85,28 @@ private struct MediumWidgetView: View {
                 HStack(spacing: 6) {
                     Image(systemName: entry.addiction.systemImage)
                         .font(.caption)
-                        .foregroundStyle(Color.accentColor)
+                        .foregroundStyle(WidgetPalette.teal)
                     Text(entry.addiction.title)
                         .font(.caption.weight(.semibold))
-                        .foregroundStyle(.secondary)
+                        .foregroundStyle(WidgetPalette.muted)
                         .lineLimit(1)
                 }
 
                 Text("\(entry.streakDays)")
                     .font(.system(size: 48, weight: .bold, design: .rounded))
-                    .foregroundStyle(.primary)
+                    .foregroundStyle(WidgetPalette.ink)
                     .minimumScaleFactor(0.6)
                     .lineLimit(1)
-                Text("Tage clean")
+                Text("TAGE CLEAN")
+                .tracking(1.1)
                     .font(.caption2)
-                    .foregroundStyle(.secondary)
+                    .foregroundStyle(WidgetPalette.muted)
 
                 Spacer(minLength: 0)
 
                 Label("Rekord: \(entry.addiction.longestStreakDays) Tage", systemImage: "trophy.fill")
                     .font(.caption2)
-                    .foregroundStyle(.secondary)
+                    .foregroundStyle(WidgetPalette.muted)
                     .lineLimit(1)
             }
             .frame(maxWidth: .infinity, alignment: .leading)
@@ -115,18 +117,18 @@ private struct MediumWidgetView: View {
             VStack(alignment: .leading, spacing: 8) {
                 Image(systemName: "quote.opening")
                     .font(.caption)
-                    .foregroundStyle(Color.accentColor)
+                    .foregroundStyle(WidgetPalette.teal)
 
                 if let quote = entry.quote {
                     Text(quote.text)
                         .font(.footnote.weight(.medium))
-                        .foregroundStyle(.primary)
+                        .foregroundStyle(WidgetPalette.ink)
                         .lineLimit(4)
                         .minimumScaleFactor(0.8)
                     if let author = quote.author {
                         Text("— \(author)")
                             .font(.caption2)
-                            .foregroundStyle(.secondary)
+                            .foregroundStyle(WidgetPalette.muted)
                             .lineLimit(1)
                     }
                 }
@@ -170,7 +172,7 @@ private struct LockedWidgetView: View {
             .accessibilityHidden(true)
 
             // Abdunkelung für gute Lesbarkeit des Overlays.
-            Color(.systemBackground).opacity(0.25)
+            WidgetPalette.surface.opacity(0.35)
 
             // Klarer Vordergrund.
             VStack(spacing: 6) {
@@ -178,19 +180,38 @@ private struct LockedWidgetView: View {
                     .font(.headline)
                     .foregroundStyle(.white)
                     .padding(8)
-                    .background(Circle().fill(Color.accentColor))
+                    .background(Circle().fill(WidgetPalette.teal))
                 Text("Premium freischalten")
                     .font(.subheadline.weight(.semibold))
-                    .foregroundStyle(.primary)
+                    .foregroundStyle(WidgetPalette.ink)
                     .multilineTextAlignment(.center)
                 Text("Streak & tägliche Motivation direkt auf dem Home-Bildschirm.")
                     .font(.caption2)
-                    .foregroundStyle(.secondary)
+                    .foregroundStyle(WidgetPalette.muted)
                     .multilineTextAlignment(.center)
                     .lineLimit(3)
             }
             .padding(.horizontal, 8)
         }
         .frame(maxWidth: .infinity, maxHeight: .infinity)
+    }
+}
+
+// MARK: - Figma-Palette (Widget-Target hat keinen Zugriff auf AppColor)
+
+enum WidgetPalette {
+    static let teal = dyn(0x177E77, 0x3FB3A6)
+    static let ink = dyn(0x17201F, 0xEEF3F1)
+    static let muted = dyn(0x66716F, 0x9AA6A3)
+    static let mint = dyn(0xE3F3EF, 0x16302D)
+    static let surface = dyn(0xFFFFFF, 0x161C1B)
+
+    private static func dyn(_ light: UInt32, _ dark: UInt32) -> Color {
+        Color(UIColor { $0.userInterfaceStyle == .dark ? rgb(dark) : rgb(light) })
+    }
+    private static func rgb(_ v: UInt32) -> UIColor {
+        UIColor(red: CGFloat((v >> 16) & 0xFF) / 255,
+                green: CGFloat((v >> 8) & 0xFF) / 255,
+                blue: CGFloat(v & 0xFF) / 255, alpha: 1)
     }
 }

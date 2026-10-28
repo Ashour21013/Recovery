@@ -18,6 +18,8 @@ struct MainTabView: View {
                 .tabItem { Label("Mehr", systemImage: "gearshape") }
         }
         .tint(AppColor.teal)
+        .toolbarBackground(AppColor.surface, for: .tabBar)
+        .toolbarBackground(.visible, for: .tabBar)
     }
 }
 
