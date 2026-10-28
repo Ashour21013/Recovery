@@ -71,7 +71,7 @@ struct JournalEditorView: View {
         HStack(spacing: 14) {
             IconTile(systemImage: "flag", size: 44)
             VStack(alignment: .leading, spacing: 2) {
-                Eyebrow("Heute")
+                Eyebrow(String(localized: "Heute"))
                 Text(now.formatted(.dateTime.weekday(.wide).day().month(.wide)) + " · " +
                      now.formatted(date: .omitted, time: .shortened))
                     .font(.subheadline.weight(.semibold))
@@ -83,7 +83,7 @@ struct JournalEditorView: View {
     private var moodCard: some View {
         card {
             VStack(spacing: 14) {
-                Eyebrow("Wie fühlst du dich?")
+                Eyebrow(String(localized: "Wie fühlst du dich?"))
                 HStack(alignment: .top, spacing: 0) {
                     ForEach(Mood.allCases) { item in
                         moodButton(item).frame(maxWidth: .infinity)
@@ -127,7 +127,7 @@ struct JournalEditorView: View {
             VStack(alignment: .leading, spacing: 14) {
                 HStack(alignment: .top) {
                     VStack(alignment: .leading, spacing: 4) {
-                        Eyebrow("Deine Gedanken")
+                        Eyebrow(String(localized: "Deine Gedanken"))
                         Text("Was bewegt dich gerade?")
                             .font(.title3.weight(.medium))
                             .foregroundStyle(AppColor.ink)
@@ -202,7 +202,7 @@ struct JournalEditorView: View {
                 HStack(spacing: 10) {
                     IconTile(systemImage: "bolt.heart", foreground: AppColor.coral, background: AppColor.coralSoft, size: 32)
                     VStack(alignment: .leading, spacing: 2) {
-                        Eyebrow("Trigger (optional)")
+                        Eyebrow(String(localized: "Trigger (optional)"))
                         Text("Gab es einen Auslöser?")
                             .font(.subheadline.weight(.semibold))
                             .foregroundStyle(AppColor.ink)
@@ -250,9 +250,9 @@ struct JournalEditorView: View {
 
     private var hintText: String {
         switch mood {
-        case .veryBad, .bad: "Schwere Tage gehören dazu. Dass du hier bist, ist schon ein Schritt."
-        case .good, .veryGood: "Halte fest, was dir heute gutgetan hat – es hilft dir an schweren Tagen."
-        default: "Du musst heute keine Lösung finden. Wahrnehmen reicht."
+        case .veryBad, .bad: String(localized: "Schwere Tage gehören dazu. Dass du hier bist, ist schon ein Schritt.")
+        case .good, .veryGood: String(localized: "Halte fest, was dir heute gutgetan hat – es hilft dir an schweren Tagen.")
+        default: String(localized: "Du musst heute keine Lösung finden. Wahrnehmen reicht.")
         }
     }
 
