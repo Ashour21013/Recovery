@@ -23,6 +23,9 @@ struct MetricsEditorView: View {
                 }
             }
             .navigationTitle("Deine Werte")
+            .scrollContentBackground(.hidden)
+            .background(AppColor.background.ignoresSafeArea())
+            .tint(AppColor.teal)
             .navigationBarTitleDisplayMode(.inline)
             .toolbar {
                 ToolbarItem(placement: .cancellationAction) {

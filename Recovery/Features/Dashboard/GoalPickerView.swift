@@ -31,6 +31,9 @@ struct GoalPickerView: View {
                 }
             }
             .navigationTitle("Ziel wählen")
+            .scrollContentBackground(.hidden)
+            .background(AppColor.background.ignoresSafeArea())
+            .tint(AppColor.teal)
             .navigationBarTitleDisplayMode(.inline)
             .toolbar {
                 ToolbarItem(placement: .cancellationAction) {
@@ -43,7 +46,7 @@ struct GoalPickerView: View {
     private func row(for goal: RecoveryGoal) -> some View {
         HStack(spacing: AppSpacing.m) {
             Image(systemName: goal.systemImage)
-                .foregroundStyle(AppColor.accent)
+                .foregroundStyle(AppColor.teal)
                 .frame(width: 28)
 
             VStack(alignment: .leading, spacing: 2) {
@@ -56,7 +59,7 @@ struct GoalPickerView: View {
                 } else {
                     Text("Noch \(goal.remainingDays(currentDays: currentDays)) Tage")
                         .font(.caption)
-                        .foregroundStyle(.secondary)
+                        .foregroundStyle(AppColor.muted)
                 }
             }
 
@@ -64,7 +67,7 @@ struct GoalPickerView: View {
 
             if currentGoal == goal {
                 Image(systemName: "checkmark")
-                    .foregroundStyle(AppColor.accent)
+                    .foregroundStyle(AppColor.teal)
             }
         }
         .contentShape(Rectangle())

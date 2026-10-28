@@ -16,7 +16,7 @@ struct DisclaimerView: View {
 
             Image(systemName: "heart.text.square.fill")
                 .font(.system(size: 72))
-                .foregroundStyle(AppColor.accent.gradient)
+                .foregroundStyle(AppColor.teal.gradient)
                 .symbolEffect(.bounce, value: appeared)
                 .accessibilityHidden(true)
 
@@ -27,7 +27,7 @@ struct DisclaimerView: View {
 
                 Text(DisclaimerText.long)
                     .font(AppFont.body)
-                    .foregroundStyle(.secondary)
+                    .foregroundStyle(AppColor.muted)
                     .multilineTextAlignment(.center)
                     .fixedSize(horizontal: false, vertical: true)
             }

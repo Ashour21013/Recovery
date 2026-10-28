@@ -26,7 +26,7 @@ struct LockedFeatureCard<Preview: View>: View {
                 foreground
             }
             .frame(maxWidth: .infinity)
-            .background(AppColor.cardBackground, in: RoundedRectangle(cornerRadius: 16, style: .continuous))
+            .background(AppColor.surface, in: RoundedRectangle(cornerRadius: 16, style: .continuous))
             .overlay(alignment: .topTrailing) {
                 PremiumBadge(style: .star)
                     .padding(AppSpacing.s)
@@ -43,9 +43,9 @@ struct LockedFeatureCard<Preview: View>: View {
         VStack(spacing: AppSpacing.s) {
             Image(systemName: feature.systemImage)
                 .font(.title)
-                .foregroundStyle(AppColor.accent)
+                .foregroundStyle(AppColor.teal)
                 .frame(width: 52, height: 52)
-                .background(AppColor.accent.opacity(0.15), in: Circle())
+                .background(AppColor.teal.opacity(0.15), in: Circle())
 
             Text(feature.teaserTitle)
                 .font(AppFont.headline)
@@ -53,7 +53,7 @@ struct LockedFeatureCard<Preview: View>: View {
 
             Text(feature.teaserDescription)
                 .font(AppFont.subheadline)
-                .foregroundStyle(.secondary)
+                .foregroundStyle(AppColor.muted)
                 .multilineTextAlignment(.center)
                 .fixedSize(horizontal: false, vertical: true)
 
@@ -62,7 +62,7 @@ struct LockedFeatureCard<Preview: View>: View {
                 .foregroundStyle(.white)
                 .padding(.horizontal, AppSpacing.m)
                 .padding(.vertical, AppSpacing.s)
-                .background(AppColor.accent.gradient, in: Capsule())
+                .background(AppColor.teal.gradient, in: Capsule())
                 .padding(.top, AppSpacing.xs)
         }
         .padding(AppSpacing.l)
@@ -84,5 +84,5 @@ extension LockedFeatureCard where Preview == EmptyView {
         LockedFeatureCard(feature: .recoveryGains, onUnlock: {})
     }
     .padding()
-    .background(Color(.systemGroupedBackground))
+    .background(AppColor.background)
 }

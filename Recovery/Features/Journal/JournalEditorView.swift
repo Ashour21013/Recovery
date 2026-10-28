@@ -57,6 +57,7 @@ struct JournalEditorView: View {
                 .padding(AppSpacing.l)
             }
             .navigationTitle("Neuer Eintrag")
+            .tint(AppColor.teal)
             .navigationBarTitleDisplayMode(.inline)
             .toolbar {
                 ToolbarItem(placement: .cancellationAction) {

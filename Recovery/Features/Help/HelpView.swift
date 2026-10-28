@@ -23,8 +23,9 @@ struct HelpView: View {
                 }
             }
             .navigationTitle("Hilfe & Ressourcen")
+            .tint(AppColor.teal)
             .navigationBarTitleDisplayMode(.inline)
-            .background(Color(.systemGroupedBackground))
+            .background(AppColor.background)
             .toolbar {
                 ToolbarItem(placement: .cancellationAction) {
                     Button("Schließen") { dismiss() }
@@ -80,7 +81,7 @@ struct HelpView: View {
                 .accessibilityHidden(true)
             Text(text)
                 .font(AppFont.footnote)
-                .foregroundStyle(.secondary)
+                .foregroundStyle(AppColor.muted)
                 .fixedSize(horizontal: false, vertical: true)
         }
         .padding(AppSpacing.m)
@@ -105,7 +106,7 @@ struct HelpView: View {
             if let subtitle {
                 Text(subtitle)
                     .font(AppFont.footnote)
-                    .foregroundStyle(.secondary)
+                    .foregroundStyle(AppColor.muted)
             }
             ForEach(resources) { resource in
                 HelpResourceCard(

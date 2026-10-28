@@ -20,21 +20,21 @@ struct MotivationSourcePickerView: View {
                         } label: {
                             HStack(spacing: AppSpacing.m) {
                                 Image(systemName: source.systemImage)
-                                    .foregroundStyle(AppColor.accent)
+                                    .foregroundStyle(AppColor.teal)
                                     .frame(width: 30)
                                 VStack(alignment: .leading, spacing: 2) {
                                     Text(source.title)
                                         .foregroundStyle(.primary)
                                     Text(source.subtitle)
                                         .font(.caption)
-                                        .foregroundStyle(.secondary)
+                                        .foregroundStyle(AppColor.muted)
                                 }
                                 Spacer()
                                 if isLocked(source) {
                                     PremiumLockBadge()
                                 } else if source == current {
                                     Image(systemName: "checkmark")
-                                        .foregroundStyle(AppColor.accent)
+                                        .foregroundStyle(AppColor.teal)
                                         .fontWeight(.semibold)
                                 }
                             }
@@ -47,6 +47,9 @@ struct MotivationSourcePickerView: View {
                 }
             }
             .navigationTitle("Tägliche Motivation")
+            .scrollContentBackground(.hidden)
+            .background(AppColor.background.ignoresSafeArea())
+            .tint(AppColor.teal)
             .navigationBarTitleDisplayMode(.inline)
             .toolbar {
                 ToolbarItem(placement: .cancellationAction) {

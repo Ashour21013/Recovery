@@ -17,7 +17,7 @@ struct HelpResourceCard: View {
             HStack(alignment: .top, spacing: AppSpacing.m) {
                 Image(systemName: resource.systemImage)
                     .font(.title3)
-                    .foregroundStyle(AppColor.accent)
+                    .foregroundStyle(AppColor.teal)
                     .frame(width: 32)
                     .accessibilityHidden(true)
 
@@ -29,7 +29,7 @@ struct HelpResourceCard: View {
 
                     Text(resource.description)
                         .font(AppFont.footnote)
-                        .foregroundStyle(.secondary)
+                        .foregroundStyle(AppColor.muted)
                         .multilineTextAlignment(.leading)
                         .fixedSize(horizontal: false, vertical: true)
                 }
@@ -39,7 +39,7 @@ struct HelpResourceCard: View {
                 if isInteractive {
                     Image(systemName: resource.url != nil ? "arrow.up.right.square" : "chevron.right")
                         .font(.footnote.weight(.semibold))
-                        .foregroundStyle(.secondary)
+                        .foregroundStyle(AppColor.muted)
                         .accessibilityHidden(true)
                 }
             }
@@ -47,7 +47,7 @@ struct HelpResourceCard: View {
             .frame(maxWidth: .infinity, alignment: .leading)
             .background(
                 RoundedRectangle(cornerRadius: 16, style: .continuous)
-                    .fill(AppColor.cardBackground)
+                    .fill(AppColor.surface)
             )
             .contentShape(Rectangle())
         }

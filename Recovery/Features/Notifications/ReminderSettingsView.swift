@@ -18,6 +18,9 @@ struct ReminderSettingsView: View {
             }
         }
         .navigationTitle("Erinnerungen")
+        .scrollContentBackground(.hidden)
+        .background(AppColor.background.ignoresSafeArea())
+        .tint(AppColor.teal)
         .navigationBarTitleDisplayMode(.inline)
         .task {
             if viewModel == nil {
@@ -59,7 +62,7 @@ struct ReminderSettingsView: View {
                 .foregroundStyle(.orange)
             Text("Aktiviere Benachrichtigungen in den Einstellungen, um Erinnerungen zu erhalten.")
                 .font(.footnote)
-                .foregroundStyle(.secondary)
+                .foregroundStyle(AppColor.muted)
             if let url = URL(string: UIApplication.openSettingsURLString) {
                 Link("Einstellungen öffnen", destination: url)
                     .font(.footnote.weight(.semibold))

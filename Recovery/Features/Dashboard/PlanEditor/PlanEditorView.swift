@@ -23,6 +23,9 @@ struct PlanEditorView: View {
                 }
             }
             .navigationTitle("Plan anpassen")
+            .scrollContentBackground(.hidden)
+            .background(AppColor.background.ignoresSafeArea())
+            .tint(AppColor.teal)
             .navigationBarTitleDisplayMode(.inline)
             .toolbar {
                 ToolbarItem(placement: .confirmationAction) {
@@ -64,14 +67,14 @@ struct PlanEditorView: View {
             ForEach(viewModel.tasks) { task in
                 HStack(spacing: AppSpacing.m) {
                     Image(systemName: task.systemImage)
-                        .foregroundStyle(AppColor.accent)
+                        .foregroundStyle(AppColor.teal)
                         .frame(width: 28)
                     VStack(alignment: .leading, spacing: 2) {
                         Text(task.title)
                             .font(.body)
                         Text(task.subtitle)
                             .font(.caption)
-                            .foregroundStyle(.secondary)
+                            .foregroundStyle(AppColor.muted)
                     }
                 }
             }
@@ -118,18 +121,18 @@ struct PlanEditorView: View {
                     } label: {
                         HStack(spacing: AppSpacing.m) {
                             Image(systemName: suggestion.systemImage)
-                                .foregroundStyle(AppColor.accent)
+                                .foregroundStyle(AppColor.teal)
                                 .frame(width: 28)
                             VStack(alignment: .leading, spacing: 2) {
                                 Text(suggestion.title)
                                     .foregroundStyle(.primary)
                                 Text(suggestion.subtitle)
                                     .font(.caption)
-                                    .foregroundStyle(.secondary)
+                                    .foregroundStyle(AppColor.muted)
                             }
                             Spacer()
                             Image(systemName: "plus.circle")
-                                .foregroundStyle(AppColor.accent)
+                                .foregroundStyle(AppColor.teal)
                         }
                     }
                     .buttonStyle(.plain)

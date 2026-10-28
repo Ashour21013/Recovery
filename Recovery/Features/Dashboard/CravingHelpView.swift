@@ -27,13 +27,13 @@ struct CravingHelpView: View {
                             HStack(spacing: AppSpacing.m) {
                                 Image(systemName: tip.icon)
                                     .font(.title2)
-                                    .foregroundStyle(AppColor.accent)
+                                    .foregroundStyle(AppColor.teal)
                                     .frame(width: 32)
                                 VStack(alignment: .leading, spacing: AppSpacing.xs) {
                                     Text(tip.title).font(.headline)
                                     Text(tip.subtitle)
                                         .font(.subheadline)
-                                        .foregroundStyle(.secondary)
+                                        .foregroundStyle(AppColor.muted)
                                 }
                             }
                         }
@@ -42,6 +42,7 @@ struct CravingHelpView: View {
                 .padding(AppSpacing.m)
             }
             .navigationTitle("Durchhalten")
+            .tint(AppColor.teal)
             .navigationBarTitleDisplayMode(.inline)
             .toolbar {
                 ToolbarItem(placement: .confirmationAction) {
