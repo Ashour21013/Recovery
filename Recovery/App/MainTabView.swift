@@ -1,40 +1,23 @@
 import SwiftUI
 
-/// Haupt-Navigation der App nach abgeschlossenem Onboarding.
-///
-/// Bündelt die Top-Level-Bereiche in einer `TabView`. Jeder Tab besitzt
-/// seinen eigenen Screen mit eigenem ViewModel.
+/// Haupt-Navigation (Figma): Heute · Statistik · Tagebuch · Erfolge · Mehr.
 struct MainTabView: View {
-    /// Wird aufgerufen, wenn in den Einstellungen alle Daten gelöscht wurden.
     var onDataDeleted: () -> Void = {}
 
     var body: some View {
         TabView {
             DashboardView()
-                .tabItem {
-                    Label("Übersicht", systemImage: "house.fill")
-                }
-
-            JournalView()
-                .tabItem {
-                    Label("Journal", systemImage: "book.fill")
-                }
-
+                .tabItem { Label("Heute", systemImage: "house") }
             StatisticsView()
-                .tabItem {
-                    Label("Statistik", systemImage: "chart.bar.fill")
-                }
-
+                .tabItem { Label("Statistik", systemImage: "chart.bar") }
+            JournalView()
+                .tabItem { Label("Tagebuch", systemImage: "book") }
             AchievementsView()
-                .tabItem {
-                    Label("Erfolge", systemImage: "trophy.fill")
-                }
-
+                .tabItem { Label("Erfolge", systemImage: "medal") }
             SettingsView(onDataDeleted: onDataDeleted)
-                .tabItem {
-                    Label("Einstellungen", systemImage: "gearshape.fill")
-                }
+                .tabItem { Label("Mehr", systemImage: "gearshape") }
         }
+        .tint(AppColor.teal)
     }
 }
 

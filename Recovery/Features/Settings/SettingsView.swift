@@ -28,6 +28,7 @@ struct SettingsView: View {
             }
             .navigationTitle("Einstellungen")
         }
+        .tint(AppColor.teal)
         .task {
             if viewModel == nil {
                 viewModel = SettingsViewModel(
@@ -51,6 +52,8 @@ struct SettingsView: View {
             supportSection(viewModel)
             aboutSection(viewModel)
         }
+        .scrollContentBackground(.hidden)
+        .background(AppColor.background.ignoresSafeArea())
         .sheet(isPresented: $isShowingPaywall) {
             PaywallView()
         }
@@ -119,13 +122,8 @@ struct SettingsView: View {
         Section {
             // Status-Zeile.
             HStack(spacing: AppSpacing.m) {
-                Image(systemName: "crown.fill")
-                    .foregroundStyle(.white)
-                    .frame(width: 28, height: 28)
-                    .background(
-                        RoundedRectangle(cornerRadius: 7, style: .continuous)
-                            .fill(AppColor.accent.gradient)
-                    )
+                IconTile(systemImage: "sparkles", foreground: AppColor.gold,
+                         background: AppColor.goldSoft, size: 34)
                 VStack(alignment: .leading, spacing: 2) {
                     Text(viewModel.isPremium ? "Premium aktiv" : "Kostenlose Version")
                         .font(AppFont.subheadline.weight(.semibold))
@@ -137,11 +135,7 @@ struct SettingsView: View {
                         .foregroundStyle(.secondary)
                 }
                 Spacer()
-                if viewModel.isPremium {
-                    Text("Aktiv")
-                        .font(AppFont.caption.weight(.semibold))
-                        .foregroundStyle(AppColor.success)
-                }
+                ProTag(text: viewModel.isPremium ? "AKTIV" : "PRO")
             }
 
             // Für Free-Nutzer: Premium freischalten (öffnet Paywall).
@@ -150,7 +144,7 @@ struct SettingsView: View {
                     isShowingPaywall = true
                 } label: {
                     HStack {
-                        settingsLabel("Premium freischalten", systemImage: "sparkles", tint: AppColor.accent)
+                        settingsLabel("Premium freischalten", systemImage: "sparkles", tint: AppColor.gold)
                         Spacer()
                         Image(systemName: "chevron.right")
                             .font(.footnote.weight(.semibold))
@@ -165,7 +159,7 @@ struct SettingsView: View {
                 Task { await viewModel.restorePurchases() }
             } label: {
                 HStack {
-                    settingsLabel("Käufe wiederherstellen", systemImage: "arrow.clockwise", tint: .blue)
+                    settingsLabel("Käufe wiederherstellen", systemImage: "arrow.clockwise", tint: AppColor.teal)
                     Spacer()
                     if viewModel.isRestoring {
                         ProgressView()
@@ -181,7 +175,7 @@ struct SettingsView: View {
                     openURL(AppLinks.manageSubscriptions)
                 } label: {
                     HStack {
-                        settingsLabel("Abonnement verwalten", systemImage: "gearshape.fill", tint: .gray)
+                        settingsLabel("Abonnement verwalten", systemImage: "gearshape.fill", tint: AppColor.muted)
                         Spacer()
                         Image(systemName: "arrow.up.forward.app")
                             .foregroundStyle(.tertiary)
@@ -199,7 +193,7 @@ struct SettingsView: View {
             NavigationLink {
                 ContentBlockingView()
             } label: {
-                settingsLabel("Inhaltsschutz", systemImage: "hand.raised.fill", tint: .purple)
+                settingsLabel("Inhaltsschutz", systemImage: "hand.raised.fill", tint: AppColor.purple)
             }
         }
     }
@@ -209,7 +203,7 @@ struct SettingsView: View {
             NavigationLink {
                 PrivacyView()
             } label: {
-                settingsLabel("Datenschutz", systemImage: "lock.shield.fill", tint: .blue)
+                settingsLabel("Datenschutz", systemImage: "lock.shield.fill", tint: AppColor.teal)
             }
         }
     }
@@ -220,7 +214,7 @@ struct SettingsView: View {
                 isShowingMetricsEditor = true
             } label: {
                 HStack {
-                    settingsLabel("Deine Werte", systemImage: "chart.line.uptrend.xyaxis", tint: .green)
+                    settingsLabel("Deine Werte", systemImage: "chart.line.uptrend.xyaxis", tint: AppColor.teal)
                     Spacer()
                     Image(systemName: "chevron.right")
                         .font(.footnote.weight(.semibold))
@@ -236,13 +230,13 @@ struct SettingsView: View {
             NavigationLink {
                 ReminderSettingsView()
             } label: {
-                settingsLabel("Erinnerungen", systemImage: "bell.badge.fill", tint: .orange)
+                settingsLabel("Erinnerungen", systemImage: "bell.badge.fill", tint: AppColor.coral)
             }
             Button {
                 openSystemNotificationSettings()
             } label: {
                 HStack {
-                    settingsLabel("Systembenachrichtigungen", systemImage: "gearshape.fill", tint: .gray)
+                    settingsLabel("Systembenachrichtigungen", systemImage: "gearshape.fill", tint: AppColor.muted)
                     Spacer()
                     Image(systemName: "arrow.up.forward.app")
                         .foregroundStyle(.tertiary)
@@ -258,7 +252,7 @@ struct SettingsView: View {
                 Task { await viewModel.exportData() }
             } label: {
                 HStack {
-                    settingsLabel("Daten exportieren", systemImage: "square.and.arrow.up.fill", tint: .green)
+                    settingsLabel("Daten exportieren", systemImage: "square.and.arrow.up.fill", tint: AppColor.teal)
                     Spacer()
                     if viewModel.isExporting {
                         ProgressView()
@@ -271,7 +265,7 @@ struct SettingsView: View {
             Button(role: .destructive) {
                 viewModel.requestDeletion()
             } label: {
-                settingsLabel("Alle Daten löschen", systemImage: "trash.fill", tint: .red)
+                settingsLabel("Alle Daten löschen", systemImage: "trash.fill", tint: AppColor.coral)
             }
         } header: {
             Text("Daten")
@@ -285,21 +279,21 @@ struct SettingsView: View {
             Button {
                 sendFeedback()
             } label: {
-                settingsLabel("Feedback senden", systemImage: "envelope.fill", tint: .teal)
+                settingsLabel("Feedback senden", systemImage: "envelope.fill", tint: AppColor.teal)
             }
             .buttonStyle(.plain)
 
             Button {
                 openURL(AppLinks.appStoreReview)
             } label: {
-                settingsLabel("App bewerten", systemImage: "star.fill", tint: .yellow)
+                settingsLabel("App bewerten", systemImage: "star.fill", tint: AppColor.gold)
             }
             .buttonStyle(.plain)
 
             Button {
                 openURL(AppLinks.privacyPolicy)
             } label: {
-                settingsLabel("Datenschutzrichtlinie", systemImage: "doc.text.fill", tint: .indigo)
+                settingsLabel("Datenschutzrichtlinie", systemImage: "doc.text.fill", tint: AppColor.purple)
             }
             .buttonStyle(.plain)
         }
@@ -308,7 +302,7 @@ struct SettingsView: View {
     private func aboutSection(_ viewModel: SettingsViewModel) -> some View {
         Section {
             HStack {
-                settingsLabel("Version", systemImage: "info.circle.fill", tint: .secondary)
+                settingsLabel("Version", systemImage: "info.circle.fill", tint: AppColor.muted)
                 Spacer()
                 Text(viewModel.appVersion)
                     .foregroundStyle(.secondary)
@@ -322,20 +316,19 @@ struct SettingsView: View {
 
     // MARK: - Bausteine
 
+    /// Figma-Settings-Zeile: getönte Icon-Kachel (statt bunter Systemkachel).
     private func settingsLabel(_ title: String, systemImage: String, tint: Color) -> some View {
-        Label {
-            Text(title)
-                .foregroundStyle(.primary)
-        } icon: {
+        HStack(spacing: 11) {
             Image(systemName: systemImage)
-                .font(.footnote)
-                .foregroundStyle(.white)
-                .frame(width: 28, height: 28)
-                .background(
-                    RoundedRectangle(cornerRadius: 7, style: .continuous)
-                        .fill(tint)
-                )
+                .font(.system(size: 15, weight: .semibold))
+                .foregroundStyle(tint)
+                .frame(width: 34, height: 34)
+                .background(RoundedRectangle(cornerRadius: 11, style: .continuous).fill(tint.opacity(0.14)))
+            Text(title)
+                .font(.subheadline.weight(.semibold))
+                .foregroundStyle(AppColor.ink)
         }
+        .padding(.vertical, 2)
     }
 
     // MARK: - Aktionen

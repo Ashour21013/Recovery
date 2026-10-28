@@ -23,15 +23,24 @@ struct PaywallView: View {
                         .frame(maxWidth: .infinity, maxHeight: .infinity)
                 }
             }
-            .background(Color(.systemGroupedBackground))
-            .navigationTitle("Recovery Premium")
-            .navigationBarTitleDisplayMode(.inline)
+            .background(
+                LinearGradient(colors: [Color(light: 0xF9FBF8, dark: 0x102321),
+                                        Color(light: 0xF4F7F4, dark: 0x152B28)],
+                               startPoint: .top, endPoint: .bottom)
+                .ignoresSafeArea()
+            )
             .toolbar {
                 ToolbarItem(placement: .cancellationAction) {
-                    Button("Schließen") { dismiss() }
+                    Button { dismiss() } label: { Image(systemName: "xmark") }
+                        .accessibilityLabel("Schließen")
+                }
+                ToolbarItem(placement: .primaryAction) {
+                    Button("Wiederherstellen") { Task { await viewModel?.restore() } }
+                        .font(.caption.weight(.bold))
                 }
             }
         }
+        .tint(AppColor.teal)
         .task {
             if viewModel == nil {
                 viewModel = PaywallViewModel(service: dependencies.subscriptionService)
@@ -46,14 +55,15 @@ struct PaywallView: View {
     @ViewBuilder
     private func content(_ viewModel: PaywallViewModel) -> some View {
         ScrollView {
-            VStack(spacing: AppSpacing.l) {
+            VStack(spacing: 20) {
                 header
                 benefits(viewModel.benefits)
                 products(viewModel)
                 purchaseSection(viewModel)
                 legalLinks
             }
-            .padding(AppSpacing.m)
+            .padding(.horizontal, 20)
+            .padding(.bottom, 28)
         }
         .alert(
             "Hinweis",
@@ -71,45 +81,54 @@ struct PaywallView: View {
     // MARK: - Header
 
     private var header: some View {
-        VStack(spacing: AppSpacing.s) {
-            Image(systemName: "crown.fill")
-                .font(.system(size: 52))
-                .foregroundStyle(AppColor.accent.gradient)
+        VStack(spacing: 0) {
+            Image(systemName: "sparkles")
+                .font(.system(size: 34, weight: .semibold))
+                .foregroundStyle(Color(hex: 0xB0842F))
+                .frame(width: 76, height: 76)
+                .background(
+                    RoundedRectangle(cornerRadius: 24, style: .continuous)
+                        .fill(LinearGradient(colors: [Color(hex: 0xFFF7D8), Color(hex: 0xEED38B)],
+                                             startPoint: .topLeading, endPoint: .bottomTrailing))
+                        .shadow(color: Color(hex: 0xA97C28, opacity: 0.18), radius: 14, y: 12)
+                )
+                .rotationEffect(.degrees(-5))
+                .padding(.top, 12)
+                .padding(.bottom, 15)
                 .accessibilityHidden(true)
-            Text("Hol das Maximum aus deiner Reise")
-                .font(AppFont.title2)
+            ProTag(text: "RECOVERY PREMIUM")
+            Text("Mehr Unterstützung.\nMehr von deinem Fortschritt.")
+                .font(.system(size: 27, weight: .bold))
                 .multilineTextAlignment(.center)
-            Text("Schalte alle Funktionen frei und bleib motiviert.")
-                .font(AppFont.subheadline)
-                .foregroundStyle(.secondary)
+                .foregroundStyle(AppColor.ink)
+                .padding(.top, 13)
+                .padding(.bottom, 8)
+            Text("Alles, was dich auf deinem Weg nachhaltig stärkt.")
+                .font(.footnote)
+                .foregroundStyle(AppColor.muted)
                 .multilineTextAlignment(.center)
         }
-        .padding(.top, AppSpacing.s)
     }
 
-    // MARK: - Vorteile
-
     private func benefits(_ benefits: [PremiumBenefit]) -> some View {
-        VStack(alignment: .leading, spacing: AppSpacing.m) {
+        VStack(alignment: .leading, spacing: 4) {
             ForEach(benefits) { benefit in
-                HStack(spacing: AppSpacing.m) {
-                    Image(systemName: benefit.systemImage)
-                        .font(.title3)
-                        .foregroundStyle(AppColor.accent)
-                        .frame(width: 32)
+                HStack(spacing: 10) {
+                    IconTile(systemImage: benefit.systemImage, size: 28)
                         .accessibilityHidden(true)
-                    VStack(alignment: .leading, spacing: 2) {
-                        Text(benefit.title)
-                            .font(AppFont.subheadline.weight(.semibold))
-                        Text(benefit.subtitle)
-                            .font(AppFont.footnote)
-                            .foregroundStyle(.secondary)
-                    }
+                    Text(benefit.title)
+                        .font(.footnote.weight(.semibold))
+                        .foregroundStyle(AppColor.ink)
                     Spacer(minLength: 0)
+                    Image(systemName: "checkmark")
+                        .font(.footnote.weight(.bold))
+                        .foregroundStyle(AppColor.teal)
                 }
+                .frame(minHeight: 36)
                 .accessibilityElement(children: .combine)
             }
         }
+        .padding(.horizontal, 4)
         .frame(maxWidth: .infinity, alignment: .leading)
     }
 
@@ -137,25 +156,25 @@ struct PaywallView: View {
     // MARK: - Kauf
 
     private func purchaseSection(_ viewModel: PaywallViewModel) -> some View {
-        VStack(spacing: AppSpacing.s) {
-            PrimaryButton(title: purchaseTitle(viewModel)) {
+        VStack(spacing: 8) {
+            Button {
                 Task { await viewModel.purchaseSelected() }
+            } label: {
+                HStack {
+                    if viewModel.isLoading { ProgressView().tint(.white) }
+                    Text(purchaseTitle(viewModel))
+                }
             }
+            .buttonStyle(TealButtonStyle(fill: AppColor.deep))
+            .shadow(color: AppColor.deep.opacity(0.18), radius: 12, y: 10)
             .disabled(viewModel.isLoading || viewModel.selectedProductID == nil)
-            .opacity(viewModel.isLoading ? 0.6 : 1)
 
-            Button("Käufe wiederherstellen") {
-                Task { await viewModel.restore() }
-            }
-            .font(AppFont.footnote)
-            .disabled(viewModel.isLoading)
-
-            if viewModel.hasAnyFreeTrial {
-                Text("Jederzeit kündbar. Die Testphase wird automatisch in ein Abo umgewandelt, wenn du nicht kündigst.")
-                    .font(.caption2)
-                    .foregroundStyle(.secondary)
-                    .multilineTextAlignment(.center)
-            }
+            Text(viewModel.hasAnyFreeTrial
+                 ? "Jederzeit kündbar. Die Testphase wird automatisch in ein Abo umgewandelt, wenn du nicht kündigst."
+                 : "Jederzeit kündbar.")
+                .font(.caption2)
+                .foregroundStyle(AppColor.muted)
+                .multilineTextAlignment(.center)
         }
     }
 
@@ -164,7 +183,7 @@ struct PaywallView: View {
         if let selected, selected.hasFreeTrial {
             return "Kostenlos testen"
         }
-        return "Fortfahren"
+        return "Premium freischalten"
     }
 
     // MARK: - Rechtliches

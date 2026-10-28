@@ -1,47 +1,46 @@
 import SwiftUI
 
-/// Kompakte Darstellung eines Journal-Eintrags in der Liste.
-/// Reine UI-Komponente ohne Geschäftslogik.
+/// Tagebuch-Zeile (Figma): Stimmungs-Kreis, Datum, Titelzeile, Vorschau.
 struct JournalEntryRow: View {
     let entry: JournalEntry
 
+    private var dateText: String {
+        let cal = Calendar.current
+        let time = entry.date.formatted(date: .omitted, time: .shortened)
+        if cal.isDateInToday(entry.date) { return "Heute, \(time)" }
+        if cal.isDateInYesterday(entry.date) { return "Gestern, \(time)" }
+        return entry.date.formatted(.dateTime.day().month(.wide).hour().minute())
+    }
+
     var body: some View {
-        VStack(alignment: .leading, spacing: AppSpacing.s) {
-            HStack {
-                if let mood = entry.moodValue {
-                    Text(mood.emoji)
-                        .font(.title3)
-                }
-                Text(entry.date, format: .dateTime.day().month().year())
-                    .font(AppFont.subheadline.weight(.semibold))
-                Spacer()
+        HStack(spacing: 11) {
+            Text(entry.moodValue?.emoji ?? "📝")
+                .font(.title3)
+                .frame(width: 38, height: 38)
+                .background(Circle().fill(AppColor.mint))
+
+            VStack(alignment: .leading, spacing: 2) {
+                Text(dateText)
+                    .font(.caption2)
+                    .foregroundStyle(AppColor.muted)
+                Text(entry.text.isEmpty ? "Ohne Text" : entry.text)
+                    .font(.subheadline.weight(.semibold))
+                    .foregroundStyle(AppColor.ink)
+                    .lineLimit(2)
                 if let trigger = entry.triggerName, !trigger.isEmpty {
                     Label(trigger, systemImage: "bolt.fill")
-                        .font(AppFont.caption)
-                        .foregroundStyle(.orange)
-                        .labelStyle(.titleAndIcon)
+                        .font(.caption2.weight(.semibold))
+                        .foregroundStyle(AppColor.coral)
                 }
             }
-
-            if !entry.text.isEmpty {
-                Text(entry.text)
-                    .font(AppFont.body)
-                    .foregroundStyle(.primary)
-                    .lineLimit(4)
-            }
+            Spacer(minLength: 0)
+            Image(systemName: "chevron.right")
+                .font(.caption.weight(.semibold))
+                .foregroundStyle(AppColor.muted)
         }
-        .padding(.vertical, AppSpacing.xs)
+        .padding(.horizontal, 12)
+        .padding(.vertical, 14)
+        .gainSurface(radius: 18)
         .accessibilityElement(children: .combine)
     }
-}
-
-#Preview {
-    JournalEntryRow(
-        entry: JournalEntry(
-            text: "Heute war ein guter Tag, wenig Verlangen.",
-            mood: 4,
-            triggerName: "Stress"
-        )
-    )
-    .padding()
 }

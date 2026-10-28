@@ -1,43 +1,35 @@
 import SwiftUI
 
-/// Wiederverwendbarer, auswählbarer Chip (Tag-Optik).
-/// Reine UI-Komponente ohne Geschäftslogik.
+/// Auswählbarer Chip im Figma-Stil (weiß mit Rahmen, ausgewählt getönt).
 struct SelectableChip: View {
     let title: String
     let isSelected: Bool
+    var tone: Color = AppColor.teal
+    var toneSoft: Color = AppColor.mint
     let action: () -> Void
+
+    init(title: String, isSelected: Bool, tone: Color = AppColor.teal,
+         toneSoft: Color = AppColor.mint, action: @escaping () -> Void) {
+        self.title = title
+        self.isSelected = isSelected
+        self.tone = tone
+        self.toneSoft = toneSoft
+        self.action = action
+    }
 
     var body: some View {
         Button(action: action) {
-            HStack(spacing: AppSpacing.xs) {
-                if isSelected {
-                    Image(systemName: "checkmark")
-                        .font(.caption.weight(.bold))
-                }
-                Text(title)
-                    .font(.subheadline)
-            }
-            .padding(.horizontal, AppSpacing.m)
-            .padding(.vertical, AppSpacing.s)
-            .background(
-                Capsule()
-                    .fill(isSelected ? AppColor.accent.opacity(0.18) : Color(.secondarySystemBackground))
-            )
-            .overlay(
-                Capsule()
-                    .stroke(isSelected ? AppColor.accent : .clear, lineWidth: 1.5)
-            )
+            Text(title)
+                .font(.footnote.weight(isSelected ? .bold : .regular))
+                .padding(.horizontal, 12)
+                .frame(minHeight: 38)
+                .background(Capsule().fill(isSelected ? toneSoft : AppColor.surface))
+                .overlay(Capsule().stroke(isSelected ? tone.opacity(0.7) : AppColor.line, lineWidth: 1))
         }
         .buttonStyle(.plain)
-        .foregroundStyle(isSelected ? AppColor.accent : .primary)
+        .foregroundStyle(isSelected ? tone : AppColor.ink)
+        .sensoryFeedback(.selection, trigger: isSelected)
+        .animation(.smooth(duration: 0.2), value: isSelected)
         .accessibilityAddTraits(isSelected ? [.isSelected] : [])
     }
-}
-
-#Preview {
-    HStack {
-        SelectableChip(title: "Stress", isSelected: true, action: {})
-        SelectableChip(title: "Langeweile", isSelected: false, action: {})
-    }
-    .padding()
 }

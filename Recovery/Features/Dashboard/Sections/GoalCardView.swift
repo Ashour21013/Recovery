@@ -1,83 +1,76 @@
 import SwiftUI
 
-/// Dashboard-Karte, die den Fortschritt zum gewählten Ziel anzeigt –
-/// oder zum Festlegen eines Ziels auffordert. Reine UI-Komponente.
+/// Ziel-Karte im Figma-Stil („DEIN ZIEL“ mit Icon-Kachel und Fortschritt).
 struct GoalCardView: View {
     let goalProgress: GoalProgress?
     let onSelectGoal: () -> Void
 
     var body: some View {
-        CardContainer {
-            if let goalProgress {
-                activeGoal(goalProgress)
-            } else {
-                noGoal
-            }
-        }
-    }
-
-    // MARK: - Aktives Ziel
-
-    private func activeGoal(_ progress: GoalProgress) -> some View {
-        VStack(alignment: .leading, spacing: AppSpacing.m) {
-            HStack {
-                Label("Mein Ziel", systemImage: progress.goal.systemImage)
-                    .font(AppFont.headline)
+        VStack(alignment: .leading, spacing: 14) {
+            HStack(spacing: 11) {
+                IconTile(systemImage: goalProgress?.goal.systemImage ?? "target",
+                         foreground: AppColor.coral, background: AppColor.coralSoft)
+                VStack(alignment: .leading, spacing: 3) {
+                    Eyebrow("Dein Ziel")
+                    Text(goalProgress.map { "\($0.goal.title) clean" } ?? "Setze dir ein Ziel")
+                        .font(.subheadline.weight(.bold))
+                        .foregroundStyle(AppColor.ink)
+                }
                 Spacer()
-                Button("Ändern", action: onSelectGoal)
-                    .font(AppFont.subheadline)
+                if goalProgress != nil {
+                    Button("Ändern", action: onSelectGoal)
+                        .font(.caption.weight(.bold))
+                }
             }
 
-            HStack(alignment: .firstTextBaseline, spacing: AppSpacing.xs) {
-                Text("\(progress.currentDays)")
-                    .font(AppFont.roundedNumber(relativeTo: .title))
-                    .foregroundStyle(AppColor.accent)
-                Text("/ \(progress.goal.days) Tage")
-                    .font(AppFont.subheadline)
-                    .foregroundStyle(.secondary)
-            }
-
-            ProgressView(value: progress.fraction)
-                .tint(AppColor.accent)
-
-            if progress.isAchieved {
-                Label("Ziel erreicht! 🎉", systemImage: "checkmark.seal.fill")
-                    .font(AppFont.subheadline.weight(.semibold))
-                    .foregroundStyle(.green)
+            if let progress = goalProgress {
+                VStack(alignment: .leading, spacing: 6) {
+                    HStack(alignment: .firstTextBaseline, spacing: 4) {
+                        Text("\(progress.currentDays)")
+                            .font(.system(.title2, design: .rounded).weight(.bold))
+                            .foregroundStyle(AppColor.teal)
+                        Text("/ \(progress.goal.days) Tage")
+                            .font(.caption)
+                            .foregroundStyle(AppColor.muted)
+                        Spacer()
+                        Text(progress.isAchieved ? "Erreicht 🎉" : "Noch \(progress.remainingDays) Tage")
+                            .font(.caption.weight(.semibold))
+                            .foregroundStyle(progress.isAchieved ? AppColor.green : AppColor.muted)
+                    }
+                    BarProgress(fraction: progress.fraction)
+                }
             } else {
-                Text("Noch \(progress.remainingDays) Tage bis zum Ziel")
-                    .font(AppFont.footnote)
-                    .foregroundStyle(.secondary)
+                Button(action: onSelectGoal) {
+                    Label("Ziel festlegen", systemImage: "target")
+                        .font(.caption.weight(.bold))
+                        .foregroundStyle(AppColor.teal)
+                        .frame(maxWidth: .infinity, minHeight: 43)
+                        .background(RoundedRectangle(cornerRadius: 13, style: .continuous)
+                            .fill(Color(light: 0xEDF6F3, dark: 0x1A3934)))
+                }
+                .buttonStyle(.plain)
             }
         }
-    }
-
-    // MARK: - Kein Ziel gesetzt
-
-    private var noGoal: some View {
-        VStack(alignment: .leading, spacing: AppSpacing.s) {
-            Label("Ziel setzen", systemImage: "target")
-                .font(AppFont.headline)
-            Text("Wähle ein Ziel und verfolge deinen Fortschritt.")
-                .font(AppFont.subheadline)
-                .foregroundStyle(.secondary)
-            Button(action: onSelectGoal) {
-                Text("Ziel festlegen")
-                    .font(AppFont.subheadline.weight(.semibold))
-            }
-            .buttonStyle(.borderedProminent)
-            .padding(.top, AppSpacing.xs)
-        }
+        .figmaCard()
     }
 }
 
-#Preview {
-    VStack {
-        GoalCardView(
-            goalProgress: GoalProgress(goal: .month, currentDays: 12),
-            onSelectGoal: {}
-        )
-        GoalCardView(goalProgress: nil, onSelectGoal: {})
+/// Dünner Fortschrittsbalken mit Teal-Verlauf.
+struct BarProgress: View {
+    let fraction: Double
+    var height: CGFloat = 6
+
+    var body: some View {
+        GeometryReader { geo in
+            ZStack(alignment: .leading) {
+                Capsule().fill(Color(light: 0xE2ECE9, dark: 0x29433F))
+                Capsule()
+                    .fill(LinearGradient(colors: [AppColor.teal, Color(hex: 0x43AE9E)],
+                                         startPoint: .leading, endPoint: .trailing))
+                    .frame(width: geo.size.width * min(1, max(0, fraction)))
+            }
+        }
+        .frame(height: height)
+        .animation(.smooth(duration: 0.6), value: fraction)
     }
-    .padding()
 }

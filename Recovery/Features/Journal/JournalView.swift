@@ -13,7 +13,7 @@ struct JournalView: View {
     var body: some View {
         NavigationStack {
             content
-                .navigationTitle("Journal")
+                .navigationTitle("Tagebuch")
                 .toolbar {
                     ToolbarItem(placement: .primaryAction) {
                         Button {
@@ -70,8 +70,26 @@ struct JournalView: View {
 
     private func list(_ entries: [JournalEntry]) -> some View {
         List {
+            Section {
+                Text("Ein sicherer Ort für deine Gedanken.")
+                    .font(.subheadline)
+                    .foregroundStyle(AppColor.muted)
+                    .listRowBackground(Color.clear)
+                    .listRowInsets(EdgeInsets(top: 0, leading: 20, bottom: 4, trailing: 20))
+                Button { isShowingEditor = true } label: {
+                    Label("Neuen Eintrag schreiben", systemImage: "plus")
+                }
+                .buttonStyle(TealButtonStyle())
+                .listRowBackground(Color.clear)
+                .listRowInsets(EdgeInsets(top: 4, leading: 18, bottom: 10, trailing: 18))
+            }
+            .listRowSeparator(.hidden)
+
             ForEach(entries) { entry in
                 JournalEntryRow(entry: entry)
+                    .listRowBackground(Color.clear)
+                    .listRowSeparator(.hidden)
+                    .listRowInsets(EdgeInsets(top: 4, leading: 18, bottom: 4, trailing: 18))
             }
             .onDelete { indexSet in
                 let ids = indexSet.map { entries[$0].id }
@@ -80,18 +98,31 @@ struct JournalView: View {
                 }
             }
         }
-        .listStyle(.insetGrouped)
+        .listStyle(.plain)
+        .figmaScreenBackground()
     }
 
     private var emptyState: some View {
-        ContentUnavailableView {
-            Label("Noch keine Einträge", systemImage: "book.closed")
-        } description: {
-            Text("Halte täglich deine Stimmung, Trigger und Gedanken fest.")
-        } actions: {
-            Button("Ersten Eintrag erstellen") { isShowingEditor = true }
-                .buttonStyle(.borderedProminent)
+        VStack(spacing: 14) {
+            Spacer()
+            IconTile(systemImage: "book", size: 72)
+            Text("Noch keine Einträge")
+                .font(.title3.weight(.bold))
+                .foregroundStyle(AppColor.ink)
+            Text("Ein sicherer Ort für deine Gedanken. Halte Stimmung, Trigger und Gedanken fest.")
+                .font(.subheadline)
+                .foregroundStyle(AppColor.muted)
+                .multilineTextAlignment(.center)
+            Button { isShowingEditor = true } label: {
+                Label("Ersten Eintrag schreiben", systemImage: "plus")
+            }
+            .buttonStyle(TealButtonStyle())
+            .padding(.top, 8)
+            Spacer()
         }
+        .padding(.horizontal, 24)
+        .frame(maxWidth: .infinity, maxHeight: .infinity)
+        .background(AppColor.background.ignoresSafeArea())
     }
 }
 

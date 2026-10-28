@@ -11,7 +11,8 @@ struct AchievementsView: View {
     @Namespace private var badgeNamespace
 
     private let columns = [
-        GridItem(.adaptive(minimum: 96), spacing: AppSpacing.l)
+        GridItem(.flexible(), spacing: 10),
+        GridItem(.flexible(), spacing: 10)
     ]
 
     var body: some View {
@@ -24,7 +25,7 @@ struct AchievementsView: View {
                 }
             }
             .navigationTitle("Erfolge")
-            .background(Color(.systemGroupedBackground))
+            .figmaScreenBackground()
         }
         .task {
             if viewModel == nil {
@@ -52,10 +53,10 @@ struct AchievementsView: View {
 
     private func content(_ viewModel: AchievementsViewModel) -> some View {
         ScrollView {
-            VStack(spacing: AppSpacing.l) {
+            VStack(spacing: 14) {
                 header(viewModel)
 
-                LazyVGrid(columns: columns, spacing: AppSpacing.l) {
+                LazyVGrid(columns: columns, spacing: 10) {
                     ForEach(viewModel.achievements) { achievement in
                         AchievementBadge(achievement: achievement)
                             .matchedGeometryEffect(id: achievement.id, in: badgeNamespace)
@@ -63,28 +64,29 @@ struct AchievementsView: View {
                 }
                 .animation(.smooth, value: viewModel.achievements)
             }
-            .padding(AppSpacing.l)
+            .padding(.horizontal, 18)
+            .padding(.vertical, 14)
         }
     }
 
     private func header(_ viewModel: AchievementsViewModel) -> some View {
-        CardContainer {
-            HStack(spacing: AppSpacing.m) {
-                Image(systemName: "trophy.fill")
-                    .font(.title)
-                    .foregroundStyle(.yellow)
+        let total = max(1, viewModel.achievements.count)
+        return VStack(alignment: .leading, spacing: 10) {
+            Text("Jeder Schritt verdient Anerkennung.")
+                .font(.subheadline)
+                .foregroundStyle(AppColor.muted)
+            HStack(spacing: 12) {
+                IconTile(systemImage: "medal.fill", foreground: AppColor.gold, background: AppColor.goldSoft, size: 46)
                     .symbolEffect(.bounce, value: viewModel.unlockedCount)
-                VStack(alignment: .leading, spacing: 2) {
-                    Text("\(viewModel.unlockedCount) / \(viewModel.achievements.count)")
-                        .font(.title2.weight(.bold))
+                VStack(alignment: .leading, spacing: 4) {
+                    Text("\(viewModel.unlockedCount) von \(viewModel.achievements.count) freigeschaltet")
+                        .font(.subheadline.weight(.bold))
+                        .foregroundStyle(AppColor.ink)
                         .contentTransition(.numericText(value: Double(viewModel.unlockedCount)))
-                        .animation(.smooth, value: viewModel.unlockedCount)
-                    Text("Erfolge freigeschaltet")
-                        .font(.subheadline)
-                        .foregroundStyle(.secondary)
+                    BarProgress(fraction: Double(viewModel.unlockedCount) / Double(total))
                 }
-                Spacer()
             }
+            .figmaCard()
         }
     }
 }

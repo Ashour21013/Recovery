@@ -1,55 +1,56 @@
 import SwiftUI
 
-/// Zeigt die tägliche Motivation aus der gewählten Quelle an.
-/// Reine UI-Komponente ohne Geschäftslogik.
+/// Dunkle Zitat-Karte (Figma) für die tägliche Motivation.
 struct MotivationCardView: View {
     let motivation: MotivationItem
-    /// Öffnet die Quellen-Auswahl.
     var onChangeSource: () -> Void = {}
 
     var body: some View {
-        CardContainer {
-            VStack(alignment: .leading, spacing: AppSpacing.s) {
-                HStack {
-                    Label(motivation.origin.title, systemImage: motivation.origin.systemImage)
-                        .font(AppFont.caption.weight(.semibold))
-                        .foregroundStyle(AppColor.accent)
-                    Spacer()
-                    Button(action: onChangeSource) {
-                        Image(systemName: "slider.horizontal.3")
-                            .font(AppFont.subheadline.weight(.semibold))
-                            .foregroundStyle(AppColor.accent)
-                    }
-                    .buttonStyle(.plain)
-                    .accessibilityLabel("Motivationsquelle ändern")
-                }
+        VStack(alignment: .leading, spacing: 0) {
+            Image(systemName: "sparkles")
+                .font(.title2)
+                .foregroundStyle(Color(hex: 0x83D3C3))
 
-                Text(motivation.text)
-                    .font(.title3.weight(.medium))
-                    .foregroundStyle(.primary)
-                    .fixedSize(horizontal: false, vertical: true)
-                    .contentTransition(.opacity)
+            Text("„\(motivation.text)“")
+                .font(.custom("Georgia", size: 18, relativeTo: .title3))
+                .lineSpacing(3)
+                .foregroundStyle(.white)
+                .fixedSize(horizontal: false, vertical: true)
+                .padding(.top, 12)
+                .padding(.bottom, motivation.source == nil ? 16 : 6)
+                .contentTransition(.opacity)
 
-                if let source = motivation.source {
-                    Text("– \(source)")
-                        .font(AppFont.footnote)
-                        .foregroundStyle(.secondary)
-                }
+            if let source = motivation.source {
+                Text("– \(source)")
+                    .font(.footnote)
+                    .foregroundStyle(.white.opacity(0.7))
+                    .padding(.bottom, 14)
             }
-            .animation(.smooth, value: motivation.id)
-            .accessibilityElement(children: .combine)
-        }
-    }
-}
 
-#Preview {
-    MotivationCardView(
-        motivation: MotivationItem(
-            id: "1",
-            text: "Du bist stärker als deine Gewohnheit.",
-            source: nil,
-            origin: .quotes
+            HStack {
+                Label(motivation.origin.title, systemImage: motivation.origin.systemImage)
+                    .font(.caption)
+                    .foregroundStyle(.white.opacity(0.65))
+                Spacer()
+                Button(action: onChangeSource) {
+                    Image(systemName: "slider.horizontal.3")
+                        .font(.subheadline.weight(.semibold))
+                        .foregroundStyle(.white)
+                        .frame(width: 36, height: 36)
+                        .background(Circle().fill(.white.opacity(0.1)))
+                }
+                .buttonStyle(.plain)
+                .accessibilityLabel("Motivationsquelle ändern")
+            }
+        }
+        .padding(20)
+        .frame(maxWidth: .infinity, alignment: .leading)
+        .background(
+            RoundedRectangle(cornerRadius: AppRadius.card, style: .continuous)
+                .fill(AppColor.quoteGradient)
+                .shadow(color: Color(hex: 0x1E4640, opacity: 0.1), radius: 17, y: 12)
         )
-    )
-    .padding()
+        .animation(.smooth, value: motivation.id)
+        .accessibilityElement(children: .combine)
+    }
 }

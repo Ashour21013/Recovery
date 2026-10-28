@@ -23,7 +23,8 @@ struct DashboardView: View {
                         .frame(maxWidth: .infinity, maxHeight: .infinity)
                 }
             }
-            .navigationTitle("Übersicht")
+            .navigationTitle("Heute")
+            .navigationBarTitleDisplayMode(.inline)
             .background(AppColor.background.ignoresSafeArea())
             .toolbar {
                 if let viewModel, !viewModel.addictions.isEmpty {
@@ -185,18 +186,22 @@ struct DashboardView: View {
     private func loadedContent(for data: DashboardData, viewModel: DashboardViewModel) -> some View {
         ScrollView {
             VStack(spacing: 12) {
+                DashboardHeaderView()
                 StreakCardView(streak: data.streak)
                 ProgressCardView(progress: data.progress, currentDays: data.streak.currentDays)
                 PlantCardView(days: data.streak.currentDays)
-                MotivationCardView(
-                    motivation: data.motivation,
-                    onChangeSource: viewModel.presentSourcePicker
-                )
-                CravingButton(action: viewModel.handleCravingTapped)
-                ContentBlockingCardView()
                 GoalCardView(
                     goalProgress: data.goalProgress,
                     onSelectGoal: viewModel.presentGoalPicker
+                )
+                RecoveryPlanCardView(
+                    plan: data.plan,
+                    onToggle: { taskId in Task { await viewModel.toggleTask(taskId) } },
+                    onEdit: viewModel.presentPlanEditor
+                )
+                MotivationCardView(
+                    motivation: data.motivation,
+                    onChangeSource: viewModel.presentSourcePicker
                 )
                 RecoveryGainsSectionView(
                     gains: viewModel.gains,
@@ -206,13 +211,14 @@ struct DashboardView: View {
                 .premiumGated(.recoveryGains) {
                     SampleMetricsPreview()
                 }
-                RecoveryPlanCardView(
-                    plan: data.plan,
-                    onToggle: { taskId in Task { await viewModel.toggleTask(taskId) } },
-                    onEdit: viewModel.presentPlanEditor
-                )
 
-                RelapseButton(action: { isShowingRelapse = true })
+                VStack(spacing: 10) {
+                    Eyebrow("Wenn es gerade schwer ist")
+                    CravingButton(action: viewModel.handleCravingTapped)
+                    ContentBlockingCardView()
+                    RelapseButton(action: { isShowingRelapse = true })
+                }
+                .padding(.top, 16)
             }
             .padding(.horizontal, 18)
             .padding(.vertical, 14)

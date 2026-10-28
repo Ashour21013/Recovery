@@ -1,114 +1,112 @@
 import SwiftUI
 
-/// Dashboard-Karte des täglichen Recovery-Plans.
-///
-/// Zeigt den Fortschritt über alle Aufgaben und listet jede Aufgabe mit einer
-/// abhakbaren Checkbox. Reine UI-Komponente – meldet Umschalt-Aktionen nach
-/// außen und enthält keine Geschäftslogik.
+/// „Meine Aufgaben“ (Figma): Zähler-Pill, Fortschritt, abhakbare Zeilen.
 struct RecoveryPlanCardView: View {
     let plan: RecoveryPlan
     let onToggle: (String) -> Void
     var onEdit: () -> Void = {}
 
     var body: some View {
-        CardContainer {
-            VStack(alignment: .leading, spacing: AppSpacing.m) {
-                header
-
-                ProgressView(value: plan.fraction)
-                    .tint(AppColor.accent)
-                    .animation(.smooth, value: plan.fraction)
-
-                VStack(spacing: AppSpacing.xs) {
-                    ForEach(plan.tasks) { task in
-                        RecoveryTaskRow(task: task) { onToggle(task.id) }
-                        if task.id != plan.tasks.last?.id {
-                            Divider()
-                        }
-                    }
+        VStack(alignment: .leading, spacing: 0) {
+            HStack {
+                VStack(alignment: .leading, spacing: 3) {
+                    Eyebrow("Mein heutiger Plan")
+                    Text("Meine Aufgaben")
+                        .font(.headline)
+                        .foregroundStyle(AppColor.ink)
                 }
+                Spacer()
+                Text("\(plan.completedCount)/\(plan.totalCount)")
+                    .font(.caption.weight(.heavy))
+                    .foregroundStyle(AppColor.teal)
+                    .frame(minWidth: 38, minHeight: 28)
+                    .background(Capsule().fill(AppColor.mint))
+                    .contentTransition(.numericText(value: Double(plan.completedCount)))
             }
-        }
-    }
+            .padding(.bottom, 10)
 
-    private var header: some View {
-        HStack {
-            Label("Dein Tagesplan", systemImage: "checklist")
-                .font(AppFont.headline)
-            Spacer()
-            Text("\(plan.completedCount)/\(plan.totalCount)")
-                .font(AppFont.subheadline.weight(.semibold))
-                .foregroundStyle(.secondary)
-                .contentTransition(.numericText(value: Double(plan.completedCount)))
-                .animation(.smooth, value: plan.completedCount)
+            BarProgress(fraction: plan.fraction, height: 4)
+                .padding(.bottom, 6)
+
+            ForEach(plan.tasks) { task in
+                RecoveryTaskRow(task: task) { onToggle(task.id) }
+            }
+
             Button(action: onEdit) {
-                Image(systemName: "slider.horizontal.3")
-                    .font(AppFont.subheadline.weight(.semibold))
-                    .foregroundStyle(AppColor.accent)
+                HStack {
+                    Text("Aufgaben anpassen …")
+                        .font(.caption)
+                        .foregroundStyle(AppColor.muted)
+                    Spacer()
+                    Image(systemName: "plus")
+                        .font(.subheadline.weight(.bold))
+                        .foregroundStyle(.white)
+                        .frame(width: 36, height: 36)
+                        .background(RoundedRectangle(cornerRadius: 10, style: .continuous).fill(AppColor.teal))
+                }
+                .padding(.leading, 12)
+                .padding(4)
+                .background(RoundedRectangle(cornerRadius: 13, style: .continuous)
+                    .fill(Color(light: 0xEDF5F2, dark: 0x1A3934)))
             }
             .buttonStyle(.plain)
+            .padding(.top, 11)
             .accessibilityLabel("Plan anpassen")
         }
+        .padding(.horizontal, 15)
+        .padding(.vertical, 17)
+        .frame(maxWidth: .infinity, alignment: .leading)
+        .gainSurface(radius: AppRadius.card)
+        .animation(.smooth, value: plan.completedCount)
     }
 }
 
-/// Einzelne, abhakbare Aufgabenzeile.
 private struct RecoveryTaskRow: View {
     let task: RecoveryTask
     let onToggle: () -> Void
 
     var body: some View {
         Button(action: onToggle) {
-            HStack(spacing: AppSpacing.m) {
-                Image(systemName: task.task.systemImage)
-                    .font(.body)
-                    .foregroundStyle(task.isCompleted ? AppColor.accent : .secondary)
-                    .frame(width: 28)
-                    .accessibilityHidden(true)
-
-                VStack(alignment: .leading, spacing: 2) {
-                    Text(task.task.title)
-                        .font(AppFont.subheadline.weight(.medium))
-                        .foregroundStyle(.primary)
-                        .strikethrough(task.isCompleted, color: .secondary)
-                    Text(task.task.subtitle)
-                        .font(AppFont.caption)
-                        .foregroundStyle(.secondary)
+            HStack(spacing: 9) {
+                ZStack {
+                    RoundedRectangle(cornerRadius: 8, style: .continuous)
+                        .fill(task.isCompleted ? AppColor.teal : .clear)
+                    RoundedRectangle(cornerRadius: 8, style: .continuous)
+                        .stroke(task.isCompleted ? AppColor.teal : Color(hex: 0xB9CBC6), lineWidth: 1.5)
+                    if task.isCompleted {
+                        Image(systemName: "checkmark")
+                            .font(.caption.weight(.bold))
+                            .foregroundStyle(.white)
+                            .transition(.scale)
+                    }
                 }
+                .frame(width: 24, height: 24)
 
+                VStack(alignment: .leading, spacing: 1) {
+                    Text(task.task.title)
+                        .font(.footnote.weight(.semibold))
+                        .foregroundStyle(task.isCompleted ? AppColor.muted : AppColor.ink)
+                        .strikethrough(task.isCompleted, color: AppColor.muted)
+                    if !task.task.subtitle.isEmpty {
+                        Text(task.task.subtitle)
+                            .font(.caption2)
+                            .foregroundStyle(AppColor.muted)
+                    }
+                }
                 Spacer()
-
-                Image(systemName: task.isCompleted ? "checkmark.circle.fill" : "circle")
-                    .font(.title2)
-                    .foregroundStyle(task.isCompleted ? AppColor.accent : Color(.tertiaryLabel))
-                    .contentTransition(.symbolEffect(.replace))
-                    .symbolEffect(.bounce, value: task.isCompleted)
-                    .accessibilityHidden(true)
+                Image(systemName: task.task.systemImage)
+                    .font(.footnote)
+                    .foregroundStyle(AppColor.muted.opacity(0.7))
             }
-            .padding(.vertical, AppSpacing.xs)
+            .frame(minHeight: 46)
             .contentShape(Rectangle())
+            .overlay(alignment: .bottom) { Rectangle().fill(AppColor.line).frame(height: 1) }
         }
         .buttonStyle(.plain)
+        .sensoryFeedback(.success, trigger: task.isCompleted)
         .animation(.smooth(duration: 0.25), value: task.isCompleted)
         .accessibilityLabel(task.task.title)
         .accessibilityValue(task.isCompleted ? "erledigt" : "offen")
         .accessibilityAddTraits(.isButton)
     }
-}
-
-#Preview {
-    RecoveryPlanCardView(
-        plan: RecoveryPlan(
-            date: .now,
-            tasks: [
-                RecoveryTask(task: PlanTask(.journal), isCompleted: true),
-                RecoveryTask(task: PlanTask(.meditation), isCompleted: false),
-                RecoveryTask(task: PlanTask(.motivation), isCompleted: true),
-                RecoveryTask(task: PlanTask(.walk), isCompleted: false),
-                RecoveryTask(task: PlanTask(.sport), isCompleted: false)
-            ]
-        ),
-        onToggle: { _ in }
-    )
-    .padding()
 }
