@@ -16,7 +16,7 @@ struct DashboardHeaderView: View {
     var body: some View {
         VStack(alignment: .leading, spacing: 4) {
             Eyebrow(Date.now.formatted(.dateTime.weekday(.wide).day().month(.wide)))
-            (Text(greeting) + Text(name.map { ", \($0)" } ?? "").foregroundColor(AppColor.teal))
+            Text("\(greeting)\(Text(name.map { ", \($0)" } ?? "").foregroundStyle(AppColor.teal))")
                 .font(.system(size: 27, weight: .bold))
                 .foregroundStyle(AppColor.ink)
         }

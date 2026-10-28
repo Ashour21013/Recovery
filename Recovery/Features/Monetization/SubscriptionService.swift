@@ -126,7 +126,7 @@ final class SubscriptionService: SubscriptionServiceProtocol {
         Task(priority: .background) { [weak self] in
             for await update in Transaction.updates {
                 guard let self else { continue }
-                guard let transaction = try? await self.verify(update) else { continue }
+                guard let transaction = try? self.verify(update) else { continue }
                 await self.refreshEntitlements()
                 await transaction.finish()
             }

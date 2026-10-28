@@ -12,11 +12,11 @@ struct WidgetSnapshotPublisher {
     private let providerFactory: MotivationProviderFactory
 
     init(
-        store: WidgetSnapshotStore = WidgetSnapshotStore(),
-        providerFactory: MotivationProviderFactory = MotivationProviderFactory()
+        store: WidgetSnapshotStore? = nil,
+        providerFactory: MotivationProviderFactory? = nil
     ) {
-        self.store = store
-        self.providerFactory = providerFactory
+        self.store = store ?? WidgetSnapshotStore()
+        self.providerFactory = providerFactory ?? MotivationProviderFactory()
     }
 
     /// Erstellt und speichert den Snapshot für das gegebene Profil.

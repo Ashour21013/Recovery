@@ -66,7 +66,7 @@ enum DomainNormalizer {
 struct DeactivationCountdown: Equatable {
 
     /// Standard-Wartezeit in Sekunden.
-    static let defaultDuration = 60
+    nonisolated static let defaultDuration = 60
 
     let duration: Int
     private(set) var remaining: Int

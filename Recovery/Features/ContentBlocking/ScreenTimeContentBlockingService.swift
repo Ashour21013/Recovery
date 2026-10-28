@@ -22,7 +22,7 @@ final class ScreenTimeContentBlockingService: ContentBlockingService {
         case .approved: .approved
         case .denied: .denied
         case .notDetermined: .notDetermined
-        @unknown default: .notDetermined
+        default: .notDetermined
         }
     }
 
