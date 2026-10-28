@@ -16,7 +16,7 @@ struct OnboardingScaffold<Content: View, Footer: View>: View {
 
     var body: some View {
         VStack(alignment: .leading, spacing: AppSpacing.l) {
-            OnboardingProgressBar(currentStep: step.index, totalSteps: OnboardingStep.total)
+            OnboardingProgressBar(currentStep: step.index + 1, totalSteps: OnboardingStep.total + 1)
                 .padding(.top, AppSpacing.s)
 
             VStack(alignment: .leading, spacing: AppSpacing.s) {

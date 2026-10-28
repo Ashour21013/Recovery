@@ -1,21 +1,24 @@
 import SwiftUI
 
-/// Figma-Fortschrittsanzeige: „Schritt x von n" plus schmaler Teal-Balken.
+/// Figma-Fortschrittsanzeige: zentriertes „x von n" über einem dünnen Balken.
 struct OnboardingProgressBar: View {
     let currentStep: Int
     let totalSteps: Int
 
     var body: some View {
-        VStack(alignment: .leading, spacing: 8) {
-            HStack {
-                Eyebrow("Schritt \(currentStep) von \(totalSteps)")
-                Spacer()
-                Text("\(Int(Double(currentStep) / Double(totalSteps) * 100)) %")
-                    .font(.caption2.weight(.bold))
-                    .foregroundStyle(AppColor.muted)
-                    .monospacedDigit()
+        VStack(spacing: 14) {
+            Text("\(currentStep) von \(totalSteps)")
+                .font(.footnote)
+                .foregroundStyle(AppColor.muted)
+                .monospacedDigit()
+            GeometryReader { geo in
+                ZStack(alignment: .leading) {
+                    Capsule().fill(AppColor.line)
+                    Capsule().fill(AppColor.teal)
+                        .frame(width: geo.size.width * CGFloat(currentStep) / CGFloat(max(totalSteps, 1)))
+                }
             }
-            BarProgress(fraction: Double(currentStep) / Double(totalSteps), height: 6)
+            .frame(height: 4)
         }
         .animation(.smooth(duration: 0.4), value: currentStep)
         .accessibilityElement()
@@ -24,5 +27,5 @@ struct OnboardingProgressBar: View {
 }
 
 #Preview {
-    OnboardingProgressBar(currentStep: 2, totalSteps: 4).padding()
+    OnboardingProgressBar(currentStep: 1, totalSteps: 5).padding()
 }

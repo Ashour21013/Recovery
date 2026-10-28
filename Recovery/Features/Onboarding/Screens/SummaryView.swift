@@ -40,12 +40,15 @@ struct SummaryView: View {
                     reasonCard
                 }
             } footer: {
-                PrimaryButton(title: "Meine Reise beginnen") {
+                Button {
                     withAnimation(.smooth(duration: 0.4)) { isFinishing = true }
                     DispatchQueue.main.asyncAfter(deadline: .now() + 0.9) {
                         onFinish()
                     }
+                } label: {
+                    Text("Meine Reise beginnen")
                 }
+                .buttonStyle(GradientCTAButtonStyle())
             }
 
             if isFinishing {

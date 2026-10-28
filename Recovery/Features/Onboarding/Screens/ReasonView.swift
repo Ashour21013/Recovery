@@ -47,7 +47,8 @@ struct ReasonView: View {
                 }
             }
         } footer: {
-            PrimaryButton(title: "Weiter", action: onContinue)
+            Button(action: onContinue) { Text("Weiter") }
+                .buttonStyle(GradientCTAButtonStyle())
         }
     }
 }

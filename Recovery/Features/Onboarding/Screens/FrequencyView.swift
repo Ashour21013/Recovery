@@ -24,7 +24,8 @@ struct FrequencyView: View {
                 }
             }
         } footer: {
-            PrimaryButton(title: "Weiter", action: onContinue)
+            Button(action: onContinue) { Text("Weiter") }
+                .buttonStyle(GradientCTAButtonStyle())
                 .disabled(!canContinue)
                 .opacity(canContinue ? 1 : 0.5)
                 .animation(.smooth, value: canContinue)
