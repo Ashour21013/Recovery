@@ -8,7 +8,7 @@ import SwiftUI
 struct OnboardingIllustration: View {
     var systemImage: String? = nil
     var emoji: String? = nil
-    var tint: Color = AppColor.accent
+    var tint: Color = AppColor.teal
 
     @State private var appeared = false
 

@@ -23,12 +23,13 @@ struct WelcomeView: View {
 
             VStack(spacing: AppSpacing.s) {
                 Text("Willkommen bei Recovery")
-                    .font(AppFont.largeTitle)
+                    .font(.system(size: 32, weight: .bold))
+                    .foregroundStyle(AppColor.ink)
                     .multilineTextAlignment(.center)
 
                 Text("Dein persönlicher Begleiter auf dem Weg zu einem freieren Leben.")
                     .font(AppFont.body)
-                    .foregroundStyle(.secondary)
+                    .foregroundStyle(AppColor.muted)
                     .multilineTextAlignment(.center)
             }
             .opacity(appeared ? 1 : 0)
@@ -39,7 +40,7 @@ struct WelcomeView: View {
                     HStack(spacing: AppSpacing.m) {
                         Image(systemName: item.icon)
                             .font(.title3)
-                            .foregroundStyle(AppColor.accent)
+                            .foregroundStyle(AppColor.teal)
                             .frame(width: 32)
                             .accessibilityHidden(true)
                         Text(item.text)
@@ -59,6 +60,7 @@ struct WelcomeView: View {
             PrimaryButton(title: "Los geht's", action: onContinue)
         }
         .padding(AppSpacing.l)
+        .background(AppColor.background.ignoresSafeArea())
         .animation(.smooth(duration: 0.6).delay(0.15), value: appeared)
         .onAppear { appeared = true }
     }

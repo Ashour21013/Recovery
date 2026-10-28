@@ -25,7 +25,7 @@ struct ReasonView: View {
             VStack(alignment: .leading, spacing: AppSpacing.m) {
                 HStack {
                     Spacer()
-                    OnboardingIllustration(systemImage: "target", tint: .pink)
+                    OnboardingIllustration(systemImage: "target", tint: AppColor.coral)
                         .scaleEffect(0.8)
                     Spacer()
                 }
@@ -34,7 +34,7 @@ struct ReasonView: View {
 
                 Text("Vorschläge")
                     .font(AppFont.caption.weight(.semibold))
-                    .foregroundStyle(.secondary)
+                    .foregroundStyle(AppColor.muted)
 
                 FlowLayout(spacing: AppSpacing.s) {
                     ForEach(suggestions, id: \.self) { suggestion in

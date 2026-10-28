@@ -62,7 +62,7 @@ private struct HabitTile: View {
 
                 Text(habit.subtitle)
                     .font(AppFont.caption)
-                    .foregroundStyle(.secondary)
+                    .foregroundStyle(AppColor.muted)
                     .multilineTextAlignment(.center)
                     .lineLimit(2)
             }
@@ -71,16 +71,16 @@ private struct HabitTile: View {
             .padding(AppSpacing.s)
             .background(
                 RoundedRectangle(cornerRadius: 20, style: .continuous)
-                    .fill(isSelected ? AppColor.accent.opacity(0.14) : AppColor.cardBackground)
+                    .fill(isSelected ? AppColor.mint : AppColor.surface)
             )
             .overlay(
                 RoundedRectangle(cornerRadius: 20, style: .continuous)
-                    .stroke(isSelected ? AppColor.accent : .clear, lineWidth: 2)
+                    .stroke(isSelected ? AppColor.teal : AppColor.line, lineWidth: isSelected ? 2 : 1)
             )
             .overlay(alignment: .topTrailing) {
                 if isSelected {
                     Image(systemName: "checkmark.circle.fill")
-                        .foregroundStyle(AppColor.accent)
+                        .foregroundStyle(AppColor.teal)
                         .padding(AppSpacing.s)
                         .transition(.scale.combined(with: .opacity))
                 }

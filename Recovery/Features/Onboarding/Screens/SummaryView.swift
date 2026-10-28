@@ -21,7 +21,7 @@ struct SummaryView: View {
                     if let habit = draft.habitType {
                         HStack {
                             Spacer()
-                            OnboardingIllustration(emoji: habit.emoji, tint: AppColor.accent)
+                            OnboardingIllustration(emoji: habit.emoji, tint: AppColor.teal)
                                 .scaleEffect(0.8)
                             Spacer()
                         }
@@ -61,23 +61,19 @@ struct SummaryView: View {
         HStack(spacing: AppSpacing.m) {
             Image(systemName: icon)
                 .font(.title3)
-                .foregroundStyle(AppColor.accent)
+                .foregroundStyle(AppColor.teal)
                 .frame(width: 32)
                 .accessibilityHidden(true)
             VStack(alignment: .leading, spacing: 2) {
                 Text(label)
                     .font(AppFont.caption)
-                    .foregroundStyle(.secondary)
+                    .foregroundStyle(AppColor.muted)
                 Text(value)
                     .font(AppFont.body.weight(.semibold))
             }
             Spacer()
         }
-        .padding(AppSpacing.m)
-        .background(
-            RoundedRectangle(cornerRadius: 16, style: .continuous)
-                .fill(AppColor.cardBackground)
-        )
+        .figmaCard(radius: 18, padding: AppSpacing.m)
         .accessibilityElement(children: .ignore)
         .accessibilityLabel("\(label): \(value)")
     }
@@ -86,24 +82,20 @@ struct SummaryView: View {
         HStack(spacing: AppSpacing.m) {
             Image(systemName: "quote.opening")
                 .font(.title3)
-                .foregroundStyle(AppColor.accent)
+                .foregroundStyle(AppColor.teal)
                 .frame(width: 32)
                 .accessibilityHidden(true)
             VStack(alignment: .leading, spacing: 2) {
                 Text("Dein Warum")
                     .font(AppFont.caption)
-                    .foregroundStyle(.secondary)
+                    .foregroundStyle(AppColor.muted)
                 Text(draft.reason.isEmpty ? "–" : draft.reason)
                     .font(AppFont.body.weight(.medium))
                     .frame(maxWidth: .infinity, alignment: .leading)
             }
             Spacer(minLength: 0)
         }
-        .padding(AppSpacing.m)
-        .background(
-            RoundedRectangle(cornerRadius: 16, style: .continuous)
-                .fill(AppColor.cardBackground)
-        )
+        .figmaCard(radius: 18, padding: AppSpacing.m)
         .accessibilityElement(children: .ignore)
         .accessibilityLabel("Dein Warum: \(draft.reason.isEmpty ? "nicht angegeben" : draft.reason)")
     }
@@ -111,18 +103,18 @@ struct SummaryView: View {
     /// Kurze Erfolgs-Animation als Übergang zum Dashboard.
     private var completionOverlay: some View {
         ZStack {
-            Color(.systemBackground).ignoresSafeArea()
+            AppColor.background.ignoresSafeArea()
             VStack(spacing: AppSpacing.l) {
                 Image(systemName: "checkmark.circle.fill")
                     .font(.system(size: 88))
-                    .foregroundStyle(AppColor.accent.gradient)
+                    .foregroundStyle(AppColor.teal.gradient)
                     .symbolEffect(.bounce, value: isFinishing)
                     .accessibilityHidden(true)
                 Text("Los geht's!")
                     .font(AppFont.title)
                 Text("Dein erster cleaner Tag beginnt jetzt.")
                     .font(AppFont.body)
-                    .foregroundStyle(.secondary)
+                    .foregroundStyle(AppColor.muted)
             }
         }
     }

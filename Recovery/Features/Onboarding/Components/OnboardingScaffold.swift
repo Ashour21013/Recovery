@@ -21,13 +21,14 @@ struct OnboardingScaffold<Content: View, Footer: View>: View {
 
             VStack(alignment: .leading, spacing: AppSpacing.s) {
                 Text(title)
-                    .font(AppFont.title)
+                    .font(.system(size: 28, weight: .bold))
+                    .foregroundStyle(AppColor.ink)
                     .fixedSize(horizontal: false, vertical: true)
 
                 if let subtitle {
                     Text(subtitle)
                         .font(AppFont.body)
-                        .foregroundStyle(.secondary)
+                        .foregroundStyle(AppColor.muted)
                         .fixedSize(horizontal: false, vertical: true)
                 }
             }
@@ -45,6 +46,8 @@ struct OnboardingScaffold<Content: View, Footer: View>: View {
         }
         .padding(AppSpacing.l)
         .frame(maxWidth: .infinity, alignment: .leading)
+        .background(AppColor.background.ignoresSafeArea())
+        .tint(AppColor.teal)
         .navigationBarTitleDisplayMode(.inline)
         .animation(.smooth(duration: 0.5), value: appeared)
         .onAppear { appeared = true }
