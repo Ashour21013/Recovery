@@ -45,7 +45,7 @@ struct AddictionEntityQuery: EntityQuery {
         // Fallback, damit der Auswahl-Parameter auch dann sichtbar ist, wenn
         // noch keine Süchte in die App Group geschrieben wurden.
         if entities.isEmpty {
-            return [AddictionAppEntity(id: "active", title: "Aktive Sucht")]
+            return [AddictionAppEntity(id: "active", title: String(localized: "Aktive Sucht"))]
         }
         return entities
     }

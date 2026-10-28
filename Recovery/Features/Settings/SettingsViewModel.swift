@@ -65,13 +65,13 @@ final class SettingsViewModel: ViewModel {
         switch (wasPremiumBefore, isPremium) {
         case (true, _):
             // War bereits Premium – nichts wurde neu wiederhergestellt.
-            infoMessage = "Premium ist bereits aktiv."
+            infoMessage = String(localized: "Premium ist bereits aktiv.")
         case (false, true):
             // Vorher kein Premium, jetzt Premium – Kauf wiederhergestellt.
-            infoMessage = "Deine Käufe wurden wiederhergestellt."
+            infoMessage = String(localized: "Deine Käufe wurden wiederhergestellt.")
         case (false, false):
             // Keine Berechtigung gefunden.
-            infoMessage = "Keine früheren Käufe gefunden."
+            infoMessage = String(localized: "Keine früheren Käufe gefunden.")
         }
     }
 
@@ -90,7 +90,7 @@ final class SettingsViewModel: ViewModel {
             let url = try writeTemporaryFile(json)
             exportURL = url
         } catch {
-            errorMessage = "Der Export ist fehlgeschlagen. Bitte versuche es erneut."
+            errorMessage = String(localized: "Der Export ist fehlgeschlagen. Bitte versuche es erneut.")
         }
     }
 
@@ -114,7 +114,7 @@ final class SettingsViewModel: ViewModel {
             try await repository.deleteAllData()
             didDeleteAllData = true
         } catch {
-            errorMessage = "Die Daten konnten nicht gelöscht werden."
+            errorMessage = String(localized: "Die Daten konnten nicht gelöscht werden.")
         }
     }
 

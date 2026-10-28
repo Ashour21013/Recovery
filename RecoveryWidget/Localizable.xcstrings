@@ -1,0 +1,406 @@
+{
+  "sourceLanguage": "de",
+  "strings": {
+    "Aktive Sucht": {
+      "localizations": {
+        "de": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Aktive Sucht"
+          }
+        },
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Active addiction"
+          }
+        }
+      }
+    },
+    "Bibelverse": {
+      "localizations": {
+        "de": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Bibelverse"
+          }
+        },
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Bible verses"
+          }
+        }
+      }
+    },
+    "Dein täglicher Motivationsspruch auf einen Blick.": {
+      "localizations": {
+        "de": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Dein täglicher Motivationsspruch auf einen Blick."
+          }
+        },
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Your daily motivational quote at a glance."
+          }
+        }
+      }
+    },
+    "Deine Streak und tägliche Motivation auf einen Blick.": {
+      "localizations": {
+        "de": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Deine Streak und tägliche Motivation auf einen Blick."
+          }
+        },
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Your streak and daily motivation at a glance."
+          }
+        }
+      }
+    },
+    "Du bist stärker als deine Gewohnheit.": {
+      "localizations": {
+        "de": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Du bist stärker als deine Gewohnheit."
+          }
+        },
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "You are stronger than your habit."
+          }
+        }
+      }
+    },
+    "Gemischt": {
+      "localizations": {
+        "de": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Gemischt"
+          }
+        },
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Mixed"
+          }
+        }
+      }
+    },
+    "Jeder Tag ohne Rückfall ist ein Sieg über dich selbst.": {
+      "localizations": {
+        "de": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Jeder Tag ohne Rückfall ist ein Sieg über dich selbst."
+          }
+        },
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Every day without a relapse is a victory over yourself."
+          }
+        }
+      }
+    },
+    "Motivationszitate": {
+      "localizations": {
+        "de": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Motivationszitate"
+          }
+        },
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Motivational quotes"
+          }
+        }
+      }
+    },
+    "Premium freischalten": {
+      "localizations": {
+        "de": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Premium freischalten"
+          }
+        },
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Unlock Premium"
+          }
+        }
+      }
+    },
+    "Quelle": {
+      "localizations": {
+        "de": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Quelle"
+          }
+        },
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Source"
+          }
+        }
+      }
+    },
+    "Quelle auswählen": {
+      "localizations": {
+        "de": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Quelle auswählen"
+          }
+        },
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Select source"
+          }
+        }
+      }
+    },
+    "Rauchen": {
+      "localizations": {
+        "de": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Rauchen"
+          }
+        },
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Smoking"
+          }
+        }
+      }
+    },
+    "Recovery": {
+      "localizations": {
+        "de": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Recovery"
+          }
+        },
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Recovery"
+          }
+        }
+      }
+    },
+    "Rekord: %lld Tage": {
+      "localizations": {
+        "de": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Rekord: %lld Tage"
+          }
+        },
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Record: %lld days"
+          }
+        }
+      }
+    },
+    "Sprüche aus ${source}": {
+      "localizations": {
+        "de": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Sprüche aus ${source}"
+          }
+        },
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Sprüche aus ${source}"
+          }
+        }
+      }
+    },
+    "Streak & tägliche Motivation direkt auf dem Home-Bildschirm.": {
+      "localizations": {
+        "de": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Streak & tägliche Motivation direkt auf dem Home-Bildschirm."
+          }
+        },
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Streak & daily motivation right on your Home Screen."
+          }
+        }
+      }
+    },
+    "Sucht": {
+      "localizations": {
+        "de": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Sucht"
+          }
+        },
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Habit"
+          }
+        }
+      }
+    },
+    "Sucht auswählen": {
+      "localizations": {
+        "de": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Sucht auswählen"
+          }
+        },
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Select habit"
+          }
+        }
+      }
+    },
+    "TAGE CLEAN": {
+      "localizations": {
+        "de": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "TAGE CLEAN"
+          }
+        },
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "DAYS CLEAN"
+          }
+        }
+      }
+    },
+    "Tägliche Motivation": {
+      "localizations": {
+        "de": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Tägliche Motivation"
+          }
+        },
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Daily motivation"
+          }
+        }
+      }
+    },
+    "Täglicher Motivationsspruch auf deinem Home-Bildschirm.": {
+      "localizations": {
+        "de": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Täglicher Motivationsspruch auf deinem Home-Bildschirm."
+          }
+        },
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "A daily motivational quote on your Home Screen."
+          }
+        }
+      }
+    },
+    "Wissenschaft": {
+      "localizations": {
+        "de": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Wissenschaft"
+          }
+        },
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Science"
+          }
+        }
+      }
+    },
+    "Wähle, aus welcher Quelle die täglichen Sprüche stammen.": {
+      "localizations": {
+        "de": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Wähle, aus welcher Quelle die täglichen Sprüche stammen."
+          }
+        },
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Choose where the daily quotes come from."
+          }
+        }
+      }
+    },
+    "Wähle, welche Sucht dieses Widget anzeigt.": {
+      "localizations": {
+        "de": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Wähle, welche Sucht dieses Widget anzeigt."
+          }
+        },
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Choose which habit this widget shows."
+          }
+        }
+      }
+    },
+    "Zeige ${addiction}": {
+      "localizations": {
+        "de": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Zeige ${addiction}"
+          }
+        },
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Zeige ${addiction}"
+          }
+        }
+      }
+    }
+  },
+  "version": "1.0"
+}

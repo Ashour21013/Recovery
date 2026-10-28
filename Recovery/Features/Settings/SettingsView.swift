@@ -125,17 +125,17 @@ struct SettingsView: View {
                 IconTile(systemImage: "sparkles", foreground: AppColor.gold,
                          background: AppColor.goldSoft, size: 34)
                 VStack(alignment: .leading, spacing: 2) {
-                    Text(viewModel.isPremium ? "Premium aktiv" : "Kostenlose Version")
+                    Text(viewModel.isPremium ? String(localized: "Premium aktiv") : String(localized: "Kostenlose Version"))
                         .font(AppFont.subheadline.weight(.semibold))
                         .foregroundStyle(.primary)
                     Text(viewModel.isPremium
-                         ? "Vielen Dank für deine Unterstützung!"
-                         : "Alle Funktionen freischalten")
+                         ? String(localized: "Vielen Dank für deine Unterstützung!")
+                         : String(localized: "Alle Funktionen freischalten"))
                         .font(AppFont.caption)
                         .foregroundStyle(.secondary)
                 }
                 Spacer()
-                ProTag(text: viewModel.isPremium ? "AKTIV" : "PRO")
+                ProTag(text: viewModel.isPremium ? String(localized: "AKTIV") : "PRO")
             }
 
             // Für Free-Nutzer: Premium freischalten (öffnet Paywall).
@@ -317,7 +317,7 @@ struct SettingsView: View {
     // MARK: - Bausteine
 
     /// Figma-Settings-Zeile: getönte Icon-Kachel (statt bunter Systemkachel).
-    private func settingsLabel(_ title: String, systemImage: String, tint: Color) -> some View {
+    private func settingsLabel(_ title: LocalizedStringKey, systemImage: String, tint: Color) -> some View {
         HStack(spacing: 11) {
             Image(systemName: systemImage)
                 .font(.system(size: 15, weight: .semibold))

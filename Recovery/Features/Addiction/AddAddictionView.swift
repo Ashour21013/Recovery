@@ -95,7 +95,7 @@ struct AddAddictionView: View {
         VStack(alignment: .leading, spacing: AppSpacing.s) {
             Text("Dein Warum (optional)")
                 .font(AppFont.headline)
-            AppTextEditor(placeholder: "Ich möchte aufhören, weil…", text: $reason)
+            AppTextEditor(placeholder: String(localized: "Ich möchte aufhören, weil…"), text: $reason)
         }
     }
 

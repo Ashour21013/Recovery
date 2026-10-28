@@ -24,8 +24,8 @@ struct SampleChartPreview: View {
 struct SampleMetricsPreview: View {
     var body: some View {
         HStack(spacing: AppSpacing.l) {
-            sample(value: "128 €", label: "Gespart")
-            sample(value: "36 Std.", label: "Zurückgewonnen")
+            sample(value: "128 €", label: String(localized: "Gespart"))
+            sample(value: "36 Std.", label: String(localized: "Zurückgewonnen"))
         }
         .frame(maxWidth: .infinity)
         .padding(AppSpacing.l)

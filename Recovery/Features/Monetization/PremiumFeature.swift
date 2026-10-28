@@ -26,26 +26,26 @@ enum PremiumFeature: String, CaseIterable, Identifiable {
     /// Sprechender Titel für Paywall/Badges.
     var title: String {
         switch self {
-        case .multipleSuchte: "Mehrere Süchte"
-        case .alleStatistiken: "Alle Statistiken"
-        case .recoveryGains: "Fortschritts-Gewinne"
-        case .alleAppIcons: "Alle App-Icons"
-        case .erweiterteInspiration: "Erweiterte Inspiration"
-        case .iCloudSync: "iCloud-Sync"
-        case .widgets: "Widgets"
+        case .multipleSuchte: String(localized: "Mehrere Süchte")
+        case .alleStatistiken: String(localized: "Alle Statistiken")
+        case .recoveryGains: String(localized: "Fortschritts-Gewinne")
+        case .alleAppIcons: String(localized: "Alle App-Icons")
+        case .erweiterteInspiration: String(localized: "Erweiterte Inspiration")
+        case .iCloudSync: String(localized: "iCloud-Sync")
+        case .widgets: String(localized: "Widgets")
         }
     }
 
     /// Einladender Teaser-Titel für die `LockedFeatureCard`.
     var teaserTitle: String {
         switch self {
-        case .multipleSuchte: "Mehrere Gewohnheiten"
-        case .alleStatistiken: "Statistiken"
-        case .recoveryGains: "Deine Erfolge"
-        case .alleAppIcons: "Alle App-Icons"
-        case .erweiterteInspiration: "Mehr Motivation"
-        case .iCloudSync: "iCloud-Sync"
-        case .widgets: "Widgets"
+        case .multipleSuchte: String(localized: "Mehrere Gewohnheiten")
+        case .alleStatistiken: String(localized: "Statistiken")
+        case .recoveryGains: String(localized: "Deine Erfolge")
+        case .alleAppIcons: String(localized: "Alle App-Icons")
+        case .erweiterteInspiration: String(localized: "Mehr Motivation")
+        case .iCloudSync: String(localized: "iCloud-Sync")
+        case .widgets: String(localized: "Widgets")
         }
     }
 
@@ -53,19 +53,19 @@ enum PremiumFeature: String, CaseIterable, Identifiable {
     var teaserDescription: String {
         switch self {
         case .multipleSuchte:
-            "Tracke mehrere Gewohnheiten gleichzeitig an einem Ort."
+            String(localized: "Tracke mehrere Gewohnheiten gleichzeitig an einem Ort.")
         case .alleStatistiken:
-            "Sieh deine längste Streak, Rückfälle und häufigsten Trigger als übersichtliche Diagramme."
+            String(localized: "Sieh deine längste Streak, Rückfälle und häufigsten Trigger als übersichtliche Diagramme.")
         case .recoveryGains:
-            "Sieh, wie viel Geld oder Zeit du seit deinem Start zurückgewonnen hast."
+            String(localized: "Sieh, wie viel Geld oder Zeit du seit deinem Start zurückgewonnen hast.")
         case .alleAppIcons:
-            "Wähle aus verschiedenen App-Icons dein Lieblingsdesign."
+            String(localized: "Wähle aus verschiedenen App-Icons dein Lieblingsdesign.")
         case .erweiterteInspiration:
-            "Schalte zusätzliche Motivationsquellen frei, z. B. Bibelverse."
+            String(localized: "Schalte zusätzliche Motivationsquellen frei, z. B. Bibelverse.")
         case .iCloudSync:
-            "Synchronisiere deinen Fortschritt sicher über all deine Geräte."
+            String(localized: "Synchronisiere deinen Fortschritt sicher über all deine Geräte.")
         case .widgets:
-            "Behalte deine Streak direkt vom Home-Bildschirm im Blick."
+            String(localized: "Behalte deine Streak direkt vom Home-Bildschirm im Blick.")
         }
     }
 

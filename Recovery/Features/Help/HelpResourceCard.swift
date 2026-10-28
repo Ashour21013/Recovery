@@ -56,7 +56,7 @@ struct HelpResourceCard: View {
         .accessibilityElement(children: .ignore)
         .accessibilityLabel("\(resource.title). \(resource.description)")
         .accessibilityAddTraits(isInteractive ? .isButton : [])
-        .accessibilityHint(resource.url != nil ? "Öffnet die Website." : "")
+        .accessibilityHint(resource.url != nil ? String(localized: "Öffnet die Website.") : "")
     }
 
     private var isInteractive: Bool {
@@ -77,8 +77,8 @@ struct HelpResourceCard: View {
         HelpResourceCard(
             resource: HelpResource(
                 id: "1",
-                title: "Sucht & Drogen – Infoportal",
-                description: "Bundesweite Informationen und Beratungsangebote.",
+                title: String(localized: "Sucht & Drogen – Infoportal"),
+                description: String(localized: "Bundesweite Informationen und Beratungsangebote."),
                 url: URL(string: "https://www.dhs.de"),
                 systemImage: "cross.case.fill",
                 category: .external(.germany)
@@ -87,8 +87,8 @@ struct HelpResourceCard: View {
         HelpResourceCard(
             resource: HelpResource(
                 id: "2",
-                title: "Soforthilfe bei Verlangen",
-                description: "Starte den Craving-Modus und komme durch die Welle.",
+                title: String(localized: "Soforthilfe bei Verlangen"),
+                description: String(localized: "Starte den Craving-Modus und komme durch die Welle."),
                 systemImage: "hand.raised.fill",
                 category: .inApp
             ),

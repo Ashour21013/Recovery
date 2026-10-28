@@ -48,7 +48,7 @@ struct RecoveryGainsSectionView: View {
             }
             Spacer()
             Button(action: onAddValues) {
-                Text(hasMetrics ? "Berechnung" : "Werte angeben")
+                Text(hasMetrics ? String(localized: "Berechnung") : String(localized: "Werte angeben"))
                     .font(.caption.weight(.heavy))
                     .foregroundStyle(AppColor.teal)
                     .padding(.horizontal, 10)

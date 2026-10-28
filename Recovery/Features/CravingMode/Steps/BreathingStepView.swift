@@ -10,8 +10,12 @@ struct BreathingStepView: View {
     @State private var inhale = false
 
     private var phaseText: String {
-        guard isRunning else { return remainingSeconds == 0 ? "Gut gemacht!" : "Bereit?" }
-        return (remainingSeconds / 4).isMultiple(of: 2) ? "Einatmen · 4 Sekunden" : "Ausatmen · 4 Sekunden"
+        guard isRunning else {
+            return remainingSeconds == 0 ? String(localized: "Gut gemacht!") : String(localized: "Bereit?")
+        }
+        return (remainingSeconds / 4).isMultiple(of: 2)
+            ? String(localized: "Einatmen · 4 Sekunden")
+            : String(localized: "Ausatmen · 4 Sekunden")
     }
 
     var body: some View {

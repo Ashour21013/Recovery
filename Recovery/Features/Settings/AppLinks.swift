@@ -21,7 +21,7 @@ enum AppLinks {
 
     /// Fertiger `mailto:`-Link inkl. Betreff.
     static var feedbackMailto: URL? {
-        let subject = "Feedback zu Recovery \(AppInfo.fullVersion)"
+        let subject = String(localized: "Feedback zu Recovery \(AppInfo.fullVersion)")
         var components = URLComponents()
         components.scheme = "mailto"
         components.path = feedbackEmail

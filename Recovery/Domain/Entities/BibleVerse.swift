@@ -10,11 +10,11 @@ enum BibleCategory: String, CaseIterable, Codable, Hashable {
 
     var title: String {
         switch self {
-        case .hope: "Hoffnung"
-        case .temptation: "Versuchung"
-        case .strength: "Stärke"
-        case .perseverance: "Ausdauer"
-        case .forgiveness: "Vergebung"
+        case .hope: String(localized: "Hoffnung")
+        case .temptation: String(localized: "Versuchung")
+        case .strength: String(localized: "Stärke")
+        case .perseverance: String(localized: "Ausdauer")
+        case .forgiveness: String(localized: "Vergebung")
         }
     }
 }

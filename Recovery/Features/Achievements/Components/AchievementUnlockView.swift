@@ -42,7 +42,7 @@ struct AchievementUnlockView: View {
                     }
 
                     Button(action: advance) {
-                        Text(index == achievements.count - 1 ? "Super!" : "Weiter")
+                        Text(index == achievements.count - 1 ? String(localized: "Super!") : String(localized: "Weiter"))
                             .font(.headline)
                             .padding(.horizontal, AppSpacing.xl)
                             .padding(.vertical, AppSpacing.s)

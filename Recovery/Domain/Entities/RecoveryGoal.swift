@@ -13,10 +13,10 @@ enum RecoveryGoal: Int, CaseIterable, Identifiable, Codable {
 
     var title: String {
         switch self {
-        case .week: "7 Tage"
-        case .month: "30 Tage"
-        case .ninetyDays: "90 Tage"
-        case .year: "365 Tage"
+        case .week: String(localized: "7 Tage")
+        case .month: String(localized: "30 Tage")
+        case .ninetyDays: String(localized: "90 Tage")
+        case .year: String(localized: "365 Tage")
         }
     }
 

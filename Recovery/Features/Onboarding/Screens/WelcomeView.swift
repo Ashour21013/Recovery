@@ -13,7 +13,7 @@ struct WelcomeView: View {
                 .padding(.top, 8)
 
             VStack(spacing: 12) {
-                Eyebrow("Willkommen bei Recovery")
+                Eyebrow(String(localized: "Willkommen bei Recovery"))
                 Text("Dein Weg zurück zu dir.")
                     .font(.system(size: 32, weight: .semibold))
                     .tracking(-0.6)

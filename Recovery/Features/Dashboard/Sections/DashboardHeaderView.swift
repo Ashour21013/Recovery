@@ -6,10 +6,10 @@ struct DashboardHeaderView: View {
 
     private var greeting: String {
         switch Calendar.current.component(.hour, from: .now) {
-        case 5..<11: "Guten Morgen"
-        case 11..<17: "Hallo"
-        case 17..<22: "Guten Abend"
-        default: "Gute Nacht"
+        case 5..<11: String(localized: "Guten Morgen")
+        case 11..<17: String(localized: "Hallo")
+        case 17..<22: String(localized: "Guten Abend")
+        default: String(localized: "Gute Nacht")
         }
     }
 

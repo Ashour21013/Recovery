@@ -30,11 +30,11 @@ final class ContentBlockingViewModel {
         let apps = selection.applicationTokens.count
         let categories = selection.categoryTokens.count
         let sites = selection.webDomainTokens.count
-        if apps + categories + sites == 0 { return "Keine ausgewählt" }
+        if apps + categories + sites == 0 { return String(localized: "Keine ausgewählt") }
         var parts: [String] = []
-        if apps > 0 { parts.append("\(apps) \(apps == 1 ? "App" : "Apps")") }
-        if categories > 0 { parts.append("\(categories) \(categories == 1 ? "Kategorie" : "Kategorien")") }
-        if sites > 0 { parts.append("\(sites) \(sites == 1 ? "Website" : "Websites")") }
+        if apps > 0 { if apps == 1 { parts.append(String(localized: "1 App")) } else { parts.append(String(localized: "\(apps) Apps")) } }
+        if categories > 0 { if categories == 1 { parts.append(String(localized: "1 Kategorie")) } else { parts.append(String(localized: "\(categories) Kategorien")) } }
+        if sites > 0 { if sites == 1 { parts.append(String(localized: "1 Website")) } else { parts.append(String(localized: "\(sites) Websites")) } }
         return parts.joined(separator: ", ")
     }
 
@@ -87,13 +87,13 @@ final class ContentBlockingViewModel {
                 try await service.requestAuthorization()
             } catch {
                 authorization = service.authorization
-                errorMessage = "Die Bildschirmzeit-Berechtigung wurde nicht erteilt. Ohne sie kann der Schutz nicht aktiviert werden."
+                errorMessage = String(localized: "Die Bildschirmzeit-Berechtigung wurde nicht erteilt. Ohne sie kann der Schutz nicht aktiviert werden.")
                 return
             }
         }
         authorization = service.authorization
         guard authorization == .approved else {
-            errorMessage = "Die Bildschirmzeit-Berechtigung wurde nicht erteilt."
+            errorMessage = String(localized: "Die Bildschirmzeit-Berechtigung wurde nicht erteilt.")
             return
         }
 
@@ -106,7 +106,7 @@ final class ContentBlockingViewModel {
 
     func addDomain() {
         guard let domain = DomainNormalizer.normalize(newDomainInput) else {
-            errorMessage = "„\(newDomainInput)“ ist keine gültige Domain. Beispiel: beispiel.com"
+            errorMessage = String(localized: "„\(newDomainInput)“ ist keine gültige Domain. Beispiel: beispiel.com")
             return
         }
         guard !customDomains.contains(domain) else {

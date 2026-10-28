@@ -63,16 +63,16 @@ final class StatisticsViewModel: ViewModel {
             StatMetric(
                 id: "currentStreak",
                 value: statistics.currentStreakDays,
-                unit: "Tage",
-                label: "Aktuelle Streak",
+                unit: String(localized: "Tage"),
+                label: String(localized: "Aktuelle Streak"),
                 systemImage: "flame.fill",
                 tint: .orange
             ),
             StatMetric(
                 id: "longestStreak",
                 value: statistics.longestStreakDays,
-                unit: "Tage",
-                label: "Längste Streak",
+                unit: String(localized: "Tage"),
+                label: String(localized: "Längste Streak"),
                 systemImage: "trophy.fill",
                 tint: .yellow
             ),
@@ -80,7 +80,7 @@ final class StatisticsViewModel: ViewModel {
                 id: "relapses",
                 value: statistics.relapseCount,
                 unit: nil,
-                label: "Rückfälle",
+                label: String(localized: "Rückfälle"),
                 systemImage: "arrow.uturn.backward",
                 tint: .red
             ),
@@ -88,7 +88,7 @@ final class StatisticsViewModel: ViewModel {
                 id: "triggers",
                 value: statistics.topTriggers.count,
                 unit: nil,
-                label: "Erfasste Trigger",
+                label: String(localized: "Erfasste Trigger"),
                 systemImage: "bolt.fill",
                 tint: .blue
             )

@@ -13,10 +13,10 @@ struct ProgressCardView: View {
 
     private var subtitle: String {
         switch remaining {
-        case 0: "Geschafft – stark!"
-        case 1: "Noch 1 Tag. Gleich hast du es!"
-        case 2...3: "Noch \(remaining) Tage. Du bist fast da!"
-        default: "Noch \(remaining) Tage. Schritt für Schritt."
+        case 0: String(localized: "Geschafft – stark!")
+        case 1: String(localized: "Noch 1 Tag. Gleich hast du es!")
+        case 2...3: String(localized: "Noch \(remaining) Tage. Du bist fast da!")
+        default: String(localized: "Noch \(remaining) Tage. Schritt für Schritt.")
         }
     }
 
@@ -68,6 +68,6 @@ struct ProgressCardView: View {
         .frame(maxWidth: .infinity, alignment: .leading)
         .gainSurface(radius: AppRadius.card)
         .accessibilityElement(children: .ignore)
-        .accessibilityLabel("Nächster Meilenstein \(milestone.rawValue) Tage, \(percent) Prozent. \(subtitle)")
+        .accessibilityLabel(String(localized: "Nächster Meilenstein \(milestone.rawValue) Tage, \(percent) Prozent. \(subtitle)"))
     }
 }

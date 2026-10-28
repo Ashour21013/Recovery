@@ -27,11 +27,11 @@ extension HabitType {
     /// Bezeichnung der Konsumeinheit (für Eingabe/Anzeige bei Geld-Süchten).
     var consumptionUnitName: String {
         switch self {
-        case .smoking: "Zigaretten"
-        case .alcohol: "Getränke"
-        case .gambling: "Wetten"
-        case .sugar: "Snacks"
-        case .pornography, .socialMedia: "Einheiten"
+        case .smoking: String(localized: "Zigaretten")
+        case .alcohol: String(localized: "Getränke")
+        case .gambling: String(localized: "Wetten")
+        case .sugar: String(localized: "Snacks")
+        case .pornography, .socialMedia: String(localized: "Einheiten")
         }
     }
 }

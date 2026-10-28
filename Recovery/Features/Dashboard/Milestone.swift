@@ -12,13 +12,13 @@ enum Milestone: Int, CaseIterable {
 
     var title: String {
         switch self {
-        case .day3: "3 Tage"
-        case .week: "1 Woche"
-        case .twoWeeks: "2 Wochen"
-        case .month: "30 Tage"
-        case .ninety: "90 Tage"
-        case .halfYear: "6 Monate"
-        case .year: "1 Jahr"
+        case .day3: String(localized: "3 Tage")
+        case .week: String(localized: "1 Woche")
+        case .twoWeeks: String(localized: "2 Wochen")
+        case .month: String(localized: "30 Tage")
+        case .ninety: String(localized: "90 Tage")
+        case .halfYear: String(localized: "6 Monate")
+        case .year: String(localized: "1 Jahr")
         }
     }
 

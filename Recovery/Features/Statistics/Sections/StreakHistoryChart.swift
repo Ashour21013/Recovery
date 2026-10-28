@@ -14,8 +14,8 @@ struct StreakHistoryChart: View {
 
     var body: some View {
         ChartCard(
-            title: "Streak-Verlauf",
-            subtitle: "Letzte 30 Tage",
+            title: String(localized: "Streak-Verlauf"),
+            subtitle: String(localized: "Letzte 30 Tage"),
             systemImage: "chart.xyaxis.line"
         ) {
             if hasData {
@@ -32,7 +32,7 @@ struct StreakHistoryChart: View {
                         .accessibilityHidden(true)
                     StatEmptyState(
                         systemImage: "chart.line.uptrend.xyaxis",
-                        message: "Dein Streak-Verlauf erscheint hier, sobald du startest."
+                        message: String(localized: "Dein Streak-Verlauf erscheint hier, sobald du startest.")
                     )
                 }
             }

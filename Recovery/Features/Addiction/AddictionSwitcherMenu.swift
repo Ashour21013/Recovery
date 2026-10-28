@@ -49,7 +49,7 @@ struct AddictionSwitcherMenu: View {
             }
             .foregroundStyle(.primary)
         }
-        .accessibilityLabel("Aktive Sucht: \(active?.title ?? "keine"). Zum Wechseln antippen.")
+        .accessibilityLabel("Aktive Sucht: \(active?.title ?? String(localized: "keine")). Zum Wechseln antippen.")
     }
 }
 

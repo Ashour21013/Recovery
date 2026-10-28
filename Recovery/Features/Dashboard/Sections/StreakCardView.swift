@@ -12,7 +12,7 @@ struct StreakCardView: View {
 
     private func counterPart(_ value: Int, _ unit: String) -> some View {
         HStack(alignment: .firstTextBaseline, spacing: 4) {
-            Text(unit == "Tage" ? "\(value)" : String(format: "%02d", value))
+            Text(unit == String(localized: "Tage") ? "\(value)" : String(format: "%02d", value))
                 .font(.system(.headline, design: .rounded).weight(.bold))
                 .contentTransition(.numericText())
             Text(unit)
@@ -45,17 +45,17 @@ struct StreakCardView: View {
                 .animation(.smooth, value: streak.currentDays)
                 .padding(.top, AppSpacing.s)
 
-            Text(streak.currentDays == 1 ? "Tag frei" : "Tage frei")
+            Text(streak.currentDays == 1 ? String(localized: "Tag frei") : String(localized: "Tage frei"))
                 .font(.title2.weight(.semibold))
 
             TimelineView(.periodic(from: .now, by: 30)) { context in
                 let parts = elapsed(at: context.date)
                 HStack(spacing: 12) {
-                    counterPart(parts.days, "Tage")
+                    counterPart(parts.days, String(localized: "Tage"))
                     dot
-                    counterPart(parts.hours, "Std")
+                    counterPart(parts.hours, String(localized: "Std"))
                     dot
-                    counterPart(parts.minutes, "Min")
+                    counterPart(parts.minutes, String(localized: "Min"))
                 }
             }
             .padding(.top, 12)
@@ -67,7 +67,11 @@ struct StreakCardView: View {
                 Image(systemName: streak.isNewRecord ? "trophy.fill" : "medal")
                     .symbolEffect(.bounce, value: streak.isNewRecord)
                     .accessibilityHidden(true)
-                Text(streak.isNewRecord ? "Neuer Rekord!" : "Dein Rekord: **\(streak.bestDays) Tage**")
+                if streak.isNewRecord {
+                    Text("Neuer Rekord!")
+                } else {
+                    Text("Dein Rekord: **\(streak.bestDays) Tage**")
+                }
                 Spacer()
                 Text("Seit \(streak.startedAt.formatted(date: .abbreviated, time: .omitted))")
             }
@@ -98,11 +102,16 @@ struct StreakCardView: View {
     /// Zusammenhängende, natürlich vorgelesene Beschreibung für VoiceOver,
     /// statt einzelner Fragmente.
     private var accessibilityDescription: String {
-        let unit = streak.currentDays == 1 ? "Tag" : "Tage"
-        let base = "Aktuelle Streak: \(streak.currentDays) \(unit)."
+        if streak.currentDays == 1 {
+            let base = String(localized: "Aktuelle Streak: 1 Tag.")
+            return base + (streak.isNewRecord
+                ? String(localized: " Neuer Rekord!")
+                : String(localized: " Bestwert: \(streak.bestDays) Tage."))
+        }
+        let base = String(localized: "Aktuelle Streak: \(streak.currentDays) Tage.")
         let record = streak.isNewRecord
-            ? " Neuer Rekord!"
-            : " Bestwert: \(streak.bestDays) Tage."
+            ? String(localized: " Neuer Rekord!")
+            : String(localized: " Bestwert: \(streak.bestDays) Tage.")
         return base + record
     }
 }

@@ -8,14 +8,14 @@ struct TopTriggersChart: View {
 
     var body: some View {
         ChartCard(
-            title: "Häufigste Trigger",
-            subtitle: triggers.isEmpty ? nil : "Top \(triggers.count)",
+            title: String(localized: "Häufigste Trigger"),
+            subtitle: triggers.isEmpty ? nil : String(localized: "Top \(triggers.count)"),
             systemImage: "bolt.fill"
         ) {
             if triggers.isEmpty {
                 StatEmptyState(
                     systemImage: "bolt.slash.fill",
-                    message: "Sobald du Trigger erfasst, erscheinen sie hier als Diagramm."
+                    message: String(localized: "Sobald du Trigger erfasst, erscheinen sie hier als Diagramm.")
                 )
             } else {
                 Chart(triggers) { trigger in

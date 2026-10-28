@@ -21,9 +21,9 @@ struct ProductDisplayInfo {
     /// Beschreibung des Abrechnungszeitraums (z. B. „pro Monat", „einmalig").
     var periodText: String {
         guard let subscription = product.subscription else {
-            return "einmalig"
+            return String(localized: "einmalig")
         }
-        return "pro " + periodName(subscription.subscriptionPeriod)
+        return periodName(subscription.subscriptionPeriod)
     }
 
     /// Ob eine kostenlose Einführungs-Testphase verfügbar ist.
@@ -38,33 +38,41 @@ struct ProductDisplayInfo {
               offer.paymentMode == .freeTrial else { return nil }
         let period = offer.period
         let count = offer.periodCount * period.value
-        let unit = unitName(period.unit, value: count)
-        return "\(count) \(unit) kostenlos testen"
+        return trialDescription(period.unit, count: count)
     }
 
     /// Empfehlungs-Badge-Text (nur beim empfohlenen Produkt).
     var badgeText: String? {
-        kind.isRecommended ? "Beliebt" : nil
+        kind.isRecommended ? String(localized: "Beliebt") : nil
     }
 
     // MARK: - Formatierung
 
     private func periodName(_ period: Product.SubscriptionPeriod) -> String {
+        let value = period.value
         switch period.unit {
-        case .day: return period.value == 1 ? "Tag" : "\(period.value) Tage"
-        case .week: return period.value == 1 ? "Woche" : "\(period.value) Wochen"
-        case .month: return period.value == 1 ? "Monat" : "\(period.value) Monate"
-        case .year: return period.value == 1 ? "Jahr" : "\(period.value) Jahre"
+        case .day:
+            return value == 1 ? String(localized: "pro Tag") : String(localized: "pro \(value) Tage")
+        case .week:
+            return value == 1 ? String(localized: "pro Woche") : String(localized: "pro \(value) Wochen")
+        case .month:
+            return value == 1 ? String(localized: "pro Monat") : String(localized: "pro \(value) Monate")
+        case .year:
+            return value == 1 ? String(localized: "pro Jahr") : String(localized: "pro \(value) Jahre")
         @unknown default: return ""
         }
     }
 
-    private func unitName(_ unit: Product.SubscriptionPeriod.Unit, value: Int) -> String {
+    private func trialDescription(_ unit: Product.SubscriptionPeriod.Unit, count: Int) -> String {
         switch unit {
-        case .day: return value == 1 ? "Tag" : "Tage"
-        case .week: return value == 1 ? "Woche" : "Wochen"
-        case .month: return value == 1 ? "Monat" : "Monate"
-        case .year: return value == 1 ? "Jahr" : "Jahre"
+        case .day:
+            return count == 1 ? String(localized: "1 Tag kostenlos testen") : String(localized: "\(count) Tage kostenlos testen")
+        case .week:
+            return count == 1 ? String(localized: "1 Woche kostenlos testen") : String(localized: "\(count) Wochen kostenlos testen")
+        case .month:
+            return count == 1 ? String(localized: "1 Monat kostenlos testen") : String(localized: "\(count) Monate kostenlos testen")
+        case .year:
+            return count == 1 ? String(localized: "1 Jahr kostenlos testen") : String(localized: "\(count) Jahre kostenlos testen")
         @unknown default: return ""
         }
     }

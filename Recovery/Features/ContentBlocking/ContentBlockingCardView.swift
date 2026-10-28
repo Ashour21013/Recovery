@@ -23,8 +23,8 @@ struct ContentBlockingCardView: View {
                         .font(AppFont.subheadline.weight(.semibold))
                         .foregroundStyle(AppColor.ink)
                     Text(isEnabled
-                         ? "Schutz aktiv – Inhalte für Erwachsene werden blockiert."
-                         : "Pornografische Inhalte auf diesem iPhone sperren.")
+                         ? String(localized: "Schutz aktiv – Inhalte für Erwachsene werden blockiert.")
+                         : String(localized: "Pornografische Inhalte auf diesem iPhone sperren."))
                         .font(AppFont.caption)
                         .foregroundStyle(AppColor.muted)
                         .multilineTextAlignment(.leading)

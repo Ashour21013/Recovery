@@ -18,8 +18,8 @@ struct HabitSelectionView: View {
     var body: some View {
         OnboardingScaffold(
             step: .habitSelection,
-            title: "Was möchtest du verändern?",
-            subtitle: "Wähle die Gewohnheit, die du hinter dir lassen willst."
+            title: String(localized: "Was möchtest du verändern?"),
+            subtitle: String(localized: "Wähle die Gewohnheit, die du hinter dir lassen willst.")
         ) {
             ScrollView {
                 LazyVGrid(columns: columns, spacing: AppSpacing.m) {

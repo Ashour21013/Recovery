@@ -13,29 +13,29 @@ struct DefaultHelpResourceProvider: HelpResourceProvider {
         [
             HelpResource(
                 id: "inapp.craving",
-                title: "Soforthilfe bei Verlangen",
-                description: "Starte den Craving-Modus und komme in wenigen geführten Schritten durch die Welle.",
+                title: String(localized: "Soforthilfe bei Verlangen"),
+                description: String(localized: "Starte den Craving-Modus und komme in wenigen geführten Schritten durch die Welle."),
                 systemImage: "hand.raised.fill",
                 category: .inApp
             ),
             HelpResource(
                 id: "inapp.breathing",
-                title: "Atemübung",
-                description: "Eine 60-Sekunden-Atemübung hilft dir, dich zu beruhigen und neu zu fokussieren.",
+                title: String(localized: "Atemübung"),
+                description: String(localized: "Eine 60-Sekunden-Atemübung hilft dir, dich zu beruhigen und neu zu fokussieren."),
                 systemImage: "wind",
                 category: .inApp
             ),
             HelpResource(
                 id: "inapp.plan",
-                title: "Dein Recovery-Plan",
-                description: "Kleine tägliche Aufgaben geben dir Struktur und Halt.",
+                title: String(localized: "Dein Recovery-Plan"),
+                description: String(localized: "Kleine tägliche Aufgaben geben dir Struktur und Halt."),
                 systemImage: "checklist",
                 category: .inApp
             ),
             HelpResource(
                 id: "inapp.motivation",
-                title: "Tägliche Motivation",
-                description: "Hol dir eine inspirierende Botschaft aus deiner gewählten Quelle.",
+                title: String(localized: "Tägliche Motivation"),
+                description: String(localized: "Hol dir eine inspirierende Botschaft aus deiner gewählten Quelle."),
                 systemImage: "sparkles",
                 category: .inApp
             )
@@ -56,24 +56,24 @@ struct DefaultHelpResourceProvider: HelpResourceProvider {
             return [
                 HelpResource(
                     id: "de.suchtunddrogen",
-                    title: "Sucht & Drogen Hotline – Infoportal",
-                    description: "Bundesweite Informationen und Beratungsangebote der Deutschen Hauptstelle für Suchtfragen.",
+                    title: String(localized: "Sucht & Drogen Hotline – Infoportal"),
+                    description: String(localized: "Bundesweite Informationen und Beratungsangebote der Deutschen Hauptstelle für Suchtfragen."),
                     url: URL(string: "https://www.dhs.de"),
                     systemImage: "cross.case.fill",
                     category: .external(.germany)
                 ),
                 HelpResource(
                     id: "de.telefonseelsorge",
-                    title: "TelefonSeelsorge – Online-Beratung",
-                    description: "Kostenlose, anonyme Beratung per Chat und Mail bei seelischen Krisen.",
+                    title: String(localized: "TelefonSeelsorge – Online-Beratung"),
+                    description: String(localized: "Kostenlose, anonyme Beratung per Chat und Mail bei seelischen Krisen."),
                     url: URL(string: "https://www.telefonseelsorge.de"),
                     systemImage: "bubble.left.and.bubble.right.fill",
                     category: .external(.germany)
                 ),
                 HelpResource(
                     id: "de.bzga",
-                    title: "BZgA – Hilfe bei Abhängigkeit",
-                    description: "Unabhängige Informationen und Selbsttests der Bundeszentrale für gesundheitliche Aufklärung.",
+                    title: String(localized: "BZgA – Hilfe bei Abhängigkeit"),
+                    description: String(localized: "Unabhängige Informationen und Selbsttests der Bundeszentrale für gesundheitliche Aufklärung."),
                     url: URL(string: "https://www.bzga.de"),
                     systemImage: "info.circle.fill",
                     category: .external(.germany)
@@ -83,16 +83,16 @@ struct DefaultHelpResourceProvider: HelpResourceProvider {
             return [
                 HelpResource(
                     id: "at.suchthilfe",
-                    title: "Suchthilfe Österreich",
-                    description: "Überblick über regionale Beratungs- und Behandlungsangebote in Österreich.",
+                    title: String(localized: "Suchthilfe Österreich"),
+                    description: String(localized: "Überblick über regionale Beratungs- und Behandlungsangebote in Österreich."),
                     url: URL(string: "https://www.suchthilfe.at"),
                     systemImage: "cross.case.fill",
                     category: .external(.austria)
                 ),
                 HelpResource(
                     id: "at.telefonseelsorge",
-                    title: "TelefonSeelsorge Österreich",
-                    description: "Anonyme Online- und Chat-Beratung in Krisensituationen.",
+                    title: String(localized: "TelefonSeelsorge Österreich"),
+                    description: String(localized: "Anonyme Online- und Chat-Beratung in Krisensituationen."),
                     url: URL(string: "https://www.telefonseelsorge.at"),
                     systemImage: "bubble.left.and.bubble.right.fill",
                     category: .external(.austria)
@@ -102,16 +102,16 @@ struct DefaultHelpResourceProvider: HelpResourceProvider {
             return [
                 HelpResource(
                     id: "ch.suchtschweiz",
-                    title: "Sucht Schweiz",
-                    description: "Stiftung mit Informationen, Beratung und Präventionsangeboten rund um Sucht.",
+                    title: String(localized: "Sucht Schweiz"),
+                    description: String(localized: "Stiftung mit Informationen, Beratung und Präventionsangeboten rund um Sucht."),
                     url: URL(string: "https://www.suchtschweiz.ch"),
                     systemImage: "cross.case.fill",
                     category: .external(.switzerland)
                 ),
                 HelpResource(
                     id: "ch.143",
-                    title: "Die Dargebotene Hand – Online-Beratung",
-                    description: "Anonyme Beratung per Chat und Mail bei Sorgen und Krisen.",
+                    title: String(localized: "Die Dargebotene Hand – Online-Beratung"),
+                    description: String(localized: "Anonyme Beratung per Chat und Mail bei Sorgen und Krisen."),
                     url: URL(string: "https://www.143.ch"),
                     systemImage: "bubble.left.and.bubble.right.fill",
                     category: .external(.switzerland)

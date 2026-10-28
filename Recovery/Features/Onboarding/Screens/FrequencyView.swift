@@ -10,8 +10,8 @@ struct FrequencyView: View {
     var body: some View {
         OnboardingScaffold(
             step: .frequency,
-            title: "Wie oft passiert es?",
-            subtitle: "Ehrlichkeit hilft dir, deinen Fortschritt realistisch einzuschätzen."
+            title: String(localized: "Wie oft passiert es?"),
+            subtitle: String(localized: "Ehrlichkeit hilft dir, deinen Fortschritt realistisch einzuschätzen.")
         ) {
             VStack(spacing: AppSpacing.s) {
                 ForEach(HabitFrequency.allCases) { frequency in

@@ -8,10 +8,10 @@ struct CravingHelpView: View {
     let onDismiss: () -> Void
 
     private let tips: [(icon: String, title: String, subtitle: String)] = [
-        ("wind", "Atme tief durch", "4 Sekunden ein, 4 halten, 4 aus – 5-mal wiederholen."),
-        ("figure.walk", "Bewege dich", "Ein kurzer Spaziergang senkt den Drang deutlich."),
-        ("drop.fill", "Trink ein Glas Wasser", "Lenkt ab und gibt deinem Körper etwas zu tun."),
-        ("timer", "Warte 10 Minuten", "Verlangen kommt in Wellen – es geht vorbei.")
+        ("wind", String(localized: "Atme tief durch"), String(localized: "4 Sekunden ein, 4 halten, 4 aus – 5-mal wiederholen.")),
+        ("figure.walk", String(localized: "Bewege dich"), String(localized: "Ein kurzer Spaziergang senkt den Drang deutlich.")),
+        ("drop.fill", String(localized: "Trink ein Glas Wasser"), String(localized: "Lenkt ab und gibt deinem Körper etwas zu tun.")),
+        ("timer", String(localized: "Warte 10 Minuten"), String(localized: "Verlangen kommt in Wellen – es geht vorbei."))
     ]
 
     var body: some View {

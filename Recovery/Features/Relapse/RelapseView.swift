@@ -53,7 +53,7 @@ struct RelapseView: View {
     private func form(_ viewModel: RelapseViewModel) -> some View {
         ScrollView {
             VStack(alignment: .leading, spacing: 0) {
-                Eyebrow("Ohne Wertung", color: AppColor.coral)
+                Eyebrow(String(localized: "Ohne Wertung"), color: AppColor.coral)
                 Text("Ein Rückfall ist kein Scheitern.")
                     .font(.system(size: 24, weight: .bold))
                     .foregroundStyle(AppColor.ink)
@@ -63,7 +63,7 @@ struct RelapseView: View {
                     .foregroundStyle(AppColor.muted)
                     .padding(.top, 8)
 
-                sectionTitle("Was war der Auslöser?")
+                sectionTitle(String(localized: "Was war der Auslöser?"))
                 FlowLayout {
                     ForEach(viewModel.suggestedTriggers, id: \.self) { name in
                         SelectableChip(title: name, isSelected: viewModel.isSelected(name),
@@ -93,7 +93,7 @@ struct RelapseView: View {
                 .overlay(RoundedRectangle(cornerRadius: 13, style: .continuous).stroke(AppColor.line))
                 .padding(.top, 9)
 
-                sectionTitle("Wie stark war das Verlangen?")
+                sectionTitle(String(localized: "Wie stark war das Verlangen?"))
                 HStack {
                     Slider(value: Binding(
                         get: { Double(viewModel.cravingIntensity) },
@@ -107,7 +107,7 @@ struct RelapseView: View {
                         .frame(width: 48)
                 }
 
-                sectionTitle("Wann ist es passiert?")
+                sectionTitle(String(localized: "Wann ist es passiert?"))
                 DatePicker("Zeitpunkt", selection: Binding(
                     get: { viewModel.date }, set: { viewModel.date = $0 }), in: ...Date.now)
                     .font(.footnote)
@@ -117,12 +117,12 @@ struct RelapseView: View {
                     .overlay(RoundedRectangle(cornerRadius: 14, style: .continuous).stroke(AppColor.line))
 
                 HStack {
-                    sectionTitle("Möchtest du etwas notieren?")
+                    sectionTitle(String(localized: "Möchtest du etwas notieren?"))
                     Spacer()
                     Text("Optional").font(.caption2).foregroundStyle(AppColor.muted).padding(.top, 18)
                 }
                 AppTextEditor(
-                    placeholder: "Was möchtest du dir merken?",
+                    placeholder: String(localized: "Was möchtest du dir merken?"),
                     text: Binding(get: { viewModel.note }, set: { viewModel.note = $0 }),
                     minHeight: 80
                 )

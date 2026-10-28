@@ -96,7 +96,7 @@ struct PaywallView: View {
                 .padding(.top, 12)
                 .padding(.bottom, 15)
                 .accessibilityHidden(true)
-            ProTag(text: "RECOVERY PREMIUM")
+            ProTag(text: String(localized: "RECOVERY PREMIUM"))
             Text("Mehr Unterstützung.\nMehr von deinem Fortschritt.")
                 .font(.system(size: 27, weight: .bold))
                 .multilineTextAlignment(.center)
@@ -170,8 +170,8 @@ struct PaywallView: View {
             .disabled(viewModel.isLoading || viewModel.selectedProductID == nil)
 
             Text(viewModel.hasAnyFreeTrial
-                 ? "Jederzeit kündbar. Die Testphase wird automatisch in ein Abo umgewandelt, wenn du nicht kündigst."
-                 : "Jederzeit kündbar.")
+                 ? String(localized: "Jederzeit kündbar. Die Testphase wird automatisch in ein Abo umgewandelt, wenn du nicht kündigst.")
+                 : String(localized: "Jederzeit kündbar."))
                 .font(.caption2)
                 .foregroundStyle(AppColor.muted)
                 .multilineTextAlignment(.center)
@@ -181,9 +181,9 @@ struct PaywallView: View {
     private func purchaseTitle(_ viewModel: PaywallViewModel) -> String {
         let selected = viewModel.displayProducts.first { $0.product.id == viewModel.selectedProductID }
         if let selected, selected.hasFreeTrial {
-            return "Kostenlos testen"
+            return String(localized: "Kostenlos testen")
         }
-        return "Premium freischalten"
+        return String(localized: "Premium freischalten")
     }
 
     // MARK: - Rechtliches

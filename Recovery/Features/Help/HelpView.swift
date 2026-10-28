@@ -47,8 +47,8 @@ struct HelpView: View {
                 disclaimerBanner(viewModel.disclaimer)
 
                 section(
-                    title: "In der App",
-                    subtitle: "Werkzeuge, die dir sofort helfen können.",
+                    title: String(localized: "In der App"),
+                    subtitle: String(localized: "Werkzeuge, die dir sofort helfen können."),
                     resources: viewModel.inAppResources,
                     onTap: viewModel.handleInAppTap
                 )
