@@ -109,7 +109,7 @@ private struct OptionalMatchedGeometry: ViewModifier {
 
     func body(content: Content) -> some View {
         if let namespace {
-            content.matchedGeometryEffect(id: id, in: namespace)
+            content.matchedGeometryEffect(id: id, in: namespace, isSource: false)
         } else {
             content
         }
