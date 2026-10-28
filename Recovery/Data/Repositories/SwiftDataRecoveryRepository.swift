@@ -469,10 +469,11 @@ final class SwiftDataRecoveryRepository: RecoveryRepository {
 
     /// Baut einen kurzen Journal-Text aus den Rückfall-Details.
     private func relapseJournalText(for relapse: Relapse) -> String {
-        var parts = ["Rückfall dokumentiert."]
-        parts.append("Verlangen: \(relapse.cravingIntensity)/10.")
+        var parts = [String(localized: "Rückfall dokumentiert.")]
+        parts.append(String(localized: "Verlangen: \(relapse.cravingIntensity)/10."))
         if !relapse.triggerNames.isEmpty {
-            parts.append("Trigger: \(relapse.triggerNames.joined(separator: ", ")).")
+            let triggers = relapse.triggerNames.joined(separator: ", ")
+            parts.append(String(localized: "Trigger: \(triggers)."))
         }
         if !relapse.note.isEmpty {
             parts.append(relapse.note)

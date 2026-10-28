@@ -26,8 +26,8 @@ struct TimeSavingsProvider: SavingsMetricProvider {
                 id: "time.reclaimed",
                 kind: .time,
                 value: totalHours,
-                unit: totalHours >= 1 ? "Std." : "Min.",
-                title: "Zurückgewonnen",
+                unit: totalHours >= 1 ? String(localized: "Std.") : String(localized: "Min."),
+                title: String(localized: "Zurückgewonnen"),
                 detail: comparison(totalHours: totalHours),
                 systemImage: "clock.arrow.circlepath"
             )
@@ -41,9 +41,9 @@ struct TimeSavingsProvider: SavingsMetricProvider {
                     id: "time.days",
                     kind: .time,
                     value: days,
-                    unit: "Tage",
-                    title: "Freie Zeit",
-                    detail: "Ganze Tage, die du zurückgewonnen hast",
+                    unit: String(localized: "Tage"),
+                    title: String(localized: "Freie Zeit"),
+                    detail: String(localized: "Ganze Tage, die du zurückgewonnen hast"),
                     systemImage: "calendar"
                 )
             )
@@ -58,13 +58,19 @@ struct TimeSavingsProvider: SavingsMetricProvider {
         let workdays = totalHours / workdayHours
         if workdays >= 1 {
             let rounded = Int(workdays.rounded())
-            return "Entspricht ca. \(rounded) Arbeitstag\(rounded == 1 ? "" : "en")"
+            if rounded == 1 {
+                return String(localized: "Entspricht ca. einem Arbeitstag")
+            }
+            return String(localized: "Entspricht ca. \(rounded) Arbeitstagen")
         }
         let movies = totalHours / 2.0
         if movies >= 1 {
             let rounded = Int(movies.rounded())
-            return "Entspricht ca. \(rounded) Film\(rounded == 1 ? "" : "en")"
+            if rounded == 1 {
+                return String(localized: "Entspricht ca. einem Film")
+            }
+            return String(localized: "Entspricht ca. \(rounded) Filmen")
         }
-        return "Wertvolle Zeit für dich"
+        return String(localized: "Wertvolle Zeit für dich")
     }
 }

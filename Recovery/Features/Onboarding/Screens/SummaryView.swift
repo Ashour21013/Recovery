@@ -14,8 +14,8 @@ struct SummaryView: View {
         ZStack {
             OnboardingScaffold(
                 step: .summary,
-                title: "Bereit für den Neustart?",
-                subtitle: "Hier ist dein persönlicher Plan. Du kannst alles später anpassen."
+                title: String(localized: "Bereit für den Neustart?"),
+                subtitle: String(localized: "Hier ist dein persönlicher Plan. Du kannst alles später anpassen.")
             ) {
                 VStack(spacing: AppSpacing.m) {
                     if let habit = draft.habitType {
@@ -29,12 +29,12 @@ struct SummaryView: View {
 
                     summaryCard(
                         icon: "flag.checkered",
-                        label: "Gewohnheit",
+                        label: String(localized: "Gewohnheit"),
                         value: draft.habitType?.title ?? "–"
                     )
                     summaryCard(
                         icon: "clock.arrow.circlepath",
-                        label: "Häufigkeit",
+                        label: String(localized: "Häufigkeit"),
                         value: draft.frequency?.title ?? "–"
                     )
                     reasonCard
@@ -100,7 +100,7 @@ struct SummaryView: View {
         }
         .figmaCard(radius: 18, padding: AppSpacing.m)
         .accessibilityElement(children: .ignore)
-        .accessibilityLabel("Dein Warum: \(draft.reason.isEmpty ? "nicht angegeben" : draft.reason)")
+        .accessibilityLabel("Dein Warum: \(draft.reason.isEmpty ? String(localized: "nicht angegeben") : draft.reason)")
     }
 
     /// Kurze Erfolgs-Animation als Übergang zum Dashboard.

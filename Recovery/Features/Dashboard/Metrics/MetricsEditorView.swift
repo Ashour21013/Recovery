@@ -75,17 +75,17 @@ struct MetricsEditorView: View {
     private func smokingSection(_ viewModel: MetricsEditorViewModel) -> some View {
         Section {
             LabeledField(
-                title: "Preis pro Schachtel (€)",
+                title: String(localized: "Preis pro Schachtel (€)"),
                 text: bindingUnitPrice(viewModel),
-                placeholder: "z. B. 8,00"
+                placeholder: String(localized: "z. B. 8,00")
             )
             LabeledField(
-                title: "Zigaretten pro Tag",
+                title: String(localized: "Zigaretten pro Tag"),
                 text: bindingUnitsPerDay(viewModel),
-                placeholder: "z. B. 15"
+                placeholder: String(localized: "z. B. 15")
             )
             LabeledField(
-                title: "Zigaretten pro Schachtel",
+                title: String(localized: "Zigaretten pro Schachtel"),
                 text: bindingUnitsPerPackage(viewModel),
                 placeholder: "20"
             )
@@ -102,9 +102,9 @@ struct MetricsEditorView: View {
     private func alcoholSection(_ viewModel: MetricsEditorViewModel) -> some View {
         Section {
             LabeledField(
-                title: "Ausgaben pro Woche (€)",
+                title: String(localized: "Ausgaben pro Woche (€)"),
                 text: bindingWeeklySpend(viewModel),
-                placeholder: "z. B. 40,00"
+                placeholder: String(localized: "z. B. 40,00")
             )
         } header: {
             Text("Ausgaben")
@@ -112,9 +112,9 @@ struct MetricsEditorView: View {
 
         Section {
             LabeledField(
-                title: "Getränke pro Woche",
+                title: String(localized: "Getränke pro Woche"),
                 text: bindingDrinksPerWeek(viewModel),
-                placeholder: "z. B. 14"
+                placeholder: String(localized: "z. B. 14")
             )
         } header: {
             Text("Optional")
@@ -131,7 +131,7 @@ struct MetricsEditorView: View {
             LabeledField(
                 title: weeklyLabel(viewModel),
                 text: bindingWeeklySpend(viewModel),
-                placeholder: "z. B. 30,00"
+                placeholder: String(localized: "z. B. 30,00")
             )
         } header: {
             Text("Deine Angaben")
@@ -141,13 +141,13 @@ struct MetricsEditorView: View {
     }
 
     private func weeklyLabel(_ viewModel: MetricsEditorViewModel) -> String {
-        viewModel.habitType == .gambling ? "Einsatz pro Woche (€)" : "Ausgaben pro Woche (€)"
+        viewModel.habitType == .gambling ? String(localized: "Einsatz pro Woche (€)") : String(localized: "Ausgaben pro Woche (€)")
     }
 
     private func weeklyFooter(_ viewModel: MetricsEditorViewModel) -> String {
         viewModel.habitType == .gambling
-            ? "Daraus zeigen wir, wie viel du nicht verspielt hast."
-            : "Optional – ohne Angabe zeigen wir dir deine Gesundheits-Meilensteine."
+            ? String(localized: "Daraus zeigen wir, wie viel du nicht verspielt hast.")
+            : String(localized: "Optional – ohne Angabe zeigen wir dir deine Gesundheits-Meilensteine.")
     }
 
     // MARK: - Zeit-Süchte
@@ -155,9 +155,9 @@ struct MetricsEditorView: View {
     private func timeSection(_ viewModel: MetricsEditorViewModel) -> some View {
         Section {
             LabeledField(
-                title: "Minuten pro Tag",
+                title: String(localized: "Minuten pro Tag"),
                 text: bindingMinutesPerDay(viewModel),
-                placeholder: "z. B. 90"
+                placeholder: String(localized: "z. B. 90")
             )
         } header: {
             Text("Verbrauchte Zeit")

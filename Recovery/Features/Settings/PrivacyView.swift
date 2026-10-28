@@ -7,14 +7,14 @@ import SwiftUI
 struct PrivacyView: View {
 
     private let points: [(icon: String, title: String, text: String)] = [
-        ("lock.fill", "Alles bleibt bei dir",
-         "Deine Einträge, Trigger und Fortschritte werden ausschließlich lokal auf deinem Gerät gespeichert."),
-        ("wifi.slash", "Keine Server, kein Tracking",
-         "Recovery sendet keine Daten an externe Server und nutzt keine Analyse- oder Tracking-Dienste."),
-        ("square.and.arrow.up", "Du hast die Kontrolle",
-         "Du kannst deine Daten jederzeit als Datei exportieren oder unwiderruflich löschen."),
-        ("hand.raised.fill", "Vertraulich",
-         "Niemand außer dir hat Zugriff auf deine sensiblen Informationen.")
+        ("lock.fill", String(localized: "Alles bleibt bei dir"),
+         String(localized: "Deine Einträge, Trigger und Fortschritte werden ausschließlich lokal auf deinem Gerät gespeichert.")),
+        ("wifi.slash", String(localized: "Keine Server, kein Tracking"),
+         String(localized: "Recovery sendet keine Daten an externe Server und nutzt keine Analyse- oder Tracking-Dienste.")),
+        ("square.and.arrow.up", String(localized: "Du hast die Kontrolle"),
+         String(localized: "Du kannst deine Daten jederzeit als Datei exportieren oder unwiderruflich löschen.")),
+        ("hand.raised.fill", String(localized: "Vertraulich"),
+         String(localized: "Niemand außer dir hat Zugriff auf deine sensiblen Informationen."))
     ]
 
     var body: some View {

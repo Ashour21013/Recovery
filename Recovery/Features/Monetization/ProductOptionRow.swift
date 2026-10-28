@@ -61,7 +61,7 @@ struct ProductOptionRow: View {
     private var accessibilityLabel: String {
         var parts = ["\(info.kind.displayName), \(info.price) \(info.periodText)"]
         if let trial = info.trialText { parts.append(trial) }
-        if info.badgeText != nil { parts.append("Empfohlen") }
+        if info.badgeText != nil { parts.append(String(localized: "Empfohlen")) }
         return parts.joined(separator: ". ")
     }
 }

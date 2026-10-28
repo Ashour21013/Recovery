@@ -13,10 +13,10 @@ enum WidgetQuoteSource: String, Codable, CaseIterable {
 
     var title: String {
         switch self {
-        case .quotes: "Motivationszitate"
-        case .science: "Wissenschaft"
-        case .bible: "Bibelverse"
-        case .mixed: "Gemischt"
+        case .quotes: String(localized: "Motivationszitate")
+        case .science: String(localized: "Wissenschaft")
+        case .bible: String(localized: "Bibelverse")
+        case .mixed: String(localized: "Gemischt")
         }
     }
 
@@ -159,13 +159,13 @@ struct WidgetSnapshot: Codable, Equatable {
     static let placeholder = WidgetSnapshot(
         currentStreakDays: 12,
         longestStreakDays: 30,
-        addictionTitle: "Rauchen",
+        addictionTitle: String(localized: "Rauchen"),
         addictionSystemImage: "smoke",
         startDate: Calendar.current.date(byAdding: .day, value: -12, to: .now) ?? .now,
         isPremium: true,
         quotes: [
-            WidgetQuote(id: "ph.1", text: "Du bist stärker als deine Gewohnheit.", author: nil),
-            WidgetQuote(id: "ph.2", text: "Jeder Tag ohne Rückfall ist ein Sieg über dich selbst.", author: nil)
+            WidgetQuote(id: "ph.1", text: String(localized: "Du bist stärker als deine Gewohnheit."), author: nil),
+            WidgetQuote(id: "ph.2", text: String(localized: "Jeder Tag ohne Rückfall ist ein Sieg über dich selbst."), author: nil)
         ]
     )
     /// Kopie mit geändertem Premium-Status (für schnelle Entitlement-Updates,

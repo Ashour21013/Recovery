@@ -14,8 +14,8 @@ struct RelapseHistoryChart: View {
 
     var body: some View {
         ChartCard(
-            title: "Rückfälle über Zeit",
-            subtitle: "Pro Woche",
+            title: String(localized: "Rückfälle über Zeit"),
+            subtitle: String(localized: "Pro Woche"),
             systemImage: "chart.bar.fill"
         ) {
             if hasData {
@@ -32,7 +32,7 @@ struct RelapseHistoryChart: View {
                         .accessibilityHidden(true)
                     StatEmptyState(
                         systemImage: "checkmark.seal.fill",
-                        message: "Noch keine Rückfälle erfasst – bleib dran!"
+                        message: String(localized: "Noch keine Rückfälle erfasst – bleib dran!")
                     )
                 }
             }

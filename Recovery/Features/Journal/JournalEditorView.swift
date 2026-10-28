@@ -23,11 +23,11 @@ struct JournalEditorView: View {
         NavigationStack {
             ScrollView {
                 VStack(alignment: .leading, spacing: AppSpacing.l) {
-                    section(title: "Wie fühlst du dich heute?") {
+                    section(title: String(localized: "Wie fühlst du dich heute?")) {
                         MoodPicker(selection: $mood)
                     }
 
-                    section(title: "Gab es einen Trigger?") {
+                    section(title: String(localized: "Gab es einen Trigger?")) {
                         VStack(alignment: .leading, spacing: AppSpacing.s) {
                             if !knownTriggers.isEmpty {
                                 FlowLayout {
@@ -46,9 +46,9 @@ struct JournalEditorView: View {
                         }
                     }
 
-                    section(title: "Notizen") {
+                    section(title: String(localized: "Notizen")) {
                         AppTextEditor(
-                            placeholder: "Was möchtest du festhalten?",
+                            placeholder: String(localized: "Was möchtest du festhalten?"),
                             text: $notes,
                             minHeight: 160
                         )

@@ -4,7 +4,7 @@ import SwiftUI
 /// großer Titel, Text und optionaler Inhalt – auf dunklem Hintergrund.
 struct CravingMessageStepView<Content: View>: View {
     let systemImage: String
-    var eyebrow: String = "DU BIST NICHT ALLEIN"
+    var eyebrow: String = String(localized: "DU BIST NICHT ALLEIN")
     let title: String
     let message: String
     var isSuccess: Bool = false
@@ -55,7 +55,7 @@ struct CravingMessageStepView<Content: View>: View {
 }
 
 extension CravingMessageStepView where Content == EmptyView {
-    init(systemImage: String, eyebrow: String = "DU BIST NICHT ALLEIN",
+    init(systemImage: String, eyebrow: String = String(localized: "DU BIST NICHT ALLEIN"),
          title: String, message: String, isSuccess: Bool = false) {
         self.init(systemImage: systemImage, eyebrow: eyebrow, title: title,
                   message: message, isSuccess: isSuccess) { EmptyView() }

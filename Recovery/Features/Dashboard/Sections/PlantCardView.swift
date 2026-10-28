@@ -19,14 +19,25 @@ struct PlantCardView: View {
 
     private var title: String {
         switch stage {
-        case 0: "Ein neuer Anfang"
-        case 1, 2: "Du wächst jeden Tag"
-        default: "Deine Stärke wird sichtbar"
+        case 0: String(localized: "Ein neuer Anfang")
+        case 1, 2: String(localized: "Du wächst jeden Tag")
+        default: String(localized: "Deine Stärke wird sichtbar")
         }
     }
 
     private var stageName: String {
-        ["Samen", "Keimling", "Junge Pflanze", "Starke Pflanze", "In voller Blüte"][stage]
+        [String(localized: "Samen"), String(localized: "Keimling"), String(localized: "Junge Pflanze"),
+         String(localized: "Starke Pflanze"), String(localized: "In voller Blüte")][stage]
+    }
+
+    private var growthText: String {
+        if stage == 0 {
+            return String(localized: "Auch der kleinste Samen trägt einen Neuanfang in sich.")
+        } else if days == 1 {
+            return String(localized: "Deine Pflanze wächst seit 1 Tag mit dir.")
+        } else {
+            return String(localized: "Deine Pflanze wächst seit \(days) Tagen mit dir.")
+        }
     }
 
     var body: some View {
@@ -39,9 +50,7 @@ struct PlantCardView: View {
                 Text(title)
                     .font(.title3.weight(.bold))
                     .foregroundStyle(AppColor.ink)
-                Text(stage == 0
-                     ? "Auch der kleinste Samen trägt einen Neuanfang in sich."
-                     : "Deine Pflanze wächst seit \(days) \(days == 1 ? "Tag" : "Tagen") mit dir.")
+                Text(growthText)
                     .font(.caption)
                     .foregroundStyle(AppColor.muted)
                 Spacer(minLength: 8)
@@ -75,7 +84,7 @@ struct PlantCardView: View {
         .overlay(RoundedRectangle(cornerRadius: 24, style: .continuous)
             .stroke(Color(light: 0xCDE5DC, dark: 0x285148), lineWidth: 1))
         .accessibilityElement(children: .ignore)
-        .accessibilityLabel("Recovery-Garten: \(stageName), Stufe \(stage + 1) von 5, \(days) Tage")
+        .accessibilityLabel(String(localized: "Recovery-Garten: \(stageName), Stufe \(stage + 1) von 5, \(days) Tage"))
     }
 }
 

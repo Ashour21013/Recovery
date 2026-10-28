@@ -10,9 +10,9 @@ enum ReminderTime: String, CaseIterable, Identifiable, Codable {
 
     var title: String {
         switch self {
-        case .morning: "Morgens"
-        case .noon: "Mittags"
-        case .evening: "Abends"
+        case .morning: String(localized: "Morgens")
+        case .noon: String(localized: "Mittags")
+        case .evening: String(localized: "Abends")
         }
     }
 

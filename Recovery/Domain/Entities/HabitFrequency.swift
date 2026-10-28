@@ -12,11 +12,11 @@ enum HabitFrequency: String, CaseIterable, Identifiable, Hashable {
 
     var title: String {
         switch self {
-        case .multipleTimesADay: "Mehrmals täglich"
-        case .daily: "Täglich"
-        case .fewTimesAWeek: "Mehrmals pro Woche"
-        case .weekly: "Wöchentlich"
-        case .occasionally: "Gelegentlich"
+        case .multipleTimesADay: String(localized: "Mehrmals täglich")
+        case .daily: String(localized: "Täglich")
+        case .fewTimesAWeek: String(localized: "Mehrmals pro Woche")
+        case .weekly: String(localized: "Wöchentlich")
+        case .occasionally: String(localized: "Gelegentlich")
         }
     }
 

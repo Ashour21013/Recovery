@@ -20,8 +20,8 @@ enum SubscriptionProduct: String, CaseIterable, Identifiable {
     /// Kurzer Anzeigename.
     var displayName: String {
         switch self {
-        case .monthly: return "Monatlich"
-        case .yearly: return "Jährlich"
+        case .monthly: return String(localized: "Monatlich")
+        case .yearly: return String(localized: "Jährlich")
         case .lifetime: return "Lifetime"
         }
     }

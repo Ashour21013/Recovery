@@ -18,11 +18,11 @@ struct Affirmation: Identifiable, Equatable {
 extension Affirmation {
     /// Erweiterbarer Katalog möglicher Affirmationen.
     static let catalog: [Affirmation] = [
-        Affirmation(text: "Ich entscheide mich bewusst für meine Gesundheit."),
-        Affirmation(text: "Dieses Verlangen ist vorübergehend – ich bleibe stark."),
-        Affirmation(text: "Ich bin stolz auf jeden Tag, den ich durchhalte."),
-        Affirmation(text: "Ich habe die Kontrolle über meine Entscheidungen."),
-        Affirmation(text: "Jeder Moment des Widerstands macht mich freier.")
+        Affirmation(text: String(localized: "Ich entscheide mich bewusst für meine Gesundheit.")),
+        Affirmation(text: String(localized: "Dieses Verlangen ist vorübergehend – ich bleibe stark.")),
+        Affirmation(text: String(localized: "Ich bin stolz auf jeden Tag, den ich durchhalte.")),
+        Affirmation(text: String(localized: "Ich habe die Kontrolle über meine Entscheidungen.")),
+        Affirmation(text: String(localized: "Jeder Moment des Widerstands macht mich freier."))
     ]
 
     /// Wählt zufällig eine Affirmation aus dem Katalog.

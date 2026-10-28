@@ -213,7 +213,7 @@ struct DashboardView: View {
                 }
 
                 VStack(spacing: 10) {
-                    Eyebrow("Wenn es gerade schwer ist")
+                    Eyebrow(String(localized: "Wenn es gerade schwer ist"))
                     CravingButton(action: viewModel.handleCravingTapped)
                     ContentBlockingCardView()
                     RelapseButton(action: { isShowingRelapse = true })

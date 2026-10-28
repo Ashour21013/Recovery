@@ -37,8 +37,8 @@ struct DailyGoalCardView: View {
     }
 
     private var accessibilityDescription: String {
-        let status = goal.isCompleted ? " Erledigt." : ""
-        return "\(goal.title): \(goal.completedTasks) von \(goal.totalTasks) Aufgaben abgeschlossen.\(status)"
+        let completed = String(localized: "\(goal.title): \(goal.completedTasks) von \(goal.totalTasks) Aufgaben abgeschlossen.")
+        return goal.isCompleted ? completed + String(localized: " Erledigt.") : completed
     }
 }
 

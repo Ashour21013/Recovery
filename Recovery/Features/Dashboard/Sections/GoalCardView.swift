@@ -11,8 +11,8 @@ struct GoalCardView: View {
                 IconTile(systemImage: goalProgress?.goal.systemImage ?? "target",
                          foreground: AppColor.coral, background: AppColor.coralSoft)
                 VStack(alignment: .leading, spacing: 3) {
-                    Eyebrow("Dein Ziel")
-                    Text(goalProgress.map { "\($0.goal.title) clean" } ?? "Setze dir ein Ziel")
+                    Eyebrow(String(localized: "Dein Ziel"))
+                    Text(goalProgress.map { "\($0.goal.title) clean" } ?? String(localized: "Setze dir ein Ziel"))
                         .font(.subheadline.weight(.bold))
                         .foregroundStyle(AppColor.ink)
                 }
@@ -33,7 +33,7 @@ struct GoalCardView: View {
                             .font(.caption)
                             .foregroundStyle(AppColor.muted)
                         Spacer()
-                        Text(progress.isAchieved ? "Erreicht 🎉" : "Noch \(progress.remainingDays) Tage")
+                        Text(progress.isAchieved ? String(localized: "Erreicht 🎉") : String(localized: "Noch \(progress.remainingDays) Tage"))
                             .font(.caption.weight(.semibold))
                             .foregroundStyle(progress.isAchieved ? AppColor.green : AppColor.muted)
                     }

@@ -50,13 +50,13 @@ struct CravingModeView: View {
         let total = CravingStep.allCases.count
         return VStack(spacing: 17) {
             HStack {
-                glassCircleButton("xmark", label: "Schließen") { dismiss() }
+                glassCircleButton("xmark", label: String(localized: "Schließen")) { dismiss() }
                 Spacer()
                 Text("\(viewModel.currentIndex + 1) von \(total)")
                     .font(.caption)
                     .foregroundStyle(.white.opacity(0.65))
                 Spacer()
-                glassCircleButton("lifepreserver", label: "Hilfe & Ressourcen") { isShowingHelp = true }
+                glassCircleButton("lifepreserver", label: String(localized: "Hilfe & Ressourcen")) { isShowingHelp = true }
             }
             HStack(spacing: 5) {
                 ForEach(0..<total, id: \.self) { index in
@@ -87,8 +87,8 @@ struct CravingModeView: View {
         case .welcome:
             CravingMessageStepView(
                 systemImage: "leaf.fill",
-                title: "Du schaffst das.",
-                message: "Lass uns diesen Moment gemeinsam durchstehen. Nur ein Schritt nach dem anderen."
+                title: String(localized: "Du schaffst das."),
+                message: String(localized: "Lass uns diesen Moment gemeinsam durchstehen. Nur ein Schritt nach dem anderen.")
             )
         case .breathing:
             BreathingStepView(
@@ -100,27 +100,27 @@ struct CravingModeView: View {
         case .motivation:
             CravingMessageStepView(
                 systemImage: "water.waves",
-                eyebrow: "ERINNERE DICH",
-                title: "Es ist nur eine Welle.",
-                message: "Das Verlangen kommt, erreicht seinen Höhepunkt – und geht wieder vorbei."
+                eyebrow: String(localized: "ERINNERE DICH"),
+                title: String(localized: "Es ist nur eine Welle."),
+                message: String(localized: "Das Verlangen kommt, erreicht seinen Höhepunkt – und geht wieder vorbei.")
             )
         case .affirmation:
             CravingMessageStepView(
                 systemImage: "sparkles",
-                eyebrow: "SPRICH ES LAUT AUS",
-                title: "Ich bin stärker als dieser Moment.",
-                message: "Du musst dem Gedanken nicht folgen."
+                eyebrow: String(localized: "SPRICH ES LAUT AUS"),
+                title: String(localized: "Ich bin stärker als dieser Moment."),
+                message: String(localized: "Du musst dem Gedanken nicht folgen.")
             ) {
                 CravingQuoteBox(text: viewModel.affirmation.text)
             }
         case .reason:
             CravingMessageStepView(
                 systemImage: "heart.fill",
-                eyebrow: "DEIN WARUM",
-                title: "Darum machst du das.",
+                eyebrow: String(localized: "DEIN WARUM"),
+                title: String(localized: "Darum machst du das."),
                 message: viewModel.reason.isEmpty
-                    ? "Erinnere dich an den Grund, warum du diese Reise begonnen hast."
-                    : "Erinnere dich an deinen persönlichen Grund:"
+                    ? String(localized: "Erinnere dich an den Grund, warum du diese Reise begonnen hast.")
+                    : String(localized: "Erinnere dich an deinen persönlichen Grund:")
             ) {
                 if !viewModel.reason.isEmpty {
                     CravingQuoteBox(text: viewModel.reason)
@@ -129,16 +129,16 @@ struct CravingModeView: View {
         case .task:
             CravingMessageStepView(
                 systemImage: viewModel.task.systemImage,
-                eyebrow: "EINE KLEINE AUFGABE",
+                eyebrow: String(localized: "EINE KLEINE AUFGABE"),
                 title: viewModel.task.title,
-                message: "Lenke Körper und Kopf für ein paar Minuten ab."
+                message: String(localized: "Lenke Körper und Kopf für ein paar Minuten ab.")
             )
         case .finish:
             CravingMessageStepView(
                 systemImage: "checkmark",
-                eyebrow: "GESCHAFFT",
-                title: "Verlangen überstanden!",
-                message: "Stark. Du hast dich heute für dich entschieden. Das zählt.",
+                eyebrow: String(localized: "GESCHAFFT"),
+                title: String(localized: "Verlangen überstanden!"),
+                message: String(localized: "Stark. Du hast dich heute für dich entschieden. Das zählt."),
                 isSuccess: true
             )
         }
@@ -167,7 +167,7 @@ struct CravingModeView: View {
                 }
             } label: {
                 HStack(spacing: 7) {
-                    Text(viewModel.isLastStep ? "Zurück zu Heute" : "Weiter")
+                    Text(viewModel.isLastStep ? String(localized: "Zurück zu Heute") : String(localized: "Weiter"))
                     if !viewModel.isLastStep { Image(systemName: "chevron.right") }
                 }
                 .font(.body.weight(.bold))

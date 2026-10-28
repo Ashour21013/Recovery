@@ -14,12 +14,12 @@ enum HabitType: String, CaseIterable, Identifiable, Hashable {
 
     var title: String {
         switch self {
-        case .smoking: "Rauchen"
-        case .pornography: "Pornografie"
-        case .alcohol: "Alkohol"
-        case .gambling: "Glücksspiel"
-        case .sugar: "Zucker"
-        case .socialMedia: "Social Media"
+        case .smoking: String(localized: "Rauchen")
+        case .pornography: String(localized: "Pornografie")
+        case .alcohol: String(localized: "Alkohol")
+        case .gambling: String(localized: "Glücksspiel")
+        case .sugar: String(localized: "Zucker")
+        case .socialMedia: String(localized: "Social Media")
         }
     }
 
@@ -49,12 +49,12 @@ enum HabitType: String, CaseIterable, Identifiable, Hashable {
     /// Kurze, ermutigende Beschreibung der jeweiligen Gewohnheit.
     var subtitle: String {
         switch self {
-        case .smoking: "Frei atmen, länger leben"
-        case .pornography: "Echte Verbindung statt Bildschirm"
-        case .alcohol: "Klarer Kopf, mehr Energie"
-        case .gambling: "Kontrolle zurückgewinnen"
-        case .sugar: "Mehr Energie, weniger Heißhunger"
-        case .socialMedia: "Präsenter im echten Leben"
+        case .smoking: String(localized: "Frei atmen, länger leben")
+        case .pornography: String(localized: "Echte Verbindung statt Bildschirm")
+        case .alcohol: String(localized: "Klarer Kopf, mehr Energie")
+        case .gambling: String(localized: "Kontrolle zurückgewinnen")
+        case .sugar: String(localized: "Mehr Energie, weniger Heißhunger")
+        case .socialMedia: String(localized: "Präsenter im echten Leben")
         }
     }
 }

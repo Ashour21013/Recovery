@@ -30,7 +30,7 @@ struct AchievementBadge: View {
                 .multilineTextAlignment(.center)
                 .lineLimit(2)
                 .padding(.top, 10)
-            Text(achievement.isUnlocked ? "Freigeschaltet" : "In Arbeit")
+            Text(achievement.isUnlocked ? String(localized: "Freigeschaltet") : String(localized: "In Arbeit"))
                 .font(.caption2)
                 .foregroundStyle(AppColor.muted)
                 .padding(.top, 2)

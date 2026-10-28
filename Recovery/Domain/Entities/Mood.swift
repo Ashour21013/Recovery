@@ -13,11 +13,11 @@ enum Mood: Int, CaseIterable, Identifiable, Hashable {
 
     var title: String {
         switch self {
-        case .veryBad: "Sehr schlecht"
-        case .bad: "Schlecht"
-        case .neutral: "Neutral"
-        case .good: "Gut"
-        case .veryGood: "Sehr gut"
+        case .veryBad: String(localized: "Sehr schlecht")
+        case .bad: String(localized: "Schlecht")
+        case .neutral: String(localized: "Neutral")
+        case .good: String(localized: "Gut")
+        case .veryGood: String(localized: "Sehr gut")
         }
     }
 

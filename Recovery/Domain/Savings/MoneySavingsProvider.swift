@@ -45,8 +45,8 @@ struct MoneySavingsProvider: SavingsMetricProvider {
                     kind: .quantity,
                     value: avoided,
                     unit: habitType.consumptionUnitName,
-                    title: "Vermieden",
-                    detail: "Nicht konsumiert seit dem Start",
+                    title: String(localized: "Vermieden"),
+                    detail: String(localized: "Nicht konsumiert seit dem Start"),
                     systemImage: "shield.lefthalf.filled"
                 )
             )
@@ -96,11 +96,12 @@ struct MoneySavingsProvider: SavingsMetricProvider {
     // MARK: - Texte
 
     private func moneyTitle(for habitType: HabitType) -> String {
-        habitType == .gambling ? "Nicht verspielt" : "Gespart"
+        habitType == .gambling ? String(localized: "Nicht verspielt") : String(localized: "Gespart")
     }
 
     private func monthlyDetail(perDay: Double) -> String {
         let monthly = Decimal(perDay * 30)
-        return "Etwa \(monthly.formatted(.currency(code: "EUR"))) pro Monat"
+        let formatted = monthly.formatted(.currency(code: "EUR"))
+        return String(localized: "Etwa \(formatted) pro Monat")
     }
 }

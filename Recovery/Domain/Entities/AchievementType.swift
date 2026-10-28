@@ -20,31 +20,31 @@ enum AchievementType: String, CaseIterable, Identifiable, Codable {
 
     var title: String {
         switch self {
-        case .first24Hours: "Erste 24 Stunden"
-        case .threeDays: "3 Tage"
-        case .sevenDays: "7 Tage"
-        case .thirtyDays: "30 Tage"
-        case .ninetyDays: "90 Tage"
-        case .oneYear: "365 Tage"
-        case .firstJournal: "Erstes Journal"
-        case .tenJournals: "10 Journale"
-        case .firstCraving: "Craving gemeistert"
-        case .firstWeekNoRelapse: "Woche ohne Rückfall"
+        case .first24Hours: String(localized: "Erste 24 Stunden")
+        case .threeDays: String(localized: "3 Tage")
+        case .sevenDays: String(localized: "7 Tage")
+        case .thirtyDays: String(localized: "30 Tage")
+        case .ninetyDays: String(localized: "90 Tage")
+        case .oneYear: String(localized: "365 Tage")
+        case .firstJournal: String(localized: "Erstes Journal")
+        case .tenJournals: String(localized: "10 Journale")
+        case .firstCraving: String(localized: "Craving gemeistert")
+        case .firstWeekNoRelapse: String(localized: "Woche ohne Rückfall")
         }
     }
 
     var details: String {
         switch self {
-        case .first24Hours: "Die ersten 24 Stunden geschafft."
-        case .threeDays: "Drei Tage am Stück clean."
-        case .sevenDays: "Eine ganze Woche durchgehalten."
-        case .thirtyDays: "30 Tage – ein starker Monat."
-        case .ninetyDays: "90 Tage voller Disziplin."
-        case .oneYear: "Ein ganzes Jahr. Unglaublich!"
-        case .firstJournal: "Deinen ersten Journal-Eintrag geschrieben."
-        case .tenJournals: "Zehn Journal-Einträge festgehalten."
-        case .firstCraving: "Ein Verlangen erfolgreich überstanden."
-        case .firstWeekNoRelapse: "Eine Woche ohne einen Rückfall."
+        case .first24Hours: String(localized: "Die ersten 24 Stunden geschafft.")
+        case .threeDays: String(localized: "Drei Tage am Stück clean.")
+        case .sevenDays: String(localized: "Eine ganze Woche durchgehalten.")
+        case .thirtyDays: String(localized: "30 Tage – ein starker Monat.")
+        case .ninetyDays: String(localized: "90 Tage voller Disziplin.")
+        case .oneYear: String(localized: "Ein ganzes Jahr. Unglaublich!")
+        case .firstJournal: String(localized: "Deinen ersten Journal-Eintrag geschrieben.")
+        case .tenJournals: String(localized: "Zehn Journal-Einträge festgehalten.")
+        case .firstCraving: String(localized: "Ein Verlangen erfolgreich überstanden.")
+        case .firstWeekNoRelapse: String(localized: "Eine Woche ohne einen Rückfall.")
         }
     }
 

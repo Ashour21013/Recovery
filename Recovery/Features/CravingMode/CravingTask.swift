@@ -19,11 +19,11 @@ struct CravingTask: Identifiable, Equatable {
 extension CravingTask {
     /// Erweiterbarer Katalog möglicher Aufgaben.
     static let catalog: [CravingTask] = [
-        CravingTask(title: "20 Kniebeugen", systemImage: "figure.strengthtraining.functional"),
-        CravingTask(title: "5 Minuten spazieren", systemImage: "figure.walk"),
-        CravingTask(title: "10 Liegestütze", systemImage: "figure.core.training"),
-        CravingTask(title: "Ein großes Glas Wasser trinken", systemImage: "drop.fill"),
-        CravingTask(title: "1 Minute Dehnen", systemImage: "figure.flexibility")
+        CravingTask(title: String(localized: "20 Kniebeugen"), systemImage: "figure.strengthtraining.functional"),
+        CravingTask(title: String(localized: "5 Minuten spazieren"), systemImage: "figure.walk"),
+        CravingTask(title: String(localized: "10 Liegestütze"), systemImage: "figure.core.training"),
+        CravingTask(title: String(localized: "Ein großes Glas Wasser trinken"), systemImage: "drop.fill"),
+        CravingTask(title: String(localized: "1 Minute Dehnen"), systemImage: "figure.flexibility")
     ]
 
     /// Wählt zufällig eine Aufgabe aus dem Katalog.

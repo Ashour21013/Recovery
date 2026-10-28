@@ -42,7 +42,7 @@ final class PlanEditorViewModel: ViewModel {
         do {
             tasks = try await repository.fetchPlanTasks()
         } catch {
-            errorMessage = "Der Plan konnte nicht geladen werden."
+            errorMessage = String(localized: "Der Plan konnte nicht geladen werden.")
         }
     }
 
@@ -58,7 +58,7 @@ final class PlanEditorViewModel: ViewModel {
         let subtitle = newSubtitle.trimmingCharacters(in: .whitespacesAndNewlines)
         let task = PlanTask.custom(
             title: title,
-            subtitle: subtitle.isEmpty ? "Eigene Übung" : subtitle,
+            subtitle: subtitle.isEmpty ? String(localized: "Eigene Übung") : subtitle,
             systemImage: "star.fill"
         )
         await add(task)
@@ -72,7 +72,7 @@ final class PlanEditorViewModel: ViewModel {
             try await repository.removePlanTask(id: task.id)
             await reload()
         } catch {
-            errorMessage = "Die Aufgabe konnte nicht entfernt werden."
+            errorMessage = String(localized: "Die Aufgabe konnte nicht entfernt werden.")
         }
     }
 
@@ -90,7 +90,7 @@ final class PlanEditorViewModel: ViewModel {
             try await repository.addPlanTask(task)
             await reload()
         } catch {
-            errorMessage = "Die Aufgabe konnte nicht hinzugefügt werden."
+            errorMessage = String(localized: "Die Aufgabe konnte nicht hinzugefügt werden.")
         }
     }
 }

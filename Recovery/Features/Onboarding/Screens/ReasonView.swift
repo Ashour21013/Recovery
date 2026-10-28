@@ -9,18 +9,18 @@ struct ReasonView: View {
     let onContinue: () -> Void
 
     private let suggestions = [
-        "Für meine Gesundheit",
-        "Für meine Familie",
-        "Um Geld zu sparen",
-        "Um mich freier zu fühlen",
-        "Für mehr Selbstachtung"
+        String(localized: "Für meine Gesundheit"),
+        String(localized: "Für meine Familie"),
+        String(localized: "Um Geld zu sparen"),
+        String(localized: "Um mich freier zu fühlen"),
+        String(localized: "Für mehr Selbstachtung")
     ]
 
     var body: some View {
         OnboardingScaffold(
             step: .reason,
-            title: "Was ist dein Warum?",
-            subtitle: "Deine persönliche Motivation gibt dir Kraft in schwierigen Momenten."
+            title: String(localized: "Was ist dein Warum?"),
+            subtitle: String(localized: "Deine persönliche Motivation gibt dir Kraft in schwierigen Momenten.")
         ) {
             VStack(alignment: .leading, spacing: AppSpacing.m) {
                 HStack {
@@ -30,7 +30,7 @@ struct ReasonView: View {
                     Spacer()
                 }
 
-                AppTextEditor(placeholder: "Ich möchte aufhören, weil…", text: $reason)
+                AppTextEditor(placeholder: String(localized: "Ich möchte aufhören, weil…"), text: $reason)
 
                 Text("Vorschläge")
                     .font(AppFont.caption.weight(.semibold))

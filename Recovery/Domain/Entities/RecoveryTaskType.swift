@@ -20,31 +20,31 @@ enum RecoveryTaskType: String, CaseIterable, Identifiable, Codable, Hashable {
 
     var title: String {
         switch self {
-        case .journal: "Journal schreiben"
-        case .meditation: "2 Minuten Meditation"
-        case .motivation: "Motivation lesen"
-        case .walk: "Kurzer Spaziergang"
-        case .sport: "Sport"
-        case .water: "Genug Wasser trinken"
-        case .gratitude: "Dankbarkeit notieren"
-        case .breathing: "Atemübung"
-        case .reading: "10 Minuten lesen"
-        case .earlySleep: "Früh schlafen gehen"
+        case .journal: String(localized: "Journal schreiben")
+        case .meditation: String(localized: "2 Minuten Meditation")
+        case .motivation: String(localized: "Motivation lesen")
+        case .walk: String(localized: "Kurzer Spaziergang")
+        case .sport: String(localized: "Sport")
+        case .water: String(localized: "Genug Wasser trinken")
+        case .gratitude: String(localized: "Dankbarkeit notieren")
+        case .breathing: String(localized: "Atemübung")
+        case .reading: String(localized: "10 Minuten lesen")
+        case .earlySleep: String(localized: "Früh schlafen gehen")
         }
     }
 
     var subtitle: String {
         switch self {
-        case .journal: "Halte deine Gedanken und Stimmung fest"
-        case .meditation: "Komm zur Ruhe und atme bewusst"
-        case .motivation: "Erinnere dich an dein Warum"
-        case .walk: "Bewegung an der frischen Luft"
-        case .sport: "Bring deinen Körper in Schwung"
-        case .water: "Bleib hydriert für mehr Energie"
-        case .gratitude: "Drei Dinge, für die du dankbar bist"
-        case .breathing: "Beruhige dein Nervensystem"
-        case .reading: "Gönn deinem Kopf eine Pause"
-        case .earlySleep: "Erholsamer Schlaf stärkt dich"
+        case .journal: String(localized: "Halte deine Gedanken und Stimmung fest")
+        case .meditation: String(localized: "Komm zur Ruhe und atme bewusst")
+        case .motivation: String(localized: "Erinnere dich an dein Warum")
+        case .walk: String(localized: "Bewegung an der frischen Luft")
+        case .sport: String(localized: "Bring deinen Körper in Schwung")
+        case .water: String(localized: "Bleib hydriert für mehr Energie")
+        case .gratitude: String(localized: "Drei Dinge, für die du dankbar bist")
+        case .breathing: String(localized: "Beruhige dein Nervensystem")
+        case .reading: String(localized: "Gönn deinem Kopf eine Pause")
+        case .earlySleep: String(localized: "Erholsamer Schlaf stärkt dich")
         }
     }
 

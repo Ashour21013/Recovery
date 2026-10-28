@@ -34,7 +34,7 @@ struct DisclaimerView: View {
 
             Spacer()
 
-            PrimaryButton(title: "Verstanden", action: onAccept)
+            PrimaryButton(title: String(localized: "Verstanden"), action: onAccept)
         }
         .padding(AppSpacing.l)
         .opacity(appeared ? 1 : 0)

@@ -18,7 +18,7 @@ struct MixedMotivationProvider: MotivationProvider {
 
     func item(for context: MotivationContext, excluding excludedIds: Set<String>) -> MotivationItem {
         guard !providers.isEmpty else {
-            return MotivationItem(id: "mixed.fallback", text: "Bleib stark!", source: nil, origin: .mixed)
+            return MotivationItem(id: "mixed.fallback", text: String(localized: "Bleib stark!"), source: nil, origin: .mixed)
         }
         // Kontextabhängige, aber wechselnde Auswahl über den Tagesindex.
         let dayIndex = Calendar.current.ordinality(of: .day, in: .era, for: .now) ?? 0

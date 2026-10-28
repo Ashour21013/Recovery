@@ -6,15 +6,15 @@ import Foundation
 /// denselben Wortlaut verwenden.
 enum DisclaimerText {
     /// Kurzform für den Hilfe-Screen und wiederkehrende Hinweise.
-    static let short = "Diese App ersetzt keine medizinische oder therapeutische Behandlung. Bei akuten Krisen wende dich bitte an professionelle Hilfe."
+    static let short = String(localized: "Diese App ersetzt keine medizinische oder therapeutische Behandlung. Bei akuten Krisen wende dich bitte an professionelle Hilfe.")
 
     /// Ausführlichere Fassung für den erstmaligen Bestätigungs-Screen.
-    static let long = """
+    static let long = String(localized: """
     Recovery unterstützt dich auf deinem Weg mit Motivation, Struktur und \
     Selbsthilfe-Werkzeugen. Die App ist jedoch kein Medizinprodukt und stellt \
     keine Diagnose, Behandlung oder Therapie dar.
 
     Diese App ersetzt keine medizinische oder therapeutische Behandlung. \
     Bei akuten Krisen wende dich bitte an professionelle Hilfe.
-    """
+    """)
 }

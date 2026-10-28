@@ -87,7 +87,7 @@ final class PaywallViewModel: ViewModel {
         if isPremium {
             didCompletePurchase = true
         } else {
-            errorMessage = "Es wurden keine früheren Käufe gefunden."
+            errorMessage = String(localized: "Es wurden keine früheren Käufe gefunden.")
         }
     }
 }

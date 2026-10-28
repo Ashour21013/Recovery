@@ -287,7 +287,7 @@ final class DashboardViewModel: ViewModel {
             motivation: motivation,
             progress: makeProgress(streak: streak, relapseCount: relapses.count),
             dailyGoal: DailyGoal(
-                title: "Heutige Ziele",
+                title: String(localized: "Heutige Ziele"),
                 completedTasks: plan.completedCount,
                 totalTasks: plan.totalCount
             ),

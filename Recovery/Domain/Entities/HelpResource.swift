@@ -56,9 +56,9 @@ enum SupportRegion: String, CaseIterable, Identifiable, Hashable {
     /// Anzeigename inkl. Flaggen-Emoji.
     var title: String {
         switch self {
-        case .germany: return "🇩🇪 Deutschland"
-        case .austria: return "🇦🇹 Österreich"
-        case .switzerland: return "🇨🇭 Schweiz"
+        case .germany: return String(localized: "🇩🇪 Deutschland")
+        case .austria: return String(localized: "🇦🇹 Österreich")
+        case .switzerland: return String(localized: "🇨🇭 Schweiz")
         }
     }
 }

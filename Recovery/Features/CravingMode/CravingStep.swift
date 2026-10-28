@@ -19,13 +19,13 @@ enum CravingStep: Int, CaseIterable, Identifiable {
     /// Kurztitel für Fortschrittsanzeige/Navigation.
     var title: String {
         switch self {
-        case .welcome: "Willkommen"
-        case .breathing: "Atmen"
-        case .motivation: "Motivation"
-        case .affirmation: "Affirmation"
-        case .reason: "Dein Warum"
-        case .task: "Kleine Aufgabe"
-        case .finish: "Geschafft"
+        case .welcome: String(localized: "Willkommen")
+        case .breathing: String(localized: "Atmen")
+        case .motivation: String(localized: "Motivation")
+        case .affirmation: String(localized: "Affirmation")
+        case .reason: String(localized: "Dein Warum")
+        case .task: String(localized: "Kleine Aufgabe")
+        case .finish: String(localized: "Geschafft")
         }
     }
 }

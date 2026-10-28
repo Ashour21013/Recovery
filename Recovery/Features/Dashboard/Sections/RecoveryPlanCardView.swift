@@ -10,7 +10,7 @@ struct RecoveryPlanCardView: View {
         VStack(alignment: .leading, spacing: 0) {
             HStack {
                 VStack(alignment: .leading, spacing: 3) {
-                    Eyebrow("Mein heutiger Plan")
+                    Eyebrow(String(localized: "Mein heutiger Plan"))
                     Text("Meine Aufgaben")
                         .font(.headline)
                         .foregroundStyle(AppColor.ink)
@@ -106,7 +106,7 @@ private struct RecoveryTaskRow: View {
         .sensoryFeedback(.success, trigger: task.isCompleted)
         .animation(.smooth(duration: 0.25), value: task.isCompleted)
         .accessibilityLabel(task.task.title)
-        .accessibilityValue(task.isCompleted ? "erledigt" : "offen")
+        .accessibilityValue(task.isCompleted ? String(localized: "erledigt") : String(localized: "offen"))
         .accessibilityAddTraits(.isButton)
     }
 }

@@ -71,17 +71,17 @@ struct ContentBlockingView: View {
                     countdownCard(countdown, viewModel: viewModel)
                 } else {
                     domainsSection(viewModel)
-                    sectionHeader("Apps sperren")
+                    sectionHeader(String(localized: "Apps sperren"))
                     Button { viewModel.isShowingAppPicker = true } label: {
                         iosRow(icon: "apps.iphone", tone: AppColor.purple, toneSoft: AppColor.purpleSoft,
-                               title: "Apps & Websites auswählen", detail: viewModel.selectionSummary)
+                               title: String(localized: "Apps & Websites auswählen"), detail: viewModel.selectionSummary)
                     }
                     .buttonStyle(.plain)
 
-                    sectionHeader("Schutz abschalten")
+                    sectionHeader(String(localized: "Schutz abschalten"))
                     Button { viewModel.startDeactivation() } label: {
                         iosRow(icon: "clock", tone: AppColor.coral, toneSoft: AppColor.coralSoft,
-                               title: "Schutz abschalten …", detail: "Mit bewusster Wartezeit",
+                               title: String(localized: "Schutz abschalten …"), detail: String(localized: "Mit bewusster Wartezeit"),
                                titleColor: Color(hex: 0xB76855))
                     }
                     .buttonStyle(.plain)
@@ -129,11 +129,11 @@ struct ContentBlockingView: View {
                 }
             }
             VStack(alignment: .leading, spacing: 4) {
-                Text(active ? "Schutz aktiv" : "Schutz inaktiv")
+                Text(active ? String(localized: "Schutz aktiv") : String(localized: "Schutz inaktiv"))
                     .font(.title3.weight(.bold))
                     .foregroundStyle(AppColor.ink)
-                Text(active ? "Inhalte für Erwachsene werden blockiert."
-                            : "Pornografische Websites werden derzeit nicht gefiltert.")
+                Text(active ? String(localized: "Inhalte für Erwachsene werden blockiert.")
+                            : String(localized: "Pornografische Websites werden derzeit nicht gefiltert."))
                     .font(.caption)
                     .foregroundStyle(AppColor.muted)
             }
@@ -144,15 +144,15 @@ struct ContentBlockingView: View {
 
     private var howItWorks: some View {
         VStack(alignment: .leading, spacing: 0) {
-            Eyebrow("So funktioniert’s")
+            Eyebrow(String(localized: "So funktioniert’s"))
                 .padding(.horizontal, 13)
                 .padding(.top, 13)
                 .padding(.bottom, 6)
             ForEach([
-                ("shield", "Nutzt Apples Bildschirmzeit-Filter für Websites für Erwachsene"),
-                ("plus", "Eigene Websites und Apps zusätzlich sperren"),
-                ("clock", "Abschalten nur nach einer Wartezeit – schützt in schwachen Momenten"),
-                ("lock", "Deine Daten verlassen das Gerät nicht")
+                ("shield", String(localized: "Nutzt Apples Bildschirmzeit-Filter für Websites für Erwachsene")),
+                ("plus", String(localized: "Eigene Websites und Apps zusätzlich sperren")),
+                ("clock", String(localized: "Abschalten nur nach einer Wartezeit – schützt in schwachen Momenten")),
+                ("lock", String(localized: "Deine Daten verlassen das Gerät nicht"))
             ], id: \.1) { icon, text in
                 HStack(spacing: 11) {
                     IconTile(systemImage: icon, foreground: AppColor.purple, background: AppColor.purpleSoft, size: 31)
@@ -172,7 +172,7 @@ struct ContentBlockingView: View {
     private func domainsSection(_ viewModel: ContentBlockingViewModel) -> some View {
         @Bindable var viewModel = viewModel
         return VStack(alignment: .leading, spacing: 0) {
-            sectionHeader("Zusätzliche Websites")
+            sectionHeader(String(localized: "Zusätzliche Websites"))
             HStack(spacing: 7) {
                 TextField("beispiel.com", text: $viewModel.newDomainInput)
                     .font(.footnote)
@@ -207,7 +207,7 @@ struct ContentBlockingView: View {
                                     .frame(width: 30, height: 30)
                             }
                             .buttonStyle(.plain)
-                            .accessibilityLabel("\(domain) löschen")
+                            .accessibilityLabel(String(localized: "\(domain) löschen"))
                         }
                         .padding(.horizontal, 9)
                         .frame(minHeight: 48)
@@ -247,15 +247,15 @@ struct ContentBlockingView: View {
             .background(Circle().fill(Color(hex: 0xD7815F, opacity: 0.06)).padding(-13))
             .padding(.bottom, 28)
 
-            Eyebrow("Ein Moment für dich")
-            Text(countdown.isFinished ? "Du kannst den Schutz jetzt abschalten." : "Atme durch.\nWillst du das wirklich?")
+            Eyebrow(String(localized: "Ein Moment für dich"))
+            Text(countdown.isFinished ? String(localized: "Du kannst den Schutz jetzt abschalten.") : String(localized: "Atme durch.\nWillst du das wirklich?"))
                 .font(.system(size: 24, weight: .bold))
                 .foregroundStyle(AppColor.ink)
                 .multilineTextAlignment(.center)
                 .padding(.vertical, 8)
             Text(countdown.isFinished
-                 ? "Was du jetzt entscheidest, ist in Ordnung. Du kannst den Schutz später wieder aktivieren."
-                 : "Noch \(countdown.remaining) s. Diese Pause hilft dir, bewusst zu entscheiden.")
+                 ? String(localized: "Was du jetzt entscheidest, ist in Ordnung. Du kannst den Schutz später wieder aktivieren.")
+                 : String(localized: "Noch \(countdown.remaining) s. Diese Pause hilft dir, bewusst zu entscheiden."))
                 .font(.caption)
                 .foregroundStyle(AppColor.muted)
                 .multilineTextAlignment(.center)
@@ -278,7 +278,7 @@ struct ContentBlockingView: View {
             .buttonStyle(TealButtonStyle())
 
             Button { viewModel.confirmDeactivation() } label: {
-                Text(countdown.isFinished ? "Schutz abschalten" : "Schutz abschalten · \(countdown.remaining) s")
+                Text(countdown.isFinished ? String(localized: "Schutz abschalten") : String(localized: "Schutz abschalten · \(countdown.remaining) s"))
                     .font(.footnote.weight(.bold))
                     .foregroundStyle(countdown.isFinished ? Color(hex: 0xB76855) : AppColor.muted.opacity(0.6))
                     .frame(maxWidth: .infinity, minHeight: 46)

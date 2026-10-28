@@ -7,8 +7,8 @@ struct JournalEntryRow: View {
     private var dateText: String {
         let cal = Calendar.current
         let time = entry.date.formatted(date: .omitted, time: .shortened)
-        if cal.isDateInToday(entry.date) { return "Heute, \(time)" }
-        if cal.isDateInYesterday(entry.date) { return "Gestern, \(time)" }
+        if cal.isDateInToday(entry.date) { return String(localized: "Heute, \(time)") }
+        if cal.isDateInYesterday(entry.date) { return String(localized: "Gestern, \(time)") }
         return entry.date.formatted(.dateTime.day().month(.wide).hour().minute())
     }
 
@@ -23,7 +23,7 @@ struct JournalEntryRow: View {
                 Text(dateText)
                     .font(.caption2)
                     .foregroundStyle(AppColor.muted)
-                Text(entry.text.isEmpty ? "Ohne Text" : entry.text)
+                Text(entry.text.isEmpty ? String(localized: "Ohne Text") : entry.text)
                     .font(.subheadline.weight(.semibold))
                     .foregroundStyle(AppColor.ink)
                     .lineLimit(2)

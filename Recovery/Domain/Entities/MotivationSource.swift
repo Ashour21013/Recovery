@@ -14,19 +14,19 @@ enum MotivationSource: String, CaseIterable, Identifiable, Codable, Hashable {
 
     var title: String {
         switch self {
-        case .quotes: "Motivationszitate"
-        case .science: "Wissenschaftlich fundiert"
-        case .bible: "Bibelverse"
-        case .mixed: "Gemischte Inhalte"
+        case .quotes: String(localized: "Motivationszitate")
+        case .science: String(localized: "Wissenschaftlich fundiert")
+        case .bible: String(localized: "Bibelverse")
+        case .mixed: String(localized: "Gemischte Inhalte")
         }
     }
 
     var subtitle: String {
         switch self {
-        case .quotes: "Kurze, kraftvolle Sprüche"
-        case .science: "Erkenntnisse aus der Forschung"
-        case .bible: "Verse passend zu deiner Situation"
-        case .mixed: "Eine Mischung aus allen Quellen"
+        case .quotes: String(localized: "Kurze, kraftvolle Sprüche")
+        case .science: String(localized: "Erkenntnisse aus der Forschung")
+        case .bible: String(localized: "Verse passend zu deiner Situation")
+        case .mixed: String(localized: "Eine Mischung aus allen Quellen")
         }
     }
 

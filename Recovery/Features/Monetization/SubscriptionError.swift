@@ -11,13 +11,13 @@ enum SubscriptionError: LocalizedError {
     var errorDescription: String? {
         switch self {
         case .failedVerification:
-            return "Der Kauf konnte nicht verifiziert werden."
+            return String(localized: "Der Kauf konnte nicht verifiziert werden.")
         case .pending:
-            return "Der Kauf steht noch aus (z. B. Freigabe erforderlich)."
+            return String(localized: "Der Kauf steht noch aus (z. B. Freigabe erforderlich).")
         case .cancelled:
-            return "Der Kauf wurde abgebrochen."
+            return String(localized: "Der Kauf wurde abgebrochen.")
         case .unknown:
-            return "Ein unbekannter Fehler ist aufgetreten."
+            return String(localized: "Ein unbekannter Fehler ist aufgetreten.")
         }
     }
 }
