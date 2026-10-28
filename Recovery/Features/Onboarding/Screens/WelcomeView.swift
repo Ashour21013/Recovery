@@ -44,7 +44,8 @@ struct WelcomeView: View {
             Spacer(minLength: 20)
 
             WelcomePlantScene()
-                .frame(height: 130)
+                .frame(height: 170)
+                .padding(.horizontal, 12)
                 .opacity(appeared ? 1 : 0)
                 .offset(y: appeared ? 0 : 20)
 
@@ -88,16 +89,40 @@ struct RecoveryLogoMark: View {
                 .fill(LinearGradient(colors: [Color(hex: 0x3E8C82), Color(hex: 0x2F7069)],
                                      startPoint: .topLeading, endPoint: .bottomTrailing))
             Image(systemName: "shield")
-                .font(.system(size: size * 0.55, weight: .semibold))
+                .font(.system(size: size * 0.58, weight: .semibold))
                 .foregroundStyle(.white)
-            Image(systemName: "leaf")
-                .font(.system(size: size * 0.24, weight: .bold))
-                .foregroundStyle(.white)
+            SproutGlyph()
+                .stroke(.white, style: StrokeStyle(lineWidth: size * 0.045, lineCap: .round, lineJoin: .round))
+                .frame(width: size * 0.32, height: size * 0.3)
                 .offset(y: size * 0.03)
         }
         .frame(width: size, height: size)
         .shadow(color: AppColor.deep.opacity(0.25), radius: 16, y: 10)
         .accessibilityHidden(true)
+    }
+}
+
+/// Keimling mit zwei Blättern (für das Logo).
+private struct SproutGlyph: Shape {
+    func path(in r: CGRect) -> Path {
+        var p = Path()
+        let stemTop = CGPoint(x: r.midX, y: r.minY + r.height * 0.45)
+        // Stiel
+        p.move(to: CGPoint(x: r.midX, y: r.maxY))
+        p.addLine(to: stemTop)
+        // linkes Blatt
+        p.move(to: stemTop)
+        p.addQuadCurve(to: CGPoint(x: r.minX, y: r.minY + r.height * 0.1),
+                       control: CGPoint(x: r.minX + r.width * 0.05, y: r.minY + r.height * 0.55))
+        p.addQuadCurve(to: stemTop,
+                       control: CGPoint(x: r.midX, y: r.minY))
+        // rechtes Blatt
+        p.move(to: stemTop)
+        p.addQuadCurve(to: CGPoint(x: r.maxX, y: r.minY),
+                       control: CGPoint(x: r.midX, y: r.minY - r.height * 0.05))
+        p.addQuadCurve(to: stemTop,
+                       control: CGPoint(x: r.maxX - r.width * 0.05, y: r.minY + r.height * 0.5))
+        return p
     }
 }
 
