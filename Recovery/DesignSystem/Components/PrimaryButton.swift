@@ -24,8 +24,10 @@ struct PressableProminentButtonStyle: ButtonStyle {
         configuration.label
             .foregroundStyle(.white)
             .background(
-                RoundedRectangle(cornerRadius: 12, style: .continuous)
-                    .fill(AppColor.accent)
+                RoundedRectangle(cornerRadius: AppRadius.button, style: .continuous)
+                    .fill(LinearGradient(colors: [Color(hex: 0x1D867D), AppColor.deep],
+                                         startPoint: .topLeading, endPoint: .bottomTrailing))
+                    .shadow(color: AppColor.deep.opacity(0.2), radius: 12, y: 8)
             )
             .scaleEffect(configuration.isPressed ? 0.97 : 1)
             .opacity(configuration.isPressed ? 0.9 : 1)

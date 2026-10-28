@@ -9,10 +9,12 @@ struct StatMetricCard: View {
     let metric: StatMetric
 
     var body: some View {
-        VStack(alignment: .leading, spacing: AppSpacing.s) {
+        VStack(alignment: .leading, spacing: 4) {
             Image(systemName: metric.systemImage)
-                .font(.title2)
-                .foregroundStyle(metric.tint)
+                .font(.headline)
+                .foregroundStyle(AppColor.teal)
+                .frame(width: 34, height: 34)
+                .background(RoundedRectangle(cornerRadius: 11, style: .continuous).fill(AppColor.mint))
                 .symbolEffect(.bounce, value: metric.value)
                 .accessibilityHidden(true)
 
@@ -20,34 +22,29 @@ struct StatMetricCard: View {
 
             HStack(alignment: .firstTextBaseline, spacing: 4) {
                 Text("\(metric.value)")
-                    .font(AppFont.roundedNumber(relativeTo: .largeTitle))
+                    .font(.system(size: 29, weight: .bold, design: .rounded))
+                    .foregroundStyle(AppColor.teal)
                     .contentTransition(.numericText())
                     .animation(.smooth, value: metric.value)
                 if let unit = metric.unit {
                     Text(unit)
                         .font(AppFont.footnote.weight(.semibold))
-                        .foregroundStyle(.secondary)
+                        .foregroundStyle(AppColor.muted)
                 }
             }
 
             Text(metric.label)
-                .font(AppFont.footnote)
-                .foregroundStyle(.secondary)
+                .font(AppFont.caption)
+                .foregroundStyle(AppColor.muted)
         }
-        .frame(maxWidth: .infinity, minHeight: 128, alignment: .leading)
-        .padding(AppSpacing.m)
+        .frame(maxWidth: .infinity, minHeight: 120, alignment: .leading)
+        .padding(16)
         .background {
-            RoundedRectangle(cornerRadius: 20, style: .continuous)
-                .fill(AppColor.cardBackground)
+            RoundedRectangle(cornerRadius: 18, style: .continuous)
+                .fill(AppColor.surface)
                 .overlay {
-                    RoundedRectangle(cornerRadius: 20, style: .continuous)
-                        .fill(
-                            LinearGradient(
-                                colors: [metric.tint.opacity(0.18), .clear],
-                                startPoint: .topLeading,
-                                endPoint: .bottomTrailing
-                            )
-                        )
+                    RoundedRectangle(cornerRadius: 18, style: .continuous)
+                        .stroke(AppColor.line, lineWidth: 1)
                 }
         }
         .accessibilityElement(children: .ignore)

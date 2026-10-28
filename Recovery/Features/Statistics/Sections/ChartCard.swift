@@ -29,11 +29,17 @@ struct ChartCard<Content: View>: View {
             content()
         }
         .frame(maxWidth: .infinity, alignment: .leading)
-        .padding(AppSpacing.m)
+        .padding(17)
         .background(
-            AppColor.cardBackground,
-            in: RoundedRectangle(cornerRadius: 20, style: .continuous)
+            RoundedRectangle(cornerRadius: AppRadius.card, style: .continuous)
+                .fill(AppColor.surface)
+                .shadow(color: Color(hex: 0x1C433E, opacity: 0.06), radius: 10, y: 5)
         )
+        .overlay(
+            RoundedRectangle(cornerRadius: AppRadius.card, style: .continuous)
+                .stroke(AppColor.line, lineWidth: 1)
+        )
+        .tint(AppColor.teal)
     }
 }
 

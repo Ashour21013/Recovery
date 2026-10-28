@@ -10,8 +10,8 @@ struct StatisticsView: View {
     @State private var viewModel: StatisticsViewModel?
 
     private let columns = [
-        GridItem(.flexible(), spacing: AppSpacing.m),
-        GridItem(.flexible(), spacing: AppSpacing.m)
+        GridItem(.flexible(), spacing: 9),
+        GridItem(.flexible(), spacing: 9)
     ]
 
     var body: some View {
@@ -19,7 +19,8 @@ struct StatisticsView: View {
             content
                 .animation(.smooth, value: viewModel?.state)
                 .navigationTitle("Statistik")
-                .background(Color(.systemGroupedBackground))
+                .background(AppColor.background.ignoresSafeArea())
+                .tint(AppColor.teal)
         }
         .task {
             if viewModel == nil {
@@ -58,17 +59,26 @@ struct StatisticsView: View {
 
     private func loadedContent(_ statistics: RecoveryStatistics) -> some View {
         ScrollView {
-            VStack(spacing: AppSpacing.m) {
+            VStack(spacing: 12) {
+                header
                 metricsGrid(statistics)
                 StreakHistoryChart(points: statistics.streakHistory)
                 RelapseHistoryChart(buckets: statistics.relapseBuckets)
                 TopTriggersChart(triggers: statistics.topTriggers)
             }
-            .padding(AppSpacing.m)
+            .padding(.horizontal, 18)
+            .padding(.vertical, 14)
             .premiumGated(.alleStatistiken) {
                 SampleChartPreview()
             }
         }
+    }
+
+    private var header: some View {
+        Text("Dein Fortschritt wird sichtbar.")
+            .font(AppFont.subheadline)
+            .foregroundStyle(AppColor.muted)
+            .frame(maxWidth: .infinity, alignment: .leading)
     }
 
     @ViewBuilder

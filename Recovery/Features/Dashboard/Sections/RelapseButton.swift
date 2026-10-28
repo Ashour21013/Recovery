@@ -8,18 +8,16 @@ struct RelapseButton: View {
 
     var body: some View {
         Button(action: action) {
-            HStack(spacing: AppSpacing.s) {
-                Image(systemName: "arrow.uturn.backward.circle")
+            VStack(spacing: 4) {
                 Text("Rückfall melden")
-                    .font(AppFont.subheadline.weight(.medium))
+                    .font(AppFont.subheadline.weight(.bold))
+                    .foregroundStyle(AppColor.coral)
+                    .frame(minHeight: 44)
+                Text("Jeder Neustart zählt. Du bist nicht allein.")
+                    .font(.caption2)
+                    .foregroundStyle(AppColor.muted)
             }
-            .foregroundStyle(.secondary)
             .frame(maxWidth: .infinity)
-            .padding(AppSpacing.m)
-            .background(
-                RoundedRectangle(cornerRadius: 16, style: .continuous)
-                    .stroke(Color(.separator), lineWidth: 1)
-            )
         }
         .buttonStyle(.plain)
         .accessibilityLabel("Rückfall melden")

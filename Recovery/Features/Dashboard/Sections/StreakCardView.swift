@@ -5,47 +5,92 @@ import SwiftUI
 struct StreakCardView: View {
     let streak: Streak
 
-    var body: some View {
-        CardContainer {
-            VStack(alignment: .leading, spacing: AppSpacing.s) {
-                Label {
-                    Text("Aktuelle Streak")
-                } icon: {
-                    Image(systemName: "flame.fill")
-                        .symbolEffect(.pulse, options: .repeating)
-                        .accessibilityHidden(true)
-                }
-                .font(AppFont.subheadline.weight(.semibold))
-                .foregroundStyle(.secondary)
+    private func elapsed(at now: Date) -> (days: Int, hours: Int, minutes: Int) {
+        let total = max(0, Int(now.timeIntervalSince(streak.startedAt)) / 60)
+        return (total / 1440, (total % 1440) / 60, total % 60)
+    }
 
-                HStack(alignment: .firstTextBaseline, spacing: AppSpacing.s) {
-                    Text("\(streak.currentDays)")
-                        .font(AppFont.roundedNumber())
-                        .foregroundStyle(AppColor.accent)
-                        .contentTransition(.numericText(value: Double(streak.currentDays)))
-
-                    Text(streak.currentDays == 1 ? "Tag" : "Tage")
-                        .font(.title3.weight(.medium))
-                        .foregroundStyle(.secondary)
-                }
-                .animation(.smooth, value: streak.currentDays)
-
-                HStack(spacing: AppSpacing.xs) {
-                    Image(systemName: streak.isNewRecord ? "trophy.fill" : "chart.line.uptrend.xyaxis")
-                        .foregroundStyle(streak.isNewRecord ? .yellow : .secondary)
-                        .contentTransition(.symbolEffect(.replace))
-                        .symbolEffect(.bounce, value: streak.isNewRecord)
-                        .accessibilityHidden(true)
-                    Text(streak.isNewRecord
-                         ? "Neuer Rekord!"
-                         : "Bestwert: \(streak.bestDays) Tage")
-                        .font(AppFont.footnote)
-                        .foregroundStyle(.secondary)
-                        .contentTransition(.numericText())
-                }
-                .animation(.smooth, value: streak.isNewRecord)
-            }
+    private func counterPart(_ value: Int, _ unit: String) -> some View {
+        HStack(alignment: .firstTextBaseline, spacing: 4) {
+            Text(unit == "Tage" ? "\(value)" : String(format: "%02d", value))
+                .font(.system(.headline, design: .rounded).weight(.bold))
+                .contentTransition(.numericText())
+            Text(unit)
+                .font(.caption)
+                .foregroundStyle(.white.opacity(0.72))
         }
+    }
+
+    private var dot: some View {
+        Circle().fill(.white.opacity(0.4)).frame(width: 3, height: 3)
+    }
+
+    var body: some View {
+        VStack(spacing: AppSpacing.xs) {
+            HStack {
+                Label("DEIN STREAK", systemImage: "flame.fill")
+                    .font(.caption2.weight(.heavy))
+                    .tracking(1)
+                    .padding(.horizontal, 10)
+                    .padding(.vertical, 7)
+                    .background(Capsule().fill(.white.opacity(0.13)))
+                Spacer()
+            }
+
+            Text("\(streak.currentDays)")
+                .font(.system(size: 104, weight: .bold, design: .rounded))
+                .minimumScaleFactor(0.5)
+                .lineLimit(1)
+                .contentTransition(.numericText(value: Double(streak.currentDays)))
+                .animation(.smooth, value: streak.currentDays)
+                .padding(.top, AppSpacing.s)
+
+            Text(streak.currentDays == 1 ? "Tag frei" : "Tage frei")
+                .font(.title2.weight(.semibold))
+
+            TimelineView(.periodic(from: .now, by: 30)) { context in
+                let parts = elapsed(at: context.date)
+                HStack(spacing: 12) {
+                    counterPart(parts.days, "Tage")
+                    dot
+                    counterPart(parts.hours, "Std")
+                    dot
+                    counterPart(parts.minutes, "Min")
+                }
+            }
+            .padding(.top, 12)
+
+            Rectangle().fill(.white.opacity(0.16)).frame(height: 1)
+                .padding(.top, 10)
+
+            HStack(spacing: 7) {
+                Image(systemName: streak.isNewRecord ? "trophy.fill" : "medal")
+                    .symbolEffect(.bounce, value: streak.isNewRecord)
+                    .accessibilityHidden(true)
+                Text(streak.isNewRecord ? "Neuer Rekord!" : "Dein Rekord: **\(streak.bestDays) Tage**")
+                Spacer()
+                Text("Seit \(streak.startedAt.formatted(date: .abbreviated, time: .omitted))")
+            }
+            .font(.caption)
+            .foregroundStyle(.white.opacity(0.8))
+            .padding(.top, 6)
+        }
+        .foregroundStyle(.white)
+        .padding(20)
+        .frame(maxWidth: .infinity)
+        .background(
+            ZStack {
+                AppColor.heroGradient
+                RadialGradient(colors: [Color(hex: 0xB1EEDE, opacity: 0.3), .clear],
+                               center: UnitPoint(x: 0.8, y: 0.1), startRadius: 0, endRadius: 160)
+                Circle()
+                    .stroke(.white.opacity(0.09), lineWidth: 1)
+                    .frame(width: 190, height: 190)
+                    .offset(x: 130, y: 10)
+            }
+            .clipShape(RoundedRectangle(cornerRadius: AppRadius.hero, style: .continuous))
+            .shadow(color: AppColor.deep.opacity(0.25), radius: 18, y: 14)
+        )
         .accessibilityElement(children: .ignore)
         .accessibilityLabel(accessibilityDescription)
     }

@@ -24,7 +24,7 @@ struct DashboardView: View {
                 }
             }
             .navigationTitle("Übersicht")
-            .background(Color(.systemGroupedBackground))
+            .background(AppColor.background.ignoresSafeArea())
             .toolbar {
                 if let viewModel, !viewModel.addictions.isEmpty {
                     ToolbarItem(placement: .principal) {
@@ -102,7 +102,7 @@ struct DashboardView: View {
             }
         }
         .animation(.smooth, value: viewModel.state)
-        .sheet(isPresented: Binding(
+        .fullScreenCover(isPresented: Binding(
             get: { viewModel.isShowingCravingHelp },
             set: { viewModel.isShowingCravingHelp = $0 }
         )) {
@@ -184,8 +184,10 @@ struct DashboardView: View {
 
     private func loadedContent(for data: DashboardData, viewModel: DashboardViewModel) -> some View {
         ScrollView {
-            VStack(spacing: AppSpacing.m) {
+            VStack(spacing: 12) {
                 StreakCardView(streak: data.streak)
+                ProgressCardView(progress: data.progress, currentDays: data.streak.currentDays)
+                PlantCardView(days: data.streak.currentDays)
                 MotivationCardView(
                     motivation: data.motivation,
                     onChangeSource: viewModel.presentSourcePicker
@@ -204,9 +206,6 @@ struct DashboardView: View {
                 .premiumGated(.recoveryGains) {
                     SampleMetricsPreview()
                 }
-                ProgressCardView(
-                    progress: data.progress
-                )
                 RecoveryPlanCardView(
                     plan: data.plan,
                     onToggle: { taskId in Task { await viewModel.toggleTask(taskId) } },
@@ -215,8 +214,11 @@ struct DashboardView: View {
 
                 RelapseButton(action: { isShowingRelapse = true })
             }
-            .padding(AppSpacing.m)
+            .padding(.horizontal, 18)
+            .padding(.vertical, 14)
         }
+        .scrollContentBackground(.hidden)
+        .tint(AppColor.teal)
     }
 }
 

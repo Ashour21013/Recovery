@@ -1,10 +1,8 @@
 import SwiftUI
 
-/// Craving-Modus: führt den Nutzer Schritt für Schritt durch einen kurzen
-/// Notfallplan. Der Ablauf ist über `CravingStep` modular erweiterbar.
-///
-/// Die View bindet an das `CravingModeViewModel` (MVVM) und enthält keine
-/// Ablauf- oder Persistenzlogik.
+/// Craving-Modus im Figma-Design: dunkler, ruhiger Vollbild-Flow mit
+/// Schritt-Segmenten oben und großem hellen „Weiter“-Button unten.
+/// Ablauf-Logik liegt im `CravingModeViewModel`.
 struct CravingModeView: View {
 
     @Environment(\.dependencies) private var dependencies
@@ -13,50 +11,33 @@ struct CravingModeView: View {
     @State private var isShowingHelp = false
 
     var body: some View {
-        NavigationStack {
-            Group {
-                if let viewModel {
-                    VStack(spacing: 0) {
-                        ProgressView(value: viewModel.progress)
-                            .tint(AppColor.accent)
-                            .padding(.horizontal, AppSpacing.l)
-                            .padding(.top, AppSpacing.s)
-                            .animation(.smooth, value: viewModel.progress)
+        ZStack {
+            RadialGradient(colors: [Color(hex: 0x215B57), Color(hex: 0x0D292A)],
+                           center: UnitPoint(x: 0.5, y: 0.4), startRadius: 0, endRadius: 520)
+                .ignoresSafeArea()
 
-                        stepContent(viewModel)
-                            .frame(maxWidth: .infinity, maxHeight: .infinity)
-                            .id(viewModel.currentIndex)
-                            .transition(.asymmetric(
-                                insertion: .move(edge: .trailing).combined(with: .opacity),
-                                removal: .move(edge: .leading).combined(with: .opacity)
-                            ))
-
-                        footer(viewModel)
-                    }
-                    .animation(.smooth(duration: 0.35), value: viewModel.currentIndex)
-                } else {
-                    ProgressView()
+            if let viewModel {
+                VStack(spacing: 0) {
+                    header(viewModel)
+                    stepContent(viewModel)
+                        .frame(maxWidth: .infinity, maxHeight: .infinity)
+                        .id(viewModel.currentIndex)
+                        .transition(.asymmetric(
+                            insertion: .move(edge: .trailing).combined(with: .opacity),
+                            removal: .move(edge: .leading).combined(with: .opacity)
+                        ))
+                    footer(viewModel)
                 }
-            }
-            .navigationTitle(viewModel?.currentStep.title ?? "")
-            .navigationBarTitleDisplayMode(.inline)
-            .toolbar {
-                ToolbarItem(placement: .cancellationAction) {
-                    Button("Schließen") { dismiss() }
-                }
-                ToolbarItem(placement: .primaryAction) {
-                    Button {
-                        isShowingHelp = true
-                    } label: {
-                        Image(systemName: "lifepreserver")
-                    }
-                    .accessibilityLabel("Hilfe & Ressourcen")
-                }
-            }
-            .sheet(isPresented: $isShowingHelp) {
-                HelpView()
+                .padding(.horizontal, 22)
+                .padding(.top, 8)
+                .padding(.bottom, 16)
+                .animation(.smooth(duration: 0.35), value: viewModel.currentIndex)
+            } else {
+                ProgressView().tint(.white)
             }
         }
+        .preferredColorScheme(.dark)
+        .sheet(isPresented: $isShowingHelp) { HelpView() }
         .task {
             if viewModel == nil {
                 viewModel = CravingModeViewModel(repository: dependencies.makeRecoveryRepository())
@@ -65,18 +46,50 @@ struct CravingModeView: View {
         }
     }
 
-    // MARK: - Schritt-Inhalt
+    private func header(_ viewModel: CravingModeViewModel) -> some View {
+        let total = CravingStep.allCases.count
+        return VStack(spacing: 17) {
+            HStack {
+                glassCircleButton("xmark", label: "Schließen") { dismiss() }
+                Spacer()
+                Text("\(viewModel.currentIndex + 1) von \(total)")
+                    .font(.caption)
+                    .foregroundStyle(.white.opacity(0.65))
+                Spacer()
+                glassCircleButton("lifepreserver", label: "Hilfe & Ressourcen") { isShowingHelp = true }
+            }
+            HStack(spacing: 5) {
+                ForEach(0..<total, id: \.self) { index in
+                    Capsule()
+                        .fill(index <= viewModel.currentIndex ? Color(hex: 0x79C9B9) : .white.opacity(0.15))
+                        .frame(height: 3)
+                }
+            }
+            .animation(.smooth, value: viewModel.currentIndex)
+        }
+    }
+
+    private func glassCircleButton(_ icon: String, label: String, action: @escaping () -> Void) -> some View {
+        Button(action: action) {
+            Image(systemName: icon)
+                .font(.body.weight(.semibold))
+                .foregroundStyle(.white)
+                .frame(width: 40, height: 40)
+                .background(Circle().fill(.white.opacity(0.1)))
+        }
+        .buttonStyle(.plain)
+        .accessibilityLabel(label)
+    }
 
     @ViewBuilder
     private func stepContent(_ viewModel: CravingModeViewModel) -> some View {
         switch viewModel.currentStep {
         case .welcome:
             CravingMessageStepView(
-                systemImage: "hand.raised.fill",
-                title: "Kurz innehalten",
-                message: "Das Verlangen ist nur eine Welle – sie kommt und geht. Wir gehen das jetzt gemeinsam in wenigen Schritten durch."
+                systemImage: "leaf.fill",
+                title: "Du schaffst das.",
+                message: "Lass uns diesen Moment gemeinsam durchstehen. Nur ein Schritt nach dem anderen."
             )
-
         case .breathing:
             BreathingStepView(
                 remainingSeconds: viewModel.remainingSeconds,
@@ -84,106 +97,97 @@ struct CravingModeView: View {
                 isRunning: viewModel.isBreathingRunning,
                 onStart: viewModel.startBreathing
             )
-
         case .motivation:
             CravingMessageStepView(
-                systemImage: "bolt.heart.fill",
-                title: "Du bist stärker",
-                message: "Jedes Mal, wenn du dem Verlangen widerstehst, wird es schwächer. Du baust gerade echte Stärke auf.",
-                tint: .pink
+                systemImage: "water.waves",
+                eyebrow: "ERINNERE DICH",
+                title: "Es ist nur eine Welle.",
+                message: "Das Verlangen kommt, erreicht seinen Höhepunkt – und geht wieder vorbei."
             )
-
         case .affirmation:
             CravingMessageStepView(
-                systemImage: "quote.bubble.fill",
-                title: "Sprich es dir laut vor",
-                message: "Lies diese Affirmation laut und langsam vor:",
-                tint: .purple
+                systemImage: "sparkles",
+                eyebrow: "SPRICH ES LAUT AUS",
+                title: "Ich bin stärker als dieser Moment.",
+                message: "Du musst dem Gedanken nicht folgen."
             ) {
-                Text("„\(viewModel.affirmation.text)")
-                    .font(.title3.weight(.medium))
-                    .multilineTextAlignment(.center)
-                    .padding(AppSpacing.l)
-                    .frame(maxWidth: .infinity)
-                    .background(
-                        RoundedRectangle(cornerRadius: 16)
-                            .fill(Color(.secondarySystemBackground))
-                    )
+                CravingQuoteBox(text: viewModel.affirmation.text)
             }
-
         case .reason:
             CravingMessageStepView(
-                systemImage: "target",
-                title: "Warum du aufhören möchtest",
-                message: reasonMessage(viewModel.reason)
+                systemImage: "heart.fill",
+                eyebrow: "DEIN WARUM",
+                title: "Darum machst du das.",
+                message: viewModel.reason.isEmpty
+                    ? "Erinnere dich an den Grund, warum du diese Reise begonnen hast."
+                    : "Erinnere dich an deinen persönlichen Grund:"
             ) {
                 if !viewModel.reason.isEmpty {
-                    Text("„\(viewModel.reason)")
-                        .font(.title3.weight(.medium))
-                        .multilineTextAlignment(.center)
-                        .padding(AppSpacing.l)
-                        .frame(maxWidth: .infinity)
-                        .background(
-                            RoundedRectangle(cornerRadius: 16)
-                                .fill(Color(.secondarySystemBackground))
-                        )
+                    CravingQuoteBox(text: viewModel.reason)
                 }
             }
-
         case .task:
             CravingMessageStepView(
                 systemImage: viewModel.task.systemImage,
-                title: "Kleine Aufgabe",
-                message: "Lenke deinen Körper und Kopf ab. Versuch jetzt:",
-                tint: .orange
-            ) {
-                Text(viewModel.task.title)
-                    .font(.title2.weight(.bold))
-                    .padding(.top, AppSpacing.s)
-            }
-
+                eyebrow: "EINE KLEINE AUFGABE",
+                title: viewModel.task.title,
+                message: "Lenke Körper und Kopf für ein paar Minuten ab."
+            )
         case .finish:
             CravingMessageStepView(
-                systemImage: "checkmark.seal.fill",
-                title: "Geschafft!",
-                message: "Du hast die Welle überstanden, ohne rückfällig zu werden. Sei stolz auf dich.",
-                tint: .green
+                systemImage: "checkmark",
+                eyebrow: "GESCHAFFT",
+                title: "Verlangen überstanden!",
+                message: "Stark. Du hast dich heute für dich entschieden. Das zählt.",
+                isSuccess: true
             )
         }
     }
 
-    // MARK: - Footer-Navigation
-
-    @ViewBuilder
     private func footer(_ viewModel: CravingModeViewModel) -> some View {
-        HStack(spacing: AppSpacing.m) {
+        HStack(spacing: 10) {
             if !viewModel.isFirstStep {
                 Button(action: viewModel.goBack) {
-                    Text("Zurück")
-                        .frame(maxWidth: .infinity)
-                        .padding(AppSpacing.m)
+                    Image(systemName: "chevron.left")
+                        .font(.body.weight(.bold))
+                        .frame(width: 54, height: 54)
+                        .background(RoundedRectangle(cornerRadius: 17, style: .continuous).fill(.white.opacity(0.1)))
                 }
-                .buttonStyle(.bordered)
+                .buttonStyle(.plain)
+                .foregroundStyle(.white)
+                .accessibilityLabel("Zurück")
                 .transition(.move(edge: .leading).combined(with: .opacity))
             }
-
-            if viewModel.isLastStep {
-                PrimaryButton(title: "Abschließen") {
+            Button {
+                if viewModel.isLastStep {
                     dependencies.cravingSessionCounter.incrementCompleted()
                     dismiss()
+                } else {
+                    viewModel.goNext()
                 }
-            } else {
-                PrimaryButton(title: "Weiter", action: viewModel.goNext)
+            } label: {
+                HStack(spacing: 7) {
+                    Text(viewModel.isLastStep ? "Zurück zu Heute" : "Weiter")
+                    if !viewModel.isLastStep { Image(systemName: "chevron.right") }
+                }
+                .font(.body.weight(.bold))
+                .foregroundStyle(Color(hex: 0x155D57))
+                .frame(maxWidth: .infinity, minHeight: 54)
+                .background(RoundedRectangle(cornerRadius: 17, style: .continuous).fill(Color(hex: 0xF4FCF9)))
             }
+            .buttonStyle(PressScaleStyle())
         }
-        .padding(AppSpacing.l)
         .animation(.smooth, value: viewModel.isFirstStep)
     }
+}
 
-    private func reasonMessage(_ reason: String) -> String {
-        reason.isEmpty
-        ? "Erinnere dich an den Grund, warum du diese Reise begonnen hast."
-        : "Erinnere dich an deinen persönlichen Grund:"
+/// Dezentes Press-Feedback ohne eigene Hintergrundfarbe.
+struct PressScaleStyle: ButtonStyle {
+    func makeBody(configuration: Configuration) -> some View {
+        configuration.label
+            .scaleEffect(configuration.isPressed ? 0.97 : 1)
+            .opacity(configuration.isPressed ? 0.9 : 1)
+            .animation(.smooth(duration: 0.2), value: configuration.isPressed)
     }
 }
 

@@ -1,81 +1,65 @@
 import SwiftUI
 
-/// Wiederverwendbare Karte, die einen `RecoveryGain` einheitlich darstellt –
-/// unabhängig davon, ob es sich um Geld, Zeit oder Menge handelt.
-///
-/// Reine UI-Komponente: erhält bereits aufbereitete Domain-Werte und enthält
-/// keine Geschäftslogik.
+/// Kompakte Gain-Kachel (Figma): farbige Icon-Kachel, große Zahl, Label.
 struct RecoveryGainCard: View {
     let gain: RecoveryGain
+    var tone: GainTone = .mint
 
     var body: some View {
-        HStack(spacing: AppSpacing.m) {
-            iconBadge
+        VStack(alignment: .leading, spacing: 0) {
+            Image(systemName: gain.systemImage)
+                .font(.body.weight(.semibold))
+                .foregroundStyle(tone.foreground)
+                .frame(width: 32, height: 32)
+                .background(RoundedRectangle(cornerRadius: 11, style: .continuous).fill(tone.background))
+                .padding(.bottom, 12)
 
-            VStack(alignment: .leading, spacing: AppSpacing.xs) {
-                Text(gain.title)
-                    .font(AppFont.footnote)
-                    .foregroundStyle(.secondary)
-                if gain.kind != .health {
-                    Text(gain.formattedValue)
-                        .font(.title3.weight(.bold))
-                        .foregroundStyle(.primary)
-                        .contentTransition(.numericText())
-                }
-                Text(gain.detail)
-                    .font(AppFont.caption)
-                    .foregroundStyle(.secondary)
-            }
-            Spacer(minLength: 0)
+            Text(gain.formattedValue)
+                .font(.system(.headline, design: .rounded).weight(.bold))
+                .foregroundStyle(AppColor.ink)
+                .lineLimit(1)
+                .minimumScaleFactor(0.6)
+                .contentTransition(.numericText())
+
+            Text(gain.title)
+                .font(.caption2)
+                .foregroundStyle(AppColor.muted)
+                .lineLimit(2)
+                .padding(.top, 3)
         }
-        .padding(AppSpacing.m)
-        .frame(maxWidth: .infinity, alignment: .leading)
-        .background(AppColor.cardBackground, in: RoundedRectangle(cornerRadius: 16, style: .continuous))
+        .padding(.horizontal, 10)
+        .padding(.vertical, 12)
+        .frame(maxWidth: .infinity, minHeight: 112, alignment: .topLeading)
+        .gainSurface(radius: 18)
         .accessibilityElement(children: .ignore)
-        .accessibilityLabel(accessibilityText)
-    }
-
-    private var accessibilityText: String {
-        gain.kind == .health
-            ? "\(gain.title). \(gain.detail)"
-            : "\(gain.title): \(gain.formattedValue). \(gain.detail)"
-    }
-
-    private var iconBadge: some View {
-        Image(systemName: gain.systemImage)
-            .font(.title2)
-            .foregroundStyle(tint)
-            .frame(width: 44, height: 44)
-            .background(tint.opacity(0.15), in: Circle())
-    }
-
-    private var tint: Color {
-        switch gain.kind {
-        case .money: return AppColor.success
-        case .time: return AppColor.accent
-        case .quantity: return AppColor.warning
-        case .health: return .pink
-        }
+        .accessibilityLabel("\(gain.title): \(gain.formattedValue). \(gain.detail)")
     }
 }
 
-#Preview {
-    VStack(spacing: AppSpacing.m) {
-        RecoveryGainCard(
-            gain: RecoveryGain(
-                id: "1", kind: .money, value: 84, unit: "EUR",
-                title: "Gespart", detail: "Etwa 210,00 € pro Monat",
-                systemImage: "eurosign.circle.fill"
-            )
-        )
-        RecoveryGainCard(
-            gain: RecoveryGain(
-                id: "2", kind: .time, value: 36, unit: "Std.",
-                title: "Zurückgewonnen", detail: "Entspricht ca. 4 Arbeitstagen",
-                systemImage: "clock.arrow.circlepath"
-            )
-        )
+/// Gesundheits-/Wohlbefinden-Meilenstein (ohne Zahl) als schmale Zeile.
+struct RecoveryHealthRow: View {
+    let gain: RecoveryGain
+
+    var body: some View {
+        HStack(spacing: 11) {
+            Image(systemName: gain.systemImage)
+                .font(.subheadline.weight(.semibold))
+                .foregroundStyle(AppColor.coral)
+                .frame(width: 32, height: 32)
+                .background(RoundedRectangle(cornerRadius: 11, style: .continuous).fill(AppColor.coralSoft))
+            VStack(alignment: .leading, spacing: 2) {
+                Text(gain.title)
+                    .font(.subheadline.weight(.semibold))
+                    .foregroundStyle(AppColor.ink)
+                Text(gain.detail)
+                    .font(.caption)
+                    .foregroundStyle(AppColor.muted)
+            }
+            Spacer(minLength: 0)
+        }
+        .padding(12)
+        .frame(maxWidth: .infinity, alignment: .leading)
+        .gainSurface(radius: 18)
+        .accessibilityElement(children: .combine)
     }
-    .padding()
-    .background(Color(.systemGroupedBackground))
 }
