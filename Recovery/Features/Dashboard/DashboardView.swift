@@ -222,7 +222,11 @@ struct DashboardView: View {
             }
             .padding(.horizontal, 18)
             .padding(.vertical, 14)
+            // Inhalt exakt auf Bildschirmbreite begrenzen – verhindert,
+            // dass zu breite Karten die Seite seitlich verschiebbar machen.
+            .containerRelativeFrame(.horizontal)
         }
+        .scrollBounceBehavior(.basedOnSize, axes: .horizontal)
         .scrollContentBackground(.hidden)
         .tint(AppColor.teal)
     }
