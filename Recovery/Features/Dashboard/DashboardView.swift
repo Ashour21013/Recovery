@@ -184,7 +184,7 @@ struct DashboardView: View {
     }
 
     private func loadedContent(for data: DashboardData, viewModel: DashboardViewModel) -> some View {
-        ScrollView {
+        ScrollView(.vertical) {
             VStack(spacing: 12) {
                 DashboardHeaderView()
                 StreakCardView(streak: data.streak)
