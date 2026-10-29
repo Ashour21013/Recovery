@@ -62,8 +62,12 @@ struct SelectAddictionIntent: WidgetConfigurationIntent {
     @Parameter(title: "Sucht")
     var addiction: AddictionAppEntity?
 
+    /// Quelle der Motivationssprüche (Standard: Motivationszitate).
+    @Parameter(title: "Quelle", default: .quotes)
+    var source: QuoteSourceAppEnum
+
     static var parameterSummary: some ParameterSummary {
-        Summary("Zeige \(\.$addiction)")
+        Summary("Zeige \(\.$addiction) mit \(\.$source)")
     }
 
     init() {}

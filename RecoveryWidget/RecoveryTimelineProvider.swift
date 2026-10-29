@@ -30,24 +30,24 @@ struct RecoveryTimelineProvider: AppIntentTimelineProvider {
     private let store = WidgetSnapshotStore()
 
     func placeholder(in context: Context) -> RecoveryEntry {
-        entry(from: .placeholder, preferredID: nil, date: .now)
+        entry(from: .placeholder, preferredID: nil, source: .quotes, date: .now)
     }
 
     func snapshot(for configuration: SelectAddictionIntent, in context: Context) async -> RecoveryEntry {
         let snapshot = store.load() ?? .placeholder
-        return entry(from: snapshot, preferredID: configuration.addiction?.id, date: .now)
+        return entry(from: snapshot, preferredID: configuration.addiction?.id, source: configuration.source.widgetSource, date: .now)
     }
 
     func timeline(for configuration: SelectAddictionIntent, in context: Context) async -> Timeline<RecoveryEntry> {
         let snapshot = store.load() ?? .placeholder
         let now = Date.now
-        let entries = [entry(from: snapshot, preferredID: configuration.addiction?.id, date: now)]
+        let entries = [entry(from: snapshot, preferredID: configuration.addiction?.id, source: configuration.source.widgetSource, date: now)]
         return Timeline(entries: entries, policy: .after(nextMidnight(after: now)))
     }
 
     // MARK: - Private
 
-    private func entry(from snapshot: WidgetSnapshot, preferredID: String?, date: Date) -> RecoveryEntry {
+    private func entry(from snapshot: WidgetSnapshot, preferredID: String?, source: WidgetQuoteSource, date: Date) -> RecoveryEntry {
         let resolved = snapshot.resolvedAddiction(preferredID: preferredID)
         // Debug/Verifikation: zeigt, welche ID angefragt wurde, welche IDs im
         // Snapshot vorliegen und welche Sucht der Provider daraus aufgelöst
@@ -63,7 +63,7 @@ struct RecoveryTimelineProvider: AppIntentTimelineProvider {
             date: date,
             snapshot: snapshot,
             addiction: resolved,
-            quote: snapshot.quote(for: date),
+            quote: snapshot.quote(for: date, source: source),
             configuredID: preferredID
         )
     }
