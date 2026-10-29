@@ -8,6 +8,7 @@ struct ReminderSettingsView: View {
 
     @Environment(\.dependencies) private var dependencies
     @State private var viewModel: ReminderSettingsViewModel?
+    @AppStorage(PlantGarden.reminderEnabledKey, store: AppGroup.sharedDefaults) private var plantReminder = true
 
     var body: some View {
         Group {
@@ -45,6 +46,17 @@ struct ReminderSettingsView: View {
                 Text("Tägliche Erinnerungen")
             } footer: {
                 Text("Wir senden dir zu den gewählten Zeiten eine motivierende Nachricht.")
+            }
+
+            Section {
+                Toggle(isOn: $plantReminder) {
+                    Label("Pflanze gießen", systemImage: "drop.fill")
+                }
+                .onChange(of: plantReminder) { _, _ in
+                    Task { await PlantGarden.refreshReminder() }
+                }
+            } footer: {
+                Text("Erinnert dich abends, falls du deine Pflanze heute noch nicht gegossen hast.")
             }
 
             if viewModel.isPermissionDenied {

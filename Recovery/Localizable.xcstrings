@@ -11443,6 +11443,56 @@
           }
         }
       }
+    },
+    "Deine Pflanze wartet auf Wasser 💧" : {
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Your plant is waiting for water 💧"
+          }
+        }
+      }
+    },
+    "Gieße sie kurz – so bleibt dein Recovery-Garten lebendig." : {
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Give it a quick drink – keep your recovery garden alive."
+          }
+        }
+      }
+    },
+    "Neue Stufe erreicht! 🎉" : {
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "New level reached! 🎉"
+          }
+        }
+      }
+    },
+    "Pflanze gießen" : {
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Water plant"
+          }
+        }
+      }
+    },
+    "Erinnert dich abends, falls du deine Pflanze heute noch nicht gegossen hast." : {
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Reminds you in the evening if you haven't watered your plant today."
+          }
+        }
+      }
     }
   },
   "version" : "1.1"

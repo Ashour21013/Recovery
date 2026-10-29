@@ -13,5 +13,6 @@ struct RecoveryWidgetBundle: WidgetBundle {
     var body: some Widget {
         RecoveryWidget()
         MotivationWidget()
+        GardenWidget()
     }
 }
