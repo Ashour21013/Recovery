@@ -1,0 +1,1008 @@
+{
+ "articles": [
+  {
+   "id": "sugar-impact",
+   "habit": "sugar",
+   "category": "impact",
+   "readMinutes": 4,
+   "de": {
+    "title": "Was zu viel Zucker im Körper macht",
+    "subtitle": "Ein ehrlicher Blick darauf, was gut belegt ist – und wo die Beweislage dünner wird.",
+    "blocks": [
+     {
+      "type": "paragraph",
+      "text": "Du bist nicht schwach, wenn dir Süßes schwerfällt. Zucker schmeckt gut, ist überall und gehört in vielen Familien zu schönen Momenten. Trotzdem lohnt sich ein klarer Blick: Was passiert eigentlich im Körper, wenn viel zugesetzter Zucker zur Gewohnheit wird? Hier steht, was die Forschung ziemlich sicher weiß – und was nicht."
+     },
+     {
+      "type": "heading",
+      "text": "Erst mal: Welcher Zucker ist gemeint?"
+     },
+     {
+      "type": "paragraph",
+      "text": "Die WHO spricht von „freien Zuckern“. Das sind Zucker, die Hersteller, Köchinnen oder du selbst zu Speisen und Getränken geben, plus die in Honig, Sirup und Fruchtsaft. Zucker in ganzem Obst, Gemüse und Milch zählt ausdrücklich nicht dazu – dafür gibt es laut WHO keine Hinweise auf Schäden."
+     },
+     {
+      "type": "heading",
+      "text": "Zähne: die klarste Beweislage"
+     },
+     {
+      "type": "paragraph",
+      "text": "Freie Zucker sind der wichtigste Ernährungsfaktor für Karies. Ein systematischer Review für die WHO (Moynihan & Kelly, 2014) wertete 55 Studien aus und fand mit mittlerer Evidenzqualität weniger Karies, wenn freie Zucker unter 10 % der Energie liegen. Für unter 5 % ist die Evidenz von sehr niedriger Qualität. Wichtig ist auch, wie oft du naschst: Dauernde kleine Zuckerportionen halten die Zähne im Säurebad."
+     },
+     {
+      "type": "stat",
+      "value": "< 10 %",
+      "label": "der Energie sollen laut WHO (2015) aus freien Zuckern stammen – „starke“ Empfehlung."
+     },
+     {
+      "type": "heading",
+      "text": "Gewicht und Typ-2-Diabetes"
+     },
+     {
+      "type": "paragraph",
+      "text": "Ein BMJ-Review von Te Morenga und Kollegen (2012) fand in Studien mit Erwachsenen: Wer weniger Zucker aß, nahm im Schnitt 0,8 kg ab; mehr Zucker führte zu einem ähnlich großen Anstieg. Das ist kein Wundermittel, zeigt aber eine Richtung. Bei zuckergesüßten Getränken ist die Verbindung zu Typ-2-Diabetes in Beobachtungsstudien recht konsistent: Eine Meta-Analyse im BMJ (Imamura et al., 2015) fand ein um 18 % höheres Risiko pro Portion pro Tag, nach Berücksichtigung des Körpergewichts noch 13 %. Beobachtungsstudien können Ursache und Zufall aber nicht sicher trennen."
+     },
+     {
+      "type": "stat",
+      "value": "+13 %",
+      "label": "Diabetesrisiko pro tägliche Portion Zuckergetränk, bereits um Übergewicht bereinigt (Imamura, BMJ 2015)."
+     },
+     {
+      "type": "heading",
+      "text": "Leber, Herz, Energie, Haut, Stimmung"
+     },
+     {
+      "type": "list",
+      "items": [
+       "Leber und Herz: Ein Übersichtsartikel von 2026 (Umbrella Review, 228 Arbeiten) sieht Zusammenhänge mit Fettleber, Herz-Kreislauf-Erkrankungen und Sterblichkeit. Die meisten der ausgewerteten Reviews hatten aber niedrige oder sehr niedrige methodische Qualität, und 68 % der Studien betrafen Zuckergetränke.",
+       "Energieschwankungen: Schnell verfügbare Zucker lassen den Blutzucker rasch steigen und wieder fallen. Viele Menschen spüren danach Müdigkeit oder Heißhunger – wie stark, ist individuell verschieden.",
+       "Haut und Stimmung: Hier ist die Beweislage dünn. Für Stimmungsstörungen zeigen Beobachtungsstudien Zusammenhänge; ob Zucker die Ursache ist, ist offen. Zu Haut gibt es kaum belastbare Studien, daher machen wir hier keine Versprechen."
+      ]
+     },
+     {
+      "type": "callout",
+      "title": "Ehrlich bleiben: Ist Zucker eine Sucht?",
+      "text": "Das ist wissenschaftlich umstritten. Ein Review (Westwater, Fletcher & Ziauddeen, 2016) fand beim Menschen wenig Belege für eine „Zuckersucht“; suchtähnliches Verhalten im Tierversuch trat vor allem bei zeitweisem Zugang auf. Eine Expertenrunde (Unwin et al., 2025) sieht dagegen suchtähnliche Muster bei hochverarbeiteten Lebensmitteln. Eine anerkannte Diagnose gibt es nicht. Belegt ist: Süßes kann Belohnung und Verlangen auslösen – und das darfst du ernst nehmen, egal wie man es nennt."
+     },
+     {
+      "type": "callout",
+      "title": "Du kannst etwas tun",
+      "text": "Jeder Schritt Richtung weniger Zucker zählt, nicht erst die perfekte Umstellung. Wenn Essen bei dir außer Kontrolle gerät oder dich stark belastet, sprich mit deiner Hausärztin oder deinem Hausarzt – du musst das nicht allein tragen."
+     }
+    ]
+   },
+   "en": {
+    "title": "What too much sugar does to your body",
+    "subtitle": "An honest look at what is well established – and where the evidence gets thinner.",
+    "blocks": [
+     {
+      "type": "paragraph",
+      "text": "You are not weak if sweet things are hard to resist. Sugar tastes good, it is everywhere, and in many families it belongs to happy moments. Still, it helps to look clearly: what actually happens in your body when a lot of added sugar becomes a habit? Here is what research knows fairly well – and what it does not."
+     },
+     {
+      "type": "heading",
+      "text": "First: which sugar are we talking about?"
+     },
+     {
+      "type": "paragraph",
+      "text": "The WHO speaks of 'free sugars'. These are sugars that manufacturers, cooks or you add to food and drinks, plus those in honey, syrups and fruit juice. Sugar in whole fruit, vegetables and milk is explicitly not included – the WHO reports no evidence of harm from these."
+     },
+     {
+      "type": "heading",
+      "text": "Teeth: the clearest evidence"
+     },
+     {
+      "type": "paragraph",
+      "text": "Free sugars are the most important dietary factor for tooth decay. A systematic review for the WHO (Moynihan & Kelly, 2014) analysed 55 studies and found, with moderate-quality evidence, less decay when free sugars stay below 10% of energy. For below 5% the evidence is of very low quality. How often you snack matters too: constant small doses of sugar keep your teeth bathed in acid."
+     },
+     {
+      "type": "stat",
+      "value": "< 10 %",
+      "label": "of energy should come from free sugars according to the WHO (2015) – a 'strong' recommendation."
+     },
+     {
+      "type": "heading",
+      "text": "Weight and type 2 diabetes"
+     },
+     {
+      "type": "paragraph",
+      "text": "A BMJ review by Te Morenga and colleagues (2012) found in adult trials that people eating less sugar lost about 0.8 kg on average, while eating more sugar led to a similar gain. That is no miracle cure, but it shows a direction. For sugar-sweetened drinks, the link to type 2 diabetes in observational studies is fairly consistent: a BMJ meta-analysis (Imamura et al., 2015) found an 18% higher risk per daily serving, still 13% after accounting for body weight. Observational studies cannot fully separate cause from coincidence, though."
+     },
+     {
+      "type": "stat",
+      "value": "+13 %",
+      "label": "type 2 diabetes risk per daily serving of a sugary drink, already adjusted for adiposity (Imamura, BMJ 2015)."
+     },
+     {
+      "type": "heading",
+      "text": "Liver, heart, energy, skin, mood"
+     },
+     {
+      "type": "list",
+      "items": [
+       "Liver and heart: a 2026 umbrella review (228 papers) sees links with fatty liver, cardiovascular disease and mortality. However, most of the reviews it analysed were of low or very low methodological quality, and 68% of the studies looked at sugary drinks.",
+       "Energy swings: quickly absorbed sugars make blood sugar rise and fall fast. Many people then feel tired or get cravings – how strongly varies a lot between individuals.",
+       "Skin and mood: evidence here is thin. Observational studies show links with mood disorders, but whether sugar is the cause is open. There are hardly any robust studies on skin, so we make no promises."
+      ]
+     },
+     {
+      "type": "callout",
+      "title": "Staying honest: is sugar an addiction?",
+      "text": "That is scientifically debated. One review (Westwater, Fletcher & Ziauddeen, 2016) found little evidence for 'sugar addiction' in humans; addiction-like behaviour in animals mainly appeared with intermittent access. An expert panel (Unwin et al., 2025), by contrast, sees addiction-like patterns with ultra-processed foods. There is no accepted diagnosis. What is documented: sweet foods can trigger reward and craving – and you can take that seriously whatever it is called."
+     },
+     {
+      "type": "callout",
+      "title": "You can do something about it",
+      "text": "Every step towards less sugar counts, not just the perfect overhaul. If eating feels out of control or distresses you, talk to your GP – you do not have to carry this alone."
+     }
+    ]
+   },
+   "sources": [
+    {
+     "name": "WHO – Guideline: Sugars intake for adults and children (2015), news release",
+     "url": "https://www.who.int/news/item/04-03-2015-who-calls-on-countries-to-reduce-sugars-intake-among-adults-and-children"
+    },
+    {
+     "name": "Moynihan & Kelly – Effect on caries of restricting sugars intake (J Dent Res, 2014)",
+     "url": "https://pubmed.ncbi.nlm.nih.gov/24323509/"
+    },
+    {
+     "name": "Te Morenga et al. – Dietary sugars and body weight (BMJ, 2012)",
+     "url": "https://pubmed.ncbi.nlm.nih.gov/23321486/"
+    },
+    {
+     "name": "Imamura et al. – Sugar sweetened beverages and type 2 diabetes (BMJ, 2015)",
+     "url": "https://pubmed.ncbi.nlm.nih.gov/26199070/"
+    },
+    {
+     "name": "Westwater, Fletcher, Ziauddeen – Sugar addiction: the state of the science (Eur J Nutr, 2016)",
+     "url": "https://pubmed.ncbi.nlm.nih.gov/27372453/"
+    },
+    {
+     "name": "Unwin et al. – Expert consensus on ultra-processed food addiction (Front Psychiatry, 2025)",
+     "url": "https://pubmed.ncbi.nlm.nih.gov/40375880/"
+    },
+    {
+     "name": "Umbrella review: oral and systemic health risks of sugar consumption (2026)",
+     "url": "https://europepmc.org/article/MED/42814269"
+    }
+   ]
+  },
+  {
+   "id": "sugar-facts",
+   "habit": "sugar",
+   "category": "facts",
+   "readMinutes": 4,
+   "de": {
+    "title": "Zucker in Zahlen: Fakten & Empfehlungen",
+    "subtitle": "Was Fachleute empfehlen, wo sich Zucker versteckt und was Zuckersteuern bewirken.",
+    "blocks": [
+     {
+      "type": "paragraph",
+      "text": "Eine Dose Limo, ein Löffel Ketchup, ein Fruchtjoghurt: Vieles, was wir essen, ist süßer als gedacht. Hier sind die wichtigsten Zahlen – alle mit Quelle, ohne Schockeffekt."
+     },
+     {
+      "type": "heading",
+      "text": "Die Empfehlungen"
+     },
+     {
+      "type": "stat",
+      "value": "< 10 %",
+      "label": "der Gesamtenergie aus freien Zuckern – WHO-Empfehlung 2015 (stark)."
+     },
+     {
+      "type": "stat",
+      "value": "< 5 %",
+      "label": "bringen laut WHO (2015) zusätzlichen Nutzen für die Zähne – bedingte Empfehlung, das sind etwa 25 g (6 Teelöffel) pro Tag."
+     },
+     {
+      "type": "paragraph",
+      "text": "Der britische NHS empfiehlt Erwachsenen höchstens 30 g freie Zucker am Tag, etwa 7 Würfel. Auch die Deutsche Gesellschaft für Ernährung (DGE) orientiert sich an der 10-%-Grenze der WHO; deutsche Verbrauchszahlen haben wir hier nicht aufgeführt, weil wir sie nicht sauber belegen konnten."
+     },
+     {
+      "type": "heading",
+      "text": "Wie viel wird gegessen?"
+     },
+     {
+      "type": "paragraph",
+      "text": "Die WHO nennt für Europa (2015) bei Erwachsenen eine Spanne von etwa 7–8 % der Energie in Ländern wie Ungarn und Norwegen bis 16–17 % in Spanien und im Vereinigten Königreich. Bei Kindern lag der Anteil zwischen rund 12 % (Dänemark, Slowenien, Schweden) und fast 25 % (Portugal)."
+     },
+     {
+      "type": "stat",
+      "value": "16–17 %",
+      "label": "Anteil freier Zucker an der Energie bei Erwachsenen in Spanien und UK (WHO, 2015)."
+     },
+     {
+      "type": "heading",
+      "text": "Wo sich Zucker versteckt"
+     },
+     {
+      "type": "stat",
+      "value": "~ 4 g",
+      "label": "freier Zucker in einem Esslöffel Ketchup (WHO, 2015)."
+     },
+     {
+      "type": "stat",
+      "value": "bis 40 g",
+      "label": "freier Zucker in einer Dose gezuckerter Limonade, rund 10 Teelöffel (WHO, 2015)."
+     },
+     {
+      "type": "list",
+      "items": [
+       "Auf Zutatenlisten steht Zucker auch als Glukose, Fruktose, Saccharose, Glukosesirup, Maltodextrin, Dextrose, Honig, Agavendicksaft, Fruchtsaftkonzentrat.",
+       "Je weiter vorn in der Liste, desto mehr steckt drin.",
+       "Fruchtsaft und Smoothies zählen laut WHO und NHS ebenfalls zu den freien Zuckern.",
+       "Beim NHS gelten mehr als 22,5 g Zucker pro 100 g als „viel“, 5 g oder weniger als „wenig“. Die Nährwerttabelle zeigt „davon Zucker“ – dort sind auch natürliche Milch- und Fruchtzucker enthalten."
+      ]
+     },
+     {
+      "type": "heading",
+      "text": "Steuern auf Zuckergetränke"
+     },
+     {
+      "type": "paragraph",
+      "text": "Im Vereinigten Königreich sank durch die Abgabe auf Softdrinks der Zuckergehalt in gekauften Getränken um etwa 15 g pro Haushalt und Woche; eine Modellrechnung (Cobiac et al., PLOS Medicine, 2024) erwartet daraus in zehn Jahren rund 64.100 weniger übergewichtige Kinder und Jugendliche in England. Das ist eine Modellierung, keine Messung. In Mexiko gingen die Einkäufe zuckergesüßter Getränke in den vier Jahren nach der Steuer von 2014 im Schnitt um 4,4 % zurück (Studie 2025); in Convenience-Läden stiegen sie jedoch."
+     },
+     {
+      "type": "stat",
+      "value": "−4,4 %",
+      "label": "Einkäufe zuckergesüßter Getränke in Mexiko in den 4 Jahren nach der Steuer (Studie 2025)."
+     },
+     {
+      "type": "paragraph",
+      "text": "Zwei weitere Einordnungen aus den Quellen: Der NHS weist darauf hin, dass eine Dose Cola bis zu 9 Zuckerwürfel enthalten kann – mehr als die empfohlene Tagesmenge für Erwachsene. Und die WHO beschreibt (2015) ein „natürliches Experiment“: Als der Zuckerangebot in den untersuchten Ländern nach dem Zweiten Weltkrieg stark einbrach, ging auch Karies zurück. Das ist keine Beweisführung im Labor, aber ein Hinweis darauf, wie stark die Verfügbarkeit von Zucker unsere Gewohnheiten prägt. Wichtig: Diese Zahlen sollen dich informieren, nicht einschüchtern."
+     },
+     {
+      "type": "callout",
+      "title": "Zahlen sind Werkzeuge, keine Waage",
+      "text": "Du musst keine Gramm zählen. Es reicht, Zutatenlisten zu kennen und die großen Posten – Getränke, Süßigkeiten, Frühstückscerealien – im Blick zu haben. Jeder bewusste Griff zählt."
+     }
+    ]
+   },
+   "en": {
+    "title": "Sugar in numbers: facts & guidelines",
+    "subtitle": "What experts recommend, where sugar hides and what sugar taxes achieve.",
+    "blocks": [
+     {
+      "type": "paragraph",
+      "text": "A can of soda, a spoonful of ketchup, a fruit yoghurt: much of what we eat is sweeter than we think. Here are the key numbers – all sourced, with no scare tactics."
+     },
+     {
+      "type": "heading",
+      "text": "The recommendations"
+     },
+     {
+      "type": "stat",
+      "value": "< 10 %",
+      "label": "of total energy from free sugars – WHO recommendation 2015 (strong)."
+     },
+     {
+      "type": "stat",
+      "value": "< 5 %",
+      "label": "brings extra benefit for teeth according to the WHO (2015) – conditional recommendation, about 25 g (6 teaspoons) per day."
+     },
+     {
+      "type": "paragraph",
+      "text": "The UK's NHS advises adults to have no more than 30 g of free sugars a day, about 7 sugar cubes. The German Nutrition Society (DGE) also follows the WHO's 10% limit; we have left out German consumption figures here because we could not source them cleanly."
+     },
+     {
+      "type": "heading",
+      "text": "How much do people eat?"
+     },
+     {
+      "type": "paragraph",
+      "text": "For Europe (2015) the WHO reports adult intake ranging from about 7–8% of energy in countries like Hungary and Norway to 16–17% in Spain and the United Kingdom. In children the share ran from around 12% (Denmark, Slovenia, Sweden) to nearly 25% (Portugal)."
+     },
+     {
+      "type": "stat",
+      "value": "16–17 %",
+      "label": "share of energy from free sugars in adults in Spain and the UK (WHO, 2015)."
+     },
+     {
+      "type": "heading",
+      "text": "Where sugar hides"
+     },
+     {
+      "type": "stat",
+      "value": "~ 4 g",
+      "label": "free sugars in one tablespoon of ketchup (WHO, 2015)."
+     },
+     {
+      "type": "stat",
+      "value": "up to 40 g",
+      "label": "free sugars in one can of sugar-sweetened soda, about 10 teaspoons (WHO, 2015)."
+     },
+     {
+      "type": "list",
+      "items": [
+       "On ingredient lists sugar also appears as glucose, fructose, sucrose, glucose syrup, maltodextrin, dextrose, honey, agave syrup, fruit juice concentrate.",
+       "The nearer to the top of the list, the more is inside.",
+       "Fruit juice and smoothies also count as free sugars according to the WHO and the NHS.",
+       "The NHS calls more than 22.5 g of sugars per 100 g 'high' and 5 g or less 'low'. The nutrition table shows 'of which sugars' – this includes natural milk and fruit sugars."
+      ]
+     },
+     {
+      "type": "heading",
+      "text": "Taxes on sugary drinks"
+     },
+     {
+      "type": "paragraph",
+      "text": "In the United Kingdom, the soft drinks levy cut sugar in purchased drinks by about 15 g per household per week; a modelling study (Cobiac et al., PLOS Medicine, 2024) projects roughly 64,100 fewer children and adolescents with overweight or obesity in England over ten years. That is a model, not a measurement. In Mexico, purchases of sugar-sweetened drinks fell by 4.4% on average in the four years after the 2014 tax (2025 study), though they rose in convenience stores."
+     },
+     {
+      "type": "stat",
+      "value": "−4.4 %",
+      "label": "purchases of sugary drinks in Mexico in the 4 years after the tax (2025 study)."
+     },
+     {
+      "type": "paragraph",
+      "text": "Two more points from the sources: the NHS notes that a can of cola can contain as many as 9 sugar cubes – more than the recommended daily amount for adults. And the WHO describes (2015) a 'natural experiment': when sugar availability in the studied populations dropped sharply after the Second World War, tooth decay fell too. That is not laboratory proof, but it hints at how strongly the availability of sugar shapes our habits. What matters: these numbers are meant to inform you, not to frighten you."
+     },
+     {
+      "type": "callout",
+      "title": "Numbers are tools, not a scale",
+      "text": "You do not need to count grams. Knowing ingredient lists and keeping an eye on the big items – drinks, sweets, breakfast cereals – is enough. Every conscious choice counts."
+     }
+    ]
+   },
+   "sources": [
+    {
+     "name": "WHO – Guideline: Sugars intake for adults and children (2015), news release",
+     "url": "https://www.who.int/news/item/04-03-2015-who-calls-on-countries-to-reduce-sugars-intake-among-adults-and-children"
+    },
+    {
+     "name": "NHS – How does sugar in our diet affect our health?",
+     "url": "https://www.nhs.uk/live-well/eat-well/food-types/how-does-sugar-in-our-diet-affect-our-health/"
+    },
+    {
+     "name": "Cobiac et al. – Impact of the UK soft drinks industry levy (PLOS Medicine, 2024)",
+     "url": "https://pubmed.ncbi.nlm.nih.gov/38547319/"
+    },
+    {
+     "name": "Mexico taxes on sugar-sweetened beverages and energy-dense foods – purchases 2008–2018 (2025)",
+     "url": "https://pubmed.ncbi.nlm.nih.gov/40521336/"
+    },
+    {
+     "name": "Deutsche Gesellschaft für Ernährung (DGE)",
+     "url": "https://www.dge.de"
+    }
+   ]
+  },
+  {
+   "id": "sugar-methods",
+   "habit": "sugar",
+   "category": "methods",
+   "readMinutes": 5,
+   "de": {
+    "title": "Weniger Zucker: Schritt für Schritt",
+    "subtitle": "Praktische Methoden, die zu deinem Alltag passen – und wo du Unterstützung findest.",
+    "blocks": [
+     {
+      "type": "paragraph",
+      "text": "Es gibt nicht den einen richtigen Weg. Manche Menschen kommen mit einem klaren Schnitt gut klar, andere mit kleinen Schritten. Zu allen Varianten gilt: Wähle, was du wirklich durchhalten kannst. Hier sind Ideen, die Fachstellen wie der NHS und die WHO nennen."
+     },
+     {
+      "type": "heading",
+      "text": "Schrittweise oder ganz auf einmal?"
+     },
+     {
+      "type": "paragraph",
+      "text": "Der NHS rät zum Beispiel, Zucker im Kaffee oder Müsli schrittweise zu reduzieren, bis du ihn nicht mehr vermisst. Eine Studie (Wise et al., 2016) zeigte, dass sich die Süßwahrnehmung nach einigen Monaten mit weniger Zucker anpasst. Zu der Frage, ob schrittweise oder abrupt langfristig besser funktioniert, haben wir keine verlässlichen Vergleichsstudien gefunden. Probiere aus, was zu dir passt."
+     },
+     {
+      "type": "steps",
+      "items": [
+       {
+        "title": "Starte mit den Getränken",
+        "text": "Gezuckerte Limos, Eistee und Säfte sind oft der größte Posten. Wasser, ungesüßter Tee oder Schorle mit viel Wasser sind einfache Tauschwege. Beim NHS gilt: Saft und Smoothies höchstens 150 ml am Tag."
+       },
+       {
+        "title": "Lies Etiketten",
+        "text": "Schau in die Zutatenliste, nicht nur aufs Frontlabel. „Davon Zucker“ in der Tabelle hilft beim Vergleichen ähnlicher Produkte."
+       },
+       {
+        "title": "Iss satt und regelmäßig",
+        "text": "Eiweiß, Ballaststoffe und Vollkorn halten länger satt. Die WHO empfiehlt mindestens 25 g Ballaststoffe am Tag für Erwachsene. Wer tagsüber zu wenig isst, greift abends oft eher zu Süßem."
+       },
+       {
+        "title": "Schlaf ernst nehmen",
+        "text": "Müdigkeit macht Appetit auf Schnelles. Das ist eine verbreitete Alltagserfahrung; wir nennen hier bewusst keine Zahlen."
+       },
+       {
+        "title": "Gestalte dein Umfeld",
+        "text": "Was nicht im Schrank liegt, musst du nicht abwehren. Stell Obst sichtbar hin und lass Süßes außer Reichweite."
+       },
+       {
+        "title": "Plane die Ausnahmen",
+        "text": "Ein bewusstes Stück Kuchen am Sonntag ist kein Rückfall. Feste Regeln für Ausnahmen nehmen Druck raus."
+       }
+      ]
+     },
+     {
+      "type": "heading",
+      "text": "Und Süßstoffe?"
+     },
+     {
+      "type": "paragraph",
+      "text": "Zuckerfreie Getränke können kurzfristig helfen, weil sie Zucker ersetzen. Die WHO rät aber seit 2023 (bedingte Empfehlung), Süßstoffe nicht zur Gewichtskontrolle zu nutzen: Langfristig sahen die Daten keinen Nutzen für das Körperfett, und es könnte unerwünschte Effekte geben, die aber durch andere Faktoren verzerrt sein können. Ihr Rat: die Gewöhnung an Süße insgesamt senken. Für Menschen mit Diabetes gilt die Empfehlung nicht."
+     },
+     {
+      "type": "heading",
+      "text": "Wo du Hilfe findest"
+     },
+     {
+      "type": "list",
+      "items": [
+       "Deine Hausarztpraxis – besonders bei Diabetes, Übergewicht oder wenn Essen dich belastet.",
+       "Qualifizierte Ernährungsberatung – frag deine Krankenkasse, ob sie Kosten ganz oder teilweise übernimmt.",
+       "Die Verbraucherzentralen (verbraucherzentrale.de) mit Infos zu Lebensmitteln und Etiketten.",
+       "Deine Zahnarztpraxis für Tipps zu Kariesschutz."
+      ]
+     },
+     {
+      "type": "paragraph",
+      "text": "Ein Gedanke zum Schluss: Du musst nicht alles gleichzeitig ändern. Wähle eine Sache für diese Woche, etwa das Zuckerstück im Kaffee oder das Getränk am Nachmittag, und beobachte, wie es sich anfühlt. Schreib dir auf, was gut geklappt hat und wo es schwierig war. So lernst du deine eigenen Muster kennen, und genau diese Muster sind später in deiner Beratung oder beim Arztgespräch hilfreich. Kleine Anpassungen, die du wirklich beibehältst, sind mehr wert als ein perfekter Plan, der nach drei Tagen kippt."
+     },
+     {
+      "type": "callout",
+      "title": "Wenn Essen aus dem Gleichgewicht gerät",
+      "text": "Bingeing, ständige Gedanken ans Essen, Schuldgefühle oder strenge Verbote können auf eine Essstörung hinweisen. Dann ist Zuckerreduktion nicht das richtige Ziel – such bitte professionelle Hilfe bei Hausarzt, Psychotherapie oder einer Beratungsstelle für Essstörungen. Du verdienst Unterstützung."
+     }
+    ]
+   },
+   "en": {
+    "title": "Cutting down on sugar, step by step",
+    "subtitle": "Practical methods that fit your daily life – and where to find support.",
+    "blocks": [
+     {
+      "type": "paragraph",
+      "text": "There is no single right way. Some people do well with a clean break, others with small steps. For every version, the same applies: choose what you can truly sustain. Here are ideas named by bodies such as the NHS and the WHO."
+     },
+     {
+      "type": "heading",
+      "text": "Gradual or all at once?"
+     },
+     {
+      "type": "paragraph",
+      "text": "The NHS suggests, for example, gradually reducing sugar in coffee or cereal until you no longer miss it. A study (Wise et al., 2016) showed that sweetness perception adapts after a few months of eating less sugar. We found no reliable comparison trials on whether gradual or abrupt works better in the long run. Try what suits you."
+     },
+     {
+      "type": "steps",
+      "items": [
+       {
+        "title": "Start with drinks",
+        "text": "Sugary sodas, iced tea and juices are often the biggest item. Water, unsweetened tea or a spritzer with lots of water are easy swaps. The NHS advises no more than 150 ml of juice or smoothie a day."
+       },
+       {
+        "title": "Read labels",
+        "text": "Look at the ingredient list, not just the front of the pack. 'Of which sugars' in the table helps you compare similar products."
+       },
+       {
+        "title": "Eat enough, regularly",
+        "text": "Protein, fibre and wholegrains keep you full longer. The WHO recommends at least 25 g of fibre a day for adults. If you eat too little during the day, you are more likely to reach for sweets in the evening."
+       },
+       {
+        "title": "Take sleep seriously",
+        "text": "Tiredness makes quick energy more appealing. This is a common everyday experience; we deliberately give no numbers here."
+       },
+       {
+        "title": "Shape your environment",
+        "text": "What is not in the cupboard, you do not have to resist. Put fruit in sight and keep sweets out of reach."
+       },
+       {
+        "title": "Plan the exceptions",
+        "text": "A deliberate slice of cake on Sunday is not a relapse. Clear rules for exceptions take pressure off."
+       }
+      ]
+     },
+     {
+      "type": "heading",
+      "text": "What about sweeteners?"
+     },
+     {
+      "type": "paragraph",
+      "text": "Sugar-free drinks can help in the short term because they replace sugar. But since 2023 the WHO advises (conditional recommendation) against using sweeteners for weight control: long term, the data showed no benefit for body fat, and there might be undesirable effects, though these may be distorted by other factors. Its advice: lower your overall taste for sweetness. The recommendation does not apply to people with diabetes."
+     },
+     {
+      "type": "heading",
+      "text": "Where to find help"
+     },
+     {
+      "type": "list",
+      "items": [
+       "Your GP – especially with diabetes, overweight or if eating distresses you.",
+       "Qualified nutrition counselling – ask your health insurer whether it covers the costs in full or in part.",
+       "Consumer advice centres (Verbraucherzentrale, verbraucherzentrale.de) with information on food and labels.",
+       "Your dentist for advice on protecting against decay."
+      ]
+     },
+     {
+      "type": "paragraph",
+      "text": "One last thought: you do not have to change everything at once. Pick one thing for this week, such as the sugar in your coffee or the afternoon drink, and notice how it feels. Write down what went well and where it was difficult. That way you get to know your own patterns, and those patterns are exactly what helps later in counselling or at a doctor's appointment. Small adjustments you actually keep are worth more than a perfect plan that collapses after three days."
+     },
+     {
+      "type": "callout",
+      "title": "When eating gets out of balance",
+      "text": "Binge eating, constant thoughts about food, guilt or strict bans can point to an eating disorder. Then cutting sugar is not the right goal – please seek professional help from your GP, a psychotherapist or an eating-disorder counselling service. You deserve support."
+     }
+    ]
+   },
+   "sources": [
+    {
+     "name": "NHS – How does sugar in our diet affect our health?",
+     "url": "https://www.nhs.uk/live-well/eat-well/food-types/how-does-sugar-in-our-diet-affect-our-health/"
+    },
+    {
+     "name": "WHO – Healthy diet fact sheet",
+     "url": "https://www.who.int/news-room/fact-sheets/detail/healthy-diet"
+    },
+    {
+     "name": "WHO – Advises not to use non-sugar sweeteners for weight control (2023)",
+     "url": "https://www.who.int/news/item/15-05-2023-who-advises-not-to-use-non-sugar-sweeteners-for-weight-control-in-newly-released-guideline"
+    },
+    {
+     "name": "Wise et al. – Reduced dietary intake of simple sugars alters perceived sweet taste intensity (Am J Clin Nutr, 2016)",
+     "url": "https://pubmed.ncbi.nlm.nih.gov/26607941/"
+    },
+    {
+     "name": "Verbraucherzentrale",
+     "url": "https://www.verbraucherzentrale.de"
+    }
+   ]
+  },
+  {
+   "id": "sugar-recovery",
+   "habit": "sugar",
+   "category": "recovery",
+   "readMinutes": 4,
+   "de": {
+    "title": "Was passiert, wenn du weniger Zucker isst",
+    "subtitle": "Von den ersten Tagen bis zu den ersten Monaten – vorsichtig formuliert und mit Quellen.",
+    "blocks": [
+     {
+      "type": "paragraph",
+      "text": "Viele fragen sich: Wie lange fühlt sich das nach Verzicht an? Die ehrliche Antwort: Das ist von Mensch zu Mensch verschieden, und für manche Fragen gibt es kaum Daten. Hier steht, was sich belegen lässt – und was Erfahrungswerte sind."
+     },
+     {
+      "type": "heading",
+      "text": "Die ersten Tage"
+     },
+     {
+      "type": "paragraph",
+      "text": "Heißhunger, Gereiztheit, Müdigkeit oder Kopfschmerzen berichten manche Menschen in den ersten Tagen. Ein anerkanntes „Zuckerentzugssyndrom“ ist beim Menschen aber nicht belegt (Westwater et al., 2016 fanden wenig Evidenz für Zuckersucht). Oft spielen andere Dinge mit hinein: weniger Koffein aus gesüßten Colas, ungewohnt wenig Energie in den Mahlzeiten oder Stress. Wenn du isst, trinkst und schläfst, sind solche Beschwerden meist kurz. Halten sie an oder sind sie stark, lass es ärztlich anschauen."
+     },
+     {
+      "type": "heading",
+      "text": "Die ersten Wochen: Geschmack passt sich an"
+     },
+     {
+      "type": "paragraph",
+      "text": "In einer kleinen Studie (Wise et al., 2016) ersetzten Teilnehmende drei Monate lang einen Teil ihrer Energie aus einfachen Zuckern. Nach etwa zwei bis drei Monaten empfanden sie Süßes mit wenig Zucker als intensiver süß als die Kontrollgruppe, während die Beliebtheit gleich blieb. Die Studie war sehr klein: 29 Menschen haben sie abgeschlossen. Sie passt aber zur Alltagserfahrung vieler: Was zuerst fade wirkt, schmeckt später süß genug."
+     },
+     {
+      "type": "stat",
+      "value": "~ 3 Mon.",
+      "label": "dauerte die Diät in der Studie von Wise et al. (2016), in der sich die Süßwahrnehmung veränderte."
+     },
+     {
+      "type": "heading",
+      "text": "Monate später: Körper und Zähne"
+     },
+     {
+      "type": "list",
+      "items": [
+       "Gewicht: In Studien mit Erwachsenen sank das Gewicht bei weniger Zucker im Schnitt um etwa 0,8 kg (Te Morenga, BMJ 2012). Das ist bescheiden – ein Nebeneffekt, kein Wunder.",
+       "Zähne: Weniger freie Zucker gehen mit weniger Karies einher (Moynihan & Kelly, 2014, mittlere Evidenzqualität bei unter 10 % der Energie). Schon gebildete Schäden heilen so nicht aus; die Zahnärztin bleibt wichtig.",
+       "Blutzucker und Energie: Wer sehr süße Getränke ersetzt, vermeidet starke Blutzuckerspitzen. Ob du dich dadurch spürbar fitter fühlst, ist individuell. Verlässliche Zahlen dazu nennen wir nicht.",
+       "Diabetes: Das Risiko steigt laut Meta-Analyse (Imamura, 2015) mit der Menge zuckergesüßter Getränke. Ob ein Umstieg es bei dir senkt, kann deine Hausarztpraxis einschätzen."
+      ]
+     },
+     {
+      "type": "quote",
+      "text": "Nach einigen Wochen schmeckte mir der Kaffee ohne Zucker plötzlich besser.",
+      "attribution": "Zusammengesetzte, illustrative Aussage – typisch für berichtete Erfahrungen, keine reale Person"
+     },
+     {
+      "type": "paragraph",
+      "text": "Was dir dabei helfen kann: Beobachte dich, statt dich zu messen. Notiere nach ein paar Wochen, ob sich Getränke, Heißhungermomente oder dein Geschmack verändert haben. Das ist kein Test, den du bestehen musst, sondern Material für dich selbst. Und erwarte nicht, dass jeder Effekt aus Studien bei dir genauso eintritt: Die Zahlen oben sind Durchschnittswerte über viele Menschen, dein Körper kann davon abweichen. Wenn du dich unsicher fühlst, ist ein Gespräch in der Hausarztpraxis eine gute Gelegenheit, deine Fragen zu klären."
+     },
+     {
+      "type": "callout",
+      "title": "Dein Tempo ist das richtige",
+      "text": "Fortschritt ist selten gerade. Ein Tag mit Schokolade löscht keine Woche ohne. Wenn Essen dich sehr beschäftigt oder du streng wirst, sprich mit deiner Hausärztin oder einer Beratungsstelle – Gelassenheit gehört zur Erholung dazu."
+     }
+    ]
+   },
+   "en": {
+    "title": "What happens when you eat less sugar",
+    "subtitle": "From the first days to the first months – carefully worded and sourced.",
+    "blocks": [
+     {
+      "type": "paragraph",
+      "text": "Many people wonder: how long will this feel like giving something up? The honest answer: it varies from person to person, and for some questions there is hardly any data. Here is what can be backed up – and what is lived experience."
+     },
+     {
+      "type": "heading",
+      "text": "The first days"
+     },
+     {
+      "type": "paragraph",
+      "text": "Some people report cravings, irritability, tiredness or headaches in the first days. An accepted 'sugar withdrawal syndrome' is not established in humans, though (Westwater et al., 2016 found little evidence for sugar addiction). Other things often play a part: less caffeine from sweetened colas, unusually little energy in meals, or stress. If you eat, drink and sleep, such complaints are usually short-lived. If they persist or are strong, have a doctor take a look."
+     },
+     {
+      "type": "heading",
+      "text": "The first weeks: taste adapts"
+     },
+     {
+      "type": "paragraph",
+      "text": "In a small study (Wise et al., 2016), participants replaced part of their energy from simple sugars for three months. After about two to three months they rated low-sugar sweet foods as more intensely sweet than the control group, while how much they liked them stayed the same. The study was very small: 29 people completed it. Still, it fits many people's everyday experience: what tastes bland at first later tastes sweet enough."
+     },
+     {
+      "type": "stat",
+      "value": "~ 3 mo.",
+      "label": "was the diet period in the study by Wise et al. (2016) in which sweetness perception changed."
+     },
+     {
+      "type": "heading",
+      "text": "Months later: body and teeth"
+     },
+     {
+      "type": "list",
+      "items": [
+       "Weight: in adult trials, weight fell by about 0.8 kg on average with less sugar (Te Morenga, BMJ 2012). That is modest – a side effect, not a miracle.",
+       "Teeth: less free sugar goes along with less decay (Moynihan & Kelly, 2014, moderate-quality evidence below 10% of energy). Existing damage does not heal this way; your dentist stays important.",
+       "Blood sugar and energy: replacing very sweet drinks avoids sharp blood sugar spikes. Whether you feel noticeably fitter is individual. We give no reliable numbers for this.",
+       "Diabetes: risk rises with the amount of sugary drinks according to a meta-analysis (Imamura, 2015). Whether switching lowers it for you is something your GP can assess."
+      ]
+     },
+     {
+      "type": "quote",
+      "text": "After a few weeks, coffee without sugar suddenly tasted better to me.",
+      "attribution": "Composite, illustrative statement – typical of reported experiences, not a real person"
+     },
+     {
+      "type": "paragraph",
+      "text": "What can help along the way: observe yourself instead of measuring yourself. After a few weeks, note whether your drinks, craving moments or your taste have changed. This is not a test you must pass, just material for yourself. And do not expect every effect from studies to show up exactly in you: the numbers above are averages across many people, and your body may differ."
+     },
+     {
+      "type": "callout",
+      "title": "Your pace is the right pace",
+      "text": "Progress is rarely a straight line. One day with chocolate does not erase a week without. If food occupies your mind a lot or you become rigid, talk to your GP or a counselling service – calm is part of recovery."
+     }
+    ]
+   },
+   "sources": [
+    {
+     "name": "Wise et al. – Reduced dietary intake of simple sugars alters perceived sweet taste intensity (Am J Clin Nutr, 2016)",
+     "url": "https://pubmed.ncbi.nlm.nih.gov/26607941/"
+    },
+    {
+     "name": "Westwater, Fletcher, Ziauddeen – Sugar addiction: the state of the science (2016)",
+     "url": "https://pubmed.ncbi.nlm.nih.gov/27372453/"
+    },
+    {
+     "name": "Te Morenga et al. – Dietary sugars and body weight (BMJ, 2012)",
+     "url": "https://pubmed.ncbi.nlm.nih.gov/23321486/"
+    },
+    {
+     "name": "Moynihan & Kelly – Effect on caries of restricting sugars intake (2014)",
+     "url": "https://pubmed.ncbi.nlm.nih.gov/24323509/"
+    },
+    {
+     "name": "Imamura et al. – Sugar sweetened beverages and type 2 diabetes (BMJ, 2015)",
+     "url": "https://pubmed.ncbi.nlm.nih.gov/26199070/"
+    }
+   ]
+  },
+  {
+   "id": "sugar-stories",
+   "habit": "sugar",
+   "category": "stories",
+   "readMinutes": 5,
+   "de": {
+    "title": "Drei typische Wege weg vom Zucker",
+    "subtitle": "Zusammengesetzte Erfahrungsberichte – mit Rückschlägen, wie sie wirklich vorkommen.",
+    "blocks": [
+     {
+      "type": "callout",
+      "title": "Wichtiger Hinweis",
+      "text": "Die folgenden Berichte sind erfundene, anonymisierte Beispiele und keine echten Personen. Sie fassen typische Verläufe zusammen, wie sie in Studien und Beratungsstellen immer wieder beschrieben werden. Namen und Details sind frei gewählt."
+     },
+     {
+      "type": "heading",
+      "text": "Mara: Die Cola am Schreibtisch"
+     },
+     {
+      "type": "paragraph",
+      "text": "Mara, Mitte 30, trank bei der Arbeit drei bis vier gezuckerte Getränke am Tag, ohne groß darüber nachzudenken. Als ihr Zahnarzt neue Kariesstellen fand, wollte sie etwas ändern. Sie begann mit einem einzigen Tausch: Statt Cola gab es Mineralwasser mit Zitrone. Die ersten Tage waren zäh, und am Nachmittag fehlte ihr der Kick. Nach ein paar Wochen merkte sie, dass der Durst nach Süße leiser wurde."
+     },
+     {
+      "type": "quote",
+      "text": "Ich dachte, ich verzichte. Inzwischen merke ich eher, wie süß manches geworden ist.",
+      "attribution": "Zusammengesetzter Erfahrungsbericht – typische Verläufe aus Studien und Beratungsstellen"
+     },
+     {
+      "type": "heading",
+      "text": "Jonas: Der Rückfall nach dem Stress"
+     },
+     {
+      "type": "paragraph",
+      "text": "Jonas hatte sich vorgenommen, drei Wochen lang gar keine Süßigkeiten zu essen. Nach einem harten Projektabschluss aß er an einem Abend eine ganze Tafel Schokolade und fühlte sich furchtbar. Sein erster Gedanke: „Alles umsonst.“ Erst als er mit einem Freund darüber sprach, sah er es anders: Ein Abend ist ein Abend, kein Scheitern. Er legte sich eine Regel zurecht: Bei Stress zuerst zehn Minuten rausgehen, dann entscheiden. Manchmal isst er trotzdem etwas Süßes – und das ist für ihn in Ordnung."
+     },
+     {
+      "type": "heading",
+      "text": "Elif: Wenn es nicht nur um Zucker geht"
+     },
+     {
+      "type": "paragraph",
+      "text": "Elif hatte versucht, Zucker streng zu verbieten. Je mehr sie verbot, desto mehr kreisten ihre Gedanken ums Essen, und Heißhungerattacken kamen mit Schuldgefühlen. Ihre Hausärztin riet ihr, den Druck herauszunehmen, und vermittelte sie an eine Ernährungsberatung. Dort ging es weniger um Verbote als um regelmäßige Mahlzeiten und Gelassenheit. Zucker wurde wieder ein Nahrungsmittel unter vielen."
+     },
+     {
+      "type": "list",
+      "items": [
+       "Kleine, konkrete Schritte halten länger durch als große Vorsätze.",
+       "Rückschläge gehören dazu – wichtig ist, was danach passiert.",
+       "Strenge Verbote können nach hinten losgehen.",
+       "Hilfe zu holen ist ein Zeichen von Stärke, nicht von Schwäche."
+      ]
+     },
+     {
+      "type": "paragraph",
+      "text": "Echte Erfahrungen von Menschen, die auf Zucker verzichten, findest du in Foren und Selbsthilfegruppen. Bedenke: Das sind Einzelberichte. Sie ersetzen keine ärztliche Beratung, und was einem hilft, muss dir nicht helfen."
+     },
+     {
+      "type": "paragraph",
+      "text": "Was alle drei Verläufe verbindet: Niemand hat „perfekt“ durchgehalten. Mara hat nach Wochen mit Zucker im Kaffee wieder angefangen und ihn dann erneut reduziert. Jonas nutzt seine Regel nur manchmal, und das reicht. Elif hat gelernt, dass weniger Druck oft mehr Ruhe bringt. Was sie gemeinsam haben, ist ein freundlicher Umgang mit sich selbst und die Bereitschaft, nach einem Rückschlag einfach weiterzumachen. Genau das lässt sich üben. Und wenn du dich in keiner der Geschichten wiederfindest, ist das ebenfalls völlig in Ordnung – jede Erfahrung ist anders."
+     },
+     {
+      "type": "callout",
+      "title": "Dein Weg ist deiner",
+      "text": "Du musst keiner dieser Geschichten gleichen. Such dir einen kleinen Schritt, probiere ihn aus und sei freundlich zu dir, wenn er nicht gleich klappt."
+     }
+    ]
+   },
+   "en": {
+    "title": "Three typical paths away from sugar",
+    "subtitle": "Composite accounts – with the setbacks that really happen.",
+    "blocks": [
+     {
+      "type": "callout",
+      "title": "Important note",
+      "text": "The following accounts are invented, anonymised examples and not real people. They summarise typical courses as repeatedly described in studies and counselling services. Names and details are made up."
+     },
+     {
+      "type": "heading",
+      "text": "Mara: the cola at the desk"
+     },
+     {
+      "type": "paragraph",
+      "text": "Mara, in her mid-30s, drank three or four sugary drinks a day at work without thinking much about it. When her dentist found new cavities, she wanted to change something. She started with one single swap: sparkling water with lemon instead of cola. The first days were tough, and she missed the kick in the afternoon. After a few weeks she noticed that her thirst for sweetness had quietened down."
+     },
+     {
+      "type": "quote",
+      "text": "I thought I was giving something up. These days I notice more how sweet some things have become.",
+      "attribution": "Composite account – typical courses from studies and counselling services"
+     },
+     {
+      "type": "heading",
+      "text": "Jonas: the slip after stress"
+     },
+     {
+      "type": "paragraph",
+      "text": "Jonas had resolved to eat no sweets at all for three weeks. After a gruelling project deadline he ate a whole bar of chocolate one evening and felt terrible. His first thought: 'All for nothing.' Only when he talked about it with a friend did he see it differently: one evening is one evening, not a failure. He set himself a rule: when stressed, first go outside for ten minutes, then decide. Sometimes he still eats something sweet – and for him that is fine."
+     },
+     {
+      "type": "heading",
+      "text": "Elif: when it is not only about sugar"
+     },
+     {
+      "type": "paragraph",
+      "text": "Elif had tried to ban sugar strictly. The more she banned, the more her thoughts circled around food, and cravings came with guilt. Her GP advised her to take the pressure off and referred her to nutrition counselling. There it was less about bans than about regular meals and calm. Sugar became one food among many again."
+     },
+     {
+      "type": "list",
+      "items": [
+       "Small, concrete steps last longer than big resolutions.",
+       "Setbacks are part of it – what matters is what happens next.",
+       "Strict bans can backfire.",
+       "Asking for help is a sign of strength, not weakness."
+      ]
+     },
+     {
+      "type": "paragraph",
+      "text": "You can find real experiences of people cutting out sugar in forums and self-help groups. Keep in mind: these are individual reports. They do not replace medical advice, and what helps one person may not help you."
+     },
+     {
+      "type": "paragraph",
+      "text": "What connects all three courses: nobody kept going 'perfectly'. Mara went back to sugar in her coffee after some weeks and then reduced it again. Jonas uses his rule only sometimes, and that is enough. Elif learned that less pressure often brings more calm. What they share is a kind attitude towards themselves and the willingness to simply carry on after a setback. That is something you can practise."
+     },
+     {
+      "type": "callout",
+      "title": "Your path is yours",
+      "text": "You do not have to resemble any of these stories. Pick one small step, try it, and be kind to yourself if it does not work straight away."
+     }
+    ]
+   },
+   "sources": [
+    {
+     "name": "WHO – Guideline: Sugars intake for adults and children (2015), news release",
+     "url": "https://www.who.int/news/item/04-03-2015-who-calls-on-countries-to-reduce-sugars-intake-among-adults-and-children"
+    },
+    {
+     "name": "Westwater, Fletcher, Ziauddeen – Sugar addiction: the state of the science (2016)",
+     "url": "https://pubmed.ncbi.nlm.nih.gov/27372453/"
+    },
+    {
+     "name": "NHS – How does sugar in our diet affect our health?",
+     "url": "https://www.nhs.uk/live-well/eat-well/food-types/how-does-sugar-in-our-diet-affect-our-health/"
+    }
+   ]
+  },
+  {
+   "id": "sugar-triggers",
+   "habit": "sugar",
+   "category": "triggers",
+   "readMinutes": 5,
+   "de": {
+    "title": "Heißhunger, Stress & Gewohnheiten verstehen",
+    "subtitle": "Wie du Auslöser erkennst, Verlangen aussitzt und nach einem Ausrutscher freundlich bleibst.",
+    "blocks": [
+     {
+      "type": "paragraph",
+      "text": "Es ist 15 Uhr, der Kopf ist leer, und plötzlich denkst du an Schokolade. Kennst du? Du bist damit nicht allein – und du kannst lernen, solche Momente zu verstehen statt dich dafür zu verurteilen."
+     },
+     {
+      "type": "heading",
+      "text": "Typische Auslöser"
+     },
+     {
+      "type": "list",
+      "items": [
+       "Emotionen: Stress, Langeweile, Einsamkeit, Frust oder Freude – Essen ist oft ein Trostpflaster, das schnell wirkt.",
+       "Der Nachmittagstief: Nach einer langen Pause ohne Essen oder einer sehr süßen Mahlzeit fühlen sich viele schlapp und suchen Schnelles.",
+       "Gewohnheiten: Das Stück Kuchen zum Kaffee, die Süßigkeit vor dem Fernseher, der Schokoriegel an der Tankstelle.",
+       "Umgebung: Süßigkeiten auf dem Tisch oder an der Kasse machen den Griff leicht."
+      ]
+     },
+     {
+      "type": "paragraph",
+      "text": "Ob Zucker „süchtig“ macht, ist wissenschaftlich umstritten. Belegt ist, dass Süßes Belohnungssysteme anspricht und Verlangen auslösen kann. Westwater et al. (2016) sehen allerdings keinen ausreichenden Beleg für eine Zuckersucht beim Menschen. Für den Umgang mit einem Verlangen ist das zweitrangig: Es kommt, erreicht einen Höhepunkt und geht wieder."
+     },
+     {
+      "type": "heading",
+      "text": "Urge Surfing: das Verlangen wie eine Welle nehmen"
+     },
+     {
+      "type": "paragraph",
+      "text": "Urge Surfing stammt aus der Suchttherapie (Marlatt). Du kämpfst nicht gegen den Drang, sondern beobachtest ihn, bis er abebbt. Für Zucker haben wir keine eigene Studie gefunden, die Methode ist aber einfach und risikoarm – probiere sie aus."
+     },
+     {
+      "type": "steps",
+      "items": [
+       {
+        "title": "Benenne es",
+        "text": "Sag dir: „Ich spüre gerade Verlangen nach Süßem.“ Mehr nicht."
+       },
+       {
+        "title": "Spüre hin",
+        "text": "Wo sitzt das Gefühl? Mund, Magen, Hände? Beschreibe es wie ein Forscher."
+       },
+       {
+        "title": "Atme und warte",
+        "text": "Atme ruhig und stelle dir eine Welle vor, die steigt und wieder fällt. Gib ihr zehn Minuten."
+       },
+       {
+        "title": "Entscheide danach",
+        "text": "Trink ein Glas Wasser, geh kurz raus, ruf jemanden an. Danach entscheidest du bewusst – auch „Ja, ich esse jetzt etwas Süßes“ darf das Ergebnis sein."
+       }
+      ]
+     },
+     {
+      "type": "heading",
+      "text": "Wenn es doch passiert: Rückfall ohne Schuld"
+     },
+     {
+      "type": "paragraph",
+      "text": "Ein Ausrutscher ist Information, kein Urteil. Frag dich: Was war vorher los? Hatte ich Hunger, Stress, zu wenig Schlaf? Dann mach bei der nächsten Mahlzeit normal weiter. Nicht „Sonntag büßen“, nicht streichen, nicht nachholen. Strenge Verbote und Schuld führen bei manchen Menschen eher zu mehr Heißhunger."
+     },
+     {
+      "type": "paragraph",
+      "text": "Ein praktischer Tipp: Führe ein, zwei Wochen lang ein kurzes Auslöser-Tagebuch, ohne Zahlen. Schreibe nur auf, wann das Verlangen kam, was vorher passiert ist und wie du dich gefühlt hast. Oft zeigt sich ein Muster, etwa Stress nach Meetings oder Langeweile am Abend. Wenn du den Auslöser kennst, kannst du eine Alternative vorbereiten: einen kurzen Spaziergang, ein Telefonat, eine herzhafte Mahlzeit oder einfach eine Pause. Auch ausreichend Schlaf und regelmäßiges Essen nehmen vielen Auslösern die Kraft. Sei dabei geduldig: Gewohnheiten wachsen über Wochen und Monate, nicht über Nacht."
+     },
+     {
+      "type": "callout",
+      "title": "Achte auf Warnzeichen",
+      "text": "Wenn Essanfälle, Erbrechen, ständiges Kreisen der Gedanken ums Essen oder starke Schuldgefühle auftreten, kann das auf eine Essstörung hindeuten. Bitte sprich mit deiner Hausärztin oder deinem Hausarzt oder suche eine Beratungsstelle. Das ist kein Scheitern – es ist ein mutiger Schritt."
+     }
+    ]
+   },
+   "en": {
+    "title": "Understanding cravings, stress & habits",
+    "subtitle": "How to spot triggers, ride out an urge and stay kind to yourself after a slip.",
+    "blocks": [
+     {
+      "type": "paragraph",
+      "text": "It is 3 pm, your head is empty, and suddenly you are thinking about chocolate. Sound familiar? You are not alone – and you can learn to understand such moments instead of judging yourself for them."
+     },
+     {
+      "type": "heading",
+      "text": "Typical triggers"
+     },
+     {
+      "type": "list",
+      "items": [
+       "Emotions: stress, boredom, loneliness, frustration or joy – food is often a quick-acting comfort.",
+       "The afternoon slump: after a long gap without food or a very sweet meal, many feel sluggish and look for something quick.",
+       "Habits: the cake with coffee, the sweets in front of the TV, the chocolate bar at the petrol station.",
+       "Environment: sweets on the table or at the checkout make reaching for them easy."
+      ]
+     },
+     {
+      "type": "paragraph",
+      "text": "Whether sugar is 'addictive' is scientifically debated. What is documented is that sweet food engages reward systems and can trigger cravings. Westwater et al. (2016), however, see insufficient evidence for sugar addiction in humans. For handling a craving that is secondary: it comes, peaks and passes."
+     },
+     {
+      "type": "heading",
+      "text": "Urge surfing: take the craving like a wave"
+     },
+     {
+      "type": "paragraph",
+      "text": "Urge surfing comes from addiction therapy (Marlatt). You do not fight the urge but observe it until it fades. We found no dedicated study for sugar, but the method is simple and low-risk – give it a try."
+     },
+     {
+      "type": "steps",
+      "items": [
+       {
+        "title": "Name it",
+        "text": "Tell yourself: 'I am feeling a craving for something sweet right now.' Nothing more."
+       },
+       {
+        "title": "Notice it",
+        "text": "Where is the feeling? Mouth, stomach, hands? Describe it like a researcher."
+       },
+       {
+        "title": "Breathe and wait",
+        "text": "Breathe calmly and picture a wave that rises and falls. Give it ten minutes."
+       },
+       {
+        "title": "Decide afterwards",
+        "text": "Drink a glass of water, step outside, call someone. Then decide consciously – 'yes, I will have something sweet now' may be the outcome too."
+       }
+      ]
+     },
+     {
+      "type": "heading",
+      "text": "If it happens anyway: a slip without guilt"
+     },
+     {
+      "type": "paragraph",
+      "text": "A slip is information, not a verdict. Ask yourself: what was going on beforehand? Hunger, stress, too little sleep? Then carry on normally at the next meal. No 'making up for it', no skipping, no punishing. For some people, strict bans and guilt lead to more cravings, not fewer."
+     },
+     {
+      "type": "paragraph",
+      "text": "A practical tip: for a week or two, keep a short trigger diary, without numbers. Only write down when the craving came, what happened beforehand and how you felt. A pattern often appears, such as stress after meetings or boredom in the evening. Once you know the trigger, you can prepare an alternative: a short walk, a phone call, a savoury meal or simply a break. Enough sleep and regular meals also take the power out of many triggers."
+     },
+     {
+      "type": "callout",
+      "title": "Watch for warning signs",
+      "text": "If you have binges, vomiting, constant circling thoughts about food or strong guilt, this can point to an eating disorder. Please talk to your GP or find a counselling service. That is not failing – it is a brave step."
+     }
+    ]
+   },
+   "sources": [
+    {
+     "name": "Westwater, Fletcher, Ziauddeen – Sugar addiction: the state of the science (2016)",
+     "url": "https://pubmed.ncbi.nlm.nih.gov/27372453/"
+    },
+    {
+     "name": "Unwin et al. – Expert consensus on ultra-processed food addiction (Front Psychiatry, 2025)",
+     "url": "https://pubmed.ncbi.nlm.nih.gov/40375880/"
+    },
+    {
+     "name": "WHO – Healthy diet fact sheet",
+     "url": "https://www.who.int/news-room/fact-sheets/detail/healthy-diet"
+    }
+   ]
+  }
+ ]
+}
