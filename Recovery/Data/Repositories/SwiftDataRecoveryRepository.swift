@@ -224,7 +224,7 @@ final class SwiftDataRecoveryRepository: RecoveryRepository {
         let domain = RecoveryMapper.toDomain(profile)
         let achieved = domain.currentStreakDays(now: relapse.date)
         profile.bestStreakDays = max(profile.bestStreakDays, achieved)
-        profile.startDate = Calendar.current.startOfDay(for: relapse.date)
+        profile.startDate = relapse.date
 
         try save()
     }

@@ -47,9 +47,7 @@ struct RecoveryProfile: Equatable, Identifiable {
 
     /// Anzahl cleaner Tage seit `startDate` (kalendarisch, nie negativ).
     func currentStreakDays(now: Date = .now, calendar: Calendar = .current) -> Int {
-        let start = calendar.startOfDay(for: startDate)
-        let today = calendar.startOfDay(for: now)
-        let days = calendar.dateComponents([.day], from: start, to: today).day ?? 0
+        let days = calendar.dateComponents([.day], from: startDate, to: now).day ?? 0
         return max(0, days)
     }
 

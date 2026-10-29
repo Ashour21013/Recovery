@@ -17,10 +17,8 @@ struct RecoveryEntry: TimelineEntry {
 
     /// Aktuelle Streak für den angezeigten Tag (kalendarisch berechnet).
     var streakDays: Int {
-        let start = Calendar.current.startOfDay(for: addiction.startDate)
-        let today = Calendar.current.startOfDay(for: date)
-        let days = Calendar.current.dateComponents([.day], from: start, to: today).day ?? 0
-        return max(addiction.currentStreakDays, max(0, days))
+        let days = Calendar.current.dateComponents([.day], from: addiction.startDate, to: date).day ?? 0
+        return max(0, days)
     }
 }
 

@@ -44,9 +44,8 @@ struct GardenProvider: TimelineProvider {
     private func makeEntry(date: Date) -> GardenEntry {
         let snapshot = store.load() ?? .placeholder
         let addiction = snapshot.resolvedAddiction(preferredID: nil)
-        let start = Calendar.current.startOfDay(for: addiction.startDate)
-        let elapsed = Calendar.current.dateComponents([.day], from: start, to: Calendar.current.startOfDay(for: date)).day ?? 0
-        return GardenEntry(date: date, days: max(addiction.currentStreakDays, max(0, elapsed)),
+        let elapsed = Calendar.current.dateComponents([.day], from: addiction.startDate, to: date).day ?? 0
+        return GardenEntry(date: date, days: max(0, elapsed),
                            wateredToday: PlantGarden.isWateredToday)
     }
 }
