@@ -7775,22 +7775,6 @@
         }
       }
     },
-    "Recovery-Garten: %@, Stufe %lld von 5, %lld Tage" : {
-      "localizations" : {
-        "de" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Recovery-Garten: %@, Stufe %lld von 5, %lld Tage"
-          }
-        },
-        "en" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Recovery garden: %1$@, level %2$lld of 5, %3$lld days"
-          }
-        }
-      }
-    },
     "Ruhigerer Kopf" : {
       "localizations" : {
         "de" : {
@@ -11312,6 +11296,150 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "🇩🇪 Germany"
+          }
+        }
+      }
+    },
+    "Gießen" : {
+      "localizations" : {
+        "de" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Gießen"
+          }
+        },
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Water"
+          }
+        }
+      }
+    },
+    "Heute gegossen" : {
+      "localizations" : {
+        "de" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Heute gegossen"
+          }
+        },
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Watered today"
+          }
+        }
+      }
+    },
+    "Gieße deine Pflanze einmal am Tag." : {
+      "localizations" : {
+        "de" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Gieße deine Pflanze einmal am Tag."
+          }
+        },
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Water your plant once a day."
+          }
+        }
+      }
+    },
+    "Noch 1 Tag bis „%@“" : {
+      "localizations" : {
+        "de" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Noch 1 Tag bis „%@“"
+          }
+        },
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "1 day until “%@”"
+          }
+        }
+      }
+    },
+    "Noch %lld Tage bis „%@“" : {
+      "localizations" : {
+        "de" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Noch %lld Tage bis „%@“"
+          }
+        },
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "%1$lld days until “%2$@”"
+          }
+        }
+      }
+    },
+    "Höchste Stufe erreicht" : {
+      "localizations" : {
+        "de" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Höchste Stufe erreicht"
+          }
+        },
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Highest level reached"
+          }
+        }
+      }
+    },
+    "Kleiner Baum" : {
+      "localizations" : {
+        "de" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Kleiner Baum"
+          }
+        },
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Small tree"
+          }
+        }
+      }
+    },
+    "Ein starker Baum" : {
+      "localizations" : {
+        "de" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Ein starker Baum"
+          }
+        },
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "A strong tree"
+          }
+        }
+      }
+    },
+    "Recovery-Garten: %@, Stufe %lld von %lld, %lld Tage" : {
+      "localizations" : {
+        "de" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Recovery-Garten: %@, Stufe %lld von %lld, %lld Tage"
+          }
+        },
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Recovery garden: %1$@, level %2$lld of %3$lld, %4$lld days"
           }
         }
       }
