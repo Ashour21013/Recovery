@@ -111,7 +111,10 @@ struct DashboardView: View {
         }
         .sheet(isPresented: $isShowingRelapse) {
             RelapseView(onSaved: {
-                Task { await viewModel.load() }
+                Task {
+                    await viewModel.load()
+                    await updateWidgetSnapshot()
+                }
             })
         }
         .sheet(isPresented: Binding(
