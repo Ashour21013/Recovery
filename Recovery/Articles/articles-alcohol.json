@@ -1,0 +1,1094 @@
+{
+ "articles": [
+  {
+   "id": "alcohol-impact",
+   "habit": "alcohol",
+   "category": "impact",
+   "readMinutes": 4,
+   "de": {
+    "title": "Was Alkohol mit Körper und Leben macht",
+    "subtitle": "Ein ehrlicher Blick darauf, wie Alkohol Organe, Psyche und Alltag beeinflusst – ohne Schuldzuweisung.",
+    "blocks": [
+     {
+      "type": "paragraph",
+      "text": "Alkohol ist so selbstverständlich, dass wir kaum noch fragen, was er eigentlich mit uns macht. Dabei ist er chemisch gesehen ein Zellgift, das fast jedes Organ erreicht. Das ist kein Vorwurf an dich – es ist einfach gut zu wissen, wenn du dir überlegst, weniger oder gar nicht mehr zu trinken. Hier ist die Übersicht, Organ für Organ."
+     },
+     {
+      "type": "heading",
+      "text": "Der Körper"
+     },
+     {
+      "type": "paragraph",
+      "text": "Die Leber baut Alkohol ab und trägt die Hauptlast. Wer dauerhaft zu viel trinkt, riskiert eine Fettleber. Sie tut nicht weh, deshalb bleibt sie oft lange unbemerkt – Müdigkeit und Erschöpfung werden selten damit in Verbindung gebracht. Auf dem Weg dorthin können Leberentzündung und Zirrhose folgen; die späteren Stadien lassen sich nach Angaben des britischen NHS meist nicht mehr zurückdrehen."
+     },
+     {
+      "type": "list",
+      "items": [
+       "Herz und Kreislauf: Regelmäßiger Konsum erhöht das Risiko für Bluthochdruck, Herzrhythmusstörungen, Herzschwäche, Schlaganfall und Herzinfarkt. Die Idee vom „gesunden Glas Rotwein“ gilt laut aktuellen Studien nicht mehr als belegt.",
+       "Krebs: Alkohol ist ein nachgewiesener Risikofaktor für Krebs in Mund, Rachen, Speiseröhre, Leber, Enddarm und – bei Frauen – der Brust.",
+       "Gehirn: Langfristiger Konsum kann zu Gedächtnis- und Konzentrationsproblemen und im Extremfall zu Schrumpfung von Hirngewebe führen.",
+       "Magen und Darm: Magenschleimhautentzündung, Magengeschwüre und Bauchspeicheldrüsenentzündung gehören zu möglichen Folgen."
+      ]
+     },
+     {
+      "type": "stat",
+      "value": "200+",
+      "label": "Krankheiten, Verletzungen und Gesundheitszustände, bei denen Alkohol laut WHO eine ursächliche Rolle spielt (WHO, 2025)"
+     },
+     {
+      "type": "heading",
+      "text": "Psyche und Schlaf"
+     },
+     {
+      "type": "paragraph",
+      "text": "Alkohol macht anfangs müde, stört aber den Schlaf in der zweiten Nachthälfte. Er kann Ängste und Depressionen verstärken, und je mehr getrunken wird, desto häufiger entsteht ein Kreislauf: Man trinkt, um Anspannung loszuwerden, und fühlt sich am nächsten Tag noch unruhiger. Der NHS weist außerdem auf einen starken Zusammenhang zwischen hohem Alkoholkonsum und Selbstverletzung bis hin zu Suizid hin. Wenn du so etwas an dir bemerkst, sprich bitte mit jemandem – die Telefonseelsorge ist unter 0800 111 0 111 kostenlos erreichbar."
+     },
+     {
+      "type": "quote",
+      "text": "There is no form of alcohol consumption that is risk-free.",
+      "attribution": "Weltgesundheitsorganisation (WHO), Fact Sheet Alcohol"
+     },
+     {
+      "type": "heading",
+      "text": "Beziehungen, Arbeit, Geld"
+     },
+     {
+      "type": "paragraph",
+      "text": "Die WHO beschreibt, dass schädlicher Alkoholkonsum langfristig zu Problemen in der Familie, am Arbeitsplatz, zu finanziellen Sorgen und im schlimmsten Fall zu Arbeitslosigkeit führen kann. Im Alltag sieht das oft unspektakulär aus: verpasste Gespräche, Reizbarkeit, ein Kopf, der am Montag nicht mitspielt, Geld, das irgendwo „verschwindet“. Alkohol erhöht außerdem die Wahrscheinlichkeit von Streit und Gewalt – und die Gefahr, selbst verletzt zu werden."
+     },
+     {
+      "type": "paragraph",
+      "text": "Die gute Nachricht steht auf der anderen Seite derselben Medaille: Vieles davon kann sich erholen. Die Fettleber bildet sich zurück, wenn du deinen Konsum deutlich senkst oder ganz pausierst, schreibt die BIÖG-Kampagne „Kenn dein Limit“. Dein Körper ist erstaunlich bereit, sich zu regenerieren."
+     },
+     {
+      "type": "callout",
+      "title": "Wichtig zur Sicherheit",
+      "text": "Wenn du über längere Zeit viel getrunken hast, höre nicht abrupt auf, ohne ärztliche Begleitung. Ein plötzlicher Stopp kann gefährliche Entzugserscheinungen auslösen, zum Beispiel Krampfanfälle. Sprich vorher mit deiner Hausärztin, deinem Hausarzt oder einer Suchtberatungsstelle. Jeder Schritt zu weniger Alkohol zählt – und du musst ihn nicht allein gehen."
+     }
+    ]
+   },
+   "en": {
+    "title": "What alcohol does to your body and life",
+    "subtitle": "An honest look at how alcohol affects organs, mind and everyday life – without blame.",
+    "blocks": [
+     {
+      "type": "paragraph",
+      "text": "Alcohol is so normal that we rarely ask what it actually does to us. Chemically, it is a cell toxin that reaches almost every organ. That is not an accusation – it is simply good to know if you are thinking about drinking less, or not at all. Here is the overview, organ by organ."
+     },
+     {
+      "type": "heading",
+      "text": "The body"
+     },
+     {
+      "type": "paragraph",
+      "text": "The liver breaks down alcohol and carries most of the load. Drinking too much over a long time risks fatty liver. It does not hurt, so it often goes unnoticed for a long time – tiredness and exhaustion are rarely linked to it. Liver inflammation and cirrhosis can follow; according to the UK NHS, the later stages usually cannot be reversed."
+     },
+     {
+      "type": "list",
+      "items": [
+       "Heart and circulation: Regular drinking raises the risk of high blood pressure, irregular heartbeat, heart failure, stroke and heart attack. The idea of a “healthy glass of red wine” is no longer considered proven by current studies.",
+       "Cancer: Alcohol is an established risk factor for cancers of the mouth, throat, oesophagus, liver, bowel and – in women – the breast.",
+       "Brain: Long-term drinking can cause memory and concentration problems and, in extreme cases, shrinkage of brain tissue.",
+       "Stomach and gut: Stomach lining inflammation, stomach ulcers and pancreatitis are possible consequences."
+      ]
+     },
+     {
+      "type": "stat",
+      "value": "200+",
+      "label": "diseases, injuries and health conditions in which alcohol plays a causal role according to the WHO (WHO, 2025)"
+     },
+     {
+      "type": "heading",
+      "text": "Mind and sleep"
+     },
+     {
+      "type": "paragraph",
+      "text": "Alcohol makes you drowsy at first but disrupts sleep in the second half of the night. It can worsen anxiety and depression, and the more you drink, the more often a cycle forms: you drink to get rid of tension and feel even more restless the next day. The NHS also points to strong links between heavy drinking and self-harm, including suicide. If you notice anything like this in yourself, please talk to someone – in Germany, the Telefonseelsorge is free to call on 0800 111 0 111."
+     },
+     {
+      "type": "quote",
+      "text": "There is no form of alcohol consumption that is risk-free.",
+      "attribution": "World Health Organization (WHO), Fact Sheet Alcohol"
+     },
+     {
+      "type": "heading",
+      "text": "Relationships, work, money"
+     },
+     {
+      "type": "paragraph",
+      "text": "The WHO describes how harmful drinking can, over time, lead to family problems, issues at work, financial worries and, in the worst case, unemployment. In everyday life this often looks unspectacular: missed conversations, irritability, a head that will not cooperate on Monday, money that somehow “disappears”. Alcohol also raises the likelihood of arguments and violence – and the risk of being hurt yourself."
+     },
+     {
+      "type": "paragraph",
+      "text": "The good news is on the other side of the same coin: a lot of this can recover. Fatty liver can regress when you clearly cut down or take a break, says the German public-health campaign “Kenn dein Limit”. Your body is remarkably willing to regenerate."
+     },
+     {
+      "type": "callout",
+      "title": "An important safety note",
+      "text": "If you have been drinking heavily for a long time, do not stop abruptly without medical supervision. Suddenly stopping can trigger dangerous withdrawal symptoms such as seizures. Talk to your GP or an addiction counselling service first. Every step towards less alcohol counts – and you do not have to take it alone."
+     }
+    ]
+   },
+   "sources": [
+    {
+     "name": "WHO – Alcohol Fact Sheet (2025)",
+     "url": "https://www.who.int/news-room/fact-sheets/detail/alcohol"
+    },
+    {
+     "name": "NHS – The risks of drinking too much",
+     "url": "https://www.nhs.uk/live-well/alcohol-advice/the-risks-of-drinking-too-much/"
+    },
+    {
+     "name": "NHS – Alcohol-related liver disease",
+     "url": "https://www.nhs.uk/conditions/alcohol-related-liver-disease-arld/"
+    },
+    {
+     "name": "Kenn dein Limit (BIÖG) – Folgen von Alkohol",
+     "url": "https://www.kenn-dein-limit.de/alkoholkonsum/folgen-von-alkohol/"
+    },
+    {
+     "name": "Kenn dein Limit (BIÖG) – Alkohol und Leber",
+     "url": "https://www.kenn-dein-limit.de/alkoholkonsum/folgen-von-alkohol/alkohol-und-leber/"
+    }
+   ]
+  },
+  {
+   "id": "alcohol-facts",
+   "habit": "alcohol",
+   "category": "facts",
+   "readMinutes": 4,
+   "de": {
+    "title": "Alkohol in Zahlen: Was wir wirklich wissen",
+    "subtitle": "Zahlen und Fakten aus WHO, NHS und der deutschen Gesundheitsaufklärung – jeweils mit Quelle.",
+    "blocks": [
+     {
+      "type": "paragraph",
+      "text": "Zahlen können nüchtern machen – im besten Sinn. Sie zeigen, dass du mit deinen Fragen nicht allein bist und dass Alkohol weit mehr ist als eine Privatsache. Wir haben nur Angaben aufgenommen, die wir in den genannten Quellen selbst gefunden haben."
+     },
+     {
+      "type": "heading",
+      "text": "Weltweit (WHO, Daten von 2019)"
+     },
+     {
+      "type": "stat",
+      "value": "2,6 Mio.",
+      "label": "Todesfälle weltweit, die dem Alkoholkonsum zugeschrieben werden (WHO, 2019)"
+     },
+     {
+      "type": "stat",
+      "value": "400 Mio.",
+      "label": "Menschen ab 15 Jahren leben mit einer alkoholbezogenen Störung – rund 7 % der Weltbevölkerung (WHO, 2019)"
+     },
+     {
+      "type": "stat",
+      "value": "209 Mio.",
+      "label": "davon mit Alkoholabhängigkeit, das sind 3,7 % der erwachsenen Weltbevölkerung (WHO, 2019)"
+     },
+     {
+      "type": "stat",
+      "value": "4,4 %",
+      "label": "aller weltweit diagnostizierten Krebserkrankungen werden dem Alkohol zugeschrieben (WHO, 2019)"
+     },
+     {
+      "type": "paragraph",
+      "text": "Es gibt auch Fortschritt: Von 2010 bis 2019 sank die Zahl der alkoholbedingten Todesfälle je 100 000 Menschen weltweit um 20,2 Prozent. Die höchsten Raten verzeichnet die WHO unter anderem in der Europäischen Region mit 52,9 Todesfällen je 100 000 Einwohner."
+     },
+     {
+      "type": "stat",
+      "value": "13 %",
+      "label": "der alkoholbedingten Todesfälle betreffen die Altersgruppe 20–39 Jahre (WHO, 2019)"
+     },
+     {
+      "type": "stat",
+      "value": "< 1–14 %",
+      "label": "der Menschen mit Alkoholproblemen sind in Behandlung – je nach Land (WHO, 2019)"
+     },
+     {
+      "type": "heading",
+      "text": "Risikogrenzen"
+     },
+     {
+      "type": "paragraph",
+      "text": "Eine „sichere“ Menge gibt es nicht. Der NHS spricht von „risikoarm“ statt „sicher“ und rät, regelmäßig höchstens 14 Einheiten pro Woche zu trinken, verteilt auf mindestens drei Tage und mit mehreren alkoholfreien Tagen. „Kenn dein Limit“ geht weiter: Am besten für die Gesundheit sei es, gar keinen Alkohol zu trinken."
+     },
+     {
+      "type": "list",
+      "items": [
+       "Krebsrisiko Mund, Rachen, Kehlkopf, Speiseröhre: Bei täglich etwa 50 g Reinalkohol (ca. 1,5 l Bier) steigt es laut „Kenn dein Limit“ um das Zwei- bis Dreifache.",
+       "Brustkrebs: Das Risiko steigt laut „Kenn dein Limit“ bereits ab einem Glas täglich; jedes weitere Glas erhöht es um etwa 7 %.",
+       "Demenz: Mehr als 24 g Reinalkohol täglich (ca. 250 ml Wein) bei Menschen mittleren Alters sind laut einer Studie des Bundesgesundheitsministeriums mit erhöhtem Demenzrisiko verbunden.",
+       "Rauschtrinken: Laut „Kenn dein Limit“ ab vier (Frauen) bzw. fünf (Männer) Getränken bei einer Gelegenheit."
+      ]
+     },
+     {
+      "type": "heading",
+      "text": "Deutschland"
+     },
+     {
+      "type": "stat",
+      "value": "100+",
+      "label": "Fachkliniken für Alkoholabhängige mit zusammen rund 10 000 Plätzen (Kenn dein Limit/BIÖG)"
+     },
+     {
+      "type": "paragraph",
+      "text": "„Psychische und Verhaltensstörungen durch Alkohol“ waren 2017 laut „Kenn dein Limit“ der zweithäufigste Behandlungsgrund in deutschen Krankenhäusern. Aktuelle Zahlen zum Pro-Kopf-Konsum und zu den volkswirtschaftlichen Kosten findest du im Jahrbuch Sucht der Deutschen Hauptstelle für Suchtfragen (DHS). Wir nennen hier bewusst keine Werte, die wir nicht selbst prüfen konnten."
+     },
+     {
+      "type": "paragraph",
+      "text": "Ein Hinweis zum Einordnen: Die WHO betont, dass die meisten alkoholbedingten Schäden aus episodischem Rauschtrinken oder dauerhaft hohem Konsum entstehen. Gleichzeitig können schon niedrige Mengen Risiken bergen. Wie groß dein persönliches Risiko ist, hängt von Menge, Häufigkeit, Gesundheitszustand, Alter und Geschlecht ab. Wenn du unsicher bist, kann ein Gespräch mit deiner Hausarztpraxis oder einer Beratungsstelle helfen, deine Situation einzuschätzen."
+     },
+     {
+      "type": "callout",
+      "title": "Was diese Zahlen für dich bedeuten",
+      "text": "Hinter jeder Zahl stehen Menschen, die es geschafft haben, etwas zu verändern. Weniger Alkohol senkt die Risiken schrittweise – jeder alkoholfreie Tag ist ein Gewinn. Und wenn du Unterstützung suchst: Sie existiert, und du darfst sie nutzen."
+     }
+    ]
+   },
+   "en": {
+    "title": "Alcohol in numbers: what we really know",
+    "subtitle": "Facts and figures from the WHO, NHS and German public-health education – each with a source.",
+    "blocks": [
+     {
+      "type": "paragraph",
+      "text": "Numbers can sober us up – in the best sense. They show that you are not alone with your questions and that alcohol is far more than a private matter. We only included figures that we found ourselves in the sources named."
+     },
+     {
+      "type": "heading",
+      "text": "Worldwide (WHO, 2019 data)"
+     },
+     {
+      "type": "stat",
+      "value": "2.6M",
+      "label": "deaths worldwide attributed to alcohol consumption (WHO, 2019)"
+     },
+     {
+      "type": "stat",
+      "value": "400M",
+      "label": "people aged 15+ live with alcohol use disorders – about 7% of the world population (WHO, 2019)"
+     },
+     {
+      "type": "stat",
+      "value": "209M",
+      "label": "of them with alcohol dependence, which is 3.7% of the adult world population (WHO, 2019)"
+     },
+     {
+      "type": "stat",
+      "value": "4.4%",
+      "label": "of all cancers diagnosed worldwide are attributed to alcohol (WHO, 2019)"
+     },
+     {
+      "type": "paragraph",
+      "text": "There is also progress: from 2010 to 2019, alcohol-attributable deaths per 100,000 people fell by 20.2% globally. The highest rates are seen in, among others, the WHO European Region with 52.9 deaths per 100,000 people."
+     },
+     {
+      "type": "stat",
+      "value": "13%",
+      "label": "of alcohol-attributable deaths occur in the 20–39 age group (WHO, 2019)"
+     },
+     {
+      "type": "stat",
+      "value": "<1–14%",
+      "label": "of people with alcohol problems are in contact with treatment – depending on the country (WHO, 2019)"
+     },
+     {
+      "type": "heading",
+      "text": "Risk thresholds"
+     },
+     {
+      "type": "paragraph",
+      "text": "There is no “safe” amount. The NHS says “low risk” instead of “safe” and advises drinking no more than 14 units a week on a regular basis, spread over at least three days with several alcohol-free days. The German campaign “Kenn dein Limit” goes further: the best choice for your health is not to drink at all."
+     },
+     {
+      "type": "list",
+      "items": [
+       "Cancer of mouth, throat, larynx, oesophagus: At about 50 g pure alcohol a day (roughly 1.5 l of beer) the risk rises two- to threefold, according to “Kenn dein Limit”.",
+       "Breast cancer: The risk rises from one drink a day, and each additional drink adds about 7%, according to “Kenn dein Limit”.",
+       "Dementia: More than 24 g of pure alcohol a day (about 250 ml of wine) in middle age is linked to a higher dementia risk in a German Federal Ministry of Health study.",
+       "Binge drinking: According to “Kenn dein Limit”, four (women) or five (men) drinks on one occasion."
+      ]
+     },
+     {
+      "type": "heading",
+      "text": "Germany"
+     },
+     {
+      "type": "stat",
+      "value": "100+",
+      "label": "specialist clinics for people dependent on alcohol, with around 10,000 places in total (Kenn dein Limit/BIÖG)"
+     },
+     {
+      "type": "paragraph",
+      "text": "“Mental and behavioural disorders due to alcohol” were the second most common reason for hospital treatment in Germany in 2017, according to “Kenn dein Limit”. For current per-capita consumption and economic cost figures, see the Jahrbuch Sucht of the German Centre for Addiction Issues (DHS). We deliberately do not quote values we could not verify ourselves."
+     },
+     {
+      "type": "paragraph",
+      "text": "A note to put this in context: the WHO stresses that most alcohol-related harm comes from episodic heavy drinking or continuous heavy drinking. At the same time, even low amounts can carry risks. How large your personal risk is depends on amount, frequency, health status, age and sex. If you are unsure, a conversation with your GP or a counselling centre can help you assess your situation."
+     },
+     {
+      "type": "callout",
+      "title": "What these numbers mean for you",
+      "text": "Behind every number are people who managed to change something. Less alcohol lowers risks step by step – every alcohol-free day is a gain. And if you are looking for support: it exists, and you are allowed to use it."
+     }
+    ]
+   },
+   "sources": [
+    {
+     "name": "WHO – Alcohol Fact Sheet (2025)",
+     "url": "https://www.who.int/news-room/fact-sheets/detail/alcohol"
+    },
+    {
+     "name": "NHS – The risks of drinking too much",
+     "url": "https://www.nhs.uk/live-well/alcohol-advice/the-risks-of-drinking-too-much/"
+    },
+    {
+     "name": "Kenn dein Limit (BIÖG) – Alkoholkonsum",
+     "url": "https://www.kenn-dein-limit.de/alkoholkonsum/"
+    },
+    {
+     "name": "Kenn dein Limit (BIÖG) – Alkohol und Krebs",
+     "url": "https://www.kenn-dein-limit.de/alkoholkonsum/folgen-von-alkohol/alkohol-und-krebs/"
+    },
+    {
+     "name": "Kenn dein Limit (BIÖG) – Folgen von Alkohol",
+     "url": "https://www.kenn-dein-limit.de/alkoholkonsum/folgen-von-alkohol/"
+    },
+    {
+     "name": "Kenn dein Limit (BIÖG) – Alkoholentzug und Therapie",
+     "url": "https://www.kenn-dein-limit.de/alkoholkonsum/alkoholismus/alkoholentzug/"
+    }
+   ]
+  },
+  {
+   "id": "alcohol-methods",
+   "habit": "alcohol",
+   "category": "methods",
+   "readMinutes": 5,
+   "de": {
+    "title": "Weniger oder gar kein Alkohol: Wege, die helfen",
+    "subtitle": "Ein Schritt-für-Schritt-Leitfaden mit medizinischer Sicherheit und echten Anlaufstellen.",
+    "blocks": [
+     {
+      "type": "paragraph",
+      "text": "Es gibt nicht den einen richtigen Weg. Manche Menschen wollen ihren Konsum senken, andere ganz aufhören. Beides ist ein legitimes Ziel, und für beides gibt es Hilfe, die nachweislich unterstützt. Hier sind die wichtigsten Bausteine, in sinnvoller Reihenfolge."
+     },
+     {
+      "type": "callout",
+      "title": "Zuerst: Sicherheit beim Entzug",
+      "text": "Wenn du regelmäßig und viel trinkst, kann abruptes Aufhören gefährlich sein. Der NHS nennt als Entzugssymptome unter anderem Zittern, Schwitzen, Herzrasen, Verwirrtheit, Halluzinationen und Krampfanfälle; sie beginnen meist 6 bis 12 Stunden nach dem letzten Getränk und dauern meist 3 bis 7 Tage. Lass dich deshalb vorher ärztlich beraten. Bei starken Symptomen wie Krampfanfällen oder Halluzinationen ruf sofort den Notruf 112."
+     },
+     {
+      "type": "heading",
+      "text": "Dein Weg in sechs Schritten"
+     },
+     {
+      "type": "steps",
+      "items": [
+       {
+        "title": "Ehrlich hinschauen",
+        "text": "Führe ein bis zwei Wochen ein Trinktagebuch (auf Papier oder online, z. B. von „Kenn dein Limit“). Es geht nicht um Kontrolle, sondern um Klarheit."
+       },
+       {
+        "title": "Ein Ziel wählen",
+        "text": "Weniger trinken, mehrere Wochen Pause oder dauerhaft abstinent? Formuliere es konkret: „Unter der Woche kein Alkohol.“ Wenn du nach zwei bis drei Monaten Selbsthilfe nicht weiterkommst, ist das kein Scheitern – dann ist professionelle Beratung der nächste gute Schritt."
+       },
+       {
+        "title": "Medizinisch abklären",
+        "text": "Sprich mit deiner Hausarztpraxis, vor allem bei Entzugssymptomen. Ein Entzug kann ambulant oder in einer Klinik begleitet werden."
+       },
+       {
+        "title": "Beratung und Therapie nutzen",
+        "text": "Suchtberatungsstellen sind meist kostenlos und vertraulich. Nach Angaben des NHS gehören Gesprächstherapien wie kognitive Verhaltenstherapie zu den Standardbausteinen. Eine ambulante Entwöhnung dauert laut „Kenn dein Limit“ meist 12 bis 18 Monate, stationäre Kurzzeittherapien 6 bis 8 Wochen."
+       },
+       {
+        "title": "Medikamente besprechen",
+        "text": "Der NHS nennt Acamprosat und Naltrexon (gegen Verlangen) sowie Disulfiram. Ob etwas für dich passt, entscheidet nur ein Arzt oder eine Ärztin."
+       },
+       {
+        "title": "Umfeld verändern, Gruppe finden",
+        "text": "Alkohol aus der Wohnung räumen, alkoholfreie Getränke bereitstellen, Menschen einweihen und Selbsthilfegruppen ausprobieren, etwa Anonyme Alkoholiker, Blaues Kreuz, Kreuzbund, Guttempler oder Freundeskreise."
+       }
+      ]
+     },
+     {
+      "type": "heading",
+      "text": "Echte Hilfe in Deutschland"
+     },
+     {
+      "type": "list",
+      "items": [
+       "Sucht- und Drogen-Hotline: 01806 313031, täglich 8–24 Uhr (0,20 € pro Anruf aus Festnetz und Mobilfunk, Stand BIÖG-Seite).",
+       "Telefonseelsorge: 0800 111 0 111, kostenfrei und rund um die Uhr.",
+       "Suchtberatungsstelle vor Ort: Das Verzeichnis der Deutschen Hauptstelle für Suchtfragen (dhs.de) listet Selbsthilfeverbände und Beratungsstellen.",
+       "Online-Chat und verschlüsselte Mail-Beratung: drugcom.de des BIÖG.",
+       "Notfall (Krampfanfall, Verwirrtheit, Halluzinationen): 112."
+      ]
+     },
+     {
+      "type": "paragraph",
+      "text": "Alkoholfreie Alternativen können den Alltag erleichtern: Schorlen, alkoholfreies Bier, Tee, Kaffee oder einfach ein hübsch serviertes Mineralwasser. Wichtig ist, dass sie dir schmecken und dass sich dein Abend nicht nach Verzicht anfühlt."
+     },
+     {
+      "type": "paragraph",
+      "text": "Auch Angehörige dürfen sich Unterstützung holen: Selbsthilfeverbände wie der Bundesverband der Elternkreise oder Gruppen für Angehörige hören zu, ohne zu urteilen. Und falls ein Schritt nicht klappt, ist das kein Beweis, dass der Weg falsch ist – oft braucht es mehrere Anläufe und eine andere Kombination aus Beratung, Medizin und Gruppe."
+     },
+     {
+      "type": "callout",
+      "title": "Du darfst Hilfe annehmen",
+      "text": "Hilfe zu suchen ist kein Zeichen von Schwäche, sondern ein kluger Plan. Wähle heute einen einzigen Schritt – zum Beispiel das Trinktagebuch oder einen Anruf – und fang damit an."
+     }
+    ]
+   },
+   "en": {
+    "title": "Cutting down or quitting: ways that help",
+    "subtitle": "A step-by-step guide with medical safety and real places to turn to.",
+    "blocks": [
+     {
+      "type": "paragraph",
+      "text": "There is no single right way. Some people want to cut down, others want to stop completely. Both are legitimate goals, and for both there is support that is known to help. Here are the key building blocks, in a sensible order."
+     },
+     {
+      "type": "callout",
+      "title": "First: safety during withdrawal",
+      "text": "If you drink heavily and regularly, stopping abruptly can be dangerous. The NHS lists withdrawal symptoms including shaking, sweating, a racing heart, confusion, hallucinations and seizures; they usually start 6 to 12 hours after the last drink and usually last 3 to 7 days. So get medical advice first. For severe symptoms such as seizures or hallucinations, call emergency services at once (112 in Germany)."
+     },
+     {
+      "type": "heading",
+      "text": "Your path in six steps"
+     },
+     {
+      "type": "steps",
+      "items": [
+       {
+        "title": "Look honestly",
+        "text": "Keep a drinking diary for one or two weeks (on paper or online, for example from “Kenn dein Limit”). It is not about control, it is about clarity."
+       },
+       {
+        "title": "Choose a goal",
+        "text": "Drink less, take a break of several weeks or stay alcohol-free for good? Make it concrete: “No alcohol on weekdays.” If self-help does not get you far after two to three months, that is not failure – professional counselling is simply the next good step."
+       },
+       {
+        "title": "Get a medical check",
+        "text": "Talk to your GP, especially if you have withdrawal symptoms. Withdrawal can be supported at home or in a clinic."
+       },
+       {
+        "title": "Use counselling and therapy",
+        "text": "Addiction counselling services are usually free and confidential. According to the NHS, talking therapies such as cognitive behavioural therapy are standard building blocks. Outpatient rehabilitation usually lasts 12 to 18 months and inpatient short-term programmes 6 to 8 weeks, according to “Kenn dein Limit”."
+       },
+       {
+        "title": "Discuss medication",
+        "text": "The NHS names acamprosate and naltrexone (to reduce cravings) as well as disulfiram. Whether something suits you is for a doctor to decide."
+       },
+       {
+        "title": "Change your environment, find a group",
+        "text": "Clear alcohol out of your home, stock alcohol-free drinks, tell people you trust and try self-help groups such as Alcoholics Anonymous, Blaues Kreuz, Kreuzbund, Guttempler or Freundeskreise."
+       }
+      ]
+     },
+     {
+      "type": "heading",
+      "text": "Real help in Germany"
+     },
+     {
+      "type": "list",
+      "items": [
+       "Sucht- und Drogen-Hotline: 01806 313031, daily 8 am–midnight (0.20 € per call from landline and mobile, as stated on the BIÖG page).",
+       "Telefonseelsorge: 0800 111 0 111, free and around the clock.",
+       "Local addiction counselling: the directory of the German Centre for Addiction Issues (dhs.de) lists self-help associations and counselling centres.",
+       "Online chat and encrypted email counselling: drugcom.de by BIÖG.",
+       "Emergency (seizure, confusion, hallucinations): 112."
+      ]
+     },
+     {
+      "type": "paragraph",
+      "text": "Alcohol-free alternatives can make daily life easier: spritzers, alcohol-free beer, tea, coffee or simply nicely served sparkling water. What matters is that you like them and that your evening does not feel like deprivation."
+     },
+     {
+      "type": "paragraph",
+      "text": "Relatives may seek support too: self-help associations such as the federal association of parents’ circles, or groups for family members, listen without judging. And if one step does not work, that is no proof that the path is wrong – it often takes several attempts and a different mix of counselling, medicine and group support."
+     },
+     {
+      "type": "callout",
+      "title": "You are allowed to accept help",
+      "text": "Seeking help is not a sign of weakness, it is a smart plan. Pick a single step today – the drinking diary or a phone call, for example – and begin there."
+     }
+    ]
+   },
+   "sources": [
+    {
+     "name": "NHS – Alcohol-use disorder (symptoms, treatment, withdrawal)",
+     "url": "https://www.nhs.uk/conditions/alcohol-use-disorder/"
+    },
+    {
+     "name": "NHS – Alcohol support",
+     "url": "https://www.nhs.uk/live-well/alcohol-advice/alcohol-support/"
+    },
+    {
+     "name": "Kenn dein Limit (BIÖG) – Weniger Alkohol trinken",
+     "url": "https://www.kenn-dein-limit.de/alkoholverzicht/weniger-alkohol-trinken/"
+    },
+    {
+     "name": "Kenn dein Limit (BIÖG) – Alkoholentzug und Therapie",
+     "url": "https://www.kenn-dein-limit.de/alkoholkonsum/alkoholismus/alkoholentzug/"
+    },
+    {
+     "name": "BIÖG – Beratungsangebote (Sucht- und Drogen-Hotline)",
+     "url": "https://www.bioeg.de/service/beratungsangebote/"
+    },
+    {
+     "name": "DHS – Selbsthilfeverbände und Suchthilfeverzeichnis",
+     "url": "https://www.dhs.de/service/suchthilfeverzeichnis"
+    }
+   ]
+  },
+  {
+   "id": "alcohol-recovery",
+   "habit": "alcohol",
+   "category": "recovery",
+   "readMinutes": 4,
+   "de": {
+    "title": "Wie sich dein Körper nach dem Alkohol erholt",
+    "subtitle": "Eine vorsichtige Zeitleiste, was sich erholen kann – ehrlich darüber, was individuell verschieden ist.",
+    "blocks": [
+     {
+      "type": "paragraph",
+      "text": "Dein Körper arbeitet ununterbrochen daran, ins Gleichgewicht zu kommen – sobald du ihn lässt. Wie schnell das geht, hängt davon ab, wie viel und wie lange du getrunken hast, von Alter, Vorerkrankungen und Genetik. Deshalb findest du hier keine Versprechen mit Stichtag, sondern eine Orientierung, an die wir uns vorsichtig halten."
+     },
+     {
+      "type": "callout",
+      "title": "Vor dem Aufhören",
+      "text": "Wenn du viel und regelmäßig getrunken hast, besprich das Aufhören mit einer Ärztin oder einem Arzt. Ein abrupter Stopp kann gefährlich sein."
+     },
+     {
+      "type": "heading",
+      "text": "Die ersten Stunden und Tage"
+     },
+     {
+      "type": "paragraph",
+      "text": "Bei körperlicher Abhängigkeit setzen Entzugssymptome nach Angaben des NHS innerhalb von 6 bis 12 Stunden nach dem letzten Getränk ein und dauern meist 3 bis 7 Tage. Dazu gehören Unruhe, Schlafprobleme, Schwitzen und Zittern. Manche Beschwerden können, besonders nach starkem Konsum, einige Monate anhalten. Das ist kein Rückschritt, sondern Teil der Umstellung – und ein Grund, ärztlich begleitet zu starten."
+     },
+     {
+      "type": "heading",
+      "text": "Die ersten Wochen"
+     },
+     {
+      "type": "paragraph",
+      "text": "Viele Menschen berichten, dass Schlaf, Konzentration und Stimmung allmählich stabiler werden. Genaue Zeiträume lassen sich nicht seriös für alle vorhersagen; Schlaf kann sich anfangs sogar vorübergehend schlechter anfühlen, bevor er besser wird. Die Kampagne „Kenn dein Limit“ nennt als Vorteile des Verzichts besseren Schlaf, mehr Fitness, weniger Kalorien und gespartes Geld."
+     },
+     {
+      "type": "heading",
+      "text": "Leber und Herz"
+     },
+     {
+      "type": "paragraph",
+      "text": "Eine Fettleber kann sich zurückbilden, wenn du den Konsum deutlich senkst oder ganz aufhörst; schon eine mehrwöchige Pause gilt als gut geeignet („Kenn dein Limit“). Der NHS beschreibt: Im Stadium der Fettleber kann sich die Leber meist erholen, bei Leberentzündung zumindest teilweise, während Zirrhose-Narben meist nicht mehr verschwinden. Auch für den Blutdruck gilt: Weniger Alkohol senkt ein Risiko, das regelmäßiger Konsum erhöht."
+     },
+     {
+      "type": "heading",
+      "text": "Monate und Jahre"
+     },
+     {
+      "type": "paragraph",
+      "text": "Das Risiko für viele alkoholbedingte Erkrankungen, darunter einige Krebsarten, steigt mit Menge und Dauer des Konsums. Umgekehrt gilt nach NHS-Angaben: Je weniger du trinkst, desto geringer sind die Gesundheitsrisiken. Wie viel sich beim Krebsrisiko zurückbildet und wie schnell, ist individuell und wird hier bewusst nicht beziffert."
+     },
+     {
+      "type": "list",
+      "items": [
+       "Fettleber: oft rückbildungsfähig – Leberwerte kontrollieren lassen.",
+       "Schlaf und Stimmung: tendenziell Verbesserung, mit Schwankungen.",
+       "Gehirn: Gedächtnis und Konzentration können sich bessern; ob und wie weit, ist individuell.",
+       "Geldbeutel und Zeit: sofort spürbar."
+      ]
+     },
+     {
+      "type": "paragraph",
+      "text": "Rechne mit Wellen: gute Tage, zähe Tage, Heißhunger auf Süßes. Das ist normal. Und: Auch wenn nicht alles vollständig zurückkehrt, lohnt sich jeder alkoholfreie Tag."
+     },
+     {
+      "type": "paragraph",
+      "text": "Was dir beim Dranbleiben helfen kann: Lege dir einen kleinen Kalender an und markiere jeden alkoholfreien Tag. Lass bei Gelegenheit deine Leberwerte beim Arzt prüfen, denn eine kranke Leber verursacht keine Schmerzen und fällt sonst leicht nicht auf. Plane Ersatzrituale für die Zeit, in der du sonst getrunken hättest, und gönne dir Belohnungen von dem Geld, das du sparst. Je konkreter dein Alltag ohne Alkohol aussieht, desto leichter fällt er dir."
+     },
+     {
+      "type": "callout",
+      "title": "Gib deinem Körper Zeit",
+      "text": "Erholung ist kein Wettlauf. Notiere dir, was sich besser anfühlt – Schlaf, Laune, Energie. Diese kleinen Belege sind oft die beste Motivation."
+     }
+    ]
+   },
+   "en": {
+    "title": "How your body recovers after alcohol",
+    "subtitle": "A careful timeline of what can recover – honest about what varies from person to person.",
+    "blocks": [
+     {
+      "type": "paragraph",
+      "text": "Your body is constantly working to find balance – as soon as you let it. How fast that goes depends on how much and how long you drank, your age, existing conditions and genetics. So instead of promises with deadlines, here is orientation that we keep careful."
+     },
+     {
+      "type": "callout",
+      "title": "Before you stop",
+      "text": "If you have been drinking heavily and regularly, discuss stopping with a doctor. Abrupt stopping can be dangerous."
+     },
+     {
+      "type": "heading",
+      "text": "The first hours and days"
+     },
+     {
+      "type": "paragraph",
+      "text": "With physical dependence, withdrawal symptoms begin within 6 to 12 hours of the last drink according to the NHS and usually last 3 to 7 days. They include restlessness, sleep problems, sweating and shaking. Some symptoms can last a few months, especially after heavy drinking. That is not a setback but part of the adjustment – and a reason to start with medical support."
+     },
+     {
+      "type": "heading",
+      "text": "The first weeks"
+     },
+     {
+      "type": "paragraph",
+      "text": "Many people report that sleep, concentration and mood gradually become steadier. Exact timeframes cannot be responsibly predicted for everyone; sleep may even feel temporarily worse at first before it improves. The “Kenn dein Limit” campaign lists better sleep, more fitness, fewer calories and money saved among the benefits of going alcohol-free."
+     },
+     {
+      "type": "heading",
+      "text": "Liver and heart"
+     },
+     {
+      "type": "paragraph",
+      "text": "Fatty liver can regress when you clearly cut down or stop; even a break of several weeks is considered well suited (“Kenn dein Limit”). The NHS describes it this way: at the fatty-liver stage the liver can usually recover, with hepatitis at least partly, while cirrhosis scarring usually does not go away. For blood pressure too: less alcohol lowers a risk that regular drinking raises."
+     },
+     {
+      "type": "heading",
+      "text": "Months and years"
+     },
+     {
+      "type": "paragraph",
+      "text": "The risk of many alcohol-related diseases, including some cancers, rises with amount and duration of drinking. Conversely, according to the NHS: the less you drink, the lower the health risks. How much cancer risk recedes and how fast is individual and deliberately not quantified here."
+     },
+     {
+      "type": "list",
+      "items": [
+       "Fatty liver: often reversible – have your liver values checked.",
+       "Sleep and mood: tendency to improve, with ups and downs.",
+       "Brain: memory and concentration can improve; whether and how far is individual.",
+       "Wallet and time: noticeable straight away."
+      ]
+     },
+     {
+      "type": "paragraph",
+      "text": "Expect waves: good days, tough days, cravings for sweets. That is normal. And even if not everything fully returns, every alcohol-free day is worth it."
+     },
+     {
+      "type": "paragraph",
+      "text": "What can help you keep going: keep a small calendar and mark every alcohol-free day. At some point have your liver values checked by a doctor, because a diseased liver causes no pain and can otherwise easily go unnoticed. Plan replacement rituals for the time when you would otherwise have been drinking, and treat yourself with some of the money you save. The more concrete your life without alcohol looks, the easier it gets."
+     },
+     {
+      "type": "callout",
+      "title": "Give your body time",
+      "text": "Recovery is not a race. Note down what feels better – sleep, mood, energy. These small proofs are often the best motivation."
+     }
+    ]
+   },
+   "sources": [
+    {
+     "name": "NHS – Alcohol-use disorder (withdrawal timing)",
+     "url": "https://www.nhs.uk/conditions/alcohol-use-disorder/"
+    },
+    {
+     "name": "NHS – Alcohol-related liver disease (stages, recovery)",
+     "url": "https://www.nhs.uk/conditions/alcohol-related-liver-disease-arld/"
+    },
+    {
+     "name": "NHS – The risks of drinking too much",
+     "url": "https://www.nhs.uk/live-well/alcohol-advice/the-risks-of-drinking-too-much/"
+    },
+    {
+     "name": "Kenn dein Limit (BIÖG) – Alkohol und Leber",
+     "url": "https://www.kenn-dein-limit.de/alkoholkonsum/folgen-von-alkohol/alkohol-und-leber/"
+    },
+    {
+     "name": "Kenn dein Limit (BIÖG) – Alkoholverzicht",
+     "url": "https://www.kenn-dein-limit.de/alkoholverzicht/"
+    }
+   ]
+  },
+  {
+   "id": "alcohol-stories",
+   "habit": "alcohol",
+   "category": "stories",
+   "readMinutes": 5,
+   "de": {
+    "title": "Drei Wege, drei Anfänge: Erfahrungen",
+    "subtitle": "Zusammengesetzte Berichte, die zeigen, wie unterschiedlich Veränderung aussehen kann.",
+    "blocks": [
+     {
+      "type": "paragraph",
+      "text": "Hinweis: Die folgenden Berichte sind erfundene, zusammengesetzte Beispiele. Sie beschreiben typische Verläufe, wie sie in Studien, Beratungsstellen und Selbsthilfegruppen immer wieder vorkommen. Es handelt sich nicht um reale Einzelpersonen und nicht um echte Zitate."
+     },
+     {
+      "type": "heading",
+      "text": "Der Feierabend-Wein"
+     },
+     {
+      "type": "paragraph",
+      "text": "Aus „ein Glas zum Runterkommen“ waren über die Jahre fast jeden Abend zwei oder drei geworden. Nichts Dramatisches – nur Müdigkeit, schlechter Schlaf und ein leises schlechtes Gewissen. Der Wendepunkt war unspektakulär: ein Trinktagebuch. Schwarz auf weiß zu sehen, wie oft es wirklich war, hat mehr bewegt als jede Ermahnung."
+     },
+     {
+      "type": "quote",
+      "text": "Ich wollte gar nicht aufhören. Ich wollte nur wissen, wie viel es wirklich ist. Danach wollte ich weniger.",
+      "attribution": "Zusammengesetzter Erfahrungsbericht – typische Verläufe aus Studien und Beratungsstellen"
+     },
+     {
+      "type": "paragraph",
+      "text": "Der Plan: unter der Woche nichts, am Wochenende höchstens ein Glas, dazu abends spazieren statt Sofa. Es gab Wochen, in denen es nicht klappte. Statt alles hinzuwerfen, wurde am nächsten Tag einfach weitergemacht."
+     },
+     {
+      "type": "heading",
+      "text": "Der Entzug mit Begleitung"
+     },
+     {
+      "type": "paragraph",
+      "text": "Über viele Jahre hatte ein Mensch täglich getrunken, auch morgens, um das Zittern zu beruhigen. Mehrere Versuche, allein aufzuhören, endeten nach ein bis zwei Tagen mit Schweißausbrüchen und Angst. Erst das Gespräch mit der Hausärztin und einer Suchtberatungsstelle brachte die entscheidende Wendung: ein medizinisch begleiteter Entzug, danach eine ambulante Therapie und eine Selbsthilfegruppe."
+     },
+     {
+      "type": "quote",
+      "text": "Das Schwerste war nicht der Entzug. Es war der Anruf. Danach war ich nicht mehr allein damit.",
+      "attribution": "Zusammengesetzter Erfahrungsbericht – typische Verläufe aus Studien und Beratungsstellen"
+     },
+     {
+      "type": "paragraph",
+      "text": "Rückfälle gehören für viele zum Weg. Hier führte ein Rückfall nach einem halben Jahr zu einem Anruf in der Gruppe – nicht zu Scham und Rückzug. Genau diese Reaktion machte den Unterschied."
+     },
+     {
+      "type": "heading",
+      "text": "Die Pause, die blieb"
+     },
+     {
+      "type": "paragraph",
+      "text": "Ein Alkoholfasten über mehrere Wochen war als Experiment gedacht. Schlaf und Stimmung wurden besser, auch das Konto. Aus dem Experiment wurde eine Entscheidung: nicht mehr zu Hause trinken, bei Einladungen höchstens ein Getränk – und dazu eine Antwort parat, wenn jemand fragt."
+     },
+     {
+      "type": "list",
+      "items": [
+       "Was diese Verläufe gemeinsam haben: ein erster kleiner, konkreter Schritt.",
+       "Unterstützung: Arzt, Beratung, Gruppe oder vertraute Menschen.",
+       "Ein Umgang mit Rückschlägen ohne Selbstverurteilung.",
+       "Ein Ziel, das zum eigenen Leben passt."
+      ]
+     },
+     {
+      "type": "paragraph",
+      "text": "Auffällig ist, was in keinem dieser Verläufe vorkam: Perfektion. Es gab Abende, an denen der Plan nicht aufging, Phasen von Zweifel und Tage, an denen alles zäh war. Hilfreich war jeweils, nicht in Scham zu versinken, sondern zu fragen: Was hat gefehlt? Schlaf, Gesellschaft, ein Plan für den Abend? Kleine Anpassungen halfen meist mehr als große Vorsätze. Und die Erfahrung, dass andere ähnliche Gedanken kennen, nahm vielen den Druck. Manche fanden gerade im Austausch mit Menschen, die Ähnliches erlebt haben, neuen Mut."
+     },
+     {
+      "type": "callout",
+      "title": "Deine Geschichte ist deine",
+      "text": "Es gibt keinen richtigen Zeitpunkt und keinen richtigen Weg. Wenn du dich in einem dieser Berichte wiedererkennst: Das ist ein guter Anfang. Du musst nicht alles auf einmal lösen."
+     }
+    ]
+   },
+   "en": {
+    "title": "Three paths, three beginnings: experiences",
+    "subtitle": "Composite accounts showing how different change can look.",
+    "blocks": [
+     {
+      "type": "paragraph",
+      "text": "Note: The following accounts are invented, composite examples. They describe typical courses that come up again and again in studies, counselling centres and self-help groups. They are not real individuals and not real quotes."
+     },
+     {
+      "type": "heading",
+      "text": "The after-work wine"
+     },
+     {
+      "type": "paragraph",
+      "text": "What started as “one glass to unwind” had become two or three almost every evening over the years. Nothing dramatic – just tiredness, poor sleep and a quiet bad conscience. The turning point was undramatic: a drinking diary. Seeing in black and white how often it really was moved things more than any warning."
+     },
+     {
+      "type": "quote",
+      "text": "I did not even want to stop. I just wanted to know how much it really was. After that I wanted less.",
+      "attribution": "Composite account – typical courses drawn from studies and counselling centres"
+     },
+     {
+      "type": "paragraph",
+      "text": "The plan: nothing on weekdays, at most one glass at the weekend, and an evening walk instead of the sofa. Some weeks it did not work. Instead of throwing everything away, the next day simply carried on."
+     },
+     {
+      "type": "heading",
+      "text": "Withdrawal with support"
+     },
+     {
+      "type": "paragraph",
+      "text": "For many years one person had been drinking daily, including in the morning to calm the shakes. Several attempts to stop alone ended after a day or two with sweating and fear. Only a conversation with a GP and an addiction counselling service brought the decisive turn: medically supported withdrawal, then outpatient therapy and a self-help group."
+     },
+     {
+      "type": "quote",
+      "text": "The hardest part was not withdrawal. It was the phone call. After that I was no longer alone with it.",
+      "attribution": "Composite account – typical courses drawn from studies and counselling centres"
+     },
+     {
+      "type": "paragraph",
+      "text": "For many people relapses are part of the path. Here a relapse after half a year led to a call to the group – not to shame and withdrawal. That very reaction made the difference."
+     },
+     {
+      "type": "heading",
+      "text": "The break that stayed"
+     },
+     {
+      "type": "paragraph",
+      "text": "An alcohol break of several weeks was meant as an experiment. Sleep and mood improved, and so did the bank account. The experiment turned into a decision: no more drinking at home, at most one drink at invitations – and an answer ready when someone asks."
+     },
+     {
+      "type": "list",
+      "items": [
+       "What these courses have in common: a first small, concrete step.",
+       "Support: a doctor, counselling, a group or trusted people.",
+       "A way of handling setbacks without self-judgement.",
+       "A goal that fits your own life."
+      ]
+     },
+     {
+      "type": "paragraph",
+      "text": "What stands out is what appears in none of these courses: perfection. There were evenings when the plan did not work, phases of doubt and days when everything felt heavy. What helped each time was not sinking into shame but asking: what was missing? Sleep, company, a plan for the evening? Small adjustments usually helped more than big resolutions. And learning that others know similar thoughts took the pressure off for many. Some found new courage precisely in talking with people who had been through something similar."
+     },
+     {
+      "type": "callout",
+      "title": "Your story is yours",
+      "text": "There is no right time and no right path. If you recognise yourself in one of these accounts: that is a good beginning. You do not have to solve everything at once."
+     }
+    ]
+   },
+   "sources": [
+    {
+     "name": "NHS – Alcohol-use disorder",
+     "url": "https://www.nhs.uk/conditions/alcohol-use-disorder/"
+    },
+    {
+     "name": "NHS – Alcohol support",
+     "url": "https://www.nhs.uk/live-well/alcohol-advice/alcohol-support/"
+    },
+    {
+     "name": "Kenn dein Limit (BIÖG) – Alkoholverzicht",
+     "url": "https://www.kenn-dein-limit.de/alkoholverzicht/"
+    },
+    {
+     "name": "Kenn dein Limit (BIÖG) – Weniger Alkohol trinken",
+     "url": "https://www.kenn-dein-limit.de/alkoholverzicht/weniger-alkohol-trinken/"
+    }
+   ]
+  },
+  {
+   "id": "alcohol-triggers",
+   "habit": "alcohol",
+   "category": "triggers",
+   "readMinutes": 5,
+   "de": {
+    "title": "Verlangen verstehen und Auslöser entschärfen",
+    "subtitle": "Wie du Suchtdruck aushältst, Nein sagst und mit einem Ausrutscher ohne Scham umgehst.",
+    "blocks": [
+     {
+      "type": "paragraph",
+      "text": "Plötzlich ist da dieser Gedanke: „Jetzt ein Glas.“ Der Gedanke ist nicht gefährlich – er ist ein Signal deines Gehirns, das gelernt hat, bestimmte Momente mit Alkohol zu verbinden. Und das Gute: Das Verlangen geht vorbei, auch wenn du nichts tust."
+     },
+     {
+      "type": "heading",
+      "text": "Typische Auslöser"
+     },
+     {
+      "type": "list",
+      "items": [
+       "Stress und Anspannung nach einem langen Tag.",
+       "Gewohnheiten und Orte: das Sofa, der Feierabend, das Fußballspiel.",
+       "Gesellschaft und sozialer Druck: Feiern, Einladungen, Kollegen.",
+       "Gefühle: Langeweile, Einsamkeit, Frust, aber auch Freude.",
+       "Hunger, Durst und Müdigkeit, die das Verlangen laut „Kenn dein Limit“ verstärken können."
+      ]
+     },
+     {
+      "type": "heading",
+      "text": "Urge Surfing: die Welle reiten"
+     },
+     {
+      "type": "steps",
+      "items": [
+       {
+        "title": "Benennen",
+        "text": "Sag dir: „Das ist Verlangen, und es geht vorbei.“"
+       },
+       {
+        "title": "Körper spüren",
+        "text": "Wo sitzt es – Magen, Brust, Hände? Beobachte es, ohne zu kämpfen."
+       },
+       {
+        "title": "Zehn Minuten warten",
+        "text": "„Kenn dein Limit“ empfiehlt, mindestens zehn Minuten zu warten. Oft ist der Gipfel dann überschritten."
+       },
+       {
+        "title": "Umlenken",
+        "text": "Spazieren gehen, Freund anrufen, Musik, etwas Alkoholfreies trinken, einen Snack essen."
+       }
+      ]
+     },
+     {
+      "type": "heading",
+      "text": "Freundlich Nein sagen"
+     },
+     {
+      "type": "paragraph",
+      "text": "„Kenn dein Limit“ betont: Es ist völlig in Ordnung, Alkohol abzulehnen. Ein Nein darf freundlich sein, mit oder ohne Begründung, und gern mit Alternative:"
+     },
+     {
+      "type": "list",
+      "items": [
+       "„Danke, ich bleibe heute bei Wasser.“",
+       "„Nein danke, ich möchte morgen fit sein.“",
+       "„Heute nicht – aber ich nehme gern einen Orangensaft.“",
+       "Wenn jemand drängt: ausweichen („später“) oder dich kurz entfernen."
+      ]
+     },
+     {
+      "type": "quote",
+      "text": "Sie bestimmen, ob und wie viel Alkohol Sie trinken.",
+      "attribution": "Kenn dein Limit (BIÖG)"
+     },
+     {
+      "type": "heading",
+      "text": "Wenn es doch passiert"
+     },
+     {
+      "type": "paragraph",
+      "text": "Ein Ausrutscher ist keine Katastrophe und kein Beweis, dass du versagt hast. Viele erleben Rückfälle auf ihrem Weg; entscheidend ist, was danach geschieht. Statt „jetzt ist eh alles egal“ hilft ein ruhiger Dreischritt: Sicherheit herstellen, kurz verstehen, was der Auslöser war, und beim nächsten Mal etwas anders machen. Sprich es an – bei einer Vertrauensperson, in der Gruppe oder der Beratungsstelle."
+     },
+     {
+      "type": "paragraph",
+      "text": "Falls du nach längerem, starkem Trinken wieder aufgehört hast und dann Zittern, Schwitzen oder Verwirrtheit spürst, such bitte medizinische Hilfe; ein plötzlicher Stopp nach starkem Konsum kann gefährlich sein."
+     },
+     {
+      "type": "heading",
+      "text": "Dein Notfallplan für Verlangen"
+     },
+     {
+      "type": "paragraph",
+      "text": "Schreib dir in ruhigen Momenten auf, was dir in schwierigen Augenblicken hilft: drei Dinge, die du statt Alkohol tun kannst, eine Person, die du anrufen kannst, und ein Satz, den du dir sagst, zum Beispiel „Im Moment fällt es mir schwer, aber in zehn Minuten sieht das anders aus“. Plane außerdem Risikosituationen im Voraus: Wenn du zu einer Feier gehst, nimm ein eigenes alkoholfreies Getränk mit, überlege dir, wann du gehst, und verabrede ein Zeichen mit einer vertrauten Person. So triffst du Entscheidungen, wenn dein Kopf klar ist – nicht mitten im Verlangen."
+     },
+     {
+      "type": "callout",
+      "title": "Neu anfangen ist immer möglich",
+      "text": "Jeder Moment, in dem du das Verlangen aushältst, trainiert dein Gehirn neu. Und wenn es mal nicht klappt: Du darfst heute neu anfangen, ohne Scham. Die Sucht- und Drogen-Hotline (01806 313031) und die Telefonseelsorge (0800 111 0 111) sind für dich da."
+     }
+    ]
+   },
+   "en": {
+    "title": "Understanding cravings and defusing triggers",
+    "subtitle": "How to ride out urges, say no, and handle a slip without shame.",
+    "blocks": [
+     {
+      "type": "paragraph",
+      "text": "Suddenly the thought is there: “A drink, now.” The thought is not dangerous – it is a signal from your brain, which has learned to link certain moments with alcohol. And the good news: the craving passes, even if you do nothing."
+     },
+     {
+      "type": "heading",
+      "text": "Typical triggers"
+     },
+     {
+      "type": "list",
+      "items": [
+       "Stress and tension after a long day.",
+       "Habits and places: the sofa, the end of the workday, the football match.",
+       "Company and social pressure: parties, invitations, colleagues.",
+       "Feelings: boredom, loneliness, frustration – but also joy.",
+       "Hunger, thirst and tiredness, which can strengthen cravings according to “Kenn dein Limit”."
+      ]
+     },
+     {
+      "type": "heading",
+      "text": "Urge surfing: ride the wave"
+     },
+     {
+      "type": "steps",
+      "items": [
+       {
+        "title": "Name it",
+        "text": "Tell yourself: “This is a craving, and it will pass.”"
+       },
+       {
+        "title": "Feel it in your body",
+        "text": "Where is it – stomach, chest, hands? Observe it without fighting."
+       },
+       {
+        "title": "Wait ten minutes",
+        "text": "“Kenn dein Limit” suggests waiting at least ten minutes. Often the peak has passed by then."
+       },
+       {
+        "title": "Redirect",
+        "text": "Go for a walk, call a friend, play music, drink something alcohol-free, have a snack."
+       }
+      ]
+     },
+     {
+      "type": "heading",
+      "text": "Saying no kindly"
+     },
+     {
+      "type": "paragraph",
+      "text": "“Kenn dein Limit” stresses: it is perfectly fine to decline alcohol. A no can be friendly, with or without a reason, and gladly with an alternative:"
+     },
+     {
+      "type": "list",
+      "items": [
+       "“Thanks, I’ll stick with water today.”",
+       "“No thanks, I want to be fit tomorrow.”",
+       "“Not today – but I’d love an orange juice.”",
+       "If someone pushes: deflect (“later”) or step away briefly."
+      ]
+     },
+     {
+      "type": "quote",
+      "text": "You decide whether and how much alcohol you drink.",
+      "attribution": "Kenn dein Limit (BIÖG), translated"
+     },
+     {
+      "type": "heading",
+      "text": "When it happens anyway"
+     },
+     {
+      "type": "paragraph",
+      "text": "A slip is not a catastrophe and not proof that you failed. Many people experience relapses on their way; what matters is what happens next. Instead of “now nothing matters”, a calm three-step helps: make sure you are safe, briefly understand what the trigger was, and do one thing differently next time. Talk about it – with someone you trust, in a group or at a counselling centre."
+     },
+     {
+      "type": "paragraph",
+      "text": "If you stopped after long, heavy drinking and then feel shaking, sweating or confusion, please seek medical help; stopping suddenly after heavy drinking can be dangerous."
+     },
+     {
+      "type": "heading",
+      "text": "Your craving emergency plan"
+     },
+     {
+      "type": "paragraph",
+      "text": "In calm moments, write down what helps you in difficult ones: three things you can do instead of drinking, one person you can call, and a sentence you tell yourself, such as “Right now it is hard, but in ten minutes it will look different”. Also plan risky situations ahead: if you go to a party, bring your own alcohol-free drink, decide when you will leave, and agree a signal with someone you trust. That way you make decisions while your head is clear – not in the middle of a craving."
+     },
+     {
+      "type": "callout",
+      "title": "A fresh start is always possible",
+      "text": "Every moment you ride out a craving retrains your brain. And if it does not work out once: you may begin again today, without shame. The Sucht- und Drogen-Hotline (01806 313031) and the Telefonseelsorge (0800 111 0 111) are there for you."
+     }
+    ]
+   },
+   "sources": [
+    {
+     "name": "Kenn dein Limit (BIÖG) – Verlangen überlisten",
+     "url": "https://www.kenn-dein-limit.de/alkoholverzicht/weniger-alkohol-trinken/verlangen-ueberlisten/"
+    },
+    {
+     "name": "Kenn dein Limit (BIÖG) – Nein sagen",
+     "url": "https://www.kenn-dein-limit.de/alkoholverzicht/weniger-alkohol-trinken/nein-sagen/"
+    },
+    {
+     "name": "Kenn dein Limit (BIÖG) – Alkoholismus und Entzug",
+     "url": "https://www.kenn-dein-limit.de/alkoholkonsum/alkoholismus/"
+    },
+    {
+     "name": "NHS – Alcohol-use disorder (things you can do)",
+     "url": "https://www.nhs.uk/conditions/alcohol-use-disorder/"
+    },
+    {
+     "name": "BIÖG – Beratungsangebote (Sucht- und Drogen-Hotline)",
+     "url": "https://www.bioeg.de/service/beratungsangebote/"
+    }
+   ]
+  }
+ ]
+}

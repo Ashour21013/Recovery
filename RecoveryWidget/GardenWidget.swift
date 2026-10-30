@@ -23,31 +23,29 @@ struct GardenEntry: TimelineEntry {
     var stage: Int { PlantGarden.stage(for: days) }
 }
 
-struct GardenProvider: TimelineProvider {
+struct GardenProvider: AppIntentTimelineProvider {
     private let store = WidgetSnapshotStore()
 
     func placeholder(in context: Context) -> GardenEntry {
         GardenEntry(date: .now, days: 12, wateredToday: false)
     }
 
-    func getSnapshot(in context: Context, completion: @escaping (GardenEntry) -> Void) {
-        completion(makeEntry(date: .now))
+    func snapshot(for configuration: SelectAddictionIntent, in context: Context) async -> GardenEntry {
+        makeEntry(date: .now, preferredID: configuration.addiction?.id)
     }
 
-    func getTimeline(in context: Context, completion: @escaping (Timeline<GardenEntry>) -> Void) {
+    func timeline(for configuration: SelectAddictionIntent, in context: Context) async -> Timeline<GardenEntry> {
         let now = Date.now
         let midnight = Calendar.current.date(byAdding: .day, value: 1, to: Calendar.current.startOfDay(for: now))
             ?? now.addingTimeInterval(3600)
-        completion(Timeline(entries: [makeEntry(date: now)], policy: .after(midnight)))
+        return Timeline(entries: [makeEntry(date: now, preferredID: configuration.addiction?.id)], policy: .after(midnight))
     }
 
-    private func makeEntry(date: Date) -> GardenEntry {
+    private func makeEntry(date: Date, preferredID: String?) -> GardenEntry {
         let snapshot = store.load() ?? .placeholder
-        let addiction = snapshot.resolvedAddiction(preferredID: nil)
-        let start = Calendar.current.startOfDay(for: addiction.startDate)
-        let elapsed = Calendar.current.dateComponents([.day], from: start, to: Calendar.current.startOfDay(for: date)).day ?? 0
-        return GardenEntry(date: date, days: max(addiction.currentStreakDays, max(0, elapsed)),
-                           wateredToday: PlantGarden.isWateredToday)
+        let addiction = snapshot.resolvedAddiction(preferredID: preferredID)
+        let elapsed = Calendar.current.dateComponents([.day], from: addiction.startDate, to: date).day ?? 0
+        return GardenEntry(date: date, days: max(0, elapsed), wateredToday: PlantGarden.isWateredToday)
     }
 }
 
@@ -121,7 +119,7 @@ struct GardenWidget: Widget {
     nonisolated static let kind = "GardenWidget"
 
     var body: some WidgetConfiguration {
-        StaticConfiguration(kind: Self.kind, provider: GardenProvider()) { entry in
+        AppIntentConfiguration(kind: Self.kind, intent: SelectAddictionIntent.self, provider: GardenProvider()) { entry in
             GardenWidgetView(entry: entry)
         }
         .configurationDisplayName("Recovery-Garten")

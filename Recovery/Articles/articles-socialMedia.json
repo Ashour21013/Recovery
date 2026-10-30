@@ -1,0 +1,1152 @@
+{
+ "articles": [
+  {
+   "id": "socialMedia-impact",
+   "habit": "socialMedia",
+   "category": "impact",
+   "readMinutes": 5,
+   "de": {
+    "title": "Was Scrollen mit uns macht – ehrlich betrachtet",
+    "subtitle": "Was die Forschung zu Aufmerksamkeit, Schlaf, Stimmung und Vergleichen wirklich sagt – und wo sie sich uneinig ist.",
+    "blocks": [
+     {
+      "type": "paragraph",
+      "text": "Du wolltest nur kurz nachsehen – und plötzlich ist eine halbe Stunde weg. Kennst du das? Dann bist du in bester Gesellschaft. Aber was macht dieses Scrollen eigentlich mit uns? Die ehrliche Antwort: weniger dramatisch als manche Schlagzeile, aber auch nicht egal. Schauen wir es uns gemeinsam an, ohne Panik und ohne Schuldgefühle."
+     },
+     {
+      "type": "callout",
+      "title": "Vorab: keine offizielle Diagnose",
+      "text": "„Social-Media-Sucht“ ist (Stand heute) keine offiziell anerkannte Diagnose. Fachleute sprechen eher von problematischer oder exzessiver Nutzung. Das heißt nicht, dass dein Leidensdruck nicht echt ist – es heißt nur, dass die Forschung noch ringt."
+     },
+     {
+      "type": "heading",
+      "text": "Ein Streit unter Forschenden"
+     },
+     {
+      "type": "paragraph",
+      "text": "Die Frage, wie schädlich soziale Medien sind, wird seit Jahren kontrovers diskutiert. Amy Orben und Andrew Przybylski werteten 2019 drei große Datensätze mit insgesamt 355.358 Teilnehmenden aus. Ergebnis: Der Zusammenhang zwischen Nutzung digitaler Technologie und Wohlbefinden Jugendlicher ist negativ, aber klein – er erklärt höchstens 0,4 % der Unterschiede im Wohlbefinden. Andere Forschende, darunter Jean Twenge und Jonathan Haidt, halten dagegen, dass solche Durchschnittswerte reale Schäden bei manchen Gruppen verdecken können."
+     },
+     {
+      "type": "stat",
+      "value": "0,4 %",
+      "label": "Höchstens so viel der Unterschiede im Wohlbefinden Jugendlicher erklärt Technologienutzung laut Orben & Przybylski (2019, n = 355.358)."
+     },
+     {
+      "type": "heading",
+      "text": "Aufmerksamkeit"
+     },
+     {
+      "type": "paragraph",
+      "text": "Ständige Unterbrechungen kosten Konzentration – das kennt jeder aus dem Alltag. Experimente zeigen auch, dass schon die bloße Anwesenheit des Smartphones Leistung beeinträchtigen kann („Brain-Drain-Effekt“). Eine Meta-Analyse von 2023 fand über 22 Studien mit 43 Effekten insgesamt einen negativen Effekt von Smartphone-Nutzung und -Anwesenheit. Die Studienlage ist aber uneinheitlich; die Autoren selbst weisen auf Unterschiede zwischen den Teilbereichen hin."
+     },
+     {
+      "type": "heading",
+      "text": "Was sich zeigt – und wie belastbar es ist"
+     },
+     {
+      "type": "list",
+      "items": [
+       "Aufmerksamkeit: Hinweise aus Experimenten, Ergebnisse gemischt (mittlere Belastbarkeit).",
+       "Stimmung und Wohlbefinden: Im Facebook-Experiment von Allcott et al. (2020) stieg das Wohlbefinden nach vier Wochen ohne Facebook leicht an (randomisiert, aber nur eine Plattform, US-Stichprobe).",
+       "Schlaf: Abendliche Nutzung wird oft mit späterem Einschlafen in Verbindung gebracht; Zusammenhang ist plausibel, aber meist korrelativ und von Person zu Person verschieden.",
+       "Selbstbild und Vergleiche: Aufwärtsvergleiche mit bearbeiteten Bildern belasten manche Menschen, andere kaum – es kommt stark auf Person und Nutzungsweise an.",
+       "Beziehungen und FOMO: Die Angst, etwas zu verpassen, hängt eher mit geringerem Wohlbefinden und stärkerer Nutzung zusammen; Ursache und Wirkung sind schwer zu trennen."
+      ]
+     },
+     {
+      "type": "heading",
+      "text": "Was das Experiment mit Facebook zeigt"
+     },
+     {
+      "type": "paragraph",
+      "text": "Allcott und Kolleg:innen baten Teilnehmende, Facebook vier Wochen vor den US-Zwischenwahlen 2018 zu deaktivieren. Die Gruppe nutzte danach mehr Offline-Aktivitäten wie Zeit mit Familie und Freunden, wusste etwas weniger über Tagesnachrichten, war weniger politisch polarisiert und berichtete höheres Wohlbefinden. Spannend: Auch nach dem Experiment nutzten viele Facebook deutlich weniger. Ein Beleg dafür, dass Pausen Gewohnheiten verändern können."
+     },
+     {
+      "type": "quote",
+      "text": "Der Zusammenhang ist negativ, aber klein.",
+      "attribution": "Sinngemäße Zusammenfassung der Ergebnisse von Orben & Przybylski, Nature Human Behaviour (2019)"
+     },
+     {
+      "type": "paragraph",
+      "text": "Was heißt das für dich? Entscheidend ist vermutlich weniger die Gesamtminutenzahl als das Wie und Warum: Scrollst du aus Langeweile, zur Betäubung oder weil dir jemand fehlt? Bemerkst du danach schlechtere Laune, Schlafprobleme oder Gedankenkreisen, ist das für dich ein relevantes Signal, auch wenn die Statistik für „den Durchschnitt“ klein ausfällt."
+     },
+     {
+      "type": "callout",
+      "title": "Dein Körper ist die beste Datenquelle",
+      "text": "Du musst nicht auf endgültige Studien warten. Probiere eine Woche bewusst weniger Nutzung aus und beobachte Schlaf, Stimmung und Konzentration. Was du bemerkst, zählt – und du darfst dabei freundlich mit dir bleiben."
+     }
+    ]
+   },
+   "en": {
+    "title": "What scrolling does to us – an honest look",
+    "subtitle": "What research really says about attention, sleep, mood and comparison – and where it disagrees.",
+    "blocks": [
+     {
+      "type": "paragraph",
+      "text": "You only meant to check quickly – and suddenly half an hour is gone. Sound familiar? You're in good company. But what does all that scrolling actually do to us? The honest answer: less dramatic than some headlines claim, but not nothing either. Let's look at it together, without panic and without guilt."
+     },
+     {
+      "type": "callout",
+      "title": "First: not an official diagnosis",
+      "text": "\"Social media addiction\" is not (as of today) an officially recognised diagnosis. Experts usually speak of problematic or excessive use. That doesn't make your distress any less real – it just means the research is still catching up."
+     },
+     {
+      "type": "heading",
+      "text": "A debate among researchers"
+     },
+     {
+      "type": "paragraph",
+      "text": "How harmful social media is has been debated for years. In 2019, Amy Orben and Andrew Przybylski analysed three large datasets with 355,358 participants in total. Their finding: the link between digital technology use and adolescent well-being is negative but small – explaining at most 0.4% of the variation in well-being. Other researchers, including Jean Twenge and Jonathan Haidt, argue that such averages can hide real harm for some groups."
+     },
+     {
+      "type": "stat",
+      "value": "0.4%",
+      "label": "At most this much of the variation in teen well-being is explained by technology use, according to Orben & Przybylski (2019, n = 355,358)."
+     },
+     {
+      "type": "heading",
+      "text": "Attention"
+     },
+     {
+      "type": "paragraph",
+      "text": "Constant interruptions cost concentration – everyone knows that from daily life. Experiments also suggest that the mere presence of a smartphone can reduce performance (the \"brain drain effect\"). A 2023 meta-analysis of 22 studies with 43 effects found an overall negative effect of smartphone use and presence. Results are mixed, though, and the authors themselves point to differences between sub-areas."
+     },
+     {
+      "type": "heading",
+      "text": "What shows up – and how solid it is"
+     },
+     {
+      "type": "list",
+      "items": [
+       "Attention: hints from experiments, mixed results (medium strength of evidence).",
+       "Mood and well-being: in the Facebook experiment by Allcott et al. (2020), well-being rose after four weeks without Facebook (randomised, but one platform, US sample).",
+       "Sleep: evening use is often linked to later sleep onset; plausible, but mostly correlational and varies from person to person.",
+       "Self-image and comparison: upward comparison with edited images burdens some people and barely affects others – it depends a lot on the person and how they use the apps.",
+       "Relationships and FOMO: fear of missing out goes along with lower well-being and heavier use; cause and effect are hard to separate."
+      ]
+     },
+     {
+      "type": "heading",
+      "text": "What the Facebook experiment shows"
+     },
+     {
+      "type": "paragraph",
+      "text": "Allcott and colleagues asked participants to deactivate Facebook for the four weeks before the 2018 US midterm elections. The group spent more time on offline activities such as time with family and friends, knew somewhat less about the news, was less politically polarised and reported higher well-being. Interestingly, many used Facebook markedly less even after the experiment ended – evidence that breaks can change habits."
+     },
+     {
+      "type": "quote",
+      "text": "The association is negative but small.",
+      "attribution": "Paraphrased summary of the findings of Orben & Przybylski, Nature Human Behaviour (2019)"
+     },
+     {
+      "type": "paragraph",
+      "text": "What does this mean for you? What probably matters more than total minutes is how and why you scroll: out of boredom, to numb out, or because you miss someone? If you notice worse mood, poor sleep or racing thoughts afterwards, that's a relevant signal for you, even if the statistics for \"the average person\" are small."
+     },
+     {
+      "type": "callout",
+      "title": "Your own experience is the best data",
+      "text": "You don't need to wait for final studies. Try one week of consciously less use and observe your sleep, mood and focus. What you notice counts – and you're allowed to stay kind to yourself while doing it."
+     }
+    ]
+   },
+   "sources": [
+    {
+     "name": "Orben & Przybylski – The association between adolescent well-being and digital technology use (Nature Human Behaviour, 2019)",
+     "url": "https://pubmed.ncbi.nlm.nih.gov/30944443/"
+    },
+    {
+     "name": "Allcott et al. – The Welfare Effects of Social Media (American Economic Review, 2020)",
+     "url": "https://www.aeaweb.org/articles?id=10.1257/aer.20190658"
+    },
+    {
+     "name": "Böttger et al. – Does the Brain Drain Effect Really Exist? A Meta-Analysis (Behavioral Sciences, 2023)",
+     "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC10525686/"
+    }
+   ]
+  },
+  {
+   "id": "socialMedia-facts",
+   "habit": "socialMedia",
+   "category": "facts",
+   "readMinutes": 5,
+   "de": {
+    "title": "Zahlen, Fakten und das Design hinter dem Daumen",
+    "subtitle": "Wie viel Jugendliche tatsächlich scrollen – und warum Apps so gebaut sind, dass es schwerfällt aufzuhören.",
+    "blocks": [
+     {
+      "type": "paragraph",
+      "text": "Du bist nicht allein mit dem Gefühl, dass das Handy ständig ruft. Hier kommen ein paar belastbare Zahlen und ein Blick hinter die Kulissen. Wichtig: Die meisten Daten stammen aus Befragungen, also aus Selbstauskünften. Die tatsächliche Nutzung kann abweichen."
+     },
+     {
+      "type": "heading",
+      "text": "Nutzung bei Jugendlichen (USA, Pew 2023)"
+     },
+     {
+      "type": "stat",
+      "value": "1.453",
+      "label": "befragte Jugendliche (13–17 Jahre) in der Pew-Umfrage vom Herbst 2023 – repräsentativ für US-Teens, die bei ihren Eltern leben."
+     },
+     {
+      "type": "stat",
+      "value": "58 %",
+      "label": "der Jugendlichen nutzen TikTok täglich; 17 % beschreiben ihre Nutzung als „fast ständig“ (Pew Research Center, 2023)."
+     },
+     {
+      "type": "stat",
+      "value": "1 von 3",
+      "label": "Jugendlichen nutzt mindestens eine von fünf großen Plattformen (YouTube, TikTok, Snapchat, Instagram, Facebook) „fast ständig“ (Pew, 2023)."
+     },
+     {
+      "type": "stat",
+      "value": "~9/10",
+      "label": "Jugendliche in den USA nutzen YouTube – die meistgenutzte Plattform der Umfrage (Pew, 2023)."
+     },
+     {
+      "type": "paragraph",
+      "text": "Plattformen verändern sich schnell: Facebook nutzten 2014/15 noch 71 % der US-Teens, 2023 waren es 33 %. Sicher ist also nur, dass sich die Orte ändern, an denen Aufmerksamkeit verbracht wird."
+     },
+     {
+      "type": "heading",
+      "text": "Und in Deutschland?"
+     },
+     {
+      "type": "paragraph",
+      "text": "Für Deutschland liefert die JIM-Studie des Medienpädagogischen Forschungsverbunds Südwest (mpfs) jährlich repräsentative Daten zu Mediennutzung von 12- bis 19-Jährigen. Dort findest du aktuelle Zahlen zu Handybesitz, Nutzungsdauer und Lieblings-Apps. Weil Zahlen jährlich schwanken, verweisen wir lieber auf die Quelle als auf einzelne Prozentwerte. Auch das Bundesinstitut für Öffentliche Gesundheit (BIÖG) bietet unter ins-netz-gehen.de fundierte Informationen."
+     },
+     {
+      "type": "heading",
+      "text": "Wie Apps dich bei der Stange halten"
+     },
+     {
+      "type": "list",
+      "items": [
+       "Endloses Scrollen (Infinite Scroll): Es gibt kein natürliches Ende, an dem du automatisch „fertig“ bist.",
+       "Variable Belohnungen: Mal ist der nächste Beitrag langweilig, mal großartig. Unvorhersehbare Belohnungen sind aus der Lernpsychologie als besonders gewohnheitsbildend bekannt.",
+       "Benachrichtigungen: Rote Zähler und Push-Mitteilungen ziehen dich zurück, oft genau dann, wenn du gerade aufgehört hattest.",
+       "Soziale Signale: Likes, Streaks und Lesebestätigungen erzeugen sozialen Druck zu reagieren.",
+       "Autoplay und personalisierte Empfehlungen: Das Nächste startet, bevor du entscheiden kannst, ob du es willst."
+      ]
+     },
+     {
+      "type": "callout",
+      "title": "Das ist Design, kein persönliches Versagen",
+      "text": "Diese Mechanismen wurden gebaut, um Nutzungszeit zu maximieren. Wenn es dir schwerfällt aufzuhören, heißt das nicht, dass mit dir etwas nicht stimmt. Es heißt, dass du gegen ein gut optimiertes Produkt anspielst."
+     },
+     {
+      "type": "heading",
+      "text": "Was die Zahlen nicht sagen"
+     },
+     {
+      "type": "paragraph",
+      "text": "Viel Zeit am Handy bedeutet nicht automatisch ein Problem. Entscheidend sind Kontrollverlust, Vernachlässigung anderer Lebensbereiche und Leidensdruck. Eine große Analyse (Orben & Przybylski, 2019) fand, dass die Nutzungszeit nur einen kleinen Teil der Unterschiede im Wohlbefinden erklärt."
+     },
+     {
+      "type": "stat",
+      "value": "0,4 %",
+      "label": "Höchstens dieser Anteil der Unterschiede im Wohlbefinden Jugendlicher hängt laut Orben & Przybylski (2019) mit Technologienutzung zusammen."
+     },
+     {
+      "type": "paragraph",
+      "text": "Noch ein Hinweis zum Lesen von Statistiken: Gruppenwerte sagen wenig über dich persönlich. Manche Menschen profitieren von sozialen Medien, etwa durch Kontakt zu Freunden, Hobbys oder Unterstützung in schwierigen Zeiten. Für andere kippt die Nutzung in ein Muster, das Schlaf, Arbeit oder Beziehungen belastet. Die hilfreichste Frage ist deshalb nicht „Ist das normal?“, sondern „Tut mir meine Nutzung gut?“. Darauf kannst nur du antworten."
+     },
+     {
+      "type": "callout",
+      "title": "Wissen ist ein erster Schritt",
+      "text": "Wer versteht, wie Apps funktionieren, kann sie bewusster nutzen. Du hast gerade angefangen, das zu tun – das ist stark."
+     }
+    ]
+   },
+   "en": {
+    "title": "Numbers, facts and the design behind your thumb",
+    "subtitle": "How much teens actually scroll – and why apps are built to make stopping hard.",
+    "blocks": [
+     {
+      "type": "paragraph",
+      "text": "You're not alone in feeling that your phone keeps calling. Here are a few solid numbers and a look behind the scenes. Important: most data comes from surveys, i.e. self-reports. Actual use can differ."
+     },
+     {
+      "type": "heading",
+      "text": "Use among teens (USA, Pew 2023)"
+     },
+     {
+      "type": "stat",
+      "value": "1,453",
+      "label": "teens (aged 13–17) surveyed in Pew's autumn 2023 poll – representative of US teens living with their parents."
+     },
+     {
+      "type": "stat",
+      "value": "58%",
+      "label": "of teens use TikTok daily; 17% describe their use as \"almost constant\" (Pew Research Center, 2023)."
+     },
+     {
+      "type": "stat",
+      "value": "1 in 3",
+      "label": "teens use at least one of five major platforms (YouTube, TikTok, Snapchat, Instagram, Facebook) \"almost constantly\" (Pew, 2023)."
+     },
+     {
+      "type": "stat",
+      "value": "~9/10",
+      "label": "US teens use YouTube – the most widely used platform in the survey (Pew, 2023)."
+     },
+     {
+      "type": "paragraph",
+      "text": "Platforms change fast: 71% of US teens used Facebook in 2014/15, versus 33% in 2023. The only constant is that the places where attention is spent keep shifting."
+     },
+     {
+      "type": "heading",
+      "text": "And in Germany?"
+     },
+     {
+      "type": "paragraph",
+      "text": "For Germany, the JIM study by the Media Education Research Association Southwest (mpfs) provides representative data on media use among 12- to 19-year-olds every year. You'll find current figures on phone ownership, usage time and favourite apps there. Because numbers shift each year, we point to the source rather than quoting single percentages. The Federal Institute for Public Health (BIÖG) also offers sound information at ins-netz-gehen.de (in German)."
+     },
+     {
+      "type": "heading",
+      "text": "How apps keep you hooked"
+     },
+     {
+      "type": "list",
+      "items": [
+       "Infinite scroll: there's no natural end where you're automatically \"done\".",
+       "Variable rewards: sometimes the next post is dull, sometimes great. Unpredictable rewards are known in learning psychology as especially habit-forming.",
+       "Notifications: red badges and push alerts pull you back, often right when you had just stopped.",
+       "Social signals: likes, streaks and read receipts create social pressure to respond.",
+       "Autoplay and personalised recommendations: the next thing starts before you can decide whether you want it."
+      ]
+     },
+     {
+      "type": "callout",
+      "title": "This is design, not personal failure",
+      "text": "These mechanisms were built to maximise time spent. If stopping is hard for you, it doesn't mean something is wrong with you. It means you're up against a well-optimised product."
+     },
+     {
+      "type": "heading",
+      "text": "What the numbers don't say"
+     },
+     {
+      "type": "paragraph",
+      "text": "A lot of phone time isn't automatically a problem. What matters is loss of control, neglect of other areas of life and distress. A large analysis (Orben & Przybylski, 2019) found that screen time explains only a small share of differences in well-being."
+     },
+     {
+      "type": "stat",
+      "value": "0.4%",
+      "label": "At most this share of the variation in teen well-being is linked to technology use, according to Orben & Przybylski (2019)."
+     },
+     {
+      "type": "paragraph",
+      "text": "One more note on reading statistics: group figures say little about you personally. Some people benefit from social media, for example through contact with friends, hobbies or support in hard times. For others, use tips into a pattern that burdens sleep, work or relationships. The most helpful question is therefore not \"Is this normal?\" but \"Is my use good for me?\" Only you can answer that."
+     },
+     {
+      "type": "callout",
+      "title": "Knowledge is a first step",
+      "text": "When you understand how apps work, you can use them more deliberately. You've just started doing that – and that's strong."
+     }
+    ]
+   },
+   "sources": [
+    {
+     "name": "Pew Research Center – Teens, Social Media and Technology (2023)",
+     "url": "https://www.pewresearch.org/internet/2023/12/11/teens-social-media-and-technology-2023/"
+    },
+    {
+     "name": "mpfs – JIM-Studie (Jugend, Information, Medien)",
+     "url": "https://mpfs.de/studie/jim-studie-2023/"
+    },
+    {
+     "name": "Orben & Przybylski (Nature Human Behaviour, 2019)",
+     "url": "https://pubmed.ncbi.nlm.nih.gov/30944443/"
+    },
+    {
+     "name": "BIÖG – Ins Netz gehen",
+     "url": "https://www.ins-netz-gehen.de"
+    }
+   ]
+  },
+  {
+   "id": "socialMedia-methods",
+   "habit": "socialMedia",
+   "category": "methods",
+   "readMinutes": 6,
+   "de": {
+    "title": "Weniger scrollen: 7 Schritte, die Alltag-tauglich sind",
+    "subtitle": "Praktische Methoden zum Reduzieren – plus Anlaufstellen, falls du Unterstützung möchtest.",
+    "blocks": [
+     {
+      "type": "paragraph",
+      "text": "Die gute Nachricht zuerst: Du musst dafür nicht dein Handy wegwerfen. Kleine Änderungen an deiner Umgebung wirken oft besser als reine Willenskraft, weil sie die Auslöser verändern statt nur gegen sie anzukämpfen. Die folgenden Schritte kannst du nacheinander ausprobieren."
+     },
+     {
+      "type": "callout",
+      "title": "Ehrlich zur Evidenz",
+      "text": "Ob einzelne Tricks wie Graustufen wirken, ist wissenschaftlich noch nicht abschließend geklärt. Stärker belegt ist, dass Pausen und Reduktion bei vielen das Wohlbefinden etwas verbessern können: Im Facebook-Experiment von Allcott et al. (2020) stieg es nach vier Wochen Pause an, und die spätere Nutzung blieb deutlich geringer."
+     },
+     {
+      "type": "steps",
+      "items": [
+       {
+        "title": "Beobachte erst, ändere dann",
+        "text": "Schau eine Woche lang in die Bildschirmzeit-Statistik deines Handys. Notiere, wann und warum du zur App greifst. Kein Urteil – nur Neugier."
+       },
+       {
+        "title": "Mach eine Benachrichtigungs-Inventur",
+        "text": "Schalte alle Push-Mitteilungen aus, die nicht von Menschen kommen, die dir wichtig sind. Rote Zähler gleich mit."
+       },
+       {
+        "title": "Mach es umständlicher",
+        "text": "Logge dich aus, lösche die App vom Startbildschirm oder ganz (Browser-Version bleibt möglich). Jede kleine Hürde unterbricht den Autopiloten."
+       },
+       {
+        "title": "Setze App-Limits und Ruhezeiten",
+        "text": "Nutze die eingebauten Funktionen von iOS (Bildschirmzeit). Wähle ein realistisches Limit, nicht ein heroisches. Lass jemanden den Code ändern, wenn du magst."
+       },
+       {
+        "title": "Probiere Graustufen",
+        "text": "Ein graues Display macht Apps weniger verlockend. Manche finden es hilfreich, andere nicht – ein Test von ein paar Tagen zeigt es dir."
+       },
+       {
+        "title": "Schaffe handyfreie Zonen",
+        "text": "Das Schlafzimmer ist ein guter Anfang: Lade das Handy außerhalb auf und nutze einen normalen Wecker. Auch der Esstisch eignet sich."
+       },
+       {
+        "title": "Ersetze, statt nur zu verzichten",
+        "text": "Leg dir für typische Scroll-Momente eine Alternative bereit: ein Buch, ein kurzer Spaziergang, ein Anruf bei einem Freund, Dehnen."
+       }
+      ]
+     },
+     {
+      "type": "heading",
+      "text": "Zusammen ist leichter"
+     },
+     {
+      "type": "list",
+      "items": [
+       "Erzähl einer Person von deinem Vorhaben und frag, ob sie zwischendurch nachfragt.",
+       "Verabrede gemeinsame handyfreie Zeiten mit Freunden oder Familie.",
+       "Plane einen digitalen Auszeit-Tag – nur wenn er sich machbar anfühlt, nicht als Strafe.",
+       "Feiere Fortschritte, auch kleine: eine Stunde weniger ist eine Stunde mehr für dich."
+      ]
+     },
+     {
+      "type": "heading",
+      "text": "Hilfe, wenn es mehr braucht"
+     },
+     {
+      "type": "paragraph",
+      "text": "Wenn du merkst, dass du die Kontrolle verlierst, andere Lebensbereiche leiden oder du dich schlecht fühlst, such dir Unterstützung. Das ist keine Schwäche, sondern ein kluger Schritt."
+     },
+     {
+      "type": "list",
+      "items": [
+       "ins-netz-gehen.de – Portal des BIÖG mit Tipps und einer Beratungsstellen-Datenbank für Jugendliche und Angehörige.",
+       "Beratungsstellen für Mediensucht in deiner Nähe – oft Teil der Suchtberatung; über ins-netz-gehen.de per Postleitzahl auffindbar.",
+       "Nummer gegen Kummer (Kinder- und Jugendtelefon): 116 111 – kostenlos und anonym.",
+       "Telefonseelsorge: 0800 111 0 111 – kostenlos, anonym, rund um die Uhr.",
+       "Deine Hausärztin oder dein Hausarzt kann ebenfalls erste Ansprechperson sein."
+      ]
+     },
+     {
+      "type": "paragraph",
+      "text": "Ein Tipp zur Reihenfolge: Beginne mit den Schritten, die am wenigsten Willenskraft brauchen, also Benachrichtigungen aus und das Handy nachts außerhalb des Bettes. Diese Veränderungen wirken im Hintergrund, auch an müden Tagen. Wenn etwas nach zwei Wochen nicht hilft, ist das keine Niederlage, sondern Information: Dann probierst du die nächste Methode. Du bist die Expertin oder der Experte für deinen Alltag."
+     },
+     {
+      "type": "callout",
+      "title": "Fang klein an",
+      "text": "Wähle heute nur einen Schritt. Du musst nicht alles auf einmal ändern – jede kleine Veränderung zählt, und du darfst jederzeit neu anfangen."
+     }
+    ]
+   },
+   "en": {
+    "title": "Scroll less: 7 steps that fit real life",
+    "subtitle": "Practical methods for cutting down – plus places to turn if you'd like support.",
+    "blocks": [
+     {
+      "type": "paragraph",
+      "text": "Good news first: you don't have to throw your phone away. Small changes to your environment often work better than willpower alone, because they change the triggers instead of just fighting them. You can try the following steps one after another."
+     },
+     {
+      "type": "callout",
+      "title": "Honest about the evidence",
+      "text": "Whether individual tricks like grayscale work isn't conclusively settled. Better supported is that breaks and cutting down can modestly improve well-being for many people: in the Facebook experiment by Allcott et al. (2020), it rose after a four-week break, and later use stayed markedly lower."
+     },
+     {
+      "type": "steps",
+      "items": [
+       {
+        "title": "Observe first, change later",
+        "text": "For a week, check your phone's screen time statistics. Note when and why you reach for an app. No judgement – just curiosity."
+       },
+       {
+        "title": "Do a notification audit",
+        "text": "Turn off every push notification that doesn't come from people who matter to you. Red badges too."
+       },
+       {
+        "title": "Make it more cumbersome",
+        "text": "Log out, remove the app from your home screen or delete it entirely (the browser version remains possible). Every small hurdle interrupts autopilot."
+       },
+       {
+        "title": "Set app limits and downtime",
+        "text": "Use iOS Screen Time. Choose a realistic limit, not a heroic one. Let someone else set the passcode if you like."
+       },
+       {
+        "title": "Try grayscale",
+        "text": "A grey display makes apps less tempting. Some find it helpful, others don't – a few days of testing will show you."
+       },
+       {
+        "title": "Create phone-free zones",
+        "text": "The bedroom is a good start: charge your phone outside and use a regular alarm clock. The dinner table works too."
+       },
+       {
+        "title": "Replace, don't just give up",
+        "text": "Prepare an alternative for typical scrolling moments: a book, a short walk, a call to a friend, stretching."
+       }
+      ]
+     },
+     {
+      "type": "heading",
+      "text": "Easier together"
+     },
+     {
+      "type": "list",
+      "items": [
+       "Tell one person about your plan and ask them to check in now and then.",
+       "Agree on shared phone-free times with friends or family.",
+       "Plan a digital day off – only if it feels doable, never as a punishment.",
+       "Celebrate progress, however small: one hour less is one hour more for you."
+      ]
+     },
+     {
+      "type": "heading",
+      "text": "Help when you need more"
+     },
+     {
+      "type": "paragraph",
+      "text": "If you notice you're losing control, other areas of life are suffering, or you feel bad, reach out for support. That's not weakness – it's a smart step."
+     },
+     {
+      "type": "list",
+      "items": [
+       "ins-netz-gehen.de – BIÖG portal (in German) with tips and a database of counselling centres for young people and relatives.",
+       "Counselling centres for media addiction near you – often part of addiction counselling; findable by postcode via ins-netz-gehen.de.",
+       "Nummer gegen Kummer (youth helpline, Germany): 116 111 – free and anonymous.",
+       "Telefonseelsorge (Germany): 0800 111 0 111 – free, anonymous, around the clock.",
+       "Your family doctor can also be a first point of contact."
+      ]
+     },
+     {
+      "type": "paragraph",
+      "text": "A tip on order: begin with the steps that need the least willpower, namely notifications off and the phone outside the bed at night. These changes work in the background, even on tired days. If something doesn't help after two weeks, that's not defeat but information: then you try the next method. You're the expert on your own everyday life."
+     },
+     {
+      "type": "callout",
+      "title": "Start small",
+      "text": "Pick just one step today. You don't have to change everything at once – every little change counts, and you can start over whenever you like."
+     }
+    ]
+   },
+   "sources": [
+    {
+     "name": "Allcott et al. – The Welfare Effects of Social Media (American Economic Review, 2020)",
+     "url": "https://www.aeaweb.org/articles?id=10.1257/aer.20190658"
+    },
+    {
+     "name": "BIÖG – Ins Netz gehen (Beratungsstellen-Datenbank)",
+     "url": "https://www.ins-netz-gehen.de"
+    },
+    {
+     "name": "Nummer gegen Kummer – Kinder- und Jugendtelefon 116 111",
+     "url": "https://www.nummergegenkummer.de"
+    },
+    {
+     "name": "TelefonSeelsorge Deutschland – 0800 111 0 111",
+     "url": "https://www.telefonseelsorge.de"
+    }
+   ]
+  },
+  {
+   "id": "socialMedia-recovery",
+   "habit": "socialMedia",
+   "category": "recovery",
+   "readMinutes": 5,
+   "de": {
+    "title": "Was passiert, wenn du weniger scrollst?",
+    "subtitle": "Ein vorsichtiger Blick auf die ersten Tage, Wochen und Monate – was Studien nahelegen und was individuell ist.",
+    "blocks": [
+     {
+      "type": "paragraph",
+      "text": "Deine Hand wandert zur Hosentasche, obwohl nichts vibriert hat. Das Handy ist nicht da – und plötzlich wirkt die Stille laut. Wenn du weniger scrollst, passiert etwas. Nur: Es gibt keinen Fahrplan, der für alle gilt. Was folgt, sind Beobachtungen aus Studien und Beratung – vorsichtig formuliert."
+     },
+     {
+      "type": "callout",
+      "title": "Wichtig zu wissen",
+      "text": "Es gibt keine standardisierte medizinische Entzugssymptomatik bei sozialen Medien. Unruhe, Gereiztheit oder Langeweile sind meist unangenehm, aber vorübergehend. Bei starker Niedergeschlagenheit, Angst oder Hoffnungslosigkeit such bitte Unterstützung, zum Beispiel bei der Telefonseelsorge (0800 111 0 111)."
+     },
+     {
+      "type": "heading",
+      "text": "Die ersten Tage"
+     },
+     {
+      "type": "list",
+      "items": [
+       "Unruhe und Langeweile: Dein Gehirn sucht die gewohnte schnelle Belohnung.",
+       "„Phantom-Checking“: Du greifst zum Handy, ohne es zu merken, oder meinst, es vibriert.",
+       "Das mulmige FOMO-Gefühl, etwas zu verpassen.",
+       "Manchmal Erleichterung: Viele bemerken schnell, wie viel Zeit plötzlich da ist."
+      ]
+     },
+     {
+      "type": "paragraph",
+      "text": "Das sind keine Zeichen, dass du etwas falsch machst. Es sind Zeichen, dass sich eine Gewohnheit gerade verändert. Zähl die Griffe zum Handy ruhig mit – oft werden sie schon nach wenigen Tagen weniger."
+     },
+     {
+      "type": "heading",
+      "text": "Was Studien nahelegen"
+     },
+     {
+      "type": "paragraph",
+      "text": "Im randomisierten Experiment von Allcott und Kolleg:innen (2020) deaktivierten Teilnehmende vier Wochen lang Facebook. Sie verbrachten mehr Zeit offline, etwa mit Familie und Freunden, berichteten höheres Wohlbefinden und nutzten Facebook auch danach deutlich weniger. Das ist keine Garantie für jeden – es war eine einzelne Plattform, eine US-Stichprobe und eine begrenzte Zeit. Aber es ist ein Hinweis, dass eine Pause nicht nur Verzicht bedeutet, sondern Raum schaffen kann."
+     },
+     {
+      "type": "quote",
+      "text": "Deaktivierung steigerte das subjektive Wohlbefinden und führte zu einer lang anhaltenden Verringerung der späteren Nutzung.",
+      "attribution": "Sinngemäße Übersetzung aus der Zusammenfassung von Allcott et al., American Economic Review (2020)"
+     },
+     {
+      "type": "heading",
+      "text": "Ein möglicher Verlauf (keine Garantie)"
+     },
+     {
+      "type": "steps",
+      "items": [
+       {
+        "title": "Tage 1–7: Entwöhnung",
+        "text": "Unruhe, Phantom-Checking, Langeweile. Halte durch, indem du Alternativen bereitlegst und Benachrichtigungen aus lässt."
+       },
+       {
+        "title": "Wochen 2–4: Neue Routinen",
+        "text": "Viele berichten, dass sich Konzentration und Schlaf etwas verbessern können – besonders, wenn das Handy abends nicht mehr im Bett landet. Das ist individuell verschieden. Langeweile wird allmählich leichter auszuhalten."
+       },
+       {
+        "title": "Monate: Selbstbestimmter Umgang",
+        "text": "Aus der Pause kann eine neue Normalität werden. Du nutzt Apps gezielter, statt automatisch. Rückfälle gehören dazu und machen den Fortschritt nicht ungültig."
+       }
+      ]
+     },
+     {
+      "type": "paragraph",
+      "text": "Auch die Frage der Konzentration ist nicht ganz eindeutig: Eine Meta-Analyse von 2023 (22 Studien) fand insgesamt negative Effekte von Smartphone-Nutzung und -Anwesenheit auf kognitive Leistung, die Ergebnisse unterscheiden sich aber je nach Bereich. Ein Smartphone außer Reichweite zu haben, kann dir trotzdem helfen, es auszuprobieren."
+     },
+     {
+      "type": "paragraph",
+      "text": "Was dir in den ersten Wochen helfen kann: Plane bewusst Dinge ein, die dir Freude machen und kein Display brauchen, etwa Bewegung, Kochen, Musik oder Treffen mit Menschen. So füllt sich die Lücke mit etwas Positivem, und du erlebst, dass Pausen nicht leer sein müssen. Langeweile auszuhalten ist eine Fähigkeit, die du trainieren kannst – und sie wird mit Übung leichter."
+     },
+     {
+      "type": "callout",
+      "title": "Es darf sich wackelig anfühlen",
+      "text": "Veränderung ist selten gerade. Wenn du dich nach einem Rückfall wieder auf den Weg machst, hast du schon gewonnen. Sei geduldig mit dir – du lernst gerade etwas Neues."
+     }
+    ]
+   },
+   "en": {
+    "title": "What happens when you scroll less?",
+    "subtitle": "A careful look at the first days, weeks and months – what studies suggest and what is individual.",
+    "blocks": [
+     {
+      "type": "paragraph",
+      "text": "Your hand drifts to your pocket even though nothing buzzed. The phone isn't there – and suddenly the quiet feels loud. When you scroll less, something happens. But there's no timetable that fits everyone. What follows are observations from studies and counselling, carefully worded."
+     },
+     {
+      "type": "callout",
+      "title": "Good to know",
+      "text": "There is no standardised medical withdrawal syndrome for social media. Restlessness, irritability or boredom are usually unpleasant but temporary. If you feel strongly low, anxious or hopeless, please reach out, e.g. to Telefonseelsorge in Germany (0800 111 0 111)."
+     },
+     {
+      "type": "heading",
+      "text": "The first days"
+     },
+     {
+      "type": "list",
+      "items": [
+       "Restlessness and boredom: your brain seeks its usual quick reward.",
+       "\"Phantom checking\": you grab your phone without noticing, or think it buzzed.",
+       "A queasy FOMO feeling of missing out.",
+       "Sometimes relief: many quickly notice how much time suddenly appears."
+      ]
+     },
+     {
+      "type": "paragraph",
+      "text": "These aren't signs you're doing something wrong. They're signs that a habit is changing. Feel free to count how often you reach for your phone – often it drops after just a few days."
+     },
+     {
+      "type": "heading",
+      "text": "What studies suggest"
+     },
+     {
+      "type": "paragraph",
+      "text": "In the randomised experiment by Allcott and colleagues (2020), participants deactivated Facebook for four weeks. They spent more time offline, for instance with family and friends, reported higher well-being, and used Facebook markedly less even afterwards. That's no guarantee for everyone – it was a single platform, a US sample and a limited period. But it hints that a break isn't only loss; it can create room."
+     },
+     {
+      "type": "quote",
+      "text": "Deactivation increased subjective well-being and caused a large persistent reduction in post-experiment use.",
+      "attribution": "Paraphrased from the abstract of Allcott et al., American Economic Review (2020)"
+     },
+     {
+      "type": "heading",
+      "text": "One possible course (no guarantee)"
+     },
+     {
+      "type": "steps",
+      "items": [
+       {
+        "title": "Days 1–7: Adjusting",
+        "text": "Restlessness, phantom checking, boredom. Get through it by preparing alternatives and keeping notifications off."
+       },
+       {
+        "title": "Weeks 2–4: New routines",
+        "text": "Many report that focus and sleep may improve a little – especially when the phone no longer ends up in bed. This varies from person to person. Boredom gradually becomes easier to tolerate."
+       },
+       {
+        "title": "Months: Self-determined use",
+        "text": "The break can become a new normal. You use apps more purposefully instead of automatically. Slips are part of it and don't cancel your progress."
+       }
+      ]
+     },
+     {
+      "type": "paragraph",
+      "text": "Concentration isn't entirely clear-cut either: a 2023 meta-analysis (22 studies) found overall negative effects of smartphone use and presence on cognitive performance, but results differ by domain. Keeping your phone out of reach may still be worth trying."
+     },
+     {
+      "type": "paragraph",
+      "text": "What can help in the first weeks: deliberately plan things you enjoy that don't need a screen, such as exercise, cooking, music or meeting people. That way the gap fills with something positive, and you experience that pauses don't have to be empty. Tolerating boredom is a skill you can train – and it gets easier with practice."
+     },
+     {
+      "type": "callout",
+      "title": "It's allowed to feel wobbly",
+      "text": "Change is rarely a straight line. If you set out again after a slip, you've already won. Be patient with yourself – you're learning something new."
+     }
+    ]
+   },
+   "sources": [
+    {
+     "name": "Allcott et al. – The Welfare Effects of Social Media (American Economic Review, 2020)",
+     "url": "https://www.aeaweb.org/articles?id=10.1257/aer.20190658"
+    },
+    {
+     "name": "Böttger et al. – Does the Brain Drain Effect Really Exist? A Meta-Analysis (2023)",
+     "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC10525686/"
+    },
+    {
+     "name": "BIÖG – Ins Netz gehen",
+     "url": "https://www.ins-netz-gehen.de"
+    },
+    {
+     "name": "TelefonSeelsorge Deutschland",
+     "url": "https://www.telefonseelsorge.de"
+    }
+   ]
+  },
+  {
+   "id": "socialMedia-stories",
+   "habit": "socialMedia",
+   "category": "stories",
+   "readMinutes": 5,
+   "de": {
+    "title": "Drei Verläufe: Wie Menschen weniger scrollen lernen",
+    "subtitle": "Zusammengesetzte Erfahrungsberichte – mit Rückschlägen, Umwegen und kleinen Erfolgen.",
+    "blocks": [
+     {
+      "type": "callout",
+      "title": "Bitte beachten",
+      "text": "Die folgenden Berichte sind erfundene, zusammengesetzte und anonymisierte Beispiele. Sie zeigen typische Verläufe, wie sie aus Studien und Beratung bekannt sind. Es sind keine echten Personen und keine echten Zitate."
+     },
+     {
+      "type": "paragraph",
+      "text": "Vielleicht erkennst du dich in einer dieser Geschichten wieder. Vielleicht in keiner – das ist auch in Ordnung. Jeder Weg sieht anders aus."
+     },
+     {
+      "type": "heading",
+      "text": "Mara, Anfang 20: Die Abend-Spirale"
+     },
+     {
+      "type": "quote",
+      "text": "Ich wollte nur kurz vorm Einschlafen nachschauen. Dann war es plötzlich zwei Uhr. Das Schlimmste war nicht die Zeit, sondern dass ich mich danach leer gefühlt habe.",
+      "attribution": "Zusammengesetzter Erfahrungsbericht – typische Verläufe aus Studien und Beratungsstellen"
+     },
+     {
+      "type": "paragraph",
+      "text": "Mara beginnt damit, das Handy abends im Flur zu laden und einen Wecker zu kaufen. Die ersten Abende sind unruhig, sie greift mehrmals ins Leere. Nach zwei Wochen schläft sie, wie sie sagt, „spürbar ruhiger“. Dann kommt ein Rückfall: ein stressiger Tag, drei Stunden Scrollen. Statt sich zu beschimpfen, legt sie am nächsten Abend das Handy wieder in den Flur. Der Rückfall ist für sie kein Beweis des Scheiterns, sondern eine Information."
+     },
+     {
+      "type": "heading",
+      "text": "Jonas, Mitte 30: Prokrastination im Homeoffice"
+     },
+     {
+      "type": "quote",
+      "text": "Immer wenn eine Aufgabe unangenehm wurde, habe ich das Handy in der Hand gehabt, ohne es zu merken.",
+      "attribution": "Zusammengesetzter Erfahrungsbericht – typische Verläufe aus Studien und Beratungsstellen"
+     },
+     {
+      "type": "paragraph",
+      "text": "Jonas löscht die Apps vom Startbildschirm und schaltet Benachrichtigungen aus. Er legt sich einen Zettel mit einer Mini-Alternative neben den Laptop: kurz aufstehen, Wasser holen, eine Seite dehnen. Anfangs fühlt es sich albern an. Mit der Zeit merkt er, dass der Drang nach einigen Minuten nachlässt, wenn er ihn nicht sofort bedient."
+     },
+     {
+      "type": "heading",
+      "text": "Lea, 16: Angst, etwas zu verpassen"
+     },
+     {
+      "type": "quote",
+      "text": "Wenn alle im Gruppenchat schreiben und ich nicht, fühle ich mich ausgeschlossen. Eigentlich wollte ich nur dazugehören.",
+      "attribution": "Zusammengesetzter Erfahrungsbericht – typische Verläufe aus Studien und Beratungsstellen"
+     },
+     {
+      "type": "paragraph",
+      "text": "Lea spricht mit ihren engsten Freundinnen offen darüber. Gemeinsam verabreden sie handyfreie Zeiten am Wochenende. Sie merkt, dass ihre Freundschaften nicht an Reaktionsgeschwindigkeit hängen. Sie holt sich außerdem Unterstützung über das Portal ins-netz-gehen.de und erfährt, dass sie mit ihrem Gefühl nicht allein ist."
+     },
+     {
+      "type": "heading",
+      "text": "Was diese Verläufe gemeinsam haben"
+     },
+     {
+      "type": "list",
+      "items": [
+       "Sie ändern zuerst die Umgebung, nicht nur den Vorsatz.",
+       "Sie rechnen mit Rückfällen und gehen freundlich damit um.",
+       "Sie holen sich Verbündete oder Hilfe.",
+       "Sie ersetzen das Scrollen durch etwas, das ihnen wichtig ist.",
+       "Fortschritt ist selten linear – und trotzdem real."
+      ]
+     },
+     {
+      "type": "paragraph",
+      "text": "Die Forschung stützt dieses Bild vorsichtig: Im Facebook-Experiment von Allcott et al. (2020) reduzierten Teilnehmende ihre Nutzung nach einer Pause dauerhaft und berichteten höheres Wohlbefinden. Individuelle Wege können trotzdem stark variieren."
+     },
+     {
+      "type": "paragraph",
+      "text": "Noch einmal zur Klarheit: Diese Verläufe sind Illustrationen und keine Erfolgsversprechen. Manche Menschen brauchen länger, andere schaffen es mit einem einzigen Schritt, und manche brauchen professionelle Begleitung. Alles davon ist in Ordnung. Entscheidend ist nicht, wie schnell du bist, sondern dass du dir erlaubst, es immer wieder zu versuchen."
+     },
+     {
+      "type": "callout",
+      "title": "Deine Geschichte schreibst du selbst",
+      "text": "Du musst nicht perfekt sein. Jeder Tag mit einem bewussteren Griff zum Handy ist ein Schritt. Wenn du Unterstützung möchtest: Nummer gegen Kummer 116 111 (Jugendliche) oder Telefonseelsorge 0800 111 0 111."
+     }
+    ]
+   },
+   "en": {
+    "title": "Three paths: how people learn to scroll less",
+    "subtitle": "Composite accounts – with setbacks, detours and small wins.",
+    "blocks": [
+     {
+      "type": "callout",
+      "title": "Please note",
+      "text": "The following accounts are fictional, composite and anonymised examples. They show typical paths known from studies and counselling. They are not real people and not real quotes."
+     },
+     {
+      "type": "paragraph",
+      "text": "Maybe you'll recognise yourself in one of these stories. Maybe in none – that's fine too. Every path looks different."
+     },
+     {
+      "type": "heading",
+      "text": "Mara, early 20s: the evening spiral"
+     },
+     {
+      "type": "quote",
+      "text": "I only wanted to check briefly before falling asleep. Then suddenly it was two a.m. The worst part wasn't the time, it was feeling empty afterwards.",
+      "attribution": "Composite account – typical paths drawn from studies and counselling services"
+     },
+     {
+      "type": "paragraph",
+      "text": "Mara starts charging her phone in the hallway in the evening and buys an alarm clock. The first evenings are restless; she reaches for nothing several times. After two weeks she sleeps, as she puts it, \"noticeably calmer\". Then a slip: a stressful day, three hours of scrolling. Instead of berating herself, she puts the phone back in the hallway the next evening. For her, the slip is not proof of failure, but information."
+     },
+     {
+      "type": "heading",
+      "text": "Jonas, mid-30s: procrastination at home"
+     },
+     {
+      "type": "quote",
+      "text": "Whenever a task got uncomfortable, I'd have my phone in my hand without noticing.",
+      "attribution": "Composite account – typical paths drawn from studies and counselling services"
+     },
+     {
+      "type": "paragraph",
+      "text": "Jonas removes the apps from his home screen and turns off notifications. He puts a note with a mini-alternative next to his laptop: stand up briefly, fetch water, stretch. At first it feels silly. Over time he notices that the urge fades after a few minutes if he doesn't feed it right away."
+     },
+     {
+      "type": "heading",
+      "text": "Lea, 16: fear of missing out"
+     },
+     {
+      "type": "quote",
+      "text": "When everyone's typing in the group chat and I'm not, I feel left out. All I really wanted was to belong.",
+      "attribution": "Composite account – typical paths drawn from studies and counselling services"
+     },
+     {
+      "type": "paragraph",
+      "text": "Lea talks openly about it with her closest friends. Together they agree on phone-free times at weekends. She notices that her friendships don't depend on reply speed. She also gets support through the portal ins-netz-gehen.de (in German) and learns she isn't alone with this feeling."
+     },
+     {
+      "type": "heading",
+      "text": "What these paths have in common"
+     },
+     {
+      "type": "list",
+      "items": [
+       "They change the environment first, not just the resolution.",
+       "They expect slips and handle them kindly.",
+       "They find allies or help.",
+       "They replace scrolling with something that matters to them.",
+       "Progress is rarely linear – and still real."
+      ]
+     },
+     {
+      "type": "paragraph",
+      "text": "Research cautiously supports this picture: in the Facebook experiment by Allcott et al. (2020), participants durably reduced their use after a break and reported higher well-being. Individual paths can still vary a lot."
+     },
+     {
+      "type": "paragraph",
+      "text": "To be clear once more: these paths are illustrations, not promises of success. Some people need longer, others manage with a single step, and some need professional support. All of that is fine. What matters isn't how fast you are, but that you allow yourself to try again and again."
+     },
+     {
+      "type": "callout",
+      "title": "You write your own story",
+      "text": "You don't have to be perfect. Every day with a more conscious reach for your phone is a step. If you'd like support in Germany: Nummer gegen Kummer 116 111 (young people) or Telefonseelsorge 0800 111 0 111."
+     }
+    ]
+   },
+   "sources": [
+    {
+     "name": "Allcott et al. – The Welfare Effects of Social Media (American Economic Review, 2020)",
+     "url": "https://www.aeaweb.org/articles?id=10.1257/aer.20190658"
+    },
+    {
+     "name": "BIÖG – Ins Netz gehen",
+     "url": "https://www.ins-netz-gehen.de"
+    },
+    {
+     "name": "Nummer gegen Kummer",
+     "url": "https://www.nummergegenkummer.de"
+    }
+   ]
+  },
+  {
+   "id": "socialMedia-triggers",
+   "habit": "socialMedia",
+   "category": "triggers",
+   "readMinutes": 5,
+   "de": {
+    "title": "Der Drang zu checken: Auslöser verstehen, Wellen reiten",
+    "subtitle": "Warum du zum Handy greifst, wie du den Drang aushältst und was bei einem Ausrutscher hilft.",
+    "blocks": [
+     {
+      "type": "paragraph",
+      "text": "Es passiert oft, bevor du es merkst: Die Hand ist schon am Handy, der Daumen schon unterwegs. Genau da setzt dieser Artikel an. Wenn du deine Auslöser kennst, bekommst du ein Stück Wahlfreiheit zurück – ganz ohne Selbstvorwürfe."
+     },
+     {
+      "type": "heading",
+      "text": "Typische Auslöser"
+     },
+     {
+      "type": "list",
+      "items": [
+       "Langeweile: Warteschlange, Bahn, Werbepause – jede Lücke wird gefüllt.",
+       "Einsamkeit: Der Feed fühlt sich wie Gesellschaft an, auch wenn er es nicht ganz ist.",
+       "Prokrastination: Eine unangenehme Aufgabe? Das Handy ist der schnellste Ausweg.",
+       "Stress und Müdigkeit: Wenig Energie, wenig Selbstkontrolle.",
+       "Benachrichtigungen: Ein Ton oder ein roter Punkt reichen oft aus.",
+       "Gewohnheit: Nach dem Aufwachen, auf der Toilette, beim Kaffee – feste Kopplungen."
+      ]
+     },
+     {
+      "type": "paragraph",
+      "text": "Auch die Angst, etwas zu verpassen (FOMO), kann treiben. Studien zeigen Zusammenhänge zwischen FOMO, geringerem Wohlbefinden und stärkerer Nutzung – wie Ursache und Wirkung genau zusammenspielen, ist aber noch nicht abschließend geklärt."
+     },
+     {
+      "type": "callout",
+      "title": "Der Drang ist eine Welle",
+      "text": "Drang kommt, steigt an, erreicht einen Gipfel und lässt wieder nach – meist innerhalb weniger Minuten. Das Prinzip „Urge Surfing“ stammt aus achtsamkeitsbasierter Rückfallprävention: Du beobachtest den Drang, statt ihm sofort nachzugeben."
+     },
+     {
+      "type": "heading",
+      "text": "Urge Surfing in 5 Schritten"
+     },
+     {
+      "type": "steps",
+      "items": [
+       {
+        "title": "Benenne es",
+        "text": "Sag innerlich: „Da ist der Drang, zu checken.“ Allein das schafft Abstand."
+       },
+       {
+        "title": "Spüre in den Körper",
+        "text": "Wo sitzt die Anspannung? Brust, Hände, Magen? Beobachte neugierig, ohne zu bewerten."
+       },
+       {
+        "title": "Atme",
+        "text": "Atme ruhig und langsam, etwa viermal tief ein und länger aus."
+       },
+       {
+        "title": "Schau, wie die Welle wandert",
+        "text": "Der Drang ändert sich. Er wird stärker, schwächer, anders. Du musst nichts tun."
+       },
+       {
+        "title": "Wähle dann bewusst",
+        "text": "Wenn du danach noch schauen willst, ist das in Ordnung. Dann schaust du mit Absicht, nicht aus Autopilot."
+       }
+      ]
+     },
+     {
+      "type": "heading",
+      "text": "Auslöser entschärfen"
+     },
+     {
+      "type": "list",
+      "items": [
+       "Langeweile: Trage ein Buch oder Podcast-Download bei dir.",
+       "Einsamkeit: Schreib einer Person direkt eine Nachricht oder ruf an, statt zu scrollen.",
+       "Prokrastination: Starte mit einer Fünf-Minuten-Aufgabe. Ein Anfang senkt den Widerstand.",
+       "Benachrichtigungen: Aus. Wirklich aus.",
+       "Gewohnheiten: Lege das Handy in Auslöser-Momenten in einen anderen Raum."
+      ]
+     },
+     {
+      "type": "heading",
+      "text": "Wenn du ausrutschst"
+     },
+     {
+      "type": "paragraph",
+      "text": "Ein Ausrutscher ist kein Scheitern. Er ist Teil von Veränderung. Frage dich freundlich: Was war der Auslöser? Was brauchte ich eigentlich? Was probiere ich beim nächsten Mal? Schamgefühle machen Scrollen eher wahrscheinlicher, weil sie genau die unangenehmen Gefühle erzeugen, vor denen du fliehen möchtest. Mitgefühl mit dir selbst ist hier das stärkere Werkzeug."
+     },
+     {
+      "type": "quote",
+      "text": "Ein Ausrutscher ist ein Datenpunkt, kein Urteil.",
+      "attribution": "Eine hilfreiche Denkweise in der Rückfallprävention"
+     },
+     {
+      "type": "paragraph",
+      "text": "Hilfreich kann auch ein kleines Auslöser-Tagebuch sein: Notiere eine Woche lang kurz, wann der Drang kam, wie du dich gefühlt hast und was du getan hast. Meist zeigen sich Muster, etwa Abende nach anstrengenden Tagen oder Wartezeiten. Muster zu kennen heißt, vorbereitet zu sein: Du kannst dir für genau diese Momente einen Plan zurechtlegen."
+     },
+     {
+      "type": "callout",
+      "title": "Du bist nicht dein letzter Klick",
+      "text": "Jeder Moment, in dem du kurz innehältst, ist ein Sieg. Wenn es dir schlecht geht, such Kontakt: Telefonseelsorge 0800 111 0 111 oder, als Jugendliche:r, Nummer gegen Kummer 116 111."
+     }
+    ]
+   },
+   "en": {
+    "title": "The urge to check: understand triggers, ride the wave",
+    "subtitle": "Why you reach for your phone, how to sit with the urge, and what helps after a slip.",
+    "blocks": [
+     {
+      "type": "paragraph",
+      "text": "It often happens before you notice: your hand is already on the phone, your thumb already moving. That's exactly where this article starts. When you know your triggers, you win back a bit of choice – with no self-blame required."
+     },
+     {
+      "type": "heading",
+      "text": "Typical triggers"
+     },
+     {
+      "type": "list",
+      "items": [
+       "Boredom: queues, trains, ad breaks – every gap gets filled.",
+       "Loneliness: the feed feels like company, even if it isn't quite.",
+       "Procrastination: an unpleasant task? The phone is the quickest exit.",
+       "Stress and tiredness: low energy, low self-control.",
+       "Notifications: a sound or a red dot is often enough.",
+       "Habit: after waking up, on the toilet, with coffee – fixed pairings."
+      ]
+     },
+     {
+      "type": "paragraph",
+      "text": "Fear of missing out (FOMO) can drive use too. Studies show links between FOMO, lower well-being and heavier use – but how cause and effect interact isn't conclusively settled."
+     },
+     {
+      "type": "callout",
+      "title": "An urge is a wave",
+      "text": "An urge comes, rises, peaks and fades – usually within a few minutes. \"Urge surfing\" comes from mindfulness-based relapse prevention: you observe the urge instead of giving in at once."
+     },
+     {
+      "type": "heading",
+      "text": "Urge surfing in 5 steps"
+     },
+     {
+      "type": "steps",
+      "items": [
+       {
+        "title": "Name it",
+        "text": "Say to yourself: \"There's the urge to check.\" That alone creates distance."
+       },
+       {
+        "title": "Feel it in your body",
+        "text": "Where is the tension? Chest, hands, stomach? Observe with curiosity, without judging."
+       },
+       {
+        "title": "Breathe",
+        "text": "Breathe calmly and slowly, about four deep breaths in with longer breaths out."
+       },
+       {
+        "title": "Watch the wave move",
+        "text": "The urge changes. It gets stronger, weaker, different. You don't have to do anything."
+       },
+       {
+        "title": "Then choose deliberately",
+        "text": "If you still want to look afterwards, that's fine. Now you look on purpose, not on autopilot."
+       }
+      ]
+     },
+     {
+      "type": "heading",
+      "text": "Defuse your triggers"
+     },
+     {
+      "type": "list",
+      "items": [
+       "Boredom: carry a book or a downloaded podcast.",
+       "Loneliness: message or call one person instead of scrolling.",
+       "Procrastination: start with a five-minute task. A beginning lowers resistance.",
+       "Notifications: off. Really off.",
+       "Habits: in trigger moments, put the phone in another room."
+      ]
+     },
+     {
+      "type": "heading",
+      "text": "If you slip"
+     },
+     {
+      "type": "paragraph",
+      "text": "A slip is not failure. It is part of change. Ask yourself kindly: what was the trigger? What did I actually need? What will I try next time? Shame tends to make scrolling more likely, because it creates exactly the uncomfortable feelings you want to escape. Self-compassion is the stronger tool here."
+     },
+     {
+      "type": "quote",
+      "text": "A slip is a data point, not a verdict.",
+      "attribution": "A helpful mindset in relapse prevention"
+     },
+     {
+      "type": "paragraph",
+      "text": "A small trigger diary can help too: for one week, briefly note when the urge came, how you felt and what you did. Patterns usually show up, such as evenings after exhausting days or waiting times. Knowing your patterns means being prepared: you can set up a plan for exactly those moments."
+     },
+     {
+      "type": "callout",
+      "title": "You are not your last click",
+      "text": "Every moment you pause is a win. If you're feeling low, reach out: Telefonseelsorge 0800 111 0 111 or, for young people in Germany, Nummer gegen Kummer 116 111."
+     }
+    ]
+   },
+   "sources": [
+    {
+     "name": "BIÖG – Ins Netz gehen",
+     "url": "https://www.ins-netz-gehen.de"
+    },
+    {
+     "name": "Allcott et al. – The Welfare Effects of Social Media (American Economic Review, 2020)",
+     "url": "https://www.aeaweb.org/articles?id=10.1257/aer.20190658"
+    },
+    {
+     "name": "Pew Research Center – Teens, Social Media and Technology (2023)",
+     "url": "https://www.pewresearch.org/internet/2023/12/11/teens-social-media-and-technology-2023/"
+    },
+    {
+     "name": "TelefonSeelsorge Deutschland",
+     "url": "https://www.telefonseelsorge.de"
+    }
+   ]
+  }
+ ]
+}

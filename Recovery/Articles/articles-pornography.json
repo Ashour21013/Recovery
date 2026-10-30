@@ -1,0 +1,1270 @@
+{
+ "articles": [
+  {
+   "id": "pornography-impact",
+   "habit": "pornography",
+   "category": "impact",
+   "readMinutes": 5,
+   "de": {
+    "title": "Was passiert im Kopf?",
+    "subtitle": "Was die Forschung über Belohnungssystem, Stimmung und Beziehungen sagt – und was noch offen ist.",
+    "blocks": [
+     {
+      "type": "paragraph",
+      "text": "Du wolltest nur kurz schauen – und plötzlich ist eine Stunde weg, und danach fühlst du dich leer oder genervt von dir selbst. Wenn dir das bekannt vorkommt: Du bist damit nicht allein, und du bist nicht „schwach“. Dieser Artikel sortiert ehrlich, was gut belegt ist, was plausibel klingt und was die Wissenschaft noch nicht weiß."
+     },
+     {
+      "type": "heading",
+      "text": "Erst mal: Was heißt „problematisch“?"
+     },
+     {
+      "type": "paragraph",
+      "text": "„Pornosucht“ ist keine offizielle Diagnose. Die WHO hat 2022 in der ICD-11 aber die „Zwanghafte Sexualverhaltensstörung“ (CSBD, Code 6C72) aufgenommen. Gemeint ist ein über lange Zeit (etwa sechs Monate oder mehr) bestehendes Muster: Das Verhalten ist außer Kontrolle geraten, nimmt viel Raum im Leben ein, wird trotz negativer Folgen fortgesetzt, und es entsteht deutlicher Leidensdruck. Ob es sich um eine Verhaltenssucht handelt, wird unter Fachleuten diskutiert – die ICD-11 ordnet die Störung bewusst bei den Impulskontrollstörungen ein."
+     },
+     {
+      "type": "quote",
+      "text": "Menschen mit hohem sexuellem Interesse, die ihr Verhalten aber nicht als außer Kontrolle erleben und keinen erheblichen Leidensdruck haben, sollen nicht diagnostiziert werden.",
+      "attribution": "Kraus et al., World Psychiatry (2018) – sinngemäß ins Deutsche übertragen"
+     },
+     {
+      "type": "heading",
+      "text": "Belohnungssystem: Wollen ist nicht Mögen"
+     },
+     {
+      "type": "paragraph",
+      "text": "In einer bildgebenden Studie von Voon et al. (2014) verglichen Forschende 19 Männer mit zwanghaftem Sexualverhalten mit 19 Männern ohne. Bei den Betroffenen reagierten Hirnregionen, die auch in Studien zu Drogenreizen auffallen (ventrales Striatum, dorsaler anteriorer Cingulum, Amygdala), stärker auf sexuelle Reize. Sie hatten mehr „Wollen“ (Verlangen), aber nicht mehr „Mögen“ (Genuss). Dieses Muster kennt man auch von Suchterkrankungen. Ähnliche Befunde gibt es aus neueren Studien, unter anderem aus Deutschland (2026)."
+     },
+     {
+      "type": "stat",
+      "value": "19 + 19",
+      "label": "Männer mit und ohne zwanghaftes Sexualverhalten in der fMRT-Studie von Voon et al. (2014) – eine kleine Studie, deshalb vorsichtig deuten."
+     },
+     {
+      "type": "paragraph",
+      "text": "Wichtig: Solche Studien zeigen Unterschiede zu einem Zeitpunkt. Sie beweisen nicht, ob das Verhalten das Gehirn verändert hat oder ob die Unterschiede schon vorher da waren."
+     },
+     {
+      "type": "heading",
+      "text": "Stimmung, Schlaf, Fokus, Selbstbild"
+     },
+     {
+      "type": "list",
+      "items": [
+       "Stimmung: Eine Meta-Analyse von 2026 (97 Artikel, 111 Studien) fand Zusammenhänge zwischen problematischer Nutzung und Depression, Einsamkeit, Scham und Schwierigkeiten bei der Gefühlsregulation. Die Richtung bleibt offen: Es kann Ursache, Folge oder beides sein.",
+       "Schlaf: Spätes Scrollen am Handy raubt Schlaf, das ist plausibel. Gute Studien speziell zu Pornografie und Schlaf sind dünn – Evidenz begrenzt.",
+       "Fokus: Viele berichten von Konzentrationsproblemen und „Nebel“. Kontrollierte Studien dazu fehlen weitgehend – das sind bisher Selbstberichte.",
+       "Selbstbild: Moralische Konflikte („Das widerspricht meinen Werten“) hängen laut Grubbs et al. (2019) mit mehr Leidensdruck und dem Gefühl, „süchtig“ zu sein, zusammen – teils unabhängig davon, wie viel jemand tatsächlich nutzt."
+      ]
+     },
+     {
+      "type": "heading",
+      "text": "Beziehungen: Das Bild ist gemischt"
+     },
+     {
+      "type": "paragraph",
+      "text": "Eine wahrscheinlichkeitsbasierte Befragung norwegischer Erwachsener (n = 4.160, 2021) zeigt, wie unterschiedlich Menschen die Wirkung auf ihr Sexualleben erleben:"
+     },
+     {
+      "type": "stat",
+      "value": "41,3 %",
+      "label": "glaubten, Pornografie habe keinen Einfluss auf ihr Sexualleben (Norwegen, 2021)."
+     },
+     {
+      "type": "stat",
+      "value": "33,2 %",
+      "label": "berichteten eher positive Effekte (gleiche Studie)."
+     },
+     {
+      "type": "stat",
+      "value": "25,5 %",
+      "label": "berichteten gemischte oder negative Effekte (gleiche Studie)."
+     },
+     {
+      "type": "paragraph",
+      "text": "Heimlichkeit, Scham und Rückzug scheinen für Beziehungen oft belastender zu sein als das Verhalten selbst – das ist aber eher klinische Erfahrung als hart belegt."
+     },
+     {
+      "type": "callout",
+      "title": "Dein Gehirn ist formbar",
+      "text": "Das Belohnungssystem lernt – und es kann auch Neues lernen. Dass Forschung noch nicht alles klärt, heißt nicht, dass dein Erleben unwichtig ist. Wenn du leidest, ist das Grund genug, etwas zu verändern. Du darfst dir Hilfe holen, ganz ohne Scham."
+     }
+    ]
+   },
+   "en": {
+    "title": "What happens in your head?",
+    "subtitle": "What research says about the reward system, mood and relationships – and what is still unknown.",
+    "blocks": [
+     {
+      "type": "paragraph",
+      "text": "You only meant to look for a minute – and suddenly an hour is gone, and afterwards you feel empty or annoyed with yourself. If that sounds familiar: you are not alone, and you are not ‘weak’. This article honestly sorts out what is well supported, what sounds plausible, and what science does not know yet."
+     },
+     {
+      "type": "heading",
+      "text": "First: what does ‘problematic’ mean?"
+     },
+     {
+      "type": "paragraph",
+      "text": "‘Porn addiction’ is not an official diagnosis. In 2022, however, the WHO added ‘compulsive sexual behaviour disorder’ (CSBD, code 6C72) to the ICD-11. It describes a long-lasting pattern (around six months or more): the behaviour feels out of control, takes up a large share of life, continues despite negative consequences, and causes marked distress. Experts still debate whether it is a behavioural addiction – the ICD-11 deliberately places it among the impulse control disorders."
+     },
+     {
+      "type": "quote",
+      "text": "Individuals with high levels of sexual interest and behaviour who do not exhibit impaired control over their sexual behaviour and significant distress or impairment in functioning should not be diagnosed.",
+      "attribution": "Kraus et al., World Psychiatry (2018) – paraphrased"
+     },
+     {
+      "type": "heading",
+      "text": "Reward system: wanting is not liking"
+     },
+     {
+      "type": "paragraph",
+      "text": "In an imaging study by Voon et al. (2014), researchers compared 19 men with compulsive sexual behaviour to 19 men without. In the affected group, brain regions that also stand out in drug-cue studies (ventral striatum, dorsal anterior cingulate, amygdala) responded more strongly to sexual cues. They showed more ‘wanting’ (desire) but not more ‘liking’ (enjoyment) – a pattern also known from addictions. Newer studies, including some from Germany (2026), report similar findings."
+     },
+     {
+      "type": "stat",
+      "value": "19 + 19",
+      "label": "men with and without compulsive sexual behaviour in the fMRI study by Voon et al. (2014) – a small study, so interpret with care."
+     },
+     {
+      "type": "paragraph",
+      "text": "Important: such studies show differences at one point in time. They do not prove whether the behaviour changed the brain or whether the differences were there beforehand."
+     },
+     {
+      "type": "heading",
+      "text": "Mood, sleep, focus, self-image"
+     },
+     {
+      "type": "list",
+      "items": [
+       "Mood: A 2026 meta-analysis (97 articles, 111 studies) found links between problematic use and depression, loneliness, shame and difficulties regulating emotions. The direction remains open: it can be cause, consequence or both.",
+       "Sleep: Late-night phone scrolling costs sleep – that is plausible. Good studies specifically on pornography and sleep are thin – evidence is limited.",
+       "Focus: Many people report poor concentration and ‘brain fog’. Controlled studies are largely missing – so far these are self-reports.",
+       "Self-image: According to Grubbs et al. (2019), moral conflict (‘this goes against my values’) is linked to more distress and to feeling ‘addicted’ – partly regardless of how much someone actually uses."
+      ]
+     },
+     {
+      "type": "heading",
+      "text": "Relationships: a mixed picture"
+     },
+     {
+      "type": "paragraph",
+      "text": "A probability-based survey of Norwegian adults (n = 4,160, 2021) shows how differently people experience the effect on their sex life:"
+     },
+     {
+      "type": "stat",
+      "value": "41.3%",
+      "label": "believed pornography had no effect on their sex life (Norway, 2021)."
+     },
+     {
+      "type": "stat",
+      "value": "33.2%",
+      "label": "reported rather positive effects (same study)."
+     },
+     {
+      "type": "stat",
+      "value": "25.5%",
+      "label": "reported mixed or negative effects (same study)."
+     },
+     {
+      "type": "paragraph",
+      "text": "Secrecy, shame and withdrawal often seem to strain relationships more than the behaviour itself – but that reflects clinical experience more than hard evidence."
+     },
+     {
+      "type": "callout",
+      "title": "Your brain can change",
+      "text": "The reward system learns – and it can learn new things, too. That research has not settled everything does not make your experience unimportant. If you are suffering, that is reason enough to change something. You are allowed to ask for help, without shame."
+     }
+    ]
+   },
+   "sources": [
+    {
+     "name": "WHO – ICD-11, 6C72 Compulsive sexual behaviour disorder (2022)",
+     "url": "https://icd.who.int/browse/2024-01/mms/en"
+    },
+    {
+     "name": "Kraus et al. – Compulsive sexual behaviour disorder in the ICD-11, World Psychiatry (2018)",
+     "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC5775124/"
+    },
+    {
+     "name": "Voon et al. – Neural correlates of sexual cue reactivity, PLoS One (2014)",
+     "url": "https://pubmed.ncbi.nlm.nih.gov/25013940/"
+    },
+    {
+     "name": "Grubbs et al. – Moral Incongruence and Pornography Use, J Sex Res (2019)",
+     "url": "https://pubmed.ncbi.nlm.nih.gov/29412013/"
+    },
+    {
+     "name": "Psychological correlates of problematic pornography use – systematic review and meta-analysis (2026)",
+     "url": "https://pubmed.ncbi.nlm.nih.gov/42707146/"
+    },
+    {
+     "name": "Self-Assessed Effects of Pornography Use on Personal Sex Life – Norwegian adults (2021)",
+     "url": "https://pubmed.ncbi.nlm.nih.gov/38595747/"
+    },
+    {
+     "name": "Persistent appetitive memory in problematic pornography users (2026)",
+     "url": "https://pubmed.ncbi.nlm.nih.gov/41805604/"
+    }
+   ]
+  },
+  {
+   "id": "pornography-facts",
+   "habit": "pornography",
+   "category": "facts",
+   "readMinutes": 5,
+   "de": {
+    "title": "Zahlen, Daten, Fakten",
+    "subtitle": "Wie verbreitet ist Pornografienutzung – und wie viele Menschen haben damit ein Problem?",
+    "blocks": [
+     {
+      "type": "paragraph",
+      "text": "Wer Schwierigkeiten mit Pornografie hat, fühlt sich oft wie der Einzige. Die Zahlen erzählen etwas anderes: Nutzung ist verbreitet, ein Kontrollverlust betrifft aber nur einen kleineren Teil. Hier die wichtigsten belegten Zahlen – jeweils mit Quelle, und mit dem Hinweis, wie weit man sie übertragen kann."
+     },
+     {
+      "type": "heading",
+      "text": "Deutschland: Wie verbreitet ist Nutzung?"
+     },
+     {
+      "type": "stat",
+      "value": "66,1 %",
+      "label": "gaben in einer bevölkerungsrepräsentativ gewichteten Online-Umfrage in Deutschland (2023, N = 3.564; veröffentlicht 2025) an, Pornografie zu konsumieren."
+     },
+     {
+      "type": "stat",
+      "value": "19 %",
+      "label": "nutzten Sexting mit erotischen Bildern – derselben Umfrage zufolge."
+     },
+     {
+      "type": "stat",
+      "value": "5,3 %",
+      "label": "nutzten VR-Pornografie; 3,9 % sehr realistische Sexpuppen oder -roboter (gleiche Studie). Jüngere Generationen nannten neuere Technologien häufiger."
+     },
+     {
+      "type": "paragraph",
+      "text": "In derselben Studie hing die Pornografienutzung mittelstark mit Werten auf einer Skala für zwanghaftes Sexualverhalten zusammen (r = 0,308). Das heißt: Wer mehr nutzt, hat im Schnitt etwas höhere Werte – aber viele Vielnutzer haben keinerlei Probleme."
+     },
+     {
+      "type": "heading",
+      "text": "Wie viele haben ein Problem?"
+     },
+     {
+      "type": "paragraph",
+      "text": "Genaue Zahlen sind schwer, weil Studien Unterschiedliches messen: Kontrollverlust, Leidensdruck oder moralischen Konflikt."
+     },
+     {
+      "type": "stat",
+      "value": "3–6 %",
+      "label": "der Erwachsenen: frühere Schätzungen für zwanghaftes Sexualverhalten insgesamt (Kraus et al., World Psychiatry, 2018)."
+     },
+     {
+      "type": "stat",
+      "value": "1–3 %",
+      "label": "lauten neuere, vorsichtigere Schätzungen (Kraus et al., 2018). Die strengeren ICD-11-Kriterien dürften noch niedrigere Werte ergeben."
+     },
+     {
+      "type": "paragraph",
+      "text": "Zur Einordnung: Das sind Schätzungen für zwanghaftes Sexualverhalten insgesamt, nicht nur für Pornografie. Eine Befragung unter 960 syrischen Medizinstudierenden (2024) – eine spezielle, nicht repräsentative Gruppe – ergab:"
+     },
+     {
+      "type": "stat",
+      "value": "74,9 %",
+      "label": "mit Pornografie-Kontakt im Leben; 48,2 % aktuelle Nutzende (Syrien, Medizinstudierende, 2024)."
+     },
+     {
+      "type": "stat",
+      "value": "12,2 %",
+      "label": "der Befragten hielten sich selbst für abhängig – unter aktuellen Nutzenden 15,5 % (gleiche Studie, Selbsteinschätzung, keine Diagnose)."
+     },
+     {
+      "type": "heading",
+      "text": "Erstkontakt: Wie früh?"
+     },
+     {
+      "type": "stat",
+      "value": "14,8 J.",
+      "label": "betrug das durchschnittliche Alter beim ersten Kontakt in der syrischen Studie (2024)."
+     },
+     {
+      "type": "paragraph",
+      "text": "Ein systematischer Review von 2026 (17 Studien) fand durchgehend: Ein früherer Erstkontakt hing mit häufigerer Nutzung und einem höheren Risiko für problematischen Konsum zusammen. In der syrischen Studie war ein Erstkontakt mit 12 Jahren oder jünger der stärkste Vorhersagefaktor für Selbst-Einschätzung als abhängig. Wichtig: Das sind Zusammenhänge, keine Beweise für Ursachen. Aus Flandern wird berichtet, dass sich früher Kontakt vor dem 13. Lebensjahr in zehn Jahren verdreifacht hat (Studienprotokoll, 2026)."
+     },
+     {
+      "type": "heading",
+      "text": "Frauen und Männer"
+     },
+     {
+      "type": "list",
+      "items": [
+       "Männer zeigen zwanghaftes Sexualverhalten häufiger – verlässliche Daten zu Geschlechtsunterschieden fehlen aber laut Kraus et al. (2018).",
+       "Männer sind laut dem Review von 2026 im Schnitt früher mit Pornografie in Kontakt und zeigen stärkere Zusammenhänge zwischen frühem Kontakt und problematischer Nutzung.",
+       "Frauen sind in der Forschung unterrepräsentiert – ihre Erfahrungen sind schlechter untersucht, nicht weniger real."
+      ]
+     },
+     {
+      "type": "heading",
+      "text": "Weltweit"
+     },
+     {
+      "type": "paragraph",
+      "text": "Vergleichbare weltweite Zahlen gibt es nicht: Studien nutzen verschiedene Methoden, Länder und Altersgruppen. Wir nennen deshalb bewusst keine globale Prozentzahl. Sicher ist nur: Pornografienutzung ist in vielen Ländern weit verbreitet, ein Kontrollverlust betrifft aber einen deutlich kleineren Teil."
+     },
+     {
+      "type": "callout",
+      "title": "Was die Zahlen für dich heißen",
+      "text": "Viele nutzen Pornografie, ohne Probleme zu haben – und viele, die Probleme haben, finden Hilfe. Entscheidend ist nicht die Statistik, sondern ob du dein Verhalten steuern kannst und ob es dir guttut. Wenn nicht, bist du in guter Gesellschaft – und es gibt Wege."
+     }
+    ]
+   },
+   "en": {
+    "title": "Numbers, data, facts",
+    "subtitle": "How common is pornography use – and how many people struggle with it?",
+    "blocks": [
+     {
+      "type": "paragraph",
+      "text": "If you struggle with pornography, you may feel like the only one. The numbers tell a different story: use is widespread, but loss of control affects a smaller share. Here are the key figures we could verify – each with source and a note on how far it can be generalised."
+     },
+     {
+      "type": "heading",
+      "text": "Germany: how common is use?"
+     },
+     {
+      "type": "stat",
+      "value": "66.1%",
+      "label": "reported using pornography in an online survey weighted to represent Germany (2023, N = 3,564; published 2025)."
+     },
+     {
+      "type": "stat",
+      "value": "19%",
+      "label": "used sexting with erotic pictures – same survey."
+     },
+     {
+      "type": "stat",
+      "value": "5.3%",
+      "label": "used VR pornography; 3.9% highly realistic sex dolls or robots (same study). Younger generations reported newer technologies more often."
+     },
+     {
+      "type": "paragraph",
+      "text": "In the same study, pornography use showed a medium-sized correlation with scores on a compulsive sexual behaviour scale (r = 0.308). In other words: heavier use goes with slightly higher scores on average – but many heavy users have no problems at all."
+     },
+     {
+      "type": "heading",
+      "text": "How many have a problem?"
+     },
+     {
+      "type": "paragraph",
+      "text": "Exact numbers are hard because studies measure different things: loss of control, distress or moral conflict."
+     },
+     {
+      "type": "stat",
+      "value": "3–6%",
+      "label": "of adults: earlier estimates for compulsive sexual behaviour overall (Kraus et al., World Psychiatry, 2018)."
+     },
+     {
+      "type": "stat",
+      "value": "1–3%",
+      "label": "are more recent, more cautious estimates (Kraus et al., 2018). The stricter ICD-11 criteria would be expected to give even lower values."
+     },
+     {
+      "type": "paragraph",
+      "text": "For context: these are estimates for compulsive sexual behaviour overall, not only pornography. A survey of 960 Syrian medical students (2024) – a special, non-representative group – found:"
+     },
+     {
+      "type": "stat",
+      "value": "74.9%",
+      "label": "had been exposed to pornography in their lifetime; 48.2% were current users (Syria, medical students, 2024)."
+     },
+     {
+      "type": "stat",
+      "value": "12.2%",
+      "label": "considered themselves addicted – 15.5% among current users (same study; self-assessment, not a diagnosis)."
+     },
+     {
+      "type": "heading",
+      "text": "First exposure: how early?"
+     },
+     {
+      "type": "stat",
+      "value": "14.8 yrs",
+      "label": "was the average age at first exposure in the Syrian study (2024)."
+     },
+     {
+      "type": "paragraph",
+      "text": "A 2026 systematic review (17 studies) consistently found that earlier first exposure was linked to more frequent use and a higher risk of problematic use. In the Syrian study, first exposure at age 12 or younger was the strongest predictor of self-perceived addiction. Important: these are associations, not proof of cause. From Flanders it is reported that early exposure before age 13 tripled within a decade (study protocol, 2026)."
+     },
+     {
+      "type": "heading",
+      "text": "Women and men"
+     },
+     {
+      "type": "list",
+      "items": [
+       "Men show compulsive sexual behaviour more often – but reliable data on gender differences are lacking, according to Kraus et al. (2018).",
+       "According to the 2026 review, males are on average exposed earlier and show stronger links between early exposure and problematic use.",
+       "Women are under-represented in research – their experiences are less studied, not less real."
+      ]
+     },
+     {
+      "type": "heading",
+      "text": "Worldwide"
+     },
+     {
+      "type": "paragraph",
+      "text": "There are no comparable worldwide figures: studies use different methods, countries and age groups. We therefore deliberately give no global percentage. What is certain: pornography use is widespread in many countries, but loss of control affects a much smaller share."
+     },
+     {
+      "type": "callout",
+      "title": "What the numbers mean for you",
+      "text": "Many people use pornography without problems – and many who do struggle find help. What matters is not the statistic but whether you can steer your behaviour and whether it is good for you. If not, you are in good company – and there are ways forward."
+     }
+    ]
+   },
+   "sources": [
+    {
+     "name": "Prevalence of first- and second-wave digisexualities in Germany and their relation to CSB – national online survey (2025)",
+     "url": "https://pubmed.ncbi.nlm.nih.gov/40459929/"
+    },
+    {
+     "name": "Kraus et al. – Compulsive sexual behaviour disorder in the ICD-11, World Psychiatry (2018)",
+     "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC5775124/"
+    },
+    {
+     "name": "Pornography consumption among medical students in Syria (2026 publication; data 2024)",
+     "url": "https://pubmed.ncbi.nlm.nih.gov/42329982/"
+    },
+    {
+     "name": "Early exposure to pornography and later consumption – systematic review (2026)",
+     "url": "https://pubmed.ncbi.nlm.nih.gov/42935155/"
+    },
+    {
+     "name": "Sexual Well-Being of Young People in Times of Widespread Pornography Use – protocol, Flanders (2026)",
+     "url": "https://pubmed.ncbi.nlm.nih.gov/42081798/"
+    },
+    {
+     "name": "WHO – ICD-11 (2022)",
+     "url": "https://icd.who.int/browse/2024-01/mms/en"
+    }
+   ]
+  },
+  {
+   "id": "pornography-methods",
+   "habit": "pornography",
+   "category": "methods",
+   "readMinutes": 6,
+   "de": {
+    "title": "Weniger schauen: dein Plan",
+    "subtitle": "Was nach aktuellem Wissen hilft – in sieben Schritten und mit echten Anlaufstellen in Deutschland.",
+    "blocks": [
+     {
+      "type": "paragraph",
+      "text": "Du musst nicht alles auf einmal ändern. Die Forschung zu Behandlungen ist noch jung, aber es gibt vielversprechende Ansätze – und die meisten Strategien lassen sich gleich heute ausprobieren. Hier ein Plan, der ehrlich benennt, wie gut jede Methode belegt ist."
+     },
+     {
+      "type": "callout",
+      "title": "Ehrlicher Hinweis zur Evidenz",
+      "text": "Es gibt bisher nur wenige große, randomisierte Studien. Am besten belegt ist kognitive Verhaltenstherapie (KVT). Für Filter-Apps, Streak-Zähler oder bestimmte Rituale gibt es kaum eigene Studien – sie sind plausible Hilfsmittel, keine Garantie."
+     },
+     {
+      "type": "steps",
+      "items": [
+       {
+        "title": "Schritt 1: Dein Ziel klären",
+        "text": "Willst du ganz aufhören oder bewusster nutzen? Beides ist legitim. Schreib auf, warum du etwas ändern willst – nicht weil du dich schämst, sondern weil dir etwas wichtig ist (Beziehung, Schlaf, Zeit, Selbstachtung)."
+       },
+       {
+        "title": "Schritt 2: Die Umgebung anpassen",
+        "text": "Filter, Blocker und Bildschirmzeit-Limits machen den Weg länger – und kurze Hürden helfen bei Impulsen. Wissenschaftlich sind sie kaum untersucht, praktisch aber oft nützlich. Tipp: Lass einen vertrauten Menschen das Passwort setzen. Das Handy abends außerhalb des Schlafzimmers laden."
+       },
+       {
+        "title": "Schritt 3: Auslöser kennen",
+        "text": "Führe ein bis zwei Wochen ein kurzes Protokoll: Wann, wo, welches Gefühl davor? Muster wie Langeweile, Stress, Einsamkeit oder spät abends allein im Bett sind häufig. Mehr dazu im Artikel über Trigger."
+       },
+       {
+        "title": "Schritt 4: Urge Surfing",
+        "text": "Ein Drang ist wie eine Welle: Er steigt, erreicht einen Höhepunkt und ebbt ab. Beobachte ihn mit Neugier – wo spürst du ihn, wie verändert er sich? – statt ihm zu folgen oder ihn wegzudrücken. Das stammt aus achtsamkeitsbasierten Ansätzen; die Evidenz speziell für Pornografie ist begrenzt."
+       },
+       {
+        "title": "Schritt 5: Ersatzhandlungen planen",
+        "text": "Leg vorher fest, was du stattdessen tust: rausgehen, duschen, jemanden anrufen, Sport, Musik. Eine Handlung, die zu deinem echten Bedürfnis passt (Entspannung, Nähe, Ablenkung), funktioniert besser als bloßes Verbieten."
+       },
+       {
+        "title": "Schritt 6: Verbündete suchen",
+        "text": "Sprich mit jemandem, dem du vertraust, oder einer Beratungsstelle. Geheimhaltung nährt Scham, und Scham nährt den Kreislauf. Selbsthilfegruppen und Online-Foren können entlasten – achte auf respektvolle, nicht beschämende Gruppen."
+       },
+       {
+        "title": "Schritt 7: Dahinterliegendes behandeln",
+        "text": "Angst, Depression, Einsamkeit, ADHS oder Stress gehen oft mit problematischer Nutzung einher (Meta-Analyse 2026). Wenn du dich darin wiedererkennst, lohnt sich eine Behandlung dieser Themen – sie senkt oft auch den Drang."
+       }
+      ]
+     },
+     {
+      "type": "heading",
+      "text": "Therapie: Was ist untersucht?"
+     },
+     {
+      "type": "stat",
+      "value": "137",
+      "label": "Männer nahmen an einer randomisierten Studie zu Gruppen-KVT teil (7 Wochen, Hallberg et al., J Sex Med, 2019): mehr Verbesserung als die Wartegruppe – stabil nach 3 und 6 Monaten."
+     },
+     {
+      "type": "list",
+      "items": [
+       "Kognitive Verhaltenstherapie (KVT): bislang am besten belegt (Hallberg et al., 2019, nur Männer).",
+       "Akzeptanz- und Commitment-Therapie (ACT): Es gibt eine randomisierte Studie (Crosby & Twohig, 2016) und eine frühere Pilotstudie (Twohig & Crosby, 2010) – vielversprechend, aber noch begrenzte Evidenz.",
+       "Medikamente: Können bei Begleiterkrankungen sinnvoll sein; das entscheiden Fachärztinnen und Fachärzte."
+      ]
+     },
+     {
+      "type": "heading",
+      "text": "Hilfe in Deutschland"
+     },
+     {
+      "type": "list",
+      "items": [
+       "pro familia: Sexual- und Paarberatung, Beratungsstellen deutschlandweit – Suche über profamilia.de.",
+       "Telefonseelsorge: 0800 111 0 111 (anonym, kostenfrei, rund um die Uhr).",
+       "Sucht & Drogen Hotline: 01806 313031 (0,20 € pro Anruf, täglich 8 bis 24 Uhr, Angebot unter Schirmherrschaft des Drogenbeauftragten der Bundesregierung).",
+       "Hausarztpraxis oder Terminservicestelle 116117 für Psychotherapie-Termine; Sexualmedizinische Ambulanzen an Universitätskliniken."
+      ]
+     },
+     {
+      "type": "callout",
+      "title": "Kleine Schritte zählen",
+      "text": "Auch ein Rückschritt gehört oft zum Weg. Du musst nicht perfekt sein – du darfst dazulernen. Jeder Tag, an dem du dich bewusst entscheidest, ist ein Training. Und wenn du Hilfe brauchst: Sie ist da."
+     }
+    ]
+   },
+   "en": {
+    "title": "Cutting down: your plan",
+    "subtitle": "What helps according to current knowledge – in seven steps, with real support services in Germany.",
+    "blocks": [
+     {
+      "type": "paragraph",
+      "text": "You do not have to change everything at once. Research on treatment is still young, but there are promising approaches – and most strategies can be tried today. Here is a plan that is honest about how well each method is supported."
+     },
+     {
+      "type": "callout",
+      "title": "An honest note on evidence",
+      "text": "So far there are only a few large randomised trials. Cognitive behavioural therapy (CBT) is the best supported. For filter apps, streak counters or specific rituals there are hardly any studies of their own – they are plausible tools, not guarantees."
+     },
+     {
+      "type": "steps",
+      "items": [
+       {
+        "title": "Step 1: Clarify your goal",
+        "text": "Do you want to stop completely or use more consciously? Both are legitimate. Write down why you want to change – not out of shame, but because something matters to you (relationship, sleep, time, self-respect)."
+       },
+       {
+        "title": "Step 2: Adapt your environment",
+        "text": "Filters, blockers and screen-time limits lengthen the path – and small hurdles help with impulses. They are hardly studied scientifically, but often useful in practice. Tip: ask someone you trust to set the password. Charge your phone outside the bedroom at night."
+       },
+       {
+        "title": "Step 3: Know your triggers",
+        "text": "Keep a short log for one or two weeks: when, where, which feeling beforehand? Patterns like boredom, stress, loneliness or being alone in bed late at night are common. More in the article on triggers."
+       },
+       {
+        "title": "Step 4: Urge surfing",
+        "text": "An urge is like a wave: it rises, peaks and fades. Observe it with curiosity – where do you feel it, how does it change? – instead of following it or pushing it away. This comes from mindfulness-based approaches; evidence specifically for pornography is limited."
+       },
+       {
+        "title": "Step 5: Plan replacement actions",
+        "text": "Decide in advance what you will do instead: go outside, shower, call someone, exercise, play music. An action that fits your real need (relaxation, closeness, distraction) works better than simply forbidding yourself."
+       },
+       {
+        "title": "Step 6: Find allies",
+        "text": "Talk to someone you trust or a counselling service. Secrecy feeds shame, and shame feeds the cycle. Self-help groups and online forums can be a relief – look for respectful, non-shaming groups."
+       },
+       {
+        "title": "Step 7: Treat what lies underneath",
+        "text": "Anxiety, depression, loneliness, ADHD or stress often go along with problematic use (2026 meta-analysis). If you recognise yourself, treating these is worthwhile – it often lowers the urge, too."
+       }
+      ]
+     },
+     {
+      "type": "heading",
+      "text": "Therapy: what has been studied?"
+     },
+     {
+      "type": "stat",
+      "value": "137",
+      "label": "men took part in a randomised trial of group CBT (7 weeks, Hallberg et al., J Sex Med, 2019): more improvement than the waitlist group – stable at 3 and 6 months."
+     },
+     {
+      "type": "list",
+      "items": [
+       "Cognitive behavioural therapy (CBT): best supported so far (Hallberg et al., 2019, men only).",
+       "Acceptance and commitment therapy (ACT): there is one randomised trial (Crosby & Twohig, 2016) and an earlier pilot study (Twohig & Crosby, 2010) – promising, but evidence is still limited.",
+       "Medication: can make sense for co-occurring conditions; physicians and psychiatrists decide this."
+      ]
+     },
+     {
+      "type": "heading",
+      "text": "Help in Germany"
+     },
+     {
+      "type": "list",
+      "items": [
+       "pro familia: sexual and couples counselling, centres across Germany – search at profamilia.de.",
+       "Telefonseelsorge: 0800 111 0 111 (anonymous, free, around the clock).",
+       "Sucht & Drogen Hotline: 01806 313031 (€0.20 per call, daily 8 am to midnight, under the patronage of the Federal Government’s Drug Commissioner).",
+       "Your GP or the appointment service 116117 for psychotherapy appointments; sexual medicine outpatient clinics at university hospitals."
+      ]
+     },
+     {
+      "type": "callout",
+      "title": "Small steps count",
+      "text": "A setback is often part of the path. You do not need to be perfect – you are allowed to keep learning. Every day you decide consciously is training. And if you need help: it is there."
+     }
+    ]
+   },
+   "sources": [
+    {
+     "name": "Hallberg et al. – Group-Administered CBT for Hypersexual Disorder in Men, J Sex Med (2019)",
+     "url": "https://pubmed.ncbi.nlm.nih.gov/30956109/"
+    },
+    {
+     "name": "Crosby & Twohig – ACT for Problematic Internet Pornography Use: A Randomized Trial, Behav Ther (2016)",
+     "url": "https://pubmed.ncbi.nlm.nih.gov/27157029/"
+    },
+    {
+     "name": "Twohig & Crosby – ACT as a treatment for problematic internet pornography viewing, Behav Ther (2010)",
+     "url": "https://pubmed.ncbi.nlm.nih.gov/20569778/"
+    },
+    {
+     "name": "Sucht & Drogen Hotline – Bundesinstitut für Öffentliche Gesundheit",
+     "url": "https://www.bioeg.de/service/beratungsangebote/sucht-drogen-hotline/"
+    },
+    {
+     "name": "TelefonSeelsorge Deutschland",
+     "url": "https://www.telefonseelsorge.de/"
+    },
+    {
+     "name": "pro familia – Beratungsstellen",
+     "url": "https://www.profamilia.de/"
+    },
+    {
+     "name": "Psychological correlates of problematic pornography use – meta-analysis (2026)",
+     "url": "https://pubmed.ncbi.nlm.nih.gov/42707146/"
+    }
+   ]
+  },
+  {
+   "id": "pornography-recovery",
+   "habit": "pornography",
+   "category": "recovery",
+   "readMinutes": 5,
+   "de": {
+    "title": "Was sich verändert",
+    "subtitle": "Ein realistischer Blick auf die Wochen nach dem Aufhören – und auf Mythen.",
+    "blocks": [
+     {
+      "type": "paragraph",
+      "text": "Im Netz kursieren große Versprechen: „Nach 90 Tagen bist du ein neuer Mensch.“ Die ehrliche Antwort ist leiser: Viele erleben Verbesserungen, aber der Verlauf ist individuell, und es gibt kaum Langzeitstudien. Hier ein vorsichtiger Überblick, der kennzeichnet, wo Belege fehlen."
+     },
+     {
+      "type": "callout",
+      "title": "Vorweg",
+      "text": "Es gibt keine kontrollierte Studie, die einen festen „Zeitplan der Erholung“ belegt. Alles Folgende sind Erfahrungswerte aus Beratung und Selbstberichten, wo nichts anderes steht."
+     },
+     {
+      "type": "heading",
+      "text": "Die ersten Tage und Wochen"
+     },
+     {
+      "type": "paragraph",
+      "text": "Anfangs kann es unruhiger werden. In einer Befragung unter syrischen Medizinstudierenden (2024) hatten 51,0 % der Nutzenden schon einmal versucht aufzuhören. Von diesen berichteten 72,2 % unangenehme Effekte (Selbstbericht, spezielle Gruppe):"
+     },
+     {
+      "type": "stat",
+      "value": "53,5 %",
+      "label": "nannten erotische Träume als Effekt beim Aufhören (Syrien, 2024)."
+     },
+     {
+      "type": "stat",
+      "value": "26,4 %",
+      "label": "nannten Gereiztheit; 26,0 % Konzentrationsprobleme (gleiche Studie)."
+     },
+     {
+      "type": "heading",
+      "text": "Ein vorsichtiger Zeitstrahl"
+     },
+     {
+      "type": "steps",
+      "items": [
+       {
+        "title": "Woche 1–2: Unruhe und Drang",
+        "text": "Der Drang kommt in Wellen, oft zu bekannten Zeiten. Reizbarkeit, Langeweile oder Schlafschwankungen sind möglich. Das ist unangenehm, aber für viele vorübergehend. (Erfahrungswerte, begrenzte Evidenz)"
+       },
+       {
+        "title": "Woche 3–6: Neue Routinen",
+        "text": "Viele berichten, dass sich der Alltag ordnet: mehr Zeit, bessere Abendroutine, weniger Schuldgefühle. Ob Stimmung und Schlaf messbar besser werden, ist individuell und kaum untersucht."
+       },
+       {
+        "title": "Monat 2–3: Beziehungen und Selbstbild",
+        "text": "Offenheit, Nähe und Selbstvertrauen können wachsen – vor allem, wenn Heimlichkeit endet. Auch das ist überwiegend Erfahrungswissen."
+       },
+       {
+        "title": "Danach: Stabilisieren",
+        "text": "Rückfälle kommen vor und sind kein Beweis für Versagen. Was langfristig hilft: Routinen, Unterstützung, Behandlung von Begleitthemen. Ohne gute Langzeitstudien lässt sich keine Erfolgsquote nennen."
+       }
+      ]
+     },
+     {
+      "type": "heading",
+      "text": "Mythen im Check"
+     },
+     {
+      "type": "list",
+      "items": [
+       "„Flatline“ (Libido und Gefühle verschwinden monatelang): In Foren verbreitet, aber wissenschaftlich nicht belegt. Wenn du dich länger niedergeschlagen oder unempfindlich fühlst, kann auch eine Depression dahinterstecken – ab zur Ärztin oder zum Arzt.",
+       "„Nach 90 Tagen ist das Gehirn zurückgesetzt“: Es gibt keine belegte magische Frist. Das Gehirn lernt fortlaufend.",
+       "„Nie wieder, sonst ist alles weg“: Absolute Regeln erhöhen oft den Druck. Dass Abstinenz für manche sinnvoll ist, stimmt – für alle ist es nicht zwingend.",
+       "„Ohne Pornografie bekomme ich Probleme“: Kein Hinweis, dass Verzicht an sich körperlich schadet."
+      ]
+     },
+     {
+      "type": "paragraph",
+      "text": "Was du in dieser Phase selbst beeinflussen kannst: ein regelmäßiger Schlafrhythmus, Bewegung an der frischen Luft, feste Zeiten mit anderen Menschen und ein bewusster Umgang mit dem Handy am Abend. Das sind keine Wundermittel, aber sie unterstützen Stimmung und Selbstkontrolle allgemein gut. Und: Wenn du merkst, dass sich dein Sexualleben oder deine Partnerschaft verändert, ist das ein guter Anlass für ein offenes Gespräch – oder für eine Paar- oder Sexualberatung, zum Beispiel bei pro familia."
+     },
+     {
+      "type": "heading",
+      "text": "Wann du Hilfe holen solltest"
+     },
+     {
+      "type": "paragraph",
+      "text": "Wenn Niedergeschlagenheit, Angst oder Hoffnungslosigkeit anhalten oder du an Selbstverletzung denkst, sprich bitte mit einer Ärztin, einem Arzt oder rufe die Telefonseelsorge an: 0800 111 0 111 (kostenfrei, anonym). In akuter Gefahr: 112."
+     },
+     {
+      "type": "callout",
+      "title": "Fortschritt ist nicht gerade",
+      "text": "Gute Tage, schlechte Tage, ein Rückfall – das ist normal und gehört zu Veränderung. Beurteile dich nicht nach einem einzelnen Tag, sondern nach der Richtung. Du darfst Geduld mit dir haben."
+     }
+    ]
+   },
+   "en": {
+    "title": "What changes",
+    "subtitle": "A realistic look at the weeks after stopping – and at myths.",
+    "blocks": [
+     {
+      "type": "paragraph",
+      "text": "Online you will find big promises: ‘After 90 days you are a new person.’ The honest answer is quieter: many people experience improvements, but the course is individual, and long-term studies are scarce. Here is a careful overview that marks where evidence is missing."
+     },
+     {
+      "type": "callout",
+      "title": "Up front",
+      "text": "No controlled study supports a fixed ‘recovery timeline’. Unless stated otherwise, everything below is based on experience from counselling and self-reports."
+     },
+     {
+      "type": "heading",
+      "text": "The first days and weeks"
+     },
+     {
+      "type": "paragraph",
+      "text": "At first things can feel more restless. In a survey of Syrian medical students (2024), 51.0% of users had tried to quit. Of those, 72.2% reported unpleasant effects (self-report, special group):"
+     },
+     {
+      "type": "stat",
+      "value": "53.5%",
+      "label": "named erotic dreams as an effect of quitting (Syria, 2024)."
+     },
+     {
+      "type": "stat",
+      "value": "26.4%",
+      "label": "named irritability; 26.0% attention problems (same study)."
+     },
+     {
+      "type": "heading",
+      "text": "A careful timeline"
+     },
+     {
+      "type": "steps",
+      "items": [
+       {
+        "title": "Weeks 1–2: restlessness and urges",
+        "text": "Urges come in waves, often at familiar times. Irritability, boredom or changes in sleep are possible. It is unpleasant but, for many, temporary. (Experience-based, limited evidence)"
+       },
+       {
+        "title": "Weeks 3–6: new routines",
+        "text": "Many report that daily life falls into order: more time, a better evening routine, less guilt. Whether mood and sleep measurably improve is individual and hardly studied."
+       },
+       {
+        "title": "Months 2–3: relationships and self-image",
+        "text": "Openness, closeness and confidence can grow – especially when secrecy ends. This is also mostly experience-based knowledge."
+       },
+       {
+        "title": "After that: stabilising",
+        "text": "Setbacks happen and are not proof of failure. What helps long term: routines, support, treating co-occurring issues. Without good long-term studies, no success rate can be given."
+       }
+      ]
+     },
+     {
+      "type": "heading",
+      "text": "Myths, checked"
+     },
+     {
+      "type": "list",
+      "items": [
+       "‘Flatline’ (libido and emotions vanish for months): widespread in forums but not scientifically supported. If you feel down or numb for long, depression may be behind it – see a doctor.",
+       "‘After 90 days the brain is reset’: there is no proven magic deadline. The brain keeps learning continuously.",
+       "‘Never again, or everything is lost’: absolute rules often raise pressure. Abstinence makes sense for some – it is not mandatory for everyone.",
+       "‘Without pornography I will get problems’: no evidence that abstaining is harmful in itself."
+      ]
+     },
+     {
+      "type": "paragraph",
+      "text": "What you can influence in this phase yourself: a regular sleep rhythm, movement outdoors, fixed times with other people and a conscious approach to your phone in the evening. These are not miracle cures, but they generally support mood and self-control well. And if you notice that your sex life or partnership is changing, that is a good occasion for an open conversation – or for couples or sexual counselling, for example at pro familia."
+     },
+     {
+      "type": "heading",
+      "text": "When to seek help"
+     },
+     {
+      "type": "paragraph",
+      "text": "If low mood, anxiety or hopelessness persist or you think about harming yourself, please talk to a doctor or call the Telefonseelsorge in Germany: 0800 111 0 111 (free, anonymous). In immediate danger: 112."
+     },
+     {
+      "type": "callout",
+      "title": "Progress is not a straight line",
+      "text": "Good days, bad days, a setback – that is normal and part of change. Do not judge yourself by a single day, but by the direction. You are allowed to be patient with yourself."
+     }
+    ]
+   },
+   "sources": [
+    {
+     "name": "Pornography consumption among medical students in Syria (2026 publication; data 2024)",
+     "url": "https://pubmed.ncbi.nlm.nih.gov/42329982/"
+    },
+    {
+     "name": "Kraus et al. – Compulsive sexual behaviour disorder in the ICD-11, World Psychiatry (2018)",
+     "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC5775124/"
+    },
+    {
+     "name": "CSBD and problematic pornography use – interdisciplinary narrative review (2026)",
+     "url": "https://pubmed.ncbi.nlm.nih.gov/41879870/"
+    },
+    {
+     "name": "Psychological correlates of problematic pornography use – meta-analysis (2026)",
+     "url": "https://pubmed.ncbi.nlm.nih.gov/42707146/"
+    },
+    {
+     "name": "TelefonSeelsorge Deutschland",
+     "url": "https://www.telefonseelsorge.de/"
+    }
+   ]
+  },
+  {
+   "id": "pornography-stories",
+   "habit": "pornography",
+   "category": "stories",
+   "readMinutes": 5,
+   "de": {
+    "title": "Erfahrungen, die verbinden",
+    "subtitle": "Drei zusammengesetzte Geschichten – mit Fehlern, Rückschlägen und kleinen Siegen.",
+    "blocks": [
+     {
+      "type": "paragraph",
+      "text": "Manchmal hilft es zu hören, dass andere ähnliche Wege gehen. Die folgenden Berichte sind keine echten Einzelpersonen: Es sind zusammengesetzte, anonymisierte Beispiele, die typische Verläufe aus Studien und Beratungsstellen abbilden. Alle Namen und Details sind erfunden. Sie sind illustrativ, keine Belege und keine Erfolgsversprechen."
+     },
+     {
+      "type": "heading",
+      "text": "Erzählung 1: „Ich dachte, ich sei der Einzige“"
+     },
+     {
+      "type": "quote",
+      "text": "Ich habe jahrelang geschwiegen. Nach der Arbeit, spät abends, immer dasselbe. Am nächsten Tag war ich müde und genervt von mir. Als ich endlich mit einer Beraterin gesprochen habe, war ich überrascht, wie normal sie das fand. Das Schweigen war schlimmer als das Verhalten.",
+      "attribution": "Zusammengesetzter Erfahrungsbericht – typische Verläufe aus Studien und Beratungsstellen"
+     },
+     {
+      "type": "paragraph",
+      "text": "Typisch hier: Scham hält das Muster am Leben. Das Gespräch mit einer Fachperson war oft der erste Wendepunkt – nicht, weil jemand eine Lösung vorgab, sondern weil das Geheimnis seine Macht verlor."
+     },
+     {
+      "type": "heading",
+      "text": "Erzählung 2: Der Rückfall"
+     },
+     {
+      "type": "quote",
+      "text": "Nach drei Wochen ohne dachte ich, ich hätte es geschafft. Dann kam ein schlimmer Tag, Streit, kein Schlaf – und ich bin rückfällig geworden. Erst wollte ich alles hinwerfen. Dann habe ich aufgeschrieben, was davor passiert war. Das war eigentlich der wichtigste Teil.",
+      "attribution": "Zusammengesetzter Erfahrungsbericht – typische Verläufe aus Studien und Beratungsstellen"
+     },
+     {
+      "type": "paragraph",
+      "text": "Rückfälle sind in der Verhaltensänderung häufig. Hilfreich ist, sie als Information zu nutzen: Was war der Auslöser, was fehlte? Viele merken, dass nicht ein Mangel an Willen, sondern Müdigkeit, Streit oder Einsamkeit den Ausschlag gab – und dass genau dort die Lösung liegt, etwa mit mehr Schlaf, einem Gespräch oder einem festen Abendplan."
+     },
+     {
+      "type": "heading",
+      "text": "Erzählung 3: Mehr als nur das Verhalten"
+     },
+     {
+      "type": "quote",
+      "text": "Ich habe lange an Blocker und Willenskraft geglaubt. Tatsächlich wurde es besser, als ich meine Einsamkeit und meine Ängste ernst genommen habe. Therapie, ein Sportverein, ein paar echte Gespräche. Die Nutzung ist nicht komplett weg, aber sie steuert mich nicht mehr.",
+      "attribution": "Zusammengesetzter Erfahrungsbericht – typische Verläufe aus Studien und Beratungsstellen"
+     },
+     {
+      "type": "paragraph",
+      "text": "Das passt zum Forschungsstand: Eine Meta-Analyse von 2026 fand Zusammenhänge zwischen problematischer Nutzung und Einsamkeit, Depression und Emotionsregulation. Daran zu arbeiten, kann den Drang senken."
+     },
+     {
+      "type": "paragraph",
+      "text": "Noch einmal zur Einordnung: Diese drei Beispiele sind erfunden und stehen für Muster, nicht für Garantien. Manche Menschen kommen mit Selbsthilfe weiter, andere brauchen Therapie, wieder andere merken, dass ihr Konflikt eher mit Werten und Scham zu tun hat als mit Kontrollverlust – auch das beschreibt die Forschung (Grubbs et al., 2019). Zu klären, welcher Fall bei dir zutrifft, ist ein guter erster Schritt, am besten mit professioneller Unterstützung."
+     },
+     {
+      "type": "heading",
+      "text": "Was die Geschichten gemeinsam haben"
+     },
+     {
+      "type": "list",
+      "items": [
+       "Sie beginnen mit dem Mut, offen zu werden – bei sich selbst oder anderen.",
+       "Rückschritte gehören dazu und werden zur Lernquelle statt zum Urteil.",
+       "Oft geht es um mehr als das Verhalten: Gefühle, Beziehungen, Schlaf, Stress.",
+       "Ziele sind unterschiedlich: komplett aufhören oder bewusster nutzen."
+      ]
+     },
+     {
+      "type": "callout",
+      "title": "Deine Geschichte ist noch offen",
+      "text": "Du musst keiner dieser Erzählungen entsprechen. Dein Weg darf anders aussehen – langsamer, holpriger, eigener. Jede kleine Entscheidung zählt, und du musst sie nicht allein treffen."
+     }
+    ]
+   },
+   "en": {
+    "title": "Experiences that connect",
+    "subtitle": "Three composite stories – with mistakes, setbacks and small wins.",
+    "blocks": [
+     {
+      "type": "paragraph",
+      "text": "Sometimes it helps to hear that others walk similar paths. The accounts below are not real individuals: they are composite, anonymised examples that reflect typical courses seen in studies and counselling services. All names and details are invented. They are illustrative, not evidence and not promises of success."
+     },
+     {
+      "type": "heading",
+      "text": "Account 1: ‘I thought I was the only one’"
+     },
+     {
+      "type": "quote",
+      "text": "I kept quiet for years. After work, late at night, always the same. The next day I was tired and annoyed with myself. When I finally talked to a counsellor, I was surprised how normal she found it. The silence was worse than the behaviour.",
+      "attribution": "Composite account – typical courses from studies and counselling services"
+     },
+     {
+      "type": "paragraph",
+      "text": "Typical here: shame keeps the pattern alive. Talking to a professional was often the first turning point – not because someone handed over a solution, but because the secret lost its power."
+     },
+     {
+      "type": "heading",
+      "text": "Account 2: the setback"
+     },
+     {
+      "type": "quote",
+      "text": "After three weeks without, I thought I had made it. Then came a terrible day, an argument, no sleep – and I relapsed. At first I wanted to give up on everything. Then I wrote down what had happened beforehand. That was actually the most important part.",
+      "attribution": "Composite account – typical courses from studies and counselling services"
+     },
+     {
+      "type": "paragraph",
+      "text": "Setbacks are common in behaviour change. It helps to treat them as information: what was the trigger, what was missing? Many notice that it was not a lack of willpower but tiredness, conflict or loneliness that tipped the balance – and that this is exactly where the solution lies, for example with more sleep, a conversation or a fixed evening plan."
+     },
+     {
+      "type": "heading",
+      "text": "Account 3: more than just the behaviour"
+     },
+     {
+      "type": "quote",
+      "text": "For a long time I believed in blockers and willpower. It actually got better when I took my loneliness and my anxiety seriously. Therapy, a sports club, a few real conversations. The use is not completely gone, but it no longer runs me.",
+      "attribution": "Composite account – typical courses from studies and counselling services"
+     },
+     {
+      "type": "paragraph",
+      "text": "This fits the state of research: a 2026 meta-analysis found links between problematic use and loneliness, depression and emotion regulation. Working on these can lower the urge."
+     },
+     {
+      "type": "paragraph",
+      "text": "One more note for context: these three examples are invented and stand for patterns, not guarantees. Some people get further with self-help, others need therapy, and still others find that their conflict has more to do with values and shame than with loss of control – research describes this too (Grubbs et al., 2019). Working out which case applies to you is a good first step, ideally with professional support."
+     },
+     {
+      "type": "heading",
+      "text": "What the stories have in common"
+     },
+     {
+      "type": "list",
+      "items": [
+       "They begin with the courage to open up – to yourself or others.",
+       "Setbacks are part of it and become a source of learning instead of a verdict.",
+       "It is often about more than the behaviour: feelings, relationships, sleep, stress.",
+       "Goals differ: stopping completely or using more consciously."
+      ]
+     },
+     {
+      "type": "callout",
+      "title": "Your story is still open",
+      "text": "You do not have to match any of these accounts. Your path may look different – slower, bumpier, your own. Every small decision counts, and you do not have to make them alone."
+     }
+    ]
+   },
+   "sources": [
+    {
+     "name": "Psychological correlates of problematic pornography use – meta-analysis (2026)",
+     "url": "https://pubmed.ncbi.nlm.nih.gov/42707146/"
+    },
+    {
+     "name": "Kraus et al. – Compulsive sexual behaviour disorder in the ICD-11, World Psychiatry (2018)",
+     "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC5775124/"
+    },
+    {
+     "name": "Grubbs et al. – Moral Incongruence and Pornography Use, J Sex Res (2019)",
+     "url": "https://pubmed.ncbi.nlm.nih.gov/29412013/"
+    },
+    {
+     "name": "CSBD and problematic pornography use – interdisciplinary narrative review (2026)",
+     "url": "https://pubmed.ncbi.nlm.nih.gov/41879870/"
+    }
+   ]
+  },
+  {
+   "id": "pornography-triggers",
+   "habit": "pornography",
+   "category": "triggers",
+   "readMinutes": 5,
+   "de": {
+    "title": "Auslöser und Drang-Wellen",
+    "subtitle": "Wie du Auslöser erkennst, Drang aushältst und mit einem Ausrutscher ohne Scham umgehst.",
+    "blocks": [
+     {
+      "type": "paragraph",
+      "text": "Selten kommt der Drang aus dem Nichts. Meistens geht ihm ein Gefühl oder eine Situation voraus – und genau da kannst du ansetzen. Dieser Artikel zeigt typische Auslöser, wie du eine Drang-Welle überstehst und was du tust, wenn es doch passiert ist."
+     },
+     {
+      "type": "heading",
+      "text": "Häufige Auslöser"
+     },
+     {
+      "type": "list",
+      "items": [
+       "Langeweile: leere Zeit, scrollen ohne Ziel.",
+       "Stress und Anspannung: Der Wunsch nach schneller Entlastung.",
+       "Einsamkeit: Sehnsucht nach Nähe oder Ablenkung von Leere. Eine Meta-Analyse (2026) fand Zusammenhänge zwischen problematischer Nutzung und Einsamkeit.",
+       "Spätes Handy im Bett: Müdigkeit senkt die Selbstkontrolle, wenig Hürden, niemand schaut zu.",
+       "Starke Gefühle: Ärger, Kränkung, Scham – auch der Druck nach einem Ausrutscher."
+      ]
+     },
+     {
+      "type": "paragraph",
+      "text": "Der Kreislauf ist oft: Gefühl, Drang, Konsum, kurze Entlastung, Scham, neues Gefühl. Ansatzpunkte gibt es an jeder Stelle."
+     },
+     {
+      "type": "heading",
+      "text": "Der Drang ist eine Welle"
+     },
+     {
+      "type": "paragraph",
+      "text": "Ein Drang steigt, erreicht einen Gipfel und sinkt ab, auch wenn du nichts tust. Das Prinzip „Urge Surfing“ stammt aus achtsamkeitsbasierten Ansätzen. Die Evidenz speziell für Pornografie ist begrenzt, aber viele finden es nützlich."
+     },
+     {
+      "type": "steps",
+      "items": [
+       {
+        "title": "Benenne es",
+        "text": "Sag dir: „Das ist ein Drang. Er kommt und geht.“ Mehr nicht."
+       },
+       {
+        "title": "Atme und spüre",
+        "text": "Atme langsam aus. Wo sitzt der Drang im Körper? Beobachte, wie er sich verändert."
+       },
+       {
+        "title": "Ort wechseln",
+        "text": "Steh auf, geh in einen anderen Raum, an die frische Luft. Das Handy bleibt liegen."
+       },
+       {
+        "title": "Etwas Konkretes tun",
+        "text": "Dusche, Spaziergang, Liegestütze, jemanden anrufen. Plane das vorher."
+       },
+       {
+        "title": "Warte 15–20 Minuten",
+        "text": "Viele merken: Die Welle wird schwächer. Du musst ihr nicht folgen."
+       }
+      ]
+     },
+     {
+      "type": "heading",
+      "text": "Vorbeugen: dein Abend-Plan"
+     },
+     {
+      "type": "list",
+      "items": [
+       "Handy außerhalb des Schlafzimmers laden, Wecker analog.",
+       "Feste Bildschirm-Auszeit am Abend, Filter von einer vertrauten Person gesperrt.",
+       "Bei Einsamkeit oder Stress: Nachricht an einen Freund, kurze Bewegung, Tagebuch."
+      ]
+     },
+     {
+      "type": "paragraph",
+      "text": "Hilfreich ist auch ein „Wenn-dann-Plan“: Wenn ich abends allein im Bett bin und der Drang kommt, dann lege ich das Handy in den Flur und lese zehn Minuten. Solche Pläne nimmst du dir in ruhigen Momenten vor, damit du im schwierigen Moment nicht entscheiden musst. Ob das bei Pornografie besser wirkt als bei anderen Gewohnheiten, ist nicht eigens untersucht – es ist ein bewährtes Prinzip der Verhaltenstherapie."
+     },
+     {
+      "type": "heading",
+      "text": "Wenn es doch passiert ist"
+     },
+     {
+      "type": "paragraph",
+      "text": "Ein Ausrutscher ist kein Beweis, dass alles umsonst war. Scham ist dabei der größte Rückfallfaktor, denn sie verstärkt Stress, und Stress ist Auslöser. Behandle dich wie einen Freund: freundlich, aber klar."
+     },
+     {
+      "type": "steps",
+      "items": [
+       {
+        "title": "Atme durch",
+        "text": "Kein Urteil, kein „Alles ist vorbei“. Es ist ein Ausrutscher, kein Charakterurteil."
+       },
+       {
+        "title": "Untersuche statt verurteile",
+        "text": "Was war davor los? Gefühl, Uhrzeit, Ort? Schreib es auf."
+       },
+       {
+        "title": "Eine Anpassung",
+        "text": "Ändere eine Sache: früher ins Bett, anderer Ort, Hilfe holen."
+       },
+       {
+        "title": "Weitermachen",
+        "text": "Der nächste Moment ist ein neuer Anfang. Du darfst ihn sofort nutzen."
+       }
+      ]
+     },
+     {
+      "type": "callout",
+      "title": "Du bist nicht dein Ausrutscher",
+      "text": "Veränderung ist Lernen, und Lernen hat Fehler. Jedes Mal, wenn du eine Welle aushältst oder nach einem Rückschritt weitermachst, trainierst du das, was dich langfristig trägt. Wenn es zu viel wird: Telefonseelsorge 0800 111 0 111."
+     }
+    ]
+   },
+   "en": {
+    "title": "Triggers and urge waves",
+    "subtitle": "How to spot triggers, ride out urges and handle a slip without shame.",
+    "blocks": [
+     {
+      "type": "paragraph",
+      "text": "An urge rarely comes out of nowhere. Usually a feeling or situation comes first – and that is exactly where you can start. This article shows typical triggers, how to ride out an urge wave, and what to do if it happened anyway."
+     },
+     {
+      "type": "heading",
+      "text": "Common triggers"
+     },
+     {
+      "type": "list",
+      "items": [
+       "Boredom: empty time, scrolling without a goal.",
+       "Stress and tension: the wish for quick relief.",
+       "Loneliness: longing for closeness or distraction from emptiness. A 2026 meta-analysis found links between problematic use and loneliness.",
+       "Late-night phone in bed: tiredness lowers self-control, few hurdles, nobody watching.",
+       "Strong feelings: anger, hurt, shame – including the pressure after a slip."
+      ]
+     },
+     {
+      "type": "paragraph",
+      "text": "The cycle is often: feeling, urge, use, brief relief, shame, new feeling. You can intervene at every point."
+     },
+     {
+      "type": "heading",
+      "text": "An urge is a wave"
+     },
+     {
+      "type": "paragraph",
+      "text": "An urge rises, peaks and fades, even if you do nothing. The ‘urge surfing’ principle comes from mindfulness-based approaches. Evidence specifically for pornography is limited, but many people find it useful."
+     },
+     {
+      "type": "steps",
+      "items": [
+       {
+        "title": "Name it",
+        "text": "Tell yourself: ‘This is an urge. It comes and goes.’ Nothing more."
+       },
+       {
+        "title": "Breathe and notice",
+        "text": "Breathe out slowly. Where does the urge sit in your body? Watch how it changes."
+       },
+       {
+        "title": "Change place",
+        "text": "Get up, go to another room, get fresh air. Leave the phone behind."
+       },
+       {
+        "title": "Do something concrete",
+        "text": "Shower, walk, push-ups, call someone. Plan this beforehand."
+       },
+       {
+        "title": "Wait 15–20 minutes",
+        "text": "Many notice the wave weakens. You do not have to follow it."
+       }
+      ]
+     },
+     {
+      "type": "heading",
+      "text": "Prevention: your evening plan"
+     },
+     {
+      "type": "list",
+      "items": [
+       "Charge your phone outside the bedroom, use an analogue alarm clock.",
+       "A fixed screen-free time in the evening, filters locked by someone you trust.",
+       "When lonely or stressed: message a friend, short movement, journaling."
+      ]
+     },
+     {
+      "type": "paragraph",
+      "text": "An ‘if-then plan’ also helps: if I am alone in bed in the evening and the urge comes, then I put the phone in the hallway and read for ten minutes. You make such plans in calm moments so you do not have to decide in the difficult one. Whether this works better for pornography than for other habits has not been studied specifically – it is an established principle of behavioural therapy."
+     },
+     {
+      "type": "heading",
+      "text": "If it happened anyway"
+     },
+     {
+      "type": "paragraph",
+      "text": "A slip is not proof that everything was for nothing. Shame is the biggest relapse factor here, because it increases stress, and stress is a trigger. Treat yourself like a friend: kind, but clear."
+     },
+     {
+      "type": "steps",
+      "items": [
+       {
+        "title": "Breathe",
+        "text": "No verdict, no ‘it is all over’. It is a slip, not a judgement of your character."
+       },
+       {
+        "title": "Investigate, do not condemn",
+        "text": "What was going on beforehand? Feeling, time, place? Write it down."
+       },
+       {
+        "title": "One adjustment",
+        "text": "Change one thing: earlier bedtime, a different place, asking for help."
+       },
+       {
+        "title": "Carry on",
+        "text": "The next moment is a new beginning. You may use it right away."
+       }
+      ]
+     },
+     {
+      "type": "callout",
+      "title": "You are not your slip",
+      "text": "Change is learning, and learning includes mistakes. Every time you ride out a wave or carry on after a setback, you train what will carry you long term. If it becomes too much: Telefonseelsorge 0800 111 0 111."
+     }
+    ]
+   },
+   "sources": [
+    {
+     "name": "Psychological correlates of problematic pornography use – meta-analysis (2026)",
+     "url": "https://pubmed.ncbi.nlm.nih.gov/42707146/"
+    },
+    {
+     "name": "Voon et al. – Neural correlates of sexual cue reactivity, PLoS One (2014)",
+     "url": "https://pubmed.ncbi.nlm.nih.gov/25013940/"
+    },
+    {
+     "name": "Hallberg et al. – Group-Administered CBT for Hypersexual Disorder in Men, J Sex Med (2019)",
+     "url": "https://pubmed.ncbi.nlm.nih.gov/30956109/"
+    },
+    {
+     "name": "Crosby & Twohig – ACT for Problematic Internet Pornography Use: A Randomized Trial (2016)",
+     "url": "https://pubmed.ncbi.nlm.nih.gov/27157029/"
+    },
+    {
+     "name": "TelefonSeelsorge Deutschland",
+     "url": "https://www.telefonseelsorge.de/"
+    }
+   ]
+  }
+ ]
+}

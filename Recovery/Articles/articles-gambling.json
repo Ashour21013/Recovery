@@ -1,0 +1,1232 @@
+{
+ "articles": [
+  {
+   "id": "gambling-impact",
+   "habit": "gambling",
+   "category": "impact",
+   "readMinutes": 4,
+   "de": {
+    "title": "Was Glücksspiel mit deinem Leben macht",
+    "subtitle": "Geld ist nur die sichtbarste Rechnung – ehrlich hinschauen, ohne dich zu verurteilen.",
+    "blocks": [
+     {
+      "type": "paragraph",
+      "text": "Niemand beginnt mit dem Ziel, Schulden zu machen oder Menschen zu belügen. Es fängt meist mit Spannung, Hoffnung oder dem Wunsch an, mal nichts zu fühlen. Dieser Text soll dir nicht Angst machen, sondern zeigen, wie viele Bereiche betroffen sein können – damit du verstehst, was sich durch Abstinenz wieder erholen darf."
+     },
+     {
+      "type": "heading",
+      "text": "Geld und Schulden"
+     },
+     {
+      "type": "paragraph",
+      "text": "Das Muster ist gut beschrieben: Man versucht, Verluste durch neue Einsätze wieder auszugleichen („Chasing“). Dafür wird erst das Erspartes eingesetzt, dann werden Kredite aufgenommen, Dinge verkauft oder Geld geliehen. Auch der NHS nennt genau das – Geld leihen oder Dinge verkaufen, um zu spielen – als Warnsignal für glücksspielbezogene Schäden."
+     },
+     {
+      "type": "heading",
+      "text": "Beziehungen und Arbeit"
+     },
+     {
+      "type": "list",
+      "items": [
+       "Lügen und Verheimlichen belasten Vertrauen oft stärker als der Geldverlust selbst.",
+       "Gedanken ans Spielen, Geldbeschaffung und Müdigkeit machen es schwer, bei der Arbeit präsent zu sein.",
+       "Freundschaften und Hobbys rücken in den Hintergrund; der Alltag dreht sich um Spielen, Verbergen und Aufräumen.",
+       "Auch Partner*innen, Kinder und Eltern leiden – viele fühlen sich ohnmächtig oder schuldig."
+      ]
+     },
+     {
+      "type": "stat",
+      "value": "0,6 %",
+      "label": "der Bevölkerung in Deutschland hatten laut Glücksspiel-Survey 2025 (ISD Hamburg) eine schwere oder mittlere Glücksspielstörung, weitere 0,9 % eine leichte."
+     },
+     {
+      "type": "heading",
+      "text": "Psyche, Scham und Suizidrisiko"
+     },
+     {
+      "type": "paragraph",
+      "text": "Glücksspiel wird oft genutzt, um Stress, Ängste, Niedergeschlagenheit oder Schuldgefühle kurz zu betäuben. Das wirkt für Minuten – und verschärft danach das Problem. Angst und Depression kommen bei Glücksspielstörungen häufig vor, und in der Fachliteratur wird ein erhöhtes Suizidrisiko beschrieben. Genaue Zahlen schwanken je nach Studie, deshalb nennen wir hier bewusst keine."
+     },
+     {
+      "type": "quote",
+      "text": "Das Spielen selbst kann dazu dienen, psychosoziale Probleme oder negative Stimmungen wie Ängste, Depressionen und Schuldgefühle zu mindern.",
+      "attribution": "Zusammenfassung der Fachliteratur, nachzulesen u. a. bei Wikipedia „Glücksspielstörung“ (abgerufen 2026)"
+     },
+     {
+      "type": "paragraph",
+      "text": "Scham ist dabei der stärkste Verstärker: Wer sich schämt, versteckt sich – und wer sich versteckt, bekommt keine Hilfe. Dabei ist Glücksspielstörung eine anerkannte Erkrankung (ICD-11: 6C50), keine Charakterschwäche. Spiele sind so gebaut, dass sie auf Lern- und Belohnungssysteme wirken, die bei jedem Menschen ähnlich funktionieren."
+     },
+     {
+      "type": "callout",
+      "title": "Wenn du an Suizid denkst",
+      "text": "Bitte warte nicht. Die Telefonseelsorge ist kostenlos und anonym erreichbar: 0800 111 0 111 oder 0800 111 0 222. In akuter Gefahr wähle 112. Schulden und Scham lassen sich bearbeiten – dein Leben ist nicht ersetzbar."
+     },
+     {
+      "type": "heading",
+      "text": "Ein Selbstcheck"
+     },
+     {
+      "type": "paragraph",
+      "text": "Der NHS nennt unter anderem diese Fragen: Setze ich mehr, als ich verlieren kann? Versuche ich, Verluste zurückzugewinnen? Habe ich mir Geld geliehen? Habe ich mich wegen des Spielens gestresst oder schuldig gefühlt? Wenn du mehrere Fragen mit Ja beantwortest, ist das kein Urteil, sondern ein Hinweis, dass Unterstützung sinnvoll ist."
+     },
+     {
+      "type": "paragraph",
+      "text": "Auch wenn du selbst nicht spielst, sondern jemanden liebst, der spielt: Du bist nicht schuld, und du musst die Schulden nicht allein tragen. Auch Angehörige finden Gehör in Beratungsstellen."
+     },
+     {
+      "type": "callout",
+      "title": "Es gibt einen Weg heraus",
+      "text": "Schäden, die entstanden sind, sind kein Beweis, dass du „zu schwach“ bist. Die meisten Bereiche – Finanzen, Vertrauen, Stimmung – können sich Schritt für Schritt erholen. Der erste Schritt ist oft nur ein Anruf: BZgA-Beratungstelefon zur Glücksspielsucht, 0800 1 37 27 00."
+     }
+    ]
+   },
+   "en": {
+    "title": "What gambling does to your life",
+    "subtitle": "Money is only the most visible bill – an honest look, without judgement.",
+    "blocks": [
+     {
+      "type": "paragraph",
+      "text": "Nobody starts out aiming to get into debt or lie to the people they love. It usually begins with excitement, hope or the wish to feel nothing for a while. This text is not meant to scare you. It shows how many areas can be affected, so you can see what is allowed to heal once you stop."
+     },
+     {
+      "type": "heading",
+      "text": "Money and debt"
+     },
+     {
+      "type": "paragraph",
+      "text": "The pattern is well described: you try to win back losses with new bets (“chasing”). First savings go, then loans are taken, things are sold or money is borrowed. The NHS also lists borrowing money or selling things to gamble as a warning sign of gambling-related harm."
+     },
+     {
+      "type": "heading",
+      "text": "Relationships and work"
+     },
+     {
+      "type": "list",
+      "items": [
+       "Lying and secrecy often damage trust more than the lost money itself.",
+       "Preoccupation with gambling, finding money and tiredness make it hard to be present at work.",
+       "Friendships and hobbies fade; daily life revolves around gambling, hiding it and cleaning up.",
+       "Partners, children and parents suffer too – many feel powerless or guilty."
+      ]
+     },
+     {
+      "type": "stat",
+      "value": "0.6 %",
+      "label": "of people in Germany had a severe or moderate gambling disorder according to the Glücksspiel-Survey 2025 (ISD Hamburg); a further 0.9 % had a mild one."
+     },
+     {
+      "type": "heading",
+      "text": "Mind, shame and suicide risk"
+     },
+     {
+      "type": "paragraph",
+      "text": "Gambling is often used to numb stress, anxiety, low mood or guilt for a short time. It works for minutes and then makes the problem worse. Anxiety and depression are common with gambling disorder, and the clinical literature describes an increased risk of suicide. Exact figures vary between studies, so we deliberately don't quote one here."
+     },
+     {
+      "type": "quote",
+      "text": "Gambling itself can serve to ease psychosocial problems or negative moods such as anxiety, depression and guilt.",
+      "attribution": "Summary of the clinical literature, see e.g. Wikipedia “Glücksspielstörung” (accessed 2026)"
+     },
+     {
+      "type": "paragraph",
+      "text": "Shame is the strongest amplifier: if you are ashamed you hide, and if you hide you get no help. Yet gambling disorder is a recognised health condition (ICD-11: 6C50), not a character flaw. Games are designed to work on learning and reward systems that function similarly in everyone."
+     },
+     {
+      "type": "callout",
+      "title": "If you are thinking about suicide",
+      "text": "Please don't wait. In Germany, Telefonseelsorge is free and anonymous: 0800 111 0 111 or 0800 111 0 222. In immediate danger call 112. Debts and shame can be worked through – your life cannot be replaced."
+     },
+     {
+      "type": "heading",
+      "text": "A quick self-check"
+     },
+     {
+      "type": "paragraph",
+      "text": "The NHS asks, among other things: Do I bet more than I can afford to lose? Do I try to win back losses? Have I borrowed money? Have I felt stressed or guilty because of gambling? If you answer yes to several, it isn't a verdict, just a sign that support makes sense."
+     },
+     {
+      "type": "paragraph",
+      "text": "Even if you don't gamble yourself but love someone who does: it is not your fault, and you don't have to carry the debts alone. Family members are also heard in counselling services."
+     },
+     {
+      "type": "callout",
+      "title": "There is a way out",
+      "text": "The harm that has happened is no proof that you are “too weak”. Most areas – finances, trust, mood – can recover step by step. The first step is often just a call: the BZgA gambling helpline in Germany, 0800 1 37 27 00."
+     }
+    ]
+   },
+   "sources": [
+    {
+     "name": "ISD Hamburg – Glücksspiel-Survey 2025 (Buth, Meyer, Rosenkranz, Kalke, 2026)",
+     "url": "https://www.isd-hamburg.de/"
+    },
+    {
+     "name": "NHS – Gambling addiction (Self-check and support)",
+     "url": "https://www.nhs.uk/live-well/addiction-support/gambling-addiction/"
+    },
+    {
+     "name": "Wikipedia – Glücksspielstörung (Zusammenfassung der Fachliteratur, ICD-11 6C50)",
+     "url": "https://de.wikipedia.org/wiki/Gl%C3%BCcksspielst%C3%B6rung"
+    },
+    {
+     "name": "WHO – ICD-11 Browser (6C50 Gambling disorder)",
+     "url": "https://icd.who.int/browse/latest-release/mms/en"
+    },
+    {
+     "name": "Telefonseelsorge Deutschland",
+     "url": "https://www.telefonseelsorge.de/"
+    }
+   ]
+  },
+  {
+   "id": "gambling-facts",
+   "habit": "gambling",
+   "category": "facts",
+   "readMinutes": 4,
+   "de": {
+    "title": "Zahlen und Fakten zum Glücksspiel",
+    "subtitle": "Wie verbreitet Glücksspielprobleme sind – und warum das Haus fast immer gewinnt.",
+    "blocks": [
+     {
+      "type": "paragraph",
+      "text": "Wenn du dich allein fühlst: Du bist es nicht. Hier ein nüchterner Blick auf die Datenlage in Deutschland, auf die Mathematik hinter den Spielen und auf die Psychologie, die sie so schwer loslassbar macht."
+     },
+     {
+      "type": "heading",
+      "text": "Wie verbreitet ist das Problem?"
+     },
+     {
+      "type": "stat",
+      "value": "0,6 %",
+      "label": "schwere oder mittlere Glücksspielstörung in der Bevölkerung, Glücksspiel-Survey 2025 (ISD Hamburg)."
+     },
+     {
+      "type": "stat",
+      "value": "0,9 %",
+      "label": "leichte Glücksspielstörung, Glücksspiel-Survey 2025."
+     },
+     {
+      "type": "stat",
+      "value": "0,7 %",
+      "label": "schwere oder mittlere Störung im Glücksspiel-Survey 2023 (leichte: 1,0 %)."
+     },
+     {
+      "type": "stat",
+      "value": "0,34 %",
+      "label": "wahrscheinlich pathologische Spielende (BZgA-Survey 2019), nach damaliger Methodik rund 200.000 Menschen."
+     },
+     {
+      "type": "paragraph",
+      "text": "Die Surveys nutzen unterschiedliche Methoden, deshalb sind Zahlen verschiedener Jahre nicht eins zu eins vergleichbar. Männer sind häufiger betroffen als Frauen."
+     },
+     {
+      "type": "heading",
+      "text": "Online ist besonders riskant"
+     },
+     {
+      "type": "stat",
+      "value": "5,5×",
+      "label": "so stark waren pathologische Spielende bei Online-Spielen gegenüber ihrem Marktanteil überrepräsentiert (Meyer, Jahrbuch Sucht; ältere Studie, Methodik nicht mit heutigen Surveys vergleichbar)."
+     },
+     {
+      "type": "paragraph",
+      "text": "Online ist rund um die Uhr verfügbar, Einzahlungen gehen in Sekunden, und Geld fühlt sich auf dem Smartphone weniger real an. Mit dem Glücksspielstaatsvertrag von 2021 wurde das legale Online-Angebot in Deutschland reguliert; zuständig ist die Gemeinsame Glücksspielbehörde der Länder (GGL)."
+     },
+     {
+      "type": "heading",
+      "text": "Welche Spiele spielen Betroffene?"
+     },
+     {
+      "type": "stat",
+      "value": "42 %",
+      "label": "der mindestens problematisch Spielenden nutzten laut BZgA-Survey 2019 Automaten- und Casinospiele; 69 % spielten Lotterien, 24 % Sportwetten (Mehrfachnennungen)."
+     },
+     {
+      "type": "heading",
+      "text": "Warum das Haus gewinnt"
+     },
+     {
+      "type": "paragraph",
+      "text": "Jedes Glücksspiel ist so aufgebaut, dass die Auszahlungen im Durchschnitt unter den Einsätzen liegen. Beim europäischen Roulette gibt es 37 Felder, ausgezahlt wird aber, als wären es 36 – rechnerisch ein Vorteil des Hauses von etwa 2,7 %. Das klingt klein, summiert sich bei hunderten Einsätzen aber unausweichlich. Kurzfristig ist alles möglich, langfristig gewinnt die Mathematik."
+     },
+     {
+      "type": "heading",
+      "text": "Warum Automaten so fesseln"
+     },
+     {
+      "type": "list",
+      "items": [
+       "Variable Belohnung: Gewinne kommen unvorhersehbar. Dieses Muster hält Verhalten in der Lernforschung besonders hartnäckig aufrecht.",
+       "Beinahe-Gewinne: Zwei Sterne und ein knapper Fehlschlag fühlen sich fast wie ein Sieg an und motivieren zum Weiterspielen.",
+       "Spielfehlschluss: „Jetzt muss es doch endlich klappen“ – dabei sind Runden unabhängig voneinander.",
+       "Licht, Sound und Tempo übertönen das Gefühl für Zeit und Verlust.",
+       "Lootboxen in Games folgen demselben Prinzip: zufällige Belohnung gegen echtes Geld."
+      ]
+     },
+     {
+      "type": "paragraph",
+      "text": "All das sind normale Lernmechanismen, die gezielt ausgenutzt werden. Dass sie bei dir wirken, sagt nichts über deine Willenskraft."
+     },
+     {
+      "type": "heading",
+      "text": "Wie du die Zahlen einordnen kannst"
+     },
+     {
+      "type": "paragraph",
+      "text": "Hinter jedem Prozentwert stehen Menschen, die oft jahrelang schweigen. Befragungen erfassen nur, wer antwortet und ehrlich antwortet; das tatsächliche Ausmaß kann deshalb anders aussehen. Wichtiger als die genaue Zahl ist die Erkenntnis: Glücksspielprobleme sind eine bekannte, gut untersuchte Gesundheitsfrage, für die es Beratung, Therapie und Schutzmaßnahmen gibt."
+     },
+     {
+      "type": "paragraph",
+      "text": "Und noch etwas: Anbieter verdienen am Spielen. Dass ihre Produkte so gestaltet sind, dass du länger bleibst, ist Geschäftsmodell, nicht Zufall. Das zu sehen kann entlasten, denn es nimmt dir die Vorstellung, du hättest einfach nur „stärker“ sein müssen."
+     },
+     {
+      "type": "callout",
+      "title": "Was du mitnehmen kannst",
+      "text": "Glücksspielstörung ist anerkannt (ICD-11: 6C50 und DSM-5) und behandelbar. Du kannst die Mathematik nicht schlagen – aber du kannst entscheiden, nicht mehr gegen sie anzutreten. Hilfe: BZgA-Beratungstelefon 0800 1 37 27 00."
+     }
+    ]
+   },
+   "en": {
+    "title": "Gambling: facts and figures",
+    "subtitle": "How common gambling problems are – and why the house almost always wins.",
+    "blocks": [
+     {
+      "type": "paragraph",
+      "text": "If you feel alone: you aren't. Here is a sober look at the data in Germany, the maths behind the games and the psychology that makes them hard to put down."
+     },
+     {
+      "type": "heading",
+      "text": "How common is the problem?"
+     },
+     {
+      "type": "stat",
+      "value": "0.6 %",
+      "label": "of the population had a severe or moderate gambling disorder, Glücksspiel-Survey 2025 (ISD Hamburg)."
+     },
+     {
+      "type": "stat",
+      "value": "0.9 %",
+      "label": "had a mild gambling disorder, Glücksspiel-Survey 2025."
+     },
+     {
+      "type": "stat",
+      "value": "0.7 %",
+      "label": "severe or moderate disorder in the Glücksspiel-Survey 2023 (mild: 1.0 %)."
+     },
+     {
+      "type": "stat",
+      "value": "0.34 %",
+      "label": "probable pathological gamblers (BZgA survey 2019), roughly 200,000 people by the method used then."
+     },
+     {
+      "type": "paragraph",
+      "text": "The surveys use different methods, so figures from different years are not directly comparable. Men are affected more often than women."
+     },
+     {
+      "type": "heading",
+      "text": "Online is especially risky"
+     },
+     {
+      "type": "stat",
+      "value": "5.5×",
+      "label": "was how over-represented pathological gamblers were in online games compared with their market share (Meyer, Jahrbuch Sucht; an older study, not comparable with current surveys)."
+     },
+     {
+      "type": "paragraph",
+      "text": "Online gambling is open around the clock, deposits take seconds, and money feels less real on a phone. With the 2021 State Treaty on Gambling, legal online offers in Germany were regulated; the authority responsible is the Gemeinsame Glücksspielbehörde der Länder (GGL)."
+     },
+     {
+      "type": "heading",
+      "text": "Which games do affected people play?"
+     },
+     {
+      "type": "stat",
+      "value": "42 %",
+      "label": "of at-least-problematic gamblers used slot and casino games according to the BZgA survey 2019; 69 % played lotteries, 24 % sports betting (multiple answers)."
+     },
+     {
+      "type": "heading",
+      "text": "Why the house wins"
+     },
+     {
+      "type": "paragraph",
+      "text": "Every gambling game is built so that payouts are lower than stakes on average. European roulette has 37 pockets but pays as if there were 36 – a mathematical house edge of about 2.7 %. That sounds small, but over hundreds of bets it adds up inevitably. Anything is possible in the short run; in the long run the maths wins."
+     },
+     {
+      "type": "heading",
+      "text": "Why slot machines grip so hard"
+     },
+     {
+      "type": "list",
+      "items": [
+       "Variable rewards: wins arrive unpredictably. In learning research, this pattern keeps behaviour especially persistent.",
+       "Near misses: two stars and a narrow miss feel almost like a win and push you to keep going.",
+       "Gambler's fallacy: “it must work now” – yet rounds are independent of each other.",
+       "Lights, sound and speed drown out the sense of time and loss.",
+       "Loot boxes in games follow the same principle: random rewards for real money."
+      ]
+     },
+     {
+      "type": "paragraph",
+      "text": "These are normal learning mechanisms that are deliberately exploited. That they work on you says nothing about your willpower."
+     },
+     {
+      "type": "heading",
+      "text": "How to read the numbers"
+     },
+     {
+      "type": "paragraph",
+      "text": "Behind every percentage are people who often stay silent for years. Surveys only capture those who respond and respond honestly, so the true extent may look different. More important than the exact figure is the insight: gambling problems are a known, well-studied health issue for which counselling, therapy and protective measures exist."
+     },
+     {
+      "type": "paragraph",
+      "text": "And one more thing: providers earn money from gambling. That their products are designed to keep you playing is a business model, not an accident. Seeing that can bring relief, because it removes the idea that you simply should have been “stronger”."
+     },
+     {
+      "type": "callout",
+      "title": "What to take with you",
+      "text": "Gambling disorder is recognised (ICD-11: 6C50 and DSM-5) and treatable. You can't beat the maths – but you can decide to stop playing against it. Help in Germany: BZgA helpline 0800 1 37 27 00."
+     }
+    ]
+   },
+   "sources": [
+    {
+     "name": "ISD Hamburg – Glücksspiel-Survey 2023 und 2025 (Buth, Meyer, Rosenkranz, Kalke)",
+     "url": "https://www.isd-hamburg.de/"
+    },
+    {
+     "name": "BZgA – Glücksspielverhalten und Glücksspielsucht in Deutschland, Survey 2019 (2020)",
+     "url": null
+    },
+    {
+     "name": "Meyer, G. – Glücksspiel: Zahlen und Fakten, Jahrbuch Sucht (zitiert nach Wikipedia)",
+     "url": "https://de.wikipedia.org/wiki/Gl%C3%BCcksspielst%C3%B6rung"
+    },
+    {
+     "name": "GGL – Gemeinsame Glücksspielbehörde der Länder",
+     "url": "https://www.gluecksspiel-behoerde.de/"
+    },
+    {
+     "name": "WHO – ICD-11 Browser (6C50 Gambling disorder)",
+     "url": "https://icd.who.int/browse/latest-release/mms/en"
+    }
+   ]
+  },
+  {
+   "id": "gambling-methods",
+   "habit": "gambling",
+   "category": "methods",
+   "readMinutes": 5,
+   "de": {
+    "title": "Aufhören: Schritt für Schritt zum Spielstopp",
+    "subtitle": "Sperren, Blocker, Finanzschutz und Beratung – so baust du dir ein Sicherheitsnetz.",
+    "blocks": [
+     {
+      "type": "paragraph",
+      "text": "Willenskraft allein ist ein schlechter Plan, wenn das Spiel rund um die Uhr in deiner Hosentasche liegt. Wirksamer ist es, Hürden einzubauen und dir Unterstützung zu holen. Hier ist eine Reihenfolge, die sich bewährt: erst schützen, dann verstehen, dann aufbauen."
+     },
+     {
+      "type": "steps",
+      "items": [
+       {
+        "title": "Spielersperre über OASIS",
+        "text": "In Deutschland gibt es das übergreifende Sperrsystem OASIS. Eine Sperre gilt für Spielhallen, Spielbanken und lizenzierte Online-Anbieter. Du kannst dich selbst sperren lassen, die Mindestdauer beträgt drei Monate. Wie es geht, erfährst du bei der Gemeinsamen Glücksspielbehörde der Länder (GGL) oder direkt in Spielstätten und bei Beratungsstellen."
+       },
+       {
+        "title": "Blocker auf allen Geräten",
+        "text": "Programme wie Gamban oder BetBlocker sperren Glücksspiel-Websites und -Apps auf Smartphone, Tablet und Computer. BetBlocker ist kostenfrei. Lass sie von einer Vertrauensperson einrichten, damit du sie nicht in einem schwachen Moment deaktivierst. Hinweis: Sie ergänzen die Sperre, ersetzen sie aber nicht – auch nicht lizenzierte Seiten kennen keine OASIS-Sperre."
+       },
+       {
+        "title": "Finanzen aus der Hand geben",
+        "text": "Bitte eine vertraute Person, Konten mitzuverwalten oder zumindest zu sehen. Setze niedrige Tageslimits, lösche gespeicherte Zahlungsdaten und Kreditkarten aus Apps und nutze nur so viel Bargeld, wie du für den Tag brauchst."
+       },
+       {
+        "title": "Beratung statt Alleingang",
+        "text": "Suchtberatungsstellen sind kostenlos und vertraulich. Das BZgA-Beratungstelefon zur Glücksspielsucht erreichst du unter 0800 1 37 27 00. Online-Hilfe und Beratungsstellen findest du über bundesweit-gegen-gluecksspielsucht.de."
+       },
+       {
+        "title": "Psychotherapie und Verhaltenstherapie",
+        "text": "Die kognitive Verhaltenstherapie (KVT) gilt als gut belegte Behandlung. Sie arbeitet an Denkfehlern wie dem Spielfehlschluss, an Auslösern und an Strategien für Verlangen. Sprich in der Suchtberatung oder bei deiner Hausärztin darüber."
+       },
+       {
+        "title": "Selbsthilfegruppen",
+        "text": "Gruppen wie Anonyme Spieler (Gamblers Anonymous) und Selbsthilfegruppen für Glücksspielsucht bieten Austausch mit Menschen, die das Gleiche kennen. Das nimmt viel Scham."
+       },
+       {
+        "title": "Schuldnerberatung",
+        "text": "Schulden zu überblicken ist beängstigend, aber lösbar. Anerkannte Schuldnerberatungen (z. B. über schuldnerberatung.de) helfen beim Überblick, bei Gesprächen mit Gläubigern und möglichen Wegen wie einer Insolvenz. Du musst nicht allein sortieren."
+       }
+      ]
+     },
+     {
+      "type": "paragraph",
+      "text": "Du musst nicht alles an einem Tag erledigen. Wähle den Schritt, der sich gerade machbar anfühlt, und starte dort. Wenn dir Worte fehlen, reicht beim Anruf ein Satz wie: „Ich glaube, ich habe ein Problem mit Glücksspiel und möchte wissen, was ich tun kann.“ Die Beratenden kennen solche Gespräche gut und urteilen nicht."
+     },
+     {
+      "type": "callout",
+      "title": "Wichtig bei Rückfällen",
+      "text": "Ein Ausrutscher heißt nicht, dass alles umsonst war. Lass Sperre und Blocker aktiv und melde dich bei deiner Beratungsstelle. Mehr dazu im Artikel über Auslöser und Rückfälle."
+     },
+     {
+      "type": "heading",
+      "text": "Kleiner Schutzplan für die erste Woche"
+     },
+     {
+      "type": "list",
+      "items": [
+       "Heute: Sperre beantragen und Blocker installieren.",
+       "Heute oder morgen: Vertrauensperson einweihen oder Beratungstelefon anrufen.",
+       "Diese Woche: Zahlungsmittel und Limits anpassen, Konten sichten.",
+       "Diese Woche: Termin bei Suchtberatung oder Schuldnerberatung vereinbaren."
+      ]
+     },
+     {
+      "type": "callout",
+      "title": "Du bist nicht allein",
+      "text": "BZgA-Beratungstelefon zur Glücksspielsucht: 0800 1 37 27 00. Bei seelischer Krise, auch nachts: Telefonseelsorge 0800 111 0 111. Jeder Schritt zählt – auch der erste, kleine."
+     }
+    ]
+   },
+   "en": {
+    "title": "Quitting: a step-by-step plan",
+    "subtitle": "Exclusion, blockers, financial safeguards and counselling – build yourself a safety net.",
+    "blocks": [
+     {
+      "type": "paragraph",
+      "text": "Willpower alone is a poor plan when gambling sits in your pocket around the clock. It works better to build hurdles and get support. Here is an order that has proven useful: protect first, understand second, build third."
+     },
+     {
+      "type": "steps",
+      "items": [
+       {
+        "title": "Self-exclusion through OASIS",
+        "text": "Germany has a nationwide exclusion system called OASIS. An exclusion applies to arcades, casinos and licensed online providers. You can have yourself excluded; the minimum duration is three months. You can find out how through the Gemeinsame Glücksspielbehörde der Länder (GGL), in gambling venues or via counselling services."
+       },
+       {
+        "title": "Blockers on every device",
+        "text": "Programs such as Gamban or BetBlocker block gambling websites and apps on phone, tablet and computer. BetBlocker is free. Have someone you trust set them up so you can't switch them off in a weak moment. Note: they complement exclusion rather than replace it – unlicensed sites know nothing about OASIS."
+       },
+       {
+        "title": "Hand over financial control",
+        "text": "Ask someone you trust to co-manage or at least see your accounts. Set low daily limits, delete saved payment details and cards from apps, and carry only as much cash as the day requires."
+       },
+       {
+        "title": "Counselling instead of going it alone",
+        "text": "Addiction counselling services are free and confidential. You can reach the BZgA gambling helpline at 0800 1 37 27 00. Online help and local services are listed at bundesweit-gegen-gluecksspielsucht.de."
+       },
+       {
+        "title": "Psychotherapy and CBT",
+        "text": "Cognitive behavioural therapy (CBT) is a well-supported treatment. It works on thinking errors such as the gambler's fallacy, on triggers and on strategies for cravings. Talk about it with an addiction counsellor or your GP."
+       },
+       {
+        "title": "Self-help groups",
+        "text": "Groups such as Gamblers Anonymous and German self-help groups for gambling addiction offer exchange with people who know the same thing. That takes away a lot of shame."
+       },
+       {
+        "title": "Debt counselling",
+        "text": "Facing debt is frightening but manageable. Recognised debt counselling services (e.g. via schuldnerberatung.de) help with an overview, talks with creditors and possible routes such as insolvency. You don't have to sort it out alone."
+       }
+      ]
+     },
+     {
+      "type": "paragraph",
+      "text": "You don't have to do everything in one day. Pick the step that feels doable right now and start there. If you lack words, one sentence is enough on the phone: “I think I have a problem with gambling and want to know what I can do.” Counsellors know such conversations well and don't judge."
+     },
+     {
+      "type": "callout",
+      "title": "Important after a slip",
+      "text": "A slip doesn't mean everything was in vain. Keep exclusion and blockers active and contact your counselling service. More in the article on triggers and slips."
+     },
+     {
+      "type": "heading",
+      "text": "A small protection plan for week one"
+     },
+     {
+      "type": "list",
+      "items": [
+       "Today: request exclusion and install blockers.",
+       "Today or tomorrow: tell someone you trust or call the helpline.",
+       "This week: adjust payment methods and limits, review accounts.",
+       "This week: book an appointment with addiction or debt counselling."
+      ]
+     },
+     {
+      "type": "callout",
+      "title": "You are not alone",
+      "text": "BZgA gambling helpline (Germany): 0800 1 37 27 00. In an emotional crisis, also at night: Telefonseelsorge 0800 111 0 111. Every step counts – the first small one too."
+     }
+    ]
+   },
+   "sources": [
+    {
+     "name": "GGL – Gemeinsame Glücksspielbehörde der Länder (Spielersperre / OASIS)",
+     "url": "https://www.gluecksspiel-behoerde.de/"
+    },
+    {
+     "name": "Bundesweit gegen Glücksspielsucht – Hilfe für Betroffene und Angehörige",
+     "url": "https://www.bundesweit-gegen-gluecksspielsucht.de/"
+    },
+    {
+     "name": "BetBlocker – kostenlose Blocking-Software",
+     "url": "https://betblocker.org/"
+    },
+    {
+     "name": "Gamblers Anonymous",
+     "url": "https://www.gamblersanonymous.org/"
+    },
+    {
+     "name": "NHS – Gambling addiction: treatment and support",
+     "url": "https://www.nhs.uk/live-well/addiction-support/gambling-addiction/"
+    },
+    {
+     "name": "Telefonseelsorge Deutschland",
+     "url": "https://www.telefonseelsorge.de/"
+    },
+    {
+     "name": "Schuldnerberatung – Hilfe bei Schulden",
+     "url": "https://www.schuldnerberatung.de/"
+    }
+   ]
+  },
+  {
+   "id": "gambling-recovery",
+   "habit": "gambling",
+   "category": "recovery",
+   "readMinutes": 4,
+   "de": {
+    "title": "Wie Erholung aussieht – realistisch und in Etappen",
+    "subtitle": "Gehirn, Finanzen und Vertrauen heilen unterschiedlich schnell – und selten geradlinig.",
+    "blocks": [
+     {
+      "type": "paragraph",
+      "text": "Viele erwarten, dass nach dem letzten Einsatz alles sofort besser wird. Meist kommt zuerst Leere, dann Erleichterung, dann wieder Verlangen. Das ist normal. Erholung ist kein Schalter, sondern ein Prozess mit Etappen."
+     },
+     {
+      "type": "heading",
+      "text": "Das Belohnungssystem"
+     },
+     {
+      "type": "paragraph",
+      "text": "Glücksspiel wirkt auf Belohnungs- und Lernsysteme im Gehirn. Weil Gewinne unvorhersehbar kommen, wird das Verlangen besonders hartnäckig. Wer aufhört, merkt oft Unruhe, Gereiztheit und Gedankenkreisen. Wie lange das dauert, ist individuell. Eine feste Zahl in Tagen können wir seriös nicht nennen – verlass dich eher auf deinen Trend: Werden die starken Phasen seltener und kürzer?"
+     },
+     {
+      "type": "heading",
+      "text": "Mögliche Etappen"
+     },
+     {
+      "type": "steps",
+      "items": [
+       {
+        "title": "Erste Tage und Wochen: Schutz",
+        "text": "Sperre, Blocker, Finanzkontrolle. Dein Ziel ist nur, nicht zu spielen. Schlaf, Essen und Gespräche sind wichtiger als Pläne."
+       },
+       {
+        "title": "Erste Monate: Überblick",
+        "text": "Du sichtest Schulden, sprichst mit Beratungsstellen und lernst deine Auslöser kennen. Typisch sind Stimmungsschwankungen und Langeweile."
+       },
+       {
+        "title": "Mittelfristig: neue Routinen",
+        "text": "Bewegung, Hobbys, Freundschaften und feste Abläufe ersetzen die Zeit und Spannung, die das Spielen gefüllt hat."
+       },
+       {
+        "title": "Langfristig: Vertrauen und Stabilität",
+        "text": "Rückzahlungsplan läuft, Beziehungen finden einen neuen Rhythmus, Rückfallprävention bleibt ein dauerhaftes Thema."
+       }
+      ]
+     },
+     {
+      "type": "stat",
+      "value": "0,6 %",
+      "label": "der Bevölkerung in Deutschland hatten 2025 eine schwere oder mittlere Glücksspielstörung (ISD Hamburg) – du bist mit dem Weg nicht allein."
+     },
+     {
+      "type": "heading",
+      "text": "Finanzen heilen"
+     },
+     {
+      "type": "list",
+      "items": [
+       "Erst Überblick, dann Plan: Eine Schuldnerberatung hilft, Forderungen zu ordnen und realistische Raten zu verhandeln.",
+       "Schulden sind ein Rechenproblem, kein Charakterurteil – sie lassen sich oft über Jahre abtragen.",
+       "Transparenz hilft: Ein gemeinsames Haushaltsbuch mit einer Vertrauensperson schafft Sicherheit.",
+       "Kleine Rücklagen, auch 5 € pro Woche, zeigen dir: Geld kann wieder wachsen."
+      ]
+     },
+     {
+      "type": "heading",
+      "text": "Beziehungen heilen"
+     },
+     {
+      "type": "paragraph",
+      "text": "Vertrauen kommt nicht durch Versprechen zurück, sondern durch wiederholte, überprüfbare Verlässlichkeit. Das dauert oft länger als die eigene Abstinenz. Angehörige brauchen selbst Raum und manchmal eigene Beratung. Wenn du Geduld mit dir und mit ihnen hast, sind Beziehungen oft tragfähiger als vorher."
+     },
+     {
+      "type": "quote",
+      "text": "Fortschritt ist nicht, nie wieder Verlangen zu spüren. Fortschritt ist, ihm anders zu begegnen.",
+      "attribution": "Redaktioneller Leitgedanke der App, keine Studienaussage"
+     },
+     {
+      "type": "heading",
+      "text": "Wenn es sich flach anfühlt"
+     },
+     {
+      "type": "paragraph",
+      "text": "Viele berichten von einer Phase, in der der Alltag grau wirkt, weil die Spannung fehlt. Das ist kein Zeichen, dass Aufhören falsch war. Plane bewusst kleine Freuden ein: Essen mit Freunden, Sport, Musik, Projekte mit sichtbarem Ergebnis. Sie liefern keine plötzlichen Kicks, aber sie bauen Stück für Stück auf, was dich trägt."
+     },
+     {
+      "type": "paragraph",
+      "text": "Sprich mit Fachleuten, wenn Niedergeschlagenheit oder Angst anhalten. Depressionen und Ängste kommen bei Glücksspielproblemen häufig vor und lassen sich behandeln. Auch das gehört zur Erholung: dass du dich um dich selbst kümmerst, nicht nur um das Spielen."
+     },
+     {
+      "type": "callout",
+      "title": "Ein Satz für schwere Tage",
+      "text": "Jeder Tag ohne Spiel ist ein Tag, an dem sich dein Leben etwas ordnen darf. Wenn es zu viel wird: BZgA-Beratungstelefon zur Glücksspielsucht 0800 1 37 27 00."
+     }
+    ]
+   },
+   "en": {
+    "title": "What recovery looks like – realistic and in stages",
+    "subtitle": "Brain, finances and trust heal at different speeds – and rarely in a straight line.",
+    "blocks": [
+     {
+      "type": "paragraph",
+      "text": "Many expect everything to improve immediately after the last bet. Usually there is emptiness first, then relief, then craving again. That is normal. Recovery is not a switch but a process with stages."
+     },
+     {
+      "type": "heading",
+      "text": "The reward system"
+     },
+     {
+      "type": "paragraph",
+      "text": "Gambling acts on reward and learning systems in the brain. Because wins arrive unpredictably, craving becomes particularly stubborn. When you stop, restlessness, irritability and racing thoughts are common. How long this lasts is individual. We can't honestly give a fixed number of days – watch your trend instead: do the strong phases get rarer and shorter?"
+     },
+     {
+      "type": "heading",
+      "text": "Possible stages"
+     },
+     {
+      "type": "steps",
+      "items": [
+       {
+        "title": "First days and weeks: protection",
+        "text": "Exclusion, blockers, financial control. Your only goal is not to gamble. Sleep, food and conversations matter more than plans."
+       },
+       {
+        "title": "First months: overview",
+        "text": "You review debts, talk to counselling services and learn your triggers. Mood swings and boredom are typical."
+       },
+       {
+        "title": "Medium term: new routines",
+        "text": "Exercise, hobbies, friendships and fixed routines replace the time and excitement gambling used to fill."
+       },
+       {
+        "title": "Long term: trust and stability",
+        "text": "The repayment plan is running, relationships find a new rhythm, and relapse prevention stays a lasting topic."
+       }
+      ]
+     },
+     {
+      "type": "stat",
+      "value": "0.6 %",
+      "label": "of people in Germany had a severe or moderate gambling disorder in 2025 (ISD Hamburg) – you are not alone on this path."
+     },
+     {
+      "type": "heading",
+      "text": "Healing finances"
+     },
+     {
+      "type": "list",
+      "items": [
+       "Overview first, then a plan: debt counselling helps organise claims and negotiate realistic instalments.",
+       "Debt is a maths problem, not a verdict on your character – it can often be paid down over years.",
+       "Transparency helps: a shared household budget with someone you trust creates security.",
+       "Small savings, even €5 a week, show you that money can grow again."
+      ]
+     },
+     {
+      "type": "heading",
+      "text": "Healing relationships"
+     },
+     {
+      "type": "paragraph",
+      "text": "Trust doesn't come back through promises but through repeated, checkable reliability. That often takes longer than your own abstinence. Family members need space and sometimes counselling of their own. If you are patient with yourself and with them, relationships are often more solid than before."
+     },
+     {
+      "type": "quote",
+      "text": "Progress is not never feeling the urge again. Progress is meeting it differently.",
+      "attribution": "Editorial guiding thought of the app, not a study finding"
+     },
+     {
+      "type": "heading",
+      "text": "When everything feels flat"
+     },
+     {
+      "type": "paragraph",
+      "text": "Many report a phase in which everyday life looks grey because the excitement is missing. That is not a sign that stopping was wrong. Plan small pleasures deliberately: dinner with friends, sport, music, projects with a visible result. They don't deliver sudden kicks, but they build up, bit by bit, what carries you."
+     },
+     {
+      "type": "paragraph",
+      "text": "Talk to professionals if low mood or anxiety persist. Depression and anxiety are common with gambling problems and can be treated. That is part of recovery too: that you look after yourself, not just after the gambling."
+     },
+     {
+      "type": "callout",
+      "title": "A sentence for hard days",
+      "text": "Every day without gambling is a day your life gets to settle a little. If it gets too much: BZgA gambling helpline in Germany, 0800 1 37 27 00."
+     }
+    ]
+   },
+   "sources": [
+    {
+     "name": "ISD Hamburg – Glücksspiel-Survey 2025 (Buth, Meyer, Rosenkranz, Kalke, 2026)",
+     "url": "https://www.isd-hamburg.de/"
+    },
+    {
+     "name": "NHS – Gambling addiction: how to get help",
+     "url": "https://www.nhs.uk/live-well/addiction-support/gambling-addiction/"
+    },
+    {
+     "name": "GamCare – Recovery toolkit and support",
+     "url": "https://www.gamcare.org.uk/"
+    },
+    {
+     "name": "Bundesweit gegen Glücksspielsucht – Hilfe für Betroffene und Angehörige",
+     "url": "https://www.bundesweit-gegen-gluecksspielsucht.de/"
+    },
+    {
+     "name": "Schuldnerberatung – Hilfe bei Schulden",
+     "url": "https://www.schuldnerberatung.de/"
+    }
+   ]
+  },
+  {
+   "id": "gambling-stories",
+   "habit": "gambling",
+   "category": "stories",
+   "readMinutes": 5,
+   "de": {
+    "title": "Drei Verläufe, die vielen bekannt vorkommen",
+    "subtitle": "Zusammengesetzte Erfahrungsberichte – mit Rückschlägen und mit Hoffnung.",
+    "blocks": [
+     {
+      "type": "callout",
+      "title": "Hinweis zur Ehrlichkeit",
+      "text": "Die folgenden Geschichten sind keine echten Einzelpersonen. Es sind zusammengesetzte, anonymisierte Beispiele, die typische Verläufe aus Studien, Beratungsalltag und öffentlichen Selbsthilfe-Berichten widerspiegeln. Namen sind erfunden."
+     },
+     {
+      "type": "heading",
+      "text": "Jonas, 29 – die Sportwetten-App"
+     },
+     {
+      "type": "paragraph",
+      "text": "Jonas begann mit kleinen Wetten auf Fußball, einfach weil Freunde es auch taten. Die App machte Einzahlen leicht. Nach einem großen Gewinn glaubte er, das „System“ zu verstehen. Nach und nach setzte er mehr, um Verluste zurückzuholen, und verheimlichte es seiner Freundin. Der Wendepunkt kam, als sie den Kontostand sah. Er ließ sich über OASIS sperren, installierte einen Blocker und rief eine Beratungsstelle an."
+     },
+     {
+      "type": "quote",
+      "text": "Das Schlimmste war nicht das Geld, sondern dass ich ihr ins Gesicht gelogen habe. Nach dem Gespräch fühlte ich zum ersten Mal Erleichterung.",
+      "attribution": "Zusammengesetzter Erfahrungsbericht – typische Verläufe aus Studien und Beratungsstellen"
+     },
+     {
+      "type": "heading",
+      "text": "Marlene, 47 – der Automat nach der Arbeit"
+     },
+     {
+      "type": "paragraph",
+      "text": "Marlene ging nach stressigen Schichten „nur kurz“ in die Spielhalle. Das Blinken, die Geräusche und das Beinahe-Gewinnen ließen die Zeit verschwinden. Sie nahm einen Kredit auf, später einen zweiten. Ihre Scham war so groß, dass sie sich zurückzog. Erst eine Kollegin, die sie ansprach, ohne zu urteilen, brachte etwas in Bewegung. Heute geht Marlene in eine Selbsthilfegruppe und trifft dort Menschen, die dasselbe kennen."
+     },
+     {
+      "type": "list",
+      "items": [
+       "Ihr größter Auslöser: der Heimweg und Erschöpfung.",
+       "Was half: ein anderer Weg nach Hause, eine feste Verabredung am Abend.",
+       "Was blieb schwer: Zahltag und Einsamkeit am Wochenende."
+      ]
+     },
+     {
+      "type": "heading",
+      "text": "Deniz, 35 – der Rückfall und was danach kam"
+     },
+     {
+      "type": "paragraph",
+      "text": "Deniz war vier Monate spielfrei, als er nach einem Streit mit seinem Chef wieder einzahlte. Es ging schnell, und er verlor in einer Nacht einen Betrag, der ihn erschütterte. Seine erste Reaktion: Scham und der Gedanke „jetzt ist eh alles egal“. Er tat dann etwas, was ihm sein Berater geraten hatte: Er schrieb am selben Tag eine Nachricht an seine Vertrauensperson, ließ das Konto sperren und ging am nächsten Morgen in die Beratung."
+     },
+     {
+      "type": "quote",
+      "text": "Der Rückfall war ein Datenpunkt, kein Urteil. Ich habe aufgeschrieben, was davor passiert war, und wir haben meinen Plan angepasst.",
+      "attribution": "Zusammengesetzter Erfahrungsbericht – typische Verläufe aus Studien und Beratungsstellen"
+     },
+     {
+      "type": "heading",
+      "text": "Was diese Verläufe gemeinsam haben"
+     },
+     {
+      "type": "list",
+      "items": [
+       "Geheimhaltung hält das Problem am Leben; Offenheit ist oft der Wendepunkt.",
+       "Technische Hürden (Sperre, Blocker) und Menschen sind ein starkes Duo.",
+       "Rückfälle kommen vor – entscheidend ist, wie schnell du dir wieder Unterstützung holst.",
+       "Erholung dauert, aber sie passiert."
+      ]
+     },
+     {
+      "type": "paragraph",
+      "text": "Wenn du echte, öffentlich veröffentlichte Erfahrungen lesen möchtest, findest du sie etwa auf der Website von GamCare (Großbritannien), die Berichte von Betroffenen und Angehörigen teilt."
+     },
+     {
+      "type": "paragraph",
+      "text": "Vielleicht erkennst du dich in einem Detail wieder, in anderen nicht. Das ist in Ordnung: Jeder Verlauf ist anders, und es gibt keine „richtige“ Art, Hilfe zu suchen. Manche beginnen mit einem Anruf, andere mit einer Sperre, wieder andere mit einem Gespräch am Küchentisch."
+     },
+     {
+      "type": "callout",
+      "title": "Deine Geschichte ist noch offen",
+      "text": "Du entscheidest, welches Kapitel als Nächstes kommt. Hilfe gibt es kostenlos und anonym: BZgA-Beratungstelefon zur Glücksspielsucht 0800 1 37 27 00."
+     }
+    ]
+   },
+   "en": {
+    "title": "Three journeys that may sound familiar",
+    "subtitle": "Composite accounts – with setbacks and with hope.",
+    "blocks": [
+     {
+      "type": "callout",
+      "title": "A note on honesty",
+      "text": "The following stories are not real individuals. They are composite, anonymised examples reflecting typical courses seen in studies, counselling practice and publicly shared self-help accounts. The names are invented."
+     },
+     {
+      "type": "heading",
+      "text": "Jonas, 29 – the sports betting app"
+     },
+     {
+      "type": "paragraph",
+      "text": "Jonas started with small bets on football simply because friends did too. The app made depositing easy. After a big win he believed he had understood the “system”. Gradually he staked more to win back losses and hid it from his girlfriend. The turning point came when she saw his balance. He had himself excluded through OASIS, installed a blocker and phoned a counselling service."
+     },
+     {
+      "type": "quote",
+      "text": "The worst part wasn't the money but that I lied to her face. After that conversation I felt relief for the first time.",
+      "attribution": "Composite account – typical courses from studies and counselling services"
+     },
+     {
+      "type": "heading",
+      "text": "Marlene, 47 – the slot machine after work"
+     },
+     {
+      "type": "paragraph",
+      "text": "After stressful shifts Marlene went to the arcade “just briefly”. The flashing, the sounds and the near wins made time disappear. She took out a loan, later a second. Her shame was so great that she withdrew. Only a colleague who approached her without judging set something in motion. Today Marlene attends a self-help group and meets people who know the same thing."
+     },
+     {
+      "type": "list",
+      "items": [
+       "Her biggest trigger: the way home and exhaustion.",
+       "What helped: a different route home and a fixed evening appointment.",
+       "What stayed hard: payday and loneliness at weekends."
+      ]
+     },
+     {
+      "type": "heading",
+      "text": "Deniz, 35 – the slip and what came after"
+     },
+     {
+      "type": "paragraph",
+      "text": "Deniz had been gambling-free for four months when he deposited again after an argument with his boss. It happened fast, and in one night he lost an amount that shook him. His first reaction: shame and the thought “now it doesn't matter anyway”. Then he did what his counsellor had advised: that same day he wrote to the person he trusts, had the account blocked and went to counselling the next morning."
+     },
+     {
+      "type": "quote",
+      "text": "The slip was a data point, not a verdict. I wrote down what had happened beforehand, and we adjusted my plan.",
+      "attribution": "Composite account – typical courses from studies and counselling services"
+     },
+     {
+      "type": "heading",
+      "text": "What these journeys have in common"
+     },
+     {
+      "type": "list",
+      "items": [
+       "Secrecy keeps the problem alive; openness is often the turning point.",
+       "Technical barriers (exclusion, blockers) and people are a strong pair.",
+       "Slips happen – what matters is how quickly you get support again.",
+       "Recovery takes time, but it happens."
+      ]
+     },
+     {
+      "type": "paragraph",
+      "text": "If you want to read real, publicly shared experiences, you can find some on the GamCare website (UK), which publishes accounts from people affected and their families."
+     },
+     {
+      "type": "paragraph",
+      "text": "Maybe you recognise yourself in one detail and not in others. That is fine: every course is different, and there is no “right” way to seek help. Some start with a call, others with an exclusion, others with a conversation at the kitchen table."
+     },
+     {
+      "type": "callout",
+      "title": "Your story is still open",
+      "text": "You decide which chapter comes next. Help is free and anonymous: BZgA gambling helpline in Germany, 0800 1 37 27 00."
+     }
+    ]
+   },
+   "sources": [
+    {
+     "name": "GamCare – Your stories (veröffentlichte Erfahrungsberichte)",
+     "url": "https://www.gamcare.org.uk/"
+    },
+    {
+     "name": "NHS – Gambling addiction (Warnsignale und Hilfe)",
+     "url": "https://www.nhs.uk/live-well/addiction-support/gambling-addiction/"
+    },
+    {
+     "name": "Wikipedia – Glücksspielstörung (Verlaufsphasen, Fachliteratur)",
+     "url": "https://de.wikipedia.org/wiki/Gl%C3%BCcksspielst%C3%B6rung"
+    },
+    {
+     "name": "Bundesweit gegen Glücksspielsucht – Hilfe für Betroffene und Angehörige",
+     "url": "https://www.bundesweit-gegen-gluecksspielsucht.de/"
+    }
+   ]
+  },
+  {
+   "id": "gambling-triggers",
+   "habit": "gambling",
+   "category": "triggers",
+   "readMinutes": 5,
+   "de": {
+    "title": "Verlangen, Auslöser und Rückfälle meistern",
+    "subtitle": "Was den Drang auslöst, wie du ihn überbrückst und wie du nach einem Ausrutscher weitermachst.",
+    "blocks": [
+     {
+      "type": "paragraph",
+      "text": "Verlangen fühlt sich an wie ein Befehl, ist aber nur eine Welle. Sie steigt, erreicht einen Gipfel und flacht wieder ab – auch wenn du nichts tust. Wenn du deine Auslöser kennst, kannst du dich vorbereiten, statt überrascht zu werden."
+     },
+     {
+      "type": "heading",
+      "text": "Typische Auslöser"
+     },
+     {
+      "type": "list",
+      "items": [
+       "Zahltag oder Geld auf dem Konto",
+       "Werbung, Push-Nachrichten, Bonusangebote und Freispiele",
+       "Langeweile, Leerlaufzeiten, Feierabend",
+       "Stress, Streit, Einsamkeit, Scham oder Ärger",
+       "Orte wie Spielhallen, Kioske mit Automaten, Sportbars",
+       "Live-Sport und Wettangebote auf dem Smartphone",
+       "Alkohol, der Hemmungen senkt"
+      ]
+     },
+     {
+      "type": "paragraph",
+      "text": "Notiere dir eine Woche lang, wann Verlangen auftaucht, was davor passiert ist und wie stark es war. Muster werden schnell sichtbar."
+     },
+     {
+      "type": "heading",
+      "text": "Aufschieben: die 20-Minuten-Regel"
+     },
+     {
+      "type": "steps",
+      "items": [
+       {
+        "title": "Benennen",
+        "text": "Sag dir: „Das ist Verlangen, kein Befehl.“ Allein das schafft Abstand."
+       },
+       {
+        "title": "Verzögern",
+        "text": "Stelle einen Timer auf 20 Minuten und tue in der Zeit etwas anderes: Spaziergang, Dusche, Liegestütze, Atemübung."
+       },
+       {
+        "title": "Jemanden einbeziehen",
+        "text": "Schreibe oder ruf eine Vertrauensperson an. Wer es ausspricht, entschärft den Drang."
+       },
+       {
+        "title": "Zugang erschweren",
+        "text": "Prüfe, ob Blocker und Sperre aktiv sind. Gib Zahlungsmittel ab, wenn nötig."
+       },
+       {
+        "title": "Nachdenken",
+        "text": "Frag dich: Was suche ich gerade? Ruhe, Spannung, Trost? Gibt es einen anderen Weg dahin?"
+       }
+      ]
+     },
+     {
+      "type": "heading",
+      "text": "Denkfallen erkennen"
+     },
+     {
+      "type": "paragraph",
+      "text": "Typische Gedanken sind „Ich habe so viel verloren, jetzt muss es sich wenden“ (Spielfehlschluss) oder „Nur dieses eine Mal“. Jede Runde ist unabhängig; Verluste müssen sich nicht ausgleichen. Das nüchtern zu wissen, hilft – es als Satz auf dem Handy zu haben, hilft noch mehr."
+     },
+     {
+      "type": "heading",
+      "text": "Wenn es doch passiert ist"
+     },
+     {
+      "type": "paragraph",
+      "text": "Ein Rückfall ist kein Beweis, dass du gescheitert bist. Er ist häufig, ein Teil vieler Verläufe, und kann Information liefern. Gefährlich ist weniger der Ausrutscher als das, was danach folgt: Scham, Verheimlichen und das Gefühl „jetzt ist es egal“, das zum Weiterspielen führt."
+     },
+     {
+      "type": "list",
+      "items": [
+       "Stoppe, sobald du es bemerkst. Zahle nichts mehr ein.",
+       "Sprich am selben Tag mit jemandem oder rufe die Beratung an.",
+       "Sichere dein Geld: Limits, Karten, Zugänge.",
+       "Schreibe auf, was davor passiert ist – ohne Selbstvorwürfe.",
+       "Passe deinen Plan an: Welcher Schutz hat gefehlt?"
+      ]
+     },
+     {
+      "type": "heading",
+      "text": "Vertrauen wieder aufbauen"
+     },
+     {
+      "type": "paragraph",
+      "text": "Sei ehrlich, auch wenn es unangenehm ist. Biete Transparenz an, etwa Kontoeinsicht oder ein wöchentliches Gespräch. Verspreche wenig und halte es. Vertrauen wächst durch viele kleine, überprüfbare Handlungen, nicht durch große Worte."
+     },
+     {
+      "type": "heading",
+      "text": "Dein persönlicher Notfallplan"
+     },
+     {
+      "type": "paragraph",
+      "text": "Schreibe auf eine Karte oder in eine Notiz auf deinem Handy: meine drei häufigsten Auslöser, drei Dinge, die ich in den ersten 20 Minuten tue, zwei Menschen, die ich anrufen kann, und eine Telefonnummer der Beratung. Lies sie nicht erst im Ernstfall zum ersten Mal, sondern gehe sie an ruhigen Tagen durch."
+     },
+     {
+      "type": "paragraph",
+      "text": "Besonders heikle Zeitpunkte wie Zahltag oder große Sportereignisse kannst du im Voraus entschärfen: Geld sofort umbuchen, Verabredungen planen, Benachrichtigungen ausschalten und Werbe-Mails abbestellen."
+     },
+     {
+      "type": "callout",
+      "title": "Du kannst neu anfangen – jeden Tag",
+      "text": "Ein Ausrutscher löscht nicht, was du gelernt hast. Melde dich bei Bedarf beim BZgA-Beratungstelefon zur Glücksspielsucht: 0800 1 37 27 00. In einer seelischen Krise: Telefonseelsorge 0800 111 0 111."
+     }
+    ]
+   },
+   "en": {
+    "title": "Handling urges, triggers and slips",
+    "subtitle": "What sets off the urge, how to bridge it and how to carry on after a slip.",
+    "blocks": [
+     {
+      "type": "paragraph",
+      "text": "A craving feels like a command but is only a wave. It rises, peaks and fades again – even if you do nothing. If you know your triggers you can prepare instead of being caught off guard."
+     },
+     {
+      "type": "heading",
+      "text": "Typical triggers"
+     },
+     {
+      "type": "list",
+      "items": [
+       "Payday or money in your account",
+       "Ads, push notifications, bonus offers and free spins",
+       "Boredom, idle time, end of the workday",
+       "Stress, arguments, loneliness, shame or anger",
+       "Places such as arcades, kiosks with machines, sports bars",
+       "Live sport and betting offers on your phone",
+       "Alcohol, which lowers inhibitions"
+      ]
+     },
+     {
+      "type": "paragraph",
+      "text": "For a week, note when cravings show up, what happened beforehand and how strong they were. Patterns become visible quickly."
+     },
+     {
+      "type": "heading",
+      "text": "Delaying: the 20-minute rule"
+     },
+     {
+      "type": "steps",
+      "items": [
+       {
+        "title": "Name it",
+        "text": "Tell yourself: “This is a craving, not a command.” That alone creates distance."
+       },
+       {
+        "title": "Delay",
+        "text": "Set a timer for 20 minutes and do something else: a walk, a shower, push-ups, a breathing exercise."
+       },
+       {
+        "title": "Involve someone",
+        "text": "Message or call someone you trust. Saying it out loud defuses the urge."
+       },
+       {
+        "title": "Make access harder",
+        "text": "Check that blockers and exclusion are active. Hand over payment methods if needed."
+       },
+       {
+        "title": "Reflect",
+        "text": "Ask yourself: what am I looking for right now? Calm, excitement, comfort? Is there another way to get it?"
+       }
+      ]
+     },
+     {
+      "type": "heading",
+      "text": "Spotting thinking traps"
+     },
+     {
+      "type": "paragraph",
+      "text": "Typical thoughts are “I've lost so much, it has to turn now” (gambler's fallacy) or “just this once”. Every round is independent; losses don't have to even out. Knowing this soberly helps – having it as a sentence on your phone helps even more."
+     },
+     {
+      "type": "heading",
+      "text": "If it happened anyway"
+     },
+     {
+      "type": "paragraph",
+      "text": "A slip is not proof that you failed. It is common, part of many journeys, and can provide information. The slip itself is less dangerous than what follows: shame, secrecy and the feeling “now it doesn't matter”, which leads to continued gambling."
+     },
+     {
+      "type": "list",
+      "items": [
+       "Stop as soon as you notice. Deposit nothing more.",
+       "Talk to someone the same day or call counselling.",
+       "Secure your money: limits, cards, access.",
+       "Write down what happened beforehand – without self-blame.",
+       "Adjust your plan: which protection was missing?"
+      ]
+     },
+     {
+      "type": "heading",
+      "text": "Rebuilding trust"
+     },
+     {
+      "type": "paragraph",
+      "text": "Be honest, even when it is uncomfortable. Offer transparency, such as account access or a weekly conversation. Promise little and keep it. Trust grows through many small, checkable actions, not big words."
+     },
+     {
+      "type": "heading",
+      "text": "Your personal emergency plan"
+     },
+     {
+      "type": "paragraph",
+      "text": "Write on a card or in a note on your phone: my three most common triggers, three things I do in the first 20 minutes, two people I can call, and one counselling phone number. Don't read it for the first time in an emergency; go through it on calm days."
+     },
+     {
+      "type": "paragraph",
+      "text": "You can defuse especially risky moments such as payday or big sporting events in advance: transfer money out immediately, plan activities, switch off notifications and unsubscribe from promotional emails."
+     },
+     {
+      "type": "callout",
+      "title": "You can start again – every day",
+      "text": "A slip doesn't erase what you have learned. If you need to, contact the BZgA gambling helpline in Germany: 0800 1 37 27 00. In an emotional crisis: Telefonseelsorge 0800 111 0 111."
+     }
+    ]
+   },
+   "sources": [
+    {
+     "name": "NHS – Gambling addiction (Warnsignale, Chasing losses, Hilfe)",
+     "url": "https://www.nhs.uk/live-well/addiction-support/gambling-addiction/"
+    },
+    {
+     "name": "GamCare – Recovery toolkit and support",
+     "url": "https://www.gamcare.org.uk/"
+    },
+    {
+     "name": "BetBlocker – kostenlose Blocking-Software",
+     "url": "https://betblocker.org/"
+    },
+    {
+     "name": "Bundesweit gegen Glücksspielsucht – Hilfe für Betroffene und Angehörige",
+     "url": "https://www.bundesweit-gegen-gluecksspielsucht.de/"
+    },
+    {
+     "name": "Telefonseelsorge Deutschland",
+     "url": "https://www.telefonseelsorge.de/"
+    }
+   ]
+  }
+ ]
+}

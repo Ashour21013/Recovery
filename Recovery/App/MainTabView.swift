@@ -1,6 +1,6 @@
 import SwiftUI
 
-/// Haupt-Navigation (Figma): Heute · Statistik · Tagebuch · Erfolge · Mehr.
+/// Haupt-Navigation (Figma): Heute · Statistik · Tagebuch · Artikel · Mehr.
 struct MainTabView: View {
     var onDataDeleted: () -> Void = {}
 
@@ -12,8 +12,8 @@ struct MainTabView: View {
                 .tabItem { Label("Statistik", systemImage: "chart.bar") }
             JournalView()
                 .tabItem { Label("Tagebuch", systemImage: "book") }
-            AchievementsView()
-                .tabItem { Label("Erfolge", systemImage: "medal") }
+            ArticlesView()
+                .tabItem { Label("Artikel", systemImage: "text.book.closed") }
             SettingsView(onDataDeleted: onDataDeleted)
                 .tabItem { Label("Mehr", systemImage: "gearshape") }
         }

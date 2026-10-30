@@ -13,6 +13,7 @@ struct SettingsView: View {
     @State private var viewModel: SettingsViewModel?
     @State private var isShowingPaywall = false
     @State private var isShowingMetricsEditor = false
+    @State private var isShowingAchievements = false
 
     /// Wird aufgerufen, wenn alle Daten gelöscht wurden (App-Reset).
     var onDataDeleted: () -> Void = {}
@@ -56,6 +57,9 @@ struct SettingsView: View {
         .background(AppColor.background.ignoresSafeArea())
         .sheet(isPresented: $isShowingPaywall) {
             PaywallView()
+        }
+        .sheet(isPresented: $isShowingAchievements) {
+            AchievementsView()
         }
         .sheet(isPresented: $isShowingMetricsEditor) {
             MetricsEditorView()
@@ -215,6 +219,19 @@ struct SettingsView: View {
             } label: {
                 HStack {
                     settingsLabel("Deine Werte", systemImage: "chart.line.uptrend.xyaxis", tint: AppColor.teal)
+                    Spacer()
+                    Image(systemName: "chevron.right")
+                        .font(.footnote.weight(.semibold))
+                        .foregroundStyle(.tertiary)
+                }
+            }
+            .buttonStyle(.plain)
+
+            Button {
+                isShowingAchievements = true
+            } label: {
+                HStack {
+                    settingsLabel("Erfolge", systemImage: "medal.fill", tint: AppColor.coral)
                     Spacer()
                     Image(systemName: "chevron.right")
                         .font(.footnote.weight(.semibold))

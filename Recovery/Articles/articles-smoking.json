@@ -1,0 +1,1276 @@
+{
+ "articles": [
+  {
+   "id": "smoking-impact",
+   "habit": "smoking",
+   "category": "impact",
+   "readMinutes": 4,
+   "de": {
+    "title": "Was Rauchen mit dir macht",
+    "subtitle": "Ein ehrlicher Blick auf Körper, Kopf, Beziehungen und Geldbeutel – ohne Vorwürfe.",
+    "blocks": [
+     {
+      "type": "paragraph",
+      "text": "Jede Zigarette fühlt sich im Moment wie eine kleine Pause an: kurz durchatmen, runterkommen, belohnen. Genau deshalb ist es so schwer, den Preis zu sehen, den sie über die Jahre verlangt. Hier geht es nicht darum, dir ein schlechtes Gewissen zu machen. Es geht darum, dass du die ganze Rechnung kennst – denn wer sie kennt, kann besser entscheiden."
+     },
+     {
+      "type": "heading",
+      "text": "Dein Körper"
+     },
+     {
+      "type": "paragraph",
+      "text": "Die Weltgesundheitsorganisation (WHO) beschreibt es deutlich: Tabak schädigt fast jedes Organ im Körper. Er verursacht Krebs, Herzkrankheiten, Schlaganfälle, Lungenerkrankungen, kann die Fruchtbarkeit senken und das Immunsystem schwächen. Nach WHO-Angaben ist Tabak ein Risikofaktor für mehr als 20 verschiedene Krebsarten oder Unterarten."
+     },
+     {
+      "type": "quote",
+      "text": "Es gibt keine sichere Menge an Tabakkonsum.",
+      "attribution": "WHO – Fact Sheet Tabak (sinngemäß aus dem Englischen übersetzt, 2025)"
+     },
+     {
+      "type": "paragraph",
+      "text": "Auch für Deutschland ist die Lage klar: Laut dem Deutschen Krebsforschungszentrum (DKFZ) ist Rauchen der wichtigste vermeidbare Risikofaktor für Krebs – fast 20 Prozent aller Krebsneuerkrankungen sind eine Folge des Rauchens. Das Gute daran: „vermeidbar“ heißt, dass du etwas verändern kannst."
+     },
+     {
+      "type": "stat",
+      "value": "~20 %",
+      "label": "aller Krebsneuerkrankungen in Deutschland gehen aufs Rauchen zurück (DKFZ, aktuelle Angabe der Stabsstelle Krebsprävention)"
+     },
+     {
+      "type": "heading",
+      "text": "Dein Kopf"
+     },
+     {
+      "type": "paragraph",
+      "text": "Nikotin ist stark abhängig machend. Es dockt im Gehirn an und löst kurz Entspannung oder Konzentration aus – und lässt dich ein paar Stunden später unruhig, gereizt oder angespannt zurück, bis die nächste Zigarette kommt. Viele erleben das als „Stress abbauen“, tatsächlich ist ein Teil dieser Anspannung die Entzugserscheinung selbst. Dieser Kreislauf ist keine Charakterschwäche, sondern Biologie."
+     },
+     {
+      "type": "heading",
+      "text": "Deine Beziehungen"
+     },
+     {
+      "type": "paragraph",
+      "text": "Rauchen betrifft nie nur dich. Nach WHO-Angaben sterben jedes Jahr mehr als 1,6 Millionen Nichtraucher durch Passivrauch. Kinder, die Tabakrauch einatmen, haben laut CDC ein höheres Risiko für Atemwegsinfekte, Mittelohrentzündungen und Asthmaanfälle. Dazu kommen die kleinen Alltagsdinge: Rauchpausen, die Zeit von Gesprächen abziehen, der Geruch in Kleidung und Wohnung, die Sorge der Menschen, die dich mögen."
+     },
+     {
+      "type": "stat",
+      "value": "1,6 Mio.",
+      "label": "Menschen sterben jährlich durch Passivrauch (WHO, 2025)"
+     },
+     {
+      "type": "heading",
+      "text": "Dein Geld"
+     },
+     {
+      "type": "paragraph",
+      "text": "Rauchen ist nicht nur gesundheitlich, sondern auch finanziell teuer. Die WHO weist darauf hin, dass Tabak Haushalte arm machen kann, weil Geld, das für Grundbedürfnisse fehlt, in Tabak fließt. Eine eigene Rechnung dauert zehn Sekunden: Preis einer Packung × Packungen pro Woche × 52. Das Ergebnis ist das, was du jedes Jahr in Rauch aufgehen lässt. Dazu kommen Folgekosten wie Krankheitstage und Behandlungen."
+     },
+     {
+      "type": "list",
+      "items": [
+       "Körper: Herz, Lunge, Gefäße, Krebsrisiko, Fruchtbarkeit",
+       "Kopf: Abhängigkeit, Entzugsstress, Gereiztheit",
+       "Beziehungen: Passivrauch, Sorgen, Zeit, Geruch",
+       "Geld: laufende Kosten plus mögliche Behandlungskosten"
+      ]
+     },
+     {
+      "type": "paragraph",
+      "text": "Vielleicht erkennst du dich in manchem wieder, vielleicht in nichts davon. Beides ist in Ordnung. Wichtig ist nur: Diese Folgen sind keine Strafe, sondern die Wirkung eines Stoffes, der extra so gemacht ist, dass man schwer davon loskommt. Du hast dich nicht „dumm“ verhalten, du hast mit einem starken Gegner gekämpft."
+     },
+     {
+      "type": "callout",
+      "title": "Die gute Nachricht",
+      "text": "Laut CDC bringt ein Rauchstopp in jedem Alter etwas – egal, wie lange oder wie viel du geraucht hast. Du musst nichts wiedergutmachen, du darfst jetzt einfach anfangen, dich zu schützen."
+     }
+    ]
+   },
+   "en": {
+    "title": "What smoking does to you",
+    "subtitle": "An honest look at body, mind, relationships and money – without blame.",
+    "blocks": [
+     {
+      "type": "paragraph",
+      "text": "In the moment, every cigarette feels like a small break: a deep breath, a way to unwind, a little reward. That is exactly why it is so hard to see the price it charges over the years. This is not about making you feel guilty. It is about knowing the whole bill – because when you know it, you can decide better."
+     },
+     {
+      "type": "heading",
+      "text": "Your body"
+     },
+     {
+      "type": "paragraph",
+      "text": "The World Health Organization (WHO) is clear: tobacco damages nearly every organ in the body. It causes cancer, heart disease, stroke and lung disease, can reduce fertility and weaken the immune system. According to the WHO, tobacco is a risk factor for more than 20 different types or subtypes of cancer."
+     },
+     {
+      "type": "quote",
+      "text": "There is no safe level of exposure to tobacco.",
+      "attribution": "WHO – Tobacco fact sheet (2025)"
+     },
+     {
+      "type": "paragraph",
+      "text": "The picture in Germany is just as clear: according to the German Cancer Research Center (DKFZ), smoking is the most important preventable risk factor for cancer – almost 20 percent of all new cancer cases result from smoking. The good news: 'preventable' means you can change something."
+     },
+     {
+      "type": "stat",
+      "value": "~20 %",
+      "label": "of all new cancer cases in Germany are due to smoking (DKFZ, current figure from its Cancer Prevention Unit)"
+     },
+     {
+      "type": "heading",
+      "text": "Your mind"
+     },
+     {
+      "type": "paragraph",
+      "text": "Nicotine is highly addictive. It docks onto receptors in the brain and briefly brings relaxation or focus – and a few hours later leaves you restless, irritable or tense until the next cigarette. Many people experience this as 'relieving stress', but part of that tension is withdrawal itself. This loop is not a weakness of character; it is biology."
+     },
+     {
+      "type": "heading",
+      "text": "Your relationships"
+     },
+     {
+      "type": "paragraph",
+      "text": "Smoking never affects only you. According to the WHO, more than 1.6 million non-smokers die every year from second-hand smoke. The CDC reports that children exposed to tobacco smoke have a higher risk of respiratory infections, ear infections and asthma attacks. Then there are the small everyday things: smoke breaks that take time away from conversations, the smell in clothes and home, the worry of people who care about you."
+     },
+     {
+      "type": "stat",
+      "value": "1.6 M",
+      "label": "people die each year from second-hand smoke (WHO, 2025)"
+     },
+     {
+      "type": "heading",
+      "text": "Your money"
+     },
+     {
+      "type": "paragraph",
+      "text": "Smoking is expensive not only for your health but also for your wallet. The WHO points out that tobacco can push households into poverty because money is diverted from basic needs. Your own calculation takes ten seconds: price of a pack × packs per week × 52. The result is what goes up in smoke every year. Add follow-up costs such as sick days and treatment."
+     },
+     {
+      "type": "list",
+      "items": [
+       "Body: heart, lungs, blood vessels, cancer risk, fertility",
+       "Mind: dependence, withdrawal stress, irritability",
+       "Relationships: second-hand smoke, worry, time, smell",
+       "Money: ongoing costs plus possible treatment costs"
+      ]
+     },
+     {
+      "type": "paragraph",
+      "text": "Perhaps you recognise yourself in some of this, perhaps in none of it. Both are fine. What matters: these effects are not a punishment but the result of a substance that is made in a way that makes it hard to leave. You have not behaved 'stupidly'; you have been up against a strong opponent."
+     },
+     {
+      "type": "callout",
+      "title": "The good news",
+      "text": "According to the CDC, quitting helps at any age – no matter how long or how much you have smoked. You do not have to make up for anything; you can simply start protecting yourself now."
+     }
+    ]
+   },
+   "sources": [
+    {
+     "name": "WHO – Tobacco fact sheet (2025)",
+     "url": "https://www.who.int/news-room/fact-sheets/detail/tobacco"
+    },
+    {
+     "name": "CDC – About Cigarettes, Smoking and Health (2024)",
+     "url": "https://www.cdc.gov/tobacco/about/index.html"
+    },
+    {
+     "name": "CDC – Benefits of Quitting Smoking (2024)",
+     "url": "https://www.cdc.gov/tobacco/about/benefits-of-quitting.html"
+    },
+    {
+     "name": "DKFZ – Stabsstelle Krebsprävention",
+     "url": "https://www.dkfz.de/forschung/translationale-zentren/ncpc/stabsstelle-krebspraevention"
+    }
+   ]
+  },
+  {
+   "id": "smoking-facts",
+   "habit": "smoking",
+   "category": "facts",
+   "readMinutes": 4,
+   "de": {
+    "title": "Rauchen in Zahlen",
+    "subtitle": "Was Gesundheitsorganisationen weltweit und in Deutschland über Tabak wissen.",
+    "blocks": [
+     {
+      "type": "paragraph",
+      "text": "Wenn du rauchst, bist du in sehr großer Gesellschaft – und gleichzeitig mit einem sehr ernsten Thema. Zahlen können helfen, das Ganze einzuordnen, ohne dich zu erschlagen. Alle Angaben hier stammen aus den genannten Quellen; wo Zahlen für Deutschland nicht eindeutig vorlagen, bleiben wir bewusst bei den Aussagen der Fachinstitute."
+     },
+     {
+      "type": "heading",
+      "text": "Weltweit"
+     },
+     {
+      "type": "stat",
+      "value": "> 7 Mio.",
+      "label": "Todesfälle pro Jahr durch Tabak weltweit (WHO, 2025)"
+     },
+     {
+      "type": "stat",
+      "value": "1,2 Mrd.",
+      "label": "Menschen weltweit konsumieren Tabak (WHO, 2025)"
+     },
+     {
+      "type": "stat",
+      "value": "~ 80 %",
+      "label": "der Tabakkonsumierenden leben in Ländern mit niedrigem oder mittlerem Einkommen (WHO, 2025)"
+     },
+     {
+      "type": "paragraph",
+      "text": "Die WHO nennt die Tabakepidemie eine der größten Bedrohungen für die öffentliche Gesundheit, mit der die Welt je konfrontiert war. Von den jährlichen Todesfällen betreffen mehr als 1,6 Millionen Menschen, die selbst nicht rauchen, sondern Passivrauch ausgesetzt waren."
+     },
+     {
+      "type": "heading",
+      "text": "Wie viele wollen aufhören?"
+     },
+     {
+      "type": "stat",
+      "value": "> 60 %",
+      "label": "der Rauchenden wollen laut Global Adult Tobacco Survey aufhören (WHO, 2025)"
+     },
+     {
+      "type": "paragraph",
+      "text": "Du bist also nicht allein mit dem Wunsch, aufzuhören. Im Durchschnitt der Länder, in denen die Umfrage durchgeführt wurde, gaben über 60 Prozent der Rauchenden an, aufhören zu wollen. Gleichzeitig bieten laut WHO nur 31 Länder, in denen etwa ein Drittel der Weltbevölkerung lebt, umfassende Aufhör-Angebote mit voller oder teilweiser Kostenübernahme an."
+     },
+     {
+      "type": "heading",
+      "text": "Deutschland"
+     },
+     {
+      "type": "stat",
+      "value": "~ 20 %",
+      "label": "aller Krebsneuerkrankungen sind Folge des Rauchens (DKFZ, Stabsstelle Krebsprävention)"
+     },
+     {
+      "type": "paragraph",
+      "text": "Das Deutsche Krebsforschungszentrum bezeichnet Rauchen als wichtigsten Risikofaktor für Krebs. Fast 40 Prozent aller Krebsneuerkrankungen gelten insgesamt als durch vermeidbare Risikofaktoren bedingt – Rauchen allein macht davon fast die Hälfte aus."
+     },
+     {
+      "type": "heading",
+      "text": "Zum Vergleich: USA"
+     },
+     {
+      "type": "stat",
+      "value": "480.000",
+      "label": "Todesfälle pro Jahr in den USA durch Rauchen und Passivrauch – fast jeder fünfte Todesfall (CDC, 2024)"
+     },
+     {
+      "type": "stat",
+      "value": "16 Mio.",
+      "label": "Menschen in den USA leben mit einer durch Rauchen verursachten Krankheit (CDC, 2024)"
+     },
+     {
+      "type": "heading",
+      "text": "Und was bringt Aufhören?"
+     },
+     {
+      "type": "list",
+      "items": [
+       "Aufhören kann die Lebenserwartung um bis zu 10 Jahre erhöhen (CDC, 2024).",
+       "Das Risiko für 12 verschiedene Krebsarten sinkt (CDC, 2024).",
+       "Beratung und Medikamente können die Erfolgschance laut WHO mehr als verdoppeln (WHO, 2025).",
+       "Ein Rauchstopp um das 30. Lebensjahr bringt laut WHO fast 10 gewonnene Lebensjahre, um das 60. Lebensjahr noch etwa 3 (WHO, Q&A zu den gesundheitlichen Vorteilen des Rauchstopps)."
+      ]
+     },
+     {
+      "type": "quote",
+      "text": "Aufhören hat in jedem Alter gesundheitliche Vorteile, egal wie lange oder wie viel man geraucht hat.",
+      "attribution": "CDC – Benefits of Quitting Smoking (sinngemäß übersetzt, 2024)"
+     },
+     {
+      "type": "paragraph",
+      "text": "Zahlen beschreiben Gruppen, nicht dich. Sie sagen nichts darüber, wie dein persönlicher Weg aussieht. Sie zeigen aber, dass Millionen Menschen vor derselben Entscheidung stehen und dass Hilfe nachweislich wirkt. Wenn du magst, merke dir eine Zahl, die dich anspricht – etwa die Verdopplung der Erfolgschance mit Unterstützung – und nimm sie als Rückenwind mit."
+     },
+     {
+      "type": "callout",
+      "title": "Was die Zahlen dir sagen",
+      "text": "Die Zahlen sind ernst, aber sie zeigen vor allem eines: Es gibt gute Gründe und gute Hilfen. Du wirst nicht mit einer Zahl verglichen – du darfst entscheiden, ab wann sich deine eigene Statistik ändert."
+     }
+    ]
+   },
+   "en": {
+    "title": "Smoking in numbers",
+    "subtitle": "What health organisations know about tobacco, worldwide and in Germany.",
+    "blocks": [
+     {
+      "type": "paragraph",
+      "text": "If you smoke, you are in very large company – and dealing with a very serious subject. Numbers can help put things in perspective without overwhelming you. All figures here come from the sources named; where clear figures for Germany were not available, we deliberately stick to the statements of the expert institutes."
+     },
+     {
+      "type": "heading",
+      "text": "Worldwide"
+     },
+     {
+      "type": "stat",
+      "value": "> 7 M",
+      "label": "deaths per year caused by tobacco worldwide (WHO, 2025)"
+     },
+     {
+      "type": "stat",
+      "value": "1.2 bn",
+      "label": "people worldwide use tobacco (WHO, 2025)"
+     },
+     {
+      "type": "stat",
+      "value": "~ 80 %",
+      "label": "of tobacco users live in low- and middle-income countries (WHO, 2025)"
+     },
+     {
+      "type": "paragraph",
+      "text": "The WHO calls the tobacco epidemic one of the biggest public health threats the world has ever faced. More than 1.6 million of the yearly deaths are people who do not smoke themselves but were exposed to second-hand smoke."
+     },
+     {
+      "type": "heading",
+      "text": "How many want to quit?"
+     },
+     {
+      "type": "stat",
+      "value": "> 60 %",
+      "label": "of smokers intend to quit, per the Global Adult Tobacco Survey (WHO, 2025)"
+     },
+     {
+      "type": "paragraph",
+      "text": "So you are not alone in wanting to stop. On average across countries where the survey was conducted, over 60 percent of smokers said they intend to quit. At the same time, according to the WHO, only 31 countries, home to about a third of the world's population, offer comprehensive quit services with full or partial cost coverage."
+     },
+     {
+      "type": "heading",
+      "text": "Germany"
+     },
+     {
+      "type": "stat",
+      "value": "~ 20 %",
+      "label": "of all new cancer cases are a result of smoking (DKFZ, Cancer Prevention Unit)"
+     },
+     {
+      "type": "paragraph",
+      "text": "The German Cancer Research Center describes smoking as the most important risk factor for cancer. Almost 40 percent of all new cancer cases are attributed to avoidable risk factors – smoking alone accounts for almost half of those."
+     },
+     {
+      "type": "heading",
+      "text": "For comparison: USA"
+     },
+     {
+      "type": "stat",
+      "value": "480,000",
+      "label": "deaths per year in the US from smoking and second-hand smoke – nearly one in five deaths (CDC, 2024)"
+     },
+     {
+      "type": "stat",
+      "value": "16 M",
+      "label": "people in the US live with a smoking-related disease (CDC, 2024)"
+     },
+     {
+      "type": "heading",
+      "text": "And what does quitting bring?"
+     },
+     {
+      "type": "list",
+      "items": [
+       "Quitting can add as much as 10 years to life expectancy (CDC, 2024).",
+       "The risk of 12 different cancers falls (CDC, 2024).",
+       "Counselling and medication can more than double the chance of quitting successfully (WHO, 2025).",
+       "According to the WHO, quitting at about age 30 gains almost 10 years of life expectancy, and at about 60 still around 3 (WHO, Q&A on health benefits of smoking cessation)."
+      ]
+     },
+     {
+      "type": "quote",
+      "text": "Quitting smoking has health benefits at any age, no matter how long or how much you have smoked.",
+      "attribution": "CDC – Benefits of Quitting Smoking (2024)"
+     },
+     {
+      "type": "paragraph",
+      "text": "Numbers describe groups, not you. They say nothing about what your personal path looks like. But they show that millions of people face the same decision and that help demonstrably works. If you like, remember one number that speaks to you – such as the doubled chance of success with support – and take it along as a tailwind."
+     },
+     {
+      "type": "callout",
+      "title": "What the numbers tell you",
+      "text": "The numbers are serious, but above all they show that there are good reasons and good help. You are not being compared to a statistic – you get to decide when your own statistic starts to change."
+     }
+    ]
+   },
+   "sources": [
+    {
+     "name": "WHO – Tobacco fact sheet (2025)",
+     "url": "https://www.who.int/news-room/fact-sheets/detail/tobacco"
+    },
+    {
+     "name": "WHO – Tobacco: Health benefits of smoking cessation",
+     "url": "https://www.who.int/news-room/questions-and-answers/item/tobacco-health-benefits-of-smoking-cessation"
+    },
+    {
+     "name": "CDC – About Cigarettes, Smoking and Health (2024)",
+     "url": "https://www.cdc.gov/tobacco/about/index.html"
+    },
+    {
+     "name": "CDC – Benefits of Quitting Smoking (2024)",
+     "url": "https://www.cdc.gov/tobacco/about/benefits-of-quitting.html"
+    },
+    {
+     "name": "DKFZ – Stabsstelle Krebsprävention",
+     "url": "https://www.dkfz.de/forschung/translationale-zentren/ncpc/stabsstelle-krebspraevention"
+    }
+   ]
+  },
+  {
+   "id": "smoking-methods",
+   "habit": "smoking",
+   "category": "methods",
+   "readMinutes": 5,
+   "de": {
+    "title": "Rauchfrei werden: Was wirklich hilft",
+    "subtitle": "Ein Plan in sieben Schritten, gestützt auf Studien – und Hilfe, die du heute anrufen kannst.",
+    "blocks": [
+     {
+      "type": "paragraph",
+      "text": "Viele versuchen es allein mit Willenskraft – und stehen dann frustriert da. Das liegt nicht an dir: Der britische Gesundheitsdienst NHS schreibt selbst, dass ein Rauchstopp „von jetzt auf gleich“ nur mit Willenskraft hart sein kann. Mit Plan, Unterstützung und passenden Hilfsmitteln steigen deine Chancen deutlich. Hier ist, was die Forschung sagt."
+     },
+     {
+      "type": "heading",
+      "text": "Das sagt die Evidenz"
+     },
+     {
+      "type": "stat",
+      "value": "> 2x",
+      "label": "Beratung und Medikamente können die Chance auf einen erfolgreichen Rauchstopp mehr als verdoppeln (WHO, 2025)"
+     },
+     {
+      "type": "stat",
+      "value": "17–37 %",
+      "label": "höhere Erfolgswahrscheinlichkeit bei Nikotinpflaster plus schnellwirksamem Ersatz (z. B. Kaugummi) statt nur einer Form (Cochrane-Review, 2019)"
+     },
+     {
+      "type": "stat",
+      "value": "17 → 20",
+      "label": "von 100 Personen schaffen es mit mehr statt weniger Begleitung zusätzlich zu Medikamenten (Cochrane, 2019)"
+     },
+     {
+      "type": "steps",
+      "items": [
+       {
+        "title": "1. Entscheide dich für ein Datum",
+        "text": "Wähle einen Tag in den nächsten ein bis zwei Wochen. Das gibt dir Zeit, dich vorzubereiten, ohne ewig zu warten."
+       },
+       {
+        "title": "2. Hol dir Unterstützung",
+        "text": "Sag Freundinnen, Familie oder Kollegen Bescheid. Die Cochrane-Auswertung zeigt: Persönlicher Kontakt – ob persönlich oder am Telefon – hilft zusätzlich zu Medikamenten."
+       },
+       {
+        "title": "3. Sprich über Medikamente",
+        "text": "Nikotinersatz (Pflaster, Kaugummi, Lutschtabletten), Vareniclin oder Cytisin können Entzug und Verlangen lindern. Nach Cochrane wirken Nikotinersatzmittel alle ähnlich gut; die Kombination aus Pflaster und schnellwirksamer Form wirkt besser als eine einzelne. Frag in der Arztpraxis oder Apotheke, was für dich passt – besonders bei Vorerkrankungen oder Schwangerschaft."
+       },
+       {
+        "title": "4. Räume dein Umfeld auf",
+        "text": "Feuerzeuge, Aschenbecher, Reste: raus. Plane für typische Auslöser – nach dem Essen, mit Kaffee, im Stress – kleine Ersatzhandlungen."
+       },
+       {
+        "title": "5. Plane für Heißhunger",
+        "text": "Verzögern, tief atmen, Wasser trinken, bewegen. Jede Welle geht vorbei, auch wenn sie sich groß anfühlt."
+       },
+       {
+        "title": "6. Nutze Apps und Programme",
+        "text": "Fortschritt zu sehen motiviert. Der NHS nennt Tracking von Fortschritt und gespartem Geld als hilfreich. Auch Online-Programme von BZgA und Krankenkassen gibt es; viele Kassen bezuschussen Kurse."
+       },
+       {
+        "title": "7. Plane den Ausrutscher mit ein",
+        "text": "Ein Ausrutscher heißt nicht, dass alles verloren ist. Schreib auf, was ihn ausgelöst hat, und mach weiter."
+       }
+      ]
+     },
+     {
+      "type": "heading",
+      "text": "Schlagartig oder schrittweise?"
+     },
+     {
+      "type": "paragraph",
+      "text": "Hier ist die Forschung weniger eindeutig als Ratgeber manchmal behaupten. Fest steht: Mit einem klaren Termin und Unterstützung hast du den besten Rahmen. Ob du dir dabei per Nikotinersatz helfen lässt, ist keine Frage von Schwäche, sondern von Technik."
+     },
+     {
+      "type": "heading",
+      "text": "Und E-Zigaretten?"
+     },
+     {
+      "type": "paragraph",
+      "text": "Laut einem Cochrane-Review schaffen mehr Menschen einen Rauchstopp mit nikotinhaltigen E-Zigaretten als mit Nikotinersatztherapie. Sie sind aber nicht risikofrei, und das Ziel bleibt, am Ende auch ganz davon wegzukommen. Sprich das mit einer Beratungsstelle durch."
+     },
+     {
+      "type": "heading",
+      "text": "Hilfe, die du anrufen kannst"
+     },
+     {
+      "type": "list",
+      "items": [
+       "BZgA Rauchfrei-Telefon (Beratung zum Rauchstopp): 0800 8 313 131",
+       "Sucht & Drogen Hotline: 01806 313031",
+       "Telefonseelsorge (rund um die Uhr, kostenlos, auch bei Krisen): 0800 111 0 111 oder 0800 111 0 222",
+       "Dein Hausarzt, deine Apotheke oder eine lokale Suchtberatungsstelle"
+      ]
+     },
+     {
+      "type": "callout",
+      "title": "Du musst nicht perfekt sein",
+      "text": "Die meisten, die es geschafft haben, hatten Hilfe, einen Plan und mehr als einen Anlauf. Wenn du heute den ersten Schritt machst – Anruf, Termin, Datum –, hast du schon angefangen."
+     }
+    ]
+   },
+   "en": {
+    "title": "Quitting smoking: what really helps",
+    "subtitle": "A seven-step plan backed by research – and help you can call today.",
+    "blocks": [
+     {
+      "type": "paragraph",
+      "text": "Many people try with willpower alone – and end up frustrated. That is not on you: the UK's NHS itself writes that going cold turkey on willpower alone can be tough. With a plan, support and the right aids, your chances rise considerably. Here is what research says."
+     },
+     {
+      "type": "heading",
+      "text": "What the evidence says"
+     },
+     {
+      "type": "stat",
+      "value": "> 2x",
+      "label": "Counselling and medication can more than double the chance of quitting successfully (WHO, 2025)"
+     },
+     {
+      "type": "stat",
+      "value": "17–37 %",
+      "label": "higher likelihood of quitting with a nicotine patch plus a fast-acting form (e.g. gum) than with one type alone (Cochrane review, 2019)"
+     },
+     {
+      "type": "stat",
+      "value": "17 → 20",
+      "label": "out of 100 people quit with more rather than less support on top of medication (Cochrane, 2019)"
+     },
+     {
+      "type": "steps",
+      "items": [
+       {
+        "title": "1. Pick a date",
+        "text": "Choose a day within the next one to two weeks. That gives you time to prepare without waiting forever."
+       },
+       {
+        "title": "2. Get support",
+        "text": "Tell friends, family or colleagues. The Cochrane analysis shows that personal contact – in person or by phone – helps on top of medication."
+       },
+       {
+        "title": "3. Talk about medication",
+        "text": "Nicotine replacement (patches, gum, lozenges), varenicline or cytisine can ease withdrawal and cravings. According to Cochrane, nicotine replacement products work similarly well; combining a patch with a fast-acting form works better than a single one. Ask your doctor or pharmacist what suits you – especially with existing conditions or pregnancy."
+       },
+       {
+        "title": "4. Clear your surroundings",
+        "text": "Lighters, ashtrays, leftovers: out. Plan small replacement actions for typical triggers – after meals, with coffee, under stress."
+       },
+       {
+        "title": "5. Plan for cravings",
+        "text": "Delay, breathe deeply, drink water, move. Every wave passes, even when it feels huge."
+       },
+       {
+        "title": "6. Use apps and programmes",
+        "text": "Seeing progress is motivating. The NHS highlights tracking progress and money saved as helpful. Online programmes from the BZgA and health insurers exist too; many insurers subsidise courses."
+       },
+       {
+        "title": "7. Plan for a slip",
+        "text": "A slip does not mean everything is lost. Write down what triggered it and carry on."
+       }
+      ]
+     },
+     {
+      "type": "heading",
+      "text": "All at once or gradually?"
+     },
+     {
+      "type": "paragraph",
+      "text": "Here the research is less clear-cut than advice columns sometimes claim. What is certain: a clear date plus support gives you the best framework. Whether you use nicotine replacement along the way is not a question of weakness but of technique."
+     },
+     {
+      "type": "heading",
+      "text": "What about e-cigarettes?"
+     },
+     {
+      "type": "paragraph",
+      "text": "According to a Cochrane review, more people stop smoking with nicotine e-cigarettes than with nicotine replacement therapy. They are not risk-free, though, and the goal remains to eventually move away from them as well. Talk this through with a counselling service."
+     },
+     {
+      "type": "heading",
+      "text": "Help you can call"
+     },
+     {
+      "type": "list",
+      "items": [
+       "BZgA Rauchfrei-Telefon (quit-smoking counselling, Germany): 0800 8 313 131",
+       "Sucht & Drogen Hotline: 01806 313031",
+       "Telefonseelsorge (around the clock, free, also in crises): 0800 111 0 111 or 0800 111 0 222",
+       "Your GP, your pharmacy or a local addiction counselling service"
+      ]
+     },
+     {
+      "type": "callout",
+      "title": "You do not have to be perfect",
+      "text": "Most people who have made it had help, a plan and more than one attempt. If you take the first step today – a call, an appointment, a date – you have already started."
+     }
+    ]
+   },
+   "sources": [
+    {
+     "name": "WHO – Tobacco fact sheet (2025)",
+     "url": "https://www.who.int/news-room/fact-sheets/detail/tobacco"
+    },
+    {
+     "name": "Cochrane – Different doses, durations and modes of delivery of nicotine replacement therapy (2019)",
+     "url": "https://www.cochrane.org/evidence/CD013308_what-best-way-use-nicotine-replacement-therapy-quit-smoking"
+    },
+    {
+     "name": "Cochrane – Behavioural support in addition to medication (2019)",
+     "url": "https://www.cochrane.org/evidence/CD009670_does-more-support-increase-success-amongst-people-using-medications-quit-smoking"
+    },
+    {
+     "name": "Cochrane – Varenicline and cytisine (2023)",
+     "url": "https://www.cochrane.org/evidence/CD006103_can-medications-varenicline-and-cytisine-nicotine-receptor-partial-agonists-help-people-stop-smoking"
+    },
+    {
+     "name": "Cochrane – E-cigarettes for stopping smoking",
+     "url": "https://www.cochrane.org/evidence/CD010216_can-electronic-cigarettes-help-people-stop-smoking-and-do-they-have-any-unwanted-effects-when-used"
+    },
+    {
+     "name": "NHS – Quit smoking",
+     "url": "https://www.nhs.uk/better-health/quit-smoking/"
+    },
+    {
+     "name": "NHS – Ready to quit smoking",
+     "url": "https://www.nhs.uk/better-health/quit-smoking/ready-to-quit-smoking/"
+    }
+   ]
+  },
+  {
+   "id": "smoking-recovery",
+   "habit": "smoking",
+   "category": "recovery",
+   "readMinutes": 4,
+   "de": {
+    "title": "Dein Körper nach der letzten Zigarette",
+    "subtitle": "Von den ersten 20 Minuten bis zu 15 Jahren: Was sich erholt – und wann.",
+    "blocks": [
+     {
+      "type": "paragraph",
+      "text": "Dein Körper wartet nicht auf einen perfekten Moment, um dir zu helfen. Er beginnt schon Minuten nach der letzten Zigarette mit dem Aufräumen. Die folgende Zeitleiste basiert auf Angaben des britischen NHS und der WHO. Es sind Durchschnittswerte – dein Körper darf etwas schneller oder langsamer sein."
+     },
+     {
+      "type": "heading",
+      "text": "Die ersten Stunden und Tage"
+     },
+     {
+      "type": "steps",
+      "items": [
+       {
+        "title": "Nach 20 Minuten",
+        "text": "Dein Puls beginnt, sich zu normalisieren. Die WHO nennt: Herzfrequenz und Blutdruck sinken."
+       },
+       {
+        "title": "Nach 8–12 Stunden",
+        "text": "Das Kohlenmonoxid in deinem Blut ist nach NHS-Angaben nach 8 Stunden halbiert und nach WHO-Angaben nach 12 Stunden wieder normal. Deine Sauerstoffwerte erholen sich."
+       },
+       {
+        "title": "Nach 48 Stunden",
+        "text": "Dein Kohlenmonoxid-Spiegel liegt laut NHS auf Nichtraucher-Niveau. Die Lunge räumt Schleim ab, Geschmack und Geruch werden besser."
+       },
+       {
+        "title": "Nach 72 Stunden",
+        "text": "Das Atmen fällt oft leichter, weil sich die Bronchien entspannen. Auch dein Energielevel steigt laut NHS."
+       }
+      ]
+     },
+     {
+      "type": "paragraph",
+      "text": "Diese ersten Tage sind oft die anstrengendsten, weil gleichzeitig der Nikotinentzug spürbar wird. Reizbarkeit, Unruhe und Heißhunger sind in dieser Zeit normal und ein Zeichen, dass dein Körper sich umstellt."
+     },
+     {
+      "type": "stat",
+      "value": "28 Tage",
+      "label": "rauchfrei: laut NHS steigt dann die Wahrscheinlichkeit deutlich, dauerhaft rauchfrei zu bleiben (NHS, aktuelle Seite)"
+     },
+     {
+      "type": "heading",
+      "text": "Wochen und Monate"
+     },
+     {
+      "type": "list",
+      "items": [
+       "2–12 Wochen: Deine Durchblutung verbessert sich, Herz und Muskeln werden besser versorgt (NHS; WHO).",
+       "3–9 Monate: Husten, Keuchen und Atemprobleme bessern sich, die Lungenfunktion steigt laut NHS um bis zu 10 Prozent.",
+       "1–9 Monate: Husten und Kurzatmigkeit nehmen ab (WHO)."
+      ]
+     },
+     {
+      "type": "heading",
+      "text": "Jahre"
+     },
+     {
+      "type": "stat",
+      "value": "1 Jahr",
+      "label": "Dein Herzinfarktrisiko ist laut NHS nur noch halb so hoch wie das einer rauchenden Person (NHS)"
+     },
+     {
+      "type": "stat",
+      "value": "10 Jahre",
+      "label": "Dein Risiko, an Lungenkrebs zu sterben, ist laut NHS und WHO etwa halbiert (NHS; WHO)"
+     },
+     {
+      "type": "stat",
+      "value": "15 Jahre",
+      "label": "Dein Risiko für koronare Herzkrankheit entspricht laut WHO dem eines Nichtrauchers (WHO)"
+     },
+     {
+      "type": "paragraph",
+      "text": "Beim Schlaganfall nennt die WHO: Nach 5 bis 15 Jahren ist das Risiko auf das eines Nichtrauchers gesunken. Die CDC ergänzt, dass das Risiko für koronare Herzkrankheit schon 1 bis 2 Jahre nach dem Aufhören stark fällt und danach langsamer weiter sinkt."
+     },
+     {
+      "type": "quote",
+      "text": "Aufhören hat in jedem Alter gesundheitliche Vorteile, egal wie lange oder wie viel man geraucht hat.",
+      "attribution": "CDC – Benefits of Quitting Smoking (sinngemäß übersetzt, 2024)"
+     },
+     {
+      "type": "heading",
+      "text": "Und das Gehirn?"
+     },
+     {
+      "type": "paragraph",
+      "text": "Die Entzugssymptome sind der sichtbare Teil dieser Anpassung: Dein Gehirn gewöhnt sich wieder daran, ohne Nikotin zu funktionieren. Das kostet Energie und Geduld. Konkrete Zeitangaben dazu variieren von Person zu Person, deshalb nennen wir hier bewusst keine festen Tage."
+     },
+     {
+      "type": "paragraph",
+      "text": "Wichtig: Diese Zeitleiste ist keine Prüfung. Wenn du zwischendurch hustest, schlecht schläfst oder dich müde fühlst, heißt das nicht, dass etwas schiefläuft. Der Körper arbeitet manchmal erst auf Hochtouren, bevor du den Effekt spürst. Bei anhaltenden Beschwerden sprich bitte mit deiner Ärztin oder deinem Arzt."
+     },
+     {
+      "type": "callout",
+      "title": "Jeder Tag zählt",
+      "text": "Du musst nicht auf das 15-Jahres-Ziel warten. Schon heute arbeitet dein Körper für dich. Markiere dir jeden Meilenstein – das erste Treppensteigen ohne Husten ist ein guter Anfang."
+     }
+    ]
+   },
+   "en": {
+    "title": "Your body after the last cigarette",
+    "subtitle": "From the first 20 minutes to 15 years: what recovers – and when.",
+    "blocks": [
+     {
+      "type": "paragraph",
+      "text": "Your body does not wait for a perfect moment to help you. It starts tidying up minutes after the last cigarette. The timeline below is based on information from the UK's NHS and the WHO. These are averages – your body may be a little faster or slower."
+     },
+     {
+      "type": "heading",
+      "text": "The first hours and days"
+     },
+     {
+      "type": "steps",
+      "items": [
+       {
+        "title": "After 20 minutes",
+        "text": "Your pulse begins to return to normal. The WHO notes that heart rate and blood pressure drop."
+       },
+       {
+        "title": "After 8–12 hours",
+        "text": "According to the NHS, the carbon monoxide in your blood has halved after 8 hours; according to the WHO it is back to normal after 12 hours. Your oxygen levels are recovering."
+       },
+       {
+        "title": "After 48 hours",
+        "text": "According to the NHS, your carbon monoxide level is that of a non-smoker. Your lungs clear mucus, and taste and smell improve."
+       },
+       {
+        "title": "After 72 hours",
+        "text": "Breathing often feels easier because your bronchial tubes relax. According to the NHS, your energy also rises."
+       }
+      ]
+     },
+     {
+      "type": "paragraph",
+      "text": "These first days are often the hardest because nicotine withdrawal becomes noticeable at the same time. Irritability, restlessness and cravings are normal in this period and a sign that your body is adjusting."
+     },
+     {
+      "type": "stat",
+      "value": "28 days",
+      "label": "smoke-free: according to the NHS you are then much more likely to stay smoke-free for good (NHS, current page)"
+     },
+     {
+      "type": "heading",
+      "text": "Weeks and months"
+     },
+     {
+      "type": "list",
+      "items": [
+       "2–12 weeks: your circulation improves, and heart and muscles get better blood supply (NHS; WHO).",
+       "3–9 months: coughing, wheezing and breathing problems improve, and according to the NHS lung function rises by up to 10 percent.",
+       "1–9 months: coughing and shortness of breath decrease (WHO)."
+      ]
+     },
+     {
+      "type": "heading",
+      "text": "Years"
+     },
+     {
+      "type": "stat",
+      "value": "1 year",
+      "label": "Your risk of a heart attack is half that of a smoker (NHS)"
+     },
+     {
+      "type": "stat",
+      "value": "10 years",
+      "label": "Your risk of dying from lung cancer is about half that of a smoker (NHS; WHO)"
+     },
+     {
+      "type": "stat",
+      "value": "15 years",
+      "label": "Your risk of coronary heart disease is that of a non-smoker (WHO)"
+     },
+     {
+      "type": "paragraph",
+      "text": "For stroke, the WHO states that after 5 to 15 years the risk falls to that of a non-smoker. The CDC adds that the risk of coronary heart disease drops sharply 1 to 2 years after quitting and then keeps declining more slowly."
+     },
+     {
+      "type": "quote",
+      "text": "Quitting smoking has health benefits at any age, no matter how long or how much you have smoked.",
+      "attribution": "CDC – Benefits of Quitting Smoking (2024)"
+     },
+     {
+      "type": "heading",
+      "text": "And the brain?"
+     },
+     {
+      "type": "paragraph",
+      "text": "Withdrawal symptoms are the visible part of this adjustment: your brain gets used to functioning without nicotine again. That takes energy and patience. Concrete timelines vary from person to person, so we deliberately do not give fixed days here."
+     },
+     {
+      "type": "paragraph",
+      "text": "Important: this timeline is not an exam. If you cough now and then, sleep badly or feel tired, that does not mean something is going wrong. Sometimes the body works at full speed before you notice the effect. If symptoms persist, please talk to your doctor."
+     },
+     {
+      "type": "callout",
+      "title": "Every day counts",
+      "text": "You do not have to wait for the 15-year mark. Your body is already working for you today. Note every milestone – the first flight of stairs without coughing is a great start."
+     }
+    ]
+   },
+   "sources": [
+    {
+     "name": "NHS – Quit smoking: what happens when you quit",
+     "url": "https://www.nhs.uk/better-health/quit-smoking/"
+    },
+    {
+     "name": "WHO – Tobacco: Health benefits of smoking cessation",
+     "url": "https://www.who.int/news-room/questions-and-answers/item/tobacco-health-benefits-of-smoking-cessation"
+    },
+    {
+     "name": "CDC – Benefits of Quitting Smoking (2024)",
+     "url": "https://www.cdc.gov/tobacco/about/benefits-of-quitting.html"
+    }
+   ]
+  },
+  {
+   "id": "smoking-stories",
+   "habit": "smoking",
+   "category": "stories",
+   "readMinutes": 5,
+   "de": {
+    "title": "Drei Wege, rauchfrei zu werden",
+    "subtitle": "Zusammengesetzte Erfahrungsberichte über typische Verläufe – mit Rückschlägen.",
+    "blocks": [
+     {
+      "type": "paragraph",
+      "text": "Wie fühlt es sich an, aufzuhören? Und was, wenn es nicht beim ersten Mal klappt? Die folgenden drei Berichte sind keine echten Personen. Es sind zusammengesetzte, anonymisierte Erfahrungsberichte, die typische Verläufe widerspiegeln, wie sie in Beratungsstellen, Erfahrungsberichten von Gesundheitsdiensten und Studien beschrieben werden. Namen und Details sind erfunden, die Erfahrungen sind typisch."
+     },
+     {
+      "type": "heading",
+      "text": "Verlauf 1: Der Plan mit Hilfe"
+     },
+     {
+      "type": "quote",
+      "text": "Ich habe 25 Jahre geraucht und dachte: ohne Zigarette nach dem Essen geht gar nichts. Ich habe mir ein Datum gesetzt, die Apotheke wegen Pflaster und Kaugummi gefragt und eine Beratungshotline angerufen. Die ersten Tage waren zäh, aber ich hatte einen Plan für jede schwierige Situation. Nach vier Wochen merkte ich, dass ich nicht mehr jeden Tag ums Rauchen kämpfe.",
+      "attribution": "Zusammengesetzter Erfahrungsbericht – typische Verläufe aus Studien und Beratungsstellen"
+     },
+     {
+      "type": "paragraph",
+      "text": "Dieser Verlauf entspricht dem, was die Forschung nahelegt: Kombination aus Medikamenten oder Nikotinersatz und persönlicher Begleitung hilft mehr als jedes für sich. Der NHS betont zudem, dass nach 28 rauchfreien Tagen die Chance auf dauerhaften Erfolg deutlich steigt."
+     },
+     {
+      "type": "heading",
+      "text": "Verlauf 2: Der Rückfall, der nicht das Ende war"
+     },
+     {
+      "type": "quote",
+      "text": "Nach drei rauchfreien Wochen kam eine stressige Phase im Job. Ich habe auf einer Party eine Zigarette geraucht und mich furchtbar geschämt. Zuerst wollte ich alles hinschmeißen. Dann habe ich überlegt: Was war eigentlich der Auslöser? Stress plus Alkohol plus Raucherrunde. Ich habe am nächsten Morgen weitergemacht und das Muster auf einen Zettel geschrieben.",
+      "attribution": "Zusammengesetzter Erfahrungsbericht – typische Verläufe aus Studien und Beratungsstellen"
+     },
+     {
+      "type": "paragraph",
+      "text": "Rückfälle sind in Berichten von Menschen, die aufhören, sehr häufig. Entscheidend ist nicht, ob es einen Ausrutscher gab, sondern was danach passiert: Wer ihn als Information statt als Urteil nutzt, kommt oft weiter."
+     },
+     {
+      "type": "heading",
+      "text": "Verlauf 3: Der zweite oder dritte Anlauf"
+     },
+     {
+      "type": "quote",
+      "text": "Meinen ersten Versuch habe ich komplett ohne Hilfe gemacht und nach zwei Tagen abgebrochen. Beim zweiten Mal habe ich mit meinem Hausarzt gesprochen. Es war nicht leichter, aber ich hatte mehr Werkzeuge. Heute weiß ich: Die ersten Versuche haben mich nicht zurückgeworfen, sondern vorbereitet.",
+      "attribution": "Zusammengesetzter Erfahrungsbericht – typische Verläufe aus Studien und Beratungsstellen"
+     },
+     {
+      "type": "heading",
+      "text": "Was diese Verläufe gemeinsam haben"
+     },
+     {
+      "type": "list",
+      "items": [
+       "Sie hatten ein konkretes Datum und einen Plan.",
+       "Sie haben sich Unterstützung geholt – persönlich, per Telefon oder in der Apotheke.",
+       "Sie haben Rückschläge als Lernmoment behandelt, nicht als Urteil über sich.",
+       "Sie haben kleine Erfolge sichtbar gemacht, zum Beispiel gespartes Geld oder rauchfreie Tage."
+      ]
+     },
+     {
+      "type": "stat",
+      "value": "> 60 %",
+      "label": "der Rauchenden wollen laut WHO aufhören (WHO, 2025) – du bist mit dem Wunsch nicht allein"
+     },
+     {
+      "type": "paragraph",
+      "text": "Vielleicht findest du dich in einem dieser Wege wieder, vielleicht in einer Mischung. Das ist normal: Kein Verlauf ist wie der andere. Wichtig ist nicht, wie gradlinig dein Weg aussieht, sondern dass du nach jeder Etappe weitergehst."
+     },
+     {
+      "type": "callout",
+      "title": "Deine Geschichte ist noch offen",
+      "text": "Es gibt nicht den einen richtigen Weg. Ob mit Plan, Pflaster, Telefonberatung oder nach mehreren Anläufen: Jede Geschichte, die gut ausgeht, enthält Zweifel. Deine darf das auch."
+     }
+    ]
+   },
+   "en": {
+    "title": "Three paths to going smoke-free",
+    "subtitle": "Composite accounts of typical journeys – setbacks included.",
+    "blocks": [
+     {
+      "type": "paragraph",
+      "text": "What does it feel like to quit? And what if it does not work the first time? The three accounts below are not real people. They are composite, anonymised accounts reflecting typical journeys as described by counselling services, health-service testimonials and studies. Names and details are invented; the experiences are typical."
+     },
+     {
+      "type": "heading",
+      "text": "Journey 1: The plan with help"
+     },
+     {
+      "type": "quote",
+      "text": "I smoked for 25 years and thought: nothing works without a cigarette after dinner. I set a date, asked the pharmacy about patches and gum, and called a counselling hotline. The first days were tough, but I had a plan for every difficult situation. After four weeks I noticed I was no longer fighting about smoking every day.",
+      "attribution": "Composite account – typical journeys drawn from studies and counselling services"
+     },
+     {
+      "type": "paragraph",
+      "text": "This journey matches what research suggests: combining medication or nicotine replacement with personal support helps more than either alone. The NHS also stresses that after 28 smoke-free days the chance of lasting success rises considerably."
+     },
+     {
+      "type": "heading",
+      "text": "Journey 2: The relapse that was not the end"
+     },
+     {
+      "type": "quote",
+      "text": "After three smoke-free weeks, a stressful phase hit at work. At a party I smoked one cigarette and felt terribly ashamed. At first I wanted to throw everything away. Then I asked myself: what was the actual trigger? Stress plus alcohol plus a smoking circle. The next morning I carried on and wrote the pattern on a note.",
+      "attribution": "Composite account – typical journeys drawn from studies and counselling services"
+     },
+     {
+      "type": "paragraph",
+      "text": "Relapses are very common in the accounts of people who quit. What matters is not whether a slip happened but what happens afterwards: those who treat it as information rather than a verdict often get further."
+     },
+     {
+      "type": "heading",
+      "text": "Journey 3: The second or third attempt"
+     },
+     {
+      "type": "quote",
+      "text": "I made my first attempt completely without help and gave up after two days. The second time I talked to my GP. It was not easier, but I had more tools. Today I know: the first attempts did not set me back, they prepared me.",
+      "attribution": "Composite account – typical journeys drawn from studies and counselling services"
+     },
+     {
+      "type": "heading",
+      "text": "What these journeys have in common"
+     },
+     {
+      "type": "list",
+      "items": [
+       "They had a concrete date and a plan.",
+       "They got support – in person, by phone or at the pharmacy.",
+       "They treated setbacks as a learning moment, not a verdict on themselves.",
+       "They made small wins visible, such as money saved or smoke-free days."
+      ]
+     },
+     {
+      "type": "stat",
+      "value": "> 60 %",
+      "label": "of smokers intend to quit according to the WHO (WHO, 2025) – you are not alone in wanting this"
+     },
+     {
+      "type": "paragraph",
+      "text": "Perhaps you recognise yourself in one of these paths, perhaps in a mix. That is normal: no journey is like another. What matters is not how straight your path looks but that you keep going after every stage."
+     },
+     {
+      "type": "callout",
+      "title": "Your story is still open",
+      "text": "There is no single right way. Whether with a plan, patches, phone counselling or after several attempts: every story that ends well contains doubt. Yours may, too."
+     }
+    ]
+   },
+   "sources": [
+    {
+     "name": "NHS – Quit smoking (incl. 28-day milestone)",
+     "url": "https://www.nhs.uk/better-health/quit-smoking/"
+    },
+    {
+     "name": "WHO – Tobacco fact sheet (2025)",
+     "url": "https://www.who.int/news-room/fact-sheets/detail/tobacco"
+    },
+    {
+     "name": "Cochrane – Behavioural support in addition to medication (2019)",
+     "url": "https://www.cochrane.org/evidence/CD009670_does-more-support-increase-success-amongst-people-using-medications-quit-smoking"
+    }
+   ]
+  },
+  {
+   "id": "smoking-triggers",
+   "habit": "smoking",
+   "category": "triggers",
+   "readMinutes": 5,
+   "de": {
+    "title": "Verlangen, Auslöser und Ausrutscher",
+    "subtitle": "Warum der Drang in Wellen kommt – und wie du ihn überstehst, ohne aufzugeben.",
+    "blocks": [
+     {
+      "type": "paragraph",
+      "text": "Mitten im Alltag steigt der Drang auf: Kaffee in der Hand, Ärger im Kopf, Freunde draußen vor der Tür. Genau in diesem Moment fühlt es sich an, als würde das Verlangen ewig dauern. Gute Nachricht: Das Gefühl ist ein Signal deines Gehirns – und Signale ebben ab."
+     },
+     {
+      "type": "heading",
+      "text": "Warum Verlangen in Wellen kommt"
+     },
+     {
+      "type": "paragraph",
+      "text": "Nikotin hat in deinem Gehirn über Jahre gelernt, bestimmte Situationen mit Belohnung zu verbinden. Wenn du aufhörst, melden sich diese Verknüpfungen: bei Entzug im Körper und bei Auslösern im Kopf. Beides schwillt an, erreicht einen Höhepunkt und fällt wieder ab. Viele erleben, dass die stärkste Phase eines Dranges nur Minuten dauert, nicht Stunden. Das ist eine Erfahrungsregel aus der Beratungspraxis; wie lange es bei dir dauert, kann variieren."
+     },
+     {
+      "type": "heading",
+      "text": "Typische Auslöser"
+     },
+     {
+      "type": "list",
+      "items": [
+       "Kaffee, Essen, Alkohol",
+       "Stress, Ärger, Langeweile",
+       "Pausen, Telefonate, Warten",
+       "Menschen, die rauchen, und bestimmte Orte",
+       "Gefühle wie Freude oder Einsamkeit"
+      ]
+     },
+     {
+      "type": "paragraph",
+      "text": "Deine Auslöser aufzuschreiben ist der erste Schritt: Was war gerade passiert, als der Drang kam? Der NHS bietet in seinem Quit-Plan genau deshalb Tipps zum Umgang mit Auslösern an."
+     },
+     {
+      "type": "heading",
+      "text": "So überstehst du eine Welle"
+     },
+     {
+      "type": "steps",
+      "items": [
+       {
+        "title": "Verzögern",
+        "text": "Sag dir: Ich warte zehn Minuten. Danach entscheide ich neu. Oft ist der Gipfel dann schon vorbei."
+       },
+       {
+        "title": "Tief atmen",
+        "text": "Atme langsam durch die Nase ein und länger durch den Mund aus. Das beruhigt das Nervensystem."
+       },
+       {
+        "title": "Trinken",
+        "text": "Ein Glas Wasser oder Tee beschäftigt Hände und Mund."
+       },
+       {
+        "title": "Bewegen oder ablenken",
+        "text": "Geh um den Block, räum etwas auf, schreib jemandem. Hauptsache anderer Fokus."
+       },
+       {
+        "title": "Hilfsmittel nutzen",
+        "text": "Nikotinersatz kann schnelle Wellen abfedern. Sprich mit Arzt oder Apotheke über das, was zu dir passt."
+       }
+      ]
+     },
+     {
+      "type": "stat",
+      "value": "> 2x",
+      "label": "Beratung und Medikamente können die Erfolgschance mehr als verdoppeln (WHO, 2025)"
+     },
+     {
+      "type": "heading",
+      "text": "Wenn es doch passiert: der Ausrutscher"
+     },
+     {
+      "type": "paragraph",
+      "text": "Du hast eine Zigarette geraucht. Was jetzt? Zuerst: kein Urteil über dich. Ein Ausrutscher ist ein Ereignis, kein Charakterfehler. Der Unterschied zwischen einem Ausrutscher und einem vollständigen Rückfall ist oft das, was du in den nächsten Stunden tust."
+     },
+     {
+      "type": "steps",
+      "items": [
+       {
+        "title": "Atme durch",
+        "text": "Du bist nicht gescheitert. Dein Körper hat einen alten Reflex ausgeführt."
+       },
+       {
+        "title": "Mach keine Packung auf",
+        "text": "Wirf Reste weg. Eine Zigarette ist keine Packung."
+       },
+       {
+        "title": "Finde den Auslöser",
+        "text": "Schreibe auf: Wo war ich? Mit wem? Wie ging es mir? Das ist Information für deinen Plan."
+       },
+       {
+        "title": "Hol dir Unterstützung",
+        "text": "Ruf das Rauchfrei-Telefon der BZgA an (0800 8 313 131) oder sprich mit einer vertrauten Person."
+       },
+       {
+        "title": "Mach weiter",
+        "text": "Der nächste Tag zählt neu, und alles, was du bisher gelernt hast, bleibt."
+       }
+      ]
+     },
+     {
+      "type": "paragraph",
+      "text": "Mit der Zeit werden die Wellen meist seltener und schwächer, weil dein Gehirn die alten Verknüpfungen nicht mehr bedient. Das passiert nicht über Nacht, aber es passiert. Hilfreich ist, wenn du dir für deine drei häufigsten Auslöser vorab einen konkreten Gegenplan überlegst."
+     },
+     {
+      "type": "callout",
+      "title": "Du bist nicht allein",
+      "text": "Wenn Verlangen oder Stress überwältigend werden, bist du mit Hilfe nur einen Anruf entfernt: Rauchfrei-Telefon 0800 8 313 131, Sucht & Drogen Hotline 01806 313031, Telefonseelsorge 0800 111 0 111. Jede Welle, die du überstehst, macht die nächste kleiner."
+     }
+    ]
+   },
+   "en": {
+    "title": "Cravings, triggers and slips",
+    "subtitle": "Why urges come in waves – and how to ride them out without giving up.",
+    "blocks": [
+     {
+      "type": "paragraph",
+      "text": "Right in the middle of your day the urge rises: coffee in hand, annoyance in your head, friends outside the door. At that moment it feels as if the craving will last forever. The good news: the feeling is a signal from your brain – and signals fade."
+     },
+     {
+      "type": "heading",
+      "text": "Why cravings come in waves"
+     },
+     {
+      "type": "paragraph",
+      "text": "Over the years, nicotine has taught your brain to link certain situations with reward. When you quit, those links speak up: through withdrawal in the body and triggers in the mind. Both swell, peak and fall again. Many people find that the strongest part of an urge lasts minutes, not hours. This is a rule of thumb from counselling practice; how long it lasts for you may vary."
+     },
+     {
+      "type": "heading",
+      "text": "Typical triggers"
+     },
+     {
+      "type": "list",
+      "items": [
+       "Coffee, meals, alcohol",
+       "Stress, anger, boredom",
+       "Breaks, phone calls, waiting",
+       "People who smoke, and certain places",
+       "Feelings like joy or loneliness"
+      ]
+     },
+     {
+      "type": "paragraph",
+      "text": "Writing down your triggers is the first step: what had just happened when the urge came? That is exactly why the NHS offers tips for managing triggers in its Personal Quit Plan."
+     },
+     {
+      "type": "heading",
+      "text": "How to ride out a wave"
+     },
+     {
+      "type": "steps",
+      "items": [
+       {
+        "title": "Delay",
+        "text": "Tell yourself: I will wait ten minutes. Then I will decide again. Often the peak has already passed."
+       },
+       {
+        "title": "Breathe deeply",
+        "text": "Breathe in slowly through the nose and out longer through the mouth. This calms the nervous system."
+       },
+       {
+        "title": "Drink",
+        "text": "A glass of water or tea keeps your hands and mouth busy."
+       },
+       {
+        "title": "Move or distract",
+        "text": "Walk around the block, tidy something, message someone. Any change of focus will do."
+       },
+       {
+        "title": "Use aids",
+        "text": "Nicotine replacement can cushion sudden waves. Talk to your doctor or pharmacist about what suits you."
+       }
+      ]
+     },
+     {
+      "type": "stat",
+      "value": "> 2x",
+      "label": "Counselling and medication can more than double the chance of quitting successfully (WHO, 2025)"
+     },
+     {
+      "type": "heading",
+      "text": "If it happens anyway: the slip"
+     },
+     {
+      "type": "paragraph",
+      "text": "You smoked a cigarette. Now what? First: no verdict on yourself. A slip is an event, not a character flaw. The difference between a slip and a full relapse is often what you do in the next few hours."
+     },
+     {
+      "type": "steps",
+      "items": [
+       {
+        "title": "Breathe",
+        "text": "You have not failed. Your body performed an old reflex."
+       },
+       {
+        "title": "Do not open a pack",
+        "text": "Throw away leftovers. One cigarette is not a pack."
+       },
+       {
+        "title": "Find the trigger",
+        "text": "Write down: where was I? With whom? How was I feeling? That is information for your plan."
+       },
+       {
+        "title": "Get support",
+        "text": "Call the BZgA Rauchfrei-Telefon (0800 8 313 131) or talk to someone you trust."
+       },
+       {
+        "title": "Keep going",
+        "text": "The next day counts anew, and everything you have learned so far stays."
+       }
+      ]
+     },
+     {
+      "type": "paragraph",
+      "text": "Over time the waves usually become rarer and weaker because your brain stops feeding the old links. This does not happen overnight, but it does happen. It helps to think up a concrete counter-plan in advance for your three most common triggers."
+     },
+     {
+      "type": "callout",
+      "title": "You are not alone",
+      "text": "When cravings or stress become overwhelming, help is just one call away: Rauchfrei-Telefon 0800 8 313 131, Sucht & Drogen Hotline 01806 313031, Telefonseelsorge 0800 111 0 111. Every wave you ride out makes the next one smaller."
+     }
+    ]
+   },
+   "sources": [
+    {
+     "name": "NHS – Quit smoking (Personal Quit Plan)",
+     "url": "https://www.nhs.uk/better-health/quit-smoking/"
+    },
+    {
+     "name": "NHS – Ready to quit smoking",
+     "url": "https://www.nhs.uk/better-health/quit-smoking/ready-to-quit-smoking/"
+    },
+    {
+     "name": "WHO – Tobacco fact sheet (2025)",
+     "url": "https://www.who.int/news-room/fact-sheets/detail/tobacco"
+    },
+    {
+     "name": "Cochrane – Behavioural support in addition to medication (2019)",
+     "url": "https://www.cochrane.org/evidence/CD009670_does-more-support-increase-success-amongst-people-using-medications-quit-smoking"
+    }
+   ]
+  }
+ ]
+}
