@@ -1,11 +1,34 @@
 {
   "sourceLanguage" : "de",
   "strings" : {
+    "— %@" : {
+      "shouldTranslate" : false
+    },
     "%@" : {
       "shouldTranslate" : false
     },
     "%lld" : {
       "shouldTranslate" : false
+    },
+    "%lld Tage clean" : {
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "%lld days clean"
+          }
+        }
+      }
+    },
+    "1 Tag clean" : {
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "1 day clean"
+          }
+        }
+      }
     },
     "Aktive Sucht" : {
       "localizations" : {
@@ -51,6 +74,26 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Your daily motivational quote at a glance."
+          }
+        }
+      }
+    },
+    "Deine Pflanze wächst mit jedem Tag – gieße sie direkt hier." : {
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Your plant grows every day – water it right here."
+          }
+        }
+      }
+    },
+    "Deine Pflanze wartet auf Wasser 💧" : {
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Your plant is waiting for water 💧"
           }
         }
       }
@@ -103,6 +146,46 @@
         }
       }
     },
+    "Gieße sie kurz – so bleibt dein Recovery-Garten lebendig." : {
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Give it a quick drink – keep your recovery garden alive."
+          }
+        }
+      }
+    },
+    "Gießen" : {
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Water"
+          }
+        }
+      }
+    },
+    "Heute gegossen" : {
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Watered today"
+          }
+        }
+      }
+    },
+    "In voller Blüte" : {
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "In full bloom"
+          }
+        }
+      }
+    },
     "Jeder Tag ohne Rückfall ist ein Sieg über dich selbst." : {
       "localizations" : {
         "de" : {
@@ -119,6 +202,36 @@
         }
       }
     },
+    "Junge Pflanze" : {
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Young plant"
+          }
+        }
+      }
+    },
+    "Keimling" : {
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Sprout"
+          }
+        }
+      }
+    },
+    "Kleiner Baum" : {
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Little tree"
+          }
+        }
+      }
+    },
     "Motivationszitate" : {
       "localizations" : {
         "de" : {
@@ -131,6 +244,16 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Motivational quotes"
+          }
+        }
+      }
+    },
+    "Pflanze gießen" : {
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Water plant"
           }
         }
       }
@@ -215,6 +338,16 @@
         }
       }
     },
+    "Recovery-Garten" : {
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Recovery Garden"
+          }
+        }
+      }
+    },
     "Rekord: %lld Tage" : {
       "localizations" : {
         "de" : {
@@ -231,6 +364,16 @@
         }
       }
     },
+    "Samen" : {
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Seed"
+          }
+        }
+      }
+    },
     "Sprüche aus ${source}" : {
       "localizations" : {
         "de" : {
@@ -243,6 +386,16 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Sprüche aus ${source}"
+          }
+        }
+      }
+    },
+    "Starke Pflanze" : {
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Strong plant"
           }
         }
       }
@@ -343,22 +496,6 @@
         }
       }
     },
-    "Wissenschaft" : {
-      "localizations" : {
-        "de" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Wissenschaft"
-          }
-        },
-        "en" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Science"
-          }
-        }
-      }
-    },
     "Wähle, aus welcher Quelle die täglichen Sprüche stammen." : {
       "localizations" : {
         "de" : {
@@ -391,7 +528,24 @@
         }
       }
     },
+    "Wissenschaft" : {
+      "localizations" : {
+        "de" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Wissenschaft"
+          }
+        },
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Science"
+          }
+        }
+      }
+    },
     "Zeige ${addiction}" : {
+      "extractionState" : "stale",
       "localizations" : {
         "de" : {
           "stringUnit" : {
@@ -407,158 +561,8 @@
         }
       }
     },
-    "— %@" : {
-      "shouldTranslate" : false
-    },
-    "Pflanze gießen" : {
-      "localizations" : {
-        "en" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Water plant"
-          }
-        }
-      }
-    },
-    "Samen" : {
-      "localizations" : {
-        "en" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Seed"
-          }
-        }
-      }
-    },
-    "Keimling" : {
-      "localizations" : {
-        "en" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Sprout"
-          }
-        }
-      }
-    },
-    "Junge Pflanze" : {
-      "localizations" : {
-        "en" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Young plant"
-          }
-        }
-      }
-    },
-    "Starke Pflanze" : {
-      "localizations" : {
-        "en" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Strong plant"
-          }
-        }
-      }
-    },
-    "In voller Blüte" : {
-      "localizations" : {
-        "en" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "In full bloom"
-          }
-        }
-      }
-    },
-    "Kleiner Baum" : {
-      "localizations" : {
-        "en" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Little tree"
-          }
-        }
-      }
-    },
-    "1 Tag clean" : {
-      "localizations" : {
-        "en" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "1 day clean"
-          }
-        }
-      }
-    },
-    "%lld Tage clean" : {
-      "localizations" : {
-        "en" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "%lld days clean"
-          }
-        }
-      }
-    },
-    "Heute gegossen" : {
-      "localizations" : {
-        "en" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Watered today"
-          }
-        }
-      }
-    },
-    "Gießen" : {
-      "localizations" : {
-        "en" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Water"
-          }
-        }
-      }
-    },
-    "Recovery-Garten" : {
-      "localizations" : {
-        "en" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Recovery Garden"
-          }
-        }
-      }
-    },
-    "Deine Pflanze wächst mit jedem Tag – gieße sie direkt hier." : {
-      "localizations" : {
-        "en" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Your plant grows every day – water it right here."
-          }
-        }
-      }
-    },
-    "Deine Pflanze wartet auf Wasser 💧" : {
-      "localizations" : {
-        "en" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Your plant is waiting for water 💧"
-          }
-        }
-      }
-    },
-    "Gieße sie kurz – so bleibt dein Recovery-Garten lebendig." : {
-      "localizations" : {
-        "en" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Give it a quick drink – keep your recovery garden alive."
-          }
-        }
-      }
+    "Zeige ${addiction} mit ${source}" : {
+
     }
   },
   "version" : "1.0"
