@@ -109,13 +109,13 @@ struct DashboardView: View {
         )) {
             CravingModeView()
         }
-        .sheet(isPresented: $isShowingRelapse) {
-            RelapseView(onSaved: {
-                Task {
-                    await viewModel.load()
-                    await updateWidgetSnapshot()
-                }
-            })
+        .sheet(isPresented: $isShowingRelapse, onDismiss: {
+            Task {
+                await viewModel.load()
+                await updateWidgetSnapshot()
+            }
+        }) {
+            RelapseView(onSaved: {})
         }
         .sheet(isPresented: Binding(
             get: { viewModel.isShowingGoalPicker },
